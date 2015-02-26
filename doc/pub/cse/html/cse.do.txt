@@ -1,0 +1,564 @@
+# Slides for PHY981
+TITLE: Computing in Science Education (CSE): Integrating a computational perspective in the basic science education
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: February 26, 2015
+
+!split
+===== People and links  =====
+!bblock 
+* Hans Petter Langtangen, Computer Science
+* Knut Morken, Computer Science
+* Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
+* Tom Lindstrom, Mathematics
+* Oyvind Ryan, Mathematics and Computer Science and many more
+* Solveig Kristensen, Dean of Education
+* Hanne Solna, Director of studies
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/"
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf"
+
+!eblock
+
+
+!split
+===== More links  =====
+!bblock 
+* Python and our first programming course, first semester URL: "http://www.uio.no/studier/emner/matnat/ifi/INF1100/h13/". Excellent new textbook by Hans Petter Langtangen
+* Mathematical modelling course, first semester URL: "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h13/". Textbook by Knut Morken to be published by Springer.
+* Mechanics, second semester URL: "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, in press by Springer
+* Computational Physics I, fifth semester, URL: "http://www.uio.no/studier/emner/matnat/fys/FYS3150/h13/"
+
+!eblock
+
+
+
+!split
+===== Wouldn't it be cool if your mechanics students could reproduce results in a PRL? =====
+!bblock
+FIGURE: [figures/prl1.png, width=800 frac=0.5] 
+
+Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+!eblock
+!bblock 
+FIGURE: [figures/prl2.png, width=700 frac=0.5] 
+!eblock
+    
+      
+!split
+===== Funny aside? =====
+!bblock
+FIGURE: [figures/old-computer.jpg, width=800 frac=0.9]
+
+!eblock
+
+!split
+===== An important observation and a  question =====
+!bblock
+
+The basic tools for mathematical calculations have changed radically.
+
+_How does this influence science education?_
+
+* Modern industry and technology is impossible without mathematics and science
+* Weather forecasting, product design, film production, materials science, cellular phones, iPad, lunar missions, GPS, furniture production and much more
+
+!eblock
+
+
+!split
+===== Reality =====
+!bblock 
+
+* Students hear about the relevance of the sciences
+* But this relevance is hardly visible in school or the first few years at university
+* Much emphasis on renewal of the wrapping of science, little on the content
+
+!eblock
+
+
+!split
+===== Principles =====
+!bblock Central aims behind our CSE reform
+
+Algorithmic  thinking as a way to
+
+* Enhance instruction based teaching
+* Introduce Research based teaching  from day one
+* Trigger further insights in math and other disciplines (we need a research program to understand if this is the case)
+* Validation and verification of scientific results (the PRL example), with the possibility to emphasize ethical aspects as well. Version control is central.
+
+!eblock
+
+
+
+!split
+===== Research based teaching =====
+!bblock How do we define it?
+One possible definition: It is coupled to a direct participation in actual research and builds upon established
+knowledge and insights about scientific methods.
+
+
+* It is the standard situation at all universities  and takes normally place at the senior undergraduate/graduate level (isn't it too late?)
+* It is seldom done in undergraduate courses.
+* Taught by a researcher
+* The student starts seeing the countour of the scientific approach leading her/him to make new interpretations, develop new insights and understandings that lead  to further research.
+
+!eblock
+
+
+
+!split
+===== Research based education =====
+!bblock What should the education contain?
+The standard situation we meet at an almost daily basis:
+
+* Theory+experiment+simulation is almost the norm in research and industry
+* To be able to model complex systems with no simple answers on closed form. Solve real problems.
+* Emphasis on insight and understanding of fundamental principles and laws in the Sciences.
+* Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.
+
+Our education should reflect this.
+!eblock
+
+
+
+!split
+===== Research based education =====
+!bblock Normal workflow in Science and Engineering
+
+* A problem is properly described using a precise (normal) language.
+* It is translated to a mathematical problem using known laws and  principles.
+* It is solved, normally via numerical similations.
+* The solution is visualized and analyzed.
+* The solution to the problem is formulated.
+
+People who master these skills bring an important compentence to society. 
+!eblock
+
+!split
+===== Computers and science teaching =====
+!bblock Education
+
+* During the  last 25 years  there has been considerable focus on  technology at all levels in the educational ladder.
+* Calculators, text processing, email, digital learning environments etc.
+* Much focus on means and technologies, but what about the content, or more importantly, insight into  physical systems?
+
+The basic topics (math, chemistry, physics, biology \dots) are taught more or less in the same fashion as before, unchanged over several decades! 
+!eblock
+
+
+!split
+===== More observations =====
+!bblock Computation in the Sciences
+
+* Computations as a fundamental tool  to gain new insights
+* Computer simulations can act as  a lab, can save both time and resources 
+* Computations is a central component in modern industry and research in the sciences, spanning almost every field:
+ * Materials science and nanotechnology, weather forecasting, earthquake simulations and forecasting, medical technology, industrial design, design of new computers, the entertainment industry, almost all aspects of our modern society!!
+
+!eblock
+
+
+!split
+===== Large scale simulations =====
+!bblock  
+Fluid dynamical simulations central in air industry.
+FIGURE: [figures/fig10.jpg, width=900 frac=0.6]
+
+#\includegraphics[width=0.95\textwidth]{fig10.jpg}
+!eblock
+
+
+!split
+===== Large scale simulations =====
+!bblock  
+Fluid dynamical simulations central in air industry, wings tested.
+FIGURE: [figures/fig8.jpg, width=900 frac=1.0]
+
+#\includegraphics[width=0.95\textwidth]{fig8.jpg}
+!eblock
+
+
+!split
+===== Nano and macro-scale reactions in rocks =====
+!bblock
+FIGURE: [figures/rocks.pdf, width=900 frac=0.8]
+
+#	\includegraphics[width=0.9\textwidth]{rocks.pdf}
+!eblock
+
+
+
+!split
+===== Further observations =====
+!bblock Computations should enter science education 
+
+* Our teaching should include  an education in basic numerical methods, normally taught in different departments, and often disconnected. 
+* The students should also learn to develop new methods and learn new tools when needed.
+* Need an adequate computational platform.
+
+!eblock
+
+
+
+!split
+===== More observations =====
+!bblock Observations about implementations
+
+* One creates different physics courses and graduate programs which bake in computations, typically various Computational Physics courses from sophomore to graduate level.  The problem is that these courses are not compulsory. The result is often an uneven background of the students. 
+* Dedicated teachers incorporate numerical exercises (at different levels) in their physics courses. When new teachers take over, the whole initiative may disappear. 
+* Some  physics departments in Europe teach their own math and computer science courses! But have still not been able to coordinate properly computational topics.
+
+!eblock
+
+
+!split
+===== Can we catch many birds with one stone? =====
+!bblock
+* How can we include and integrate an algorithmic (computational) perspective   in our basic education?
+* Can this enhance the students' understanding of mathematics and science?
+* Can it strengthen research based teaching?
+
+!eblock
+
+
+!split
+===== Preliminary summary =====
+!bblock Computations should enter basic science education
+
+* Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
+* Requires development of algorithmic thinking.
+* Basic numerical methods should be part of the compulsory curriculum.
+* The students should also learn to develop new numerical methods and adapt to new software tools.
+* Requires more training than simple programming in a mathematics course.
+
+!eblock
+
+
+!split
+===== What is needed? =====
+!bblock Programming
+A compulsory programming course with a strong mathematical flavour. Should give a solid foundation in programming. Programming is understanding!
+!eblock
+
+!bblock Mathematics and numerics
+Mathematics is at least as important as before, but should be supplemented with development and analysis of numerical methods.
+!eblock
+
+!bblock Sciences
+Training in modelling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+!eblock
+
+
+
+!split
+===== Implementation =====
+!bblock Crucial ingredients
+
+* Support from governing bodies (now priority 1 of the CNS@Oslo)
+* Cooperation across departmental boundaries
+* Willingness by individuals to give priority to teaching reform
+
+Consensus driven approach.
+!eblock
+
+
+
+!split
+===== Implementation in Oslo: The CSE  project =====
+!bblock What we do
+* Coordinated use of computational exercises and numerical tools in most undergraduate courses.
+* Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction.
+* Teachers get good summer students to aid in introducing computational exercises
+* Develop courses and exercise modules with a computational perspective, both for students and teachers. 
+* Basic idea: mixture of mathematics, computation, informatics and topics from the physical sciences.
+ 
+Interesting outcome: higher focus on teaching and pedagogical issues!!
+!eblock
+
+
+!split
+===== Example of bachelor program, astrophysics =====
+!bblock
+FIGURE: [figures/astronomy.png, width=900 frac=0.6] 
+
+
+!eblock
+
+
+!split
+===== Example: Computations from day one =====
+!bblock Differentiation
+Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
+* Definition  of the derivative in  MAT1100 (Calculus and analysis) 
+!bt
+\[
+ f'(x)=\lim_{h \rightarrow 0}\frac{f(x+h)-f(x)}{h}.
+\]
+!et
+* Algorithms to compute the derivative in MAT-INF1100  (Mathematical modelling with computing)
+!bt
+\[
+ f'(x)\approx \frac{f(x+h)-f(x-h)}{2h}.
+\]
+!et
+* Implementation and use in applications in  the programming course INF1100, with Python as programming language. 
+
+!eblock
+
+
+!split
+===== Other Examples =====
+!bblock Integration by Trapezoidal Rule 
+ 
+* Definition of integration  in MAT1100 (Calculus and analysis).
+* The algorithm for computing the  integral vha the Trapezoidal rule for an interval $x \in [a,b]$
+!bt
+\[
+  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right] 
+\]
+!et
+* Taught   in MAT-INF1100  (Mathematical modelling)
+
+* The algorithm is then implemented in  INF1100 (programming course).
+
+!eblock
+
+!split
+===== Typical implementation in INF1100 =====
+!bblock Integration by Trapezoidal Rule 
+
+!bc pycod
+from math import *
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+
+def f1(x):
+    return exp(-x*x)*log(1+x*sin(x))
+
+a = 1;  b = 3; n = 1000
+result = Trapez(a,b,f1,n)
+print result
+!ec
+!eblock
+
+
+!split
+===== Typical implementation in INF1100 =====
+!bblock Integration by Trapezoidal Rule 
+
+!bc pyoptpro
+from math import *
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+
+def f1(x):
+    return exp(-x*x)*log(1+x*sin(x))
+
+a = 1;  b = 3; n = 1000
+result = Trapez(a,b,f1,n)
+print result
+!ec
+!eblock
+
+
+
+
+
+
+!split
+===== Learning outcomes three first semesters =====
+!bblock Knowledge of basic algorithms
+
+* Differential equations: Euler, modified Euler and Runge-Kutta methods
+* Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals
+* Random numbers, random walks, probability distributions and Monte Carlo integration
+* Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel.
+* Root finding and interpolation etc.
+* Processing of sound and images.
+
+The students have to code several of these algorithms during the first three semesters.
+!eblock
+
+
+!split
+===== Later courses =====
+!bblock
+
+_Later courses should build on this foundation as much as possible_.
+
+o In particular, the course should not be too basic! There should be progression in the use of mathematics, numerical methods and programming, as well as science.
+
+
+o Computational platform: Python, fully object-oriented and allows for seamless integration of c++ and Fortran codes, as well as Matlab-like programming environment. Makes it easy to parallelize codes as well.
+
+!eblock
+
+!split
+===== Coordination =====
+!bblock
+* Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.
+
+
+!eblock
+
+
+
+!split
+===== FYS-MEK1100 (Mechanics), Second Semester =====
+!bblock Realistic Pendulum
+
+Classical pendulum with damping and external force
+!bt
+\[
+  ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Asin(\omega t).
+\]
+!et
+Easy to solve numerically without classical simplification, and then visualize the solution.  Done in first semester!
+Same equation for an RLC circuit 
+!bt
+\[
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
+\]
+!et
+!eblock
+
+
+!split
+===== FYS1120 Electromagnetism, Third Semester =====
+!bblock  RLC circuit
+Same equation as the pendulum for an RLC circuit 
+!bt
+\[
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
+\]
+!et
+From the numerics, 
+the students found the optimal parameters for studying experimentally chaos
+in an RLC circuit. Then they did the experiment.
+
+!eblock
+
+
+
+
+!split
+===== What can we do with the pendulum? =====
+!bblock Many interesting problems
+
+o Can study chaos, theoretically, numerically and experimentally, can choose 'best' parameters  for experimental setup.
+o Can test different algorithms for solving ordinary differential equations, from Euler's to fourth-order Runge Kutta methods. Tight connection with algorithm and physics.
+o Can make classes of differential equation solvers.
+o Can make a general program that can be applied to other scientific cases in later courses, such as electromagnetism (RLC circuits).  Students realize that much of the same mathematics enters many physics cases.
+
+!eblock
+
+
+!split
+===== More Examples from Physics Courses, 2-5 semester =====
+!bblock  Second-fourth semester
+
+* Air resistance in two and three dimensions with quadratic velocity dependence.
+* Launching a probe into a tornado
+* Rocket launching with realistic parameters, gravity assist
+* How to kick a football and model its trajectory.
+* Planet motion and position of planets
+* Magnetic fields with various geometries based on Biot-Savart's law
+* Harmonic oscillations and various forms of electromagnetic waves.
+* Combined effect of different potentials such as the electrostatic potential and the gravitational potential.
+* Simple studies of atoms and molecules, and much more
+
+!eblock
+
+!split
+===== First computational physics course =====
+!bblock Late: Fifth semester, FYS3150 Computational Physics
+  
+The first computational physics course can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
+
+* Monte carlo methods
+* Parallelization
+* Solving quantum mechanical problems by Variational Monte Carlo  or other quantum mechanical methods
+* Study phase transitions with for example the Ising and Potts model.
+* Molecular dynamics simulations etc etc 
+
+!eblock
+
+
+!split
+===== Challenges...  =====
+!bblock .. and objections
+
+*Standard objection: computations take away the attention from other central topics in 'my course'*. 
+
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.
+
+* To help teachers: Developed pedagogical modules which can aid university teachers.
+
+!eblock
+
+!split
+===== Challenges and future plans =====
+!bblock
+
+* The project depends crucially on few individuals. 
+* Need to get more teachers involved, not only good TAs.
+* How  to implement a CSE perspective in other programs like Chemistry, Molecular Biology,  Biology, Engineering. New courses are being developed.
+* Now a national pilot for other universities and regional colleges.
+
+_Key issue: modularization of topics and development of a 'technological platform' which glues together different modules_
+
+!eblock
+
+!split
+===== Which aspects are important for a successful introduction of CSE? =====
+!bblock
+
+* Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
+* Crucial to learn proper programming at the beginning.
+* Choice of software.
+* Textbooks and modularization of topics.
+* Resources and expenses.
+* Tailor to specific disciplines.
+* Organizational matters.
+!eblock
+
+!split
+===== Do we get better students? =====
+!bblock Molecular dynamics visualization by two MSc students
+FIGURE: [figures/visualize.jpg, width=700 frac=0.7]  
+
+#\includegraphics[width=9.5cm]{visualize.jpg}
+
+!eblock
+
+
+!split
+===== Summary =====
+!bblock
+
+* Make our research visible in early undergraduate courses, enhance research based teaching
+* Possibility to focus more on understanding and increased insight.
+* Impetus for broad cooperation in teaching.
+* Strengthening of instruction based teaching (expensive and time-consuming).
+* Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.
+* And perhaps the most important issue: does this enhance the student's insight in the Sciences?
+
+!eblock
+
+

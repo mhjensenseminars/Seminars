@@ -1,0 +1,965 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Computing in Science Education (CSE): Integrating a computational perspective in the basic science education">
+
+<title>Computing in Science Education (CSE): Integrating a computational perspective in the basic science education</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [(' People and links  ', 2, None, '___sec0'),
+              (' More links  ', 2, None, '___sec1'),
+              (" Wouldn't it be cool if your mechanics students could reproduce results in a PRL? ",
+               2,
+               None,
+               '___sec2'),
+              (' Funny aside? ', 2, None, '___sec3'),
+              (' An important observation and a  question ',
+               2,
+               None,
+               '___sec4'),
+              (' Reality ', 2, None, '___sec5'),
+              (' Principles ', 2, None, '___sec6'),
+              (' Research based teaching ', 2, None, '___sec7'),
+              (' Research based education ', 2, None, '___sec8'),
+              (' Research based education ', 2, None, '___sec9'),
+              (' Computers and science teaching ', 2, None, '___sec10'),
+              (' More observations ', 2, None, '___sec11'),
+              (' Large scale simulations ', 2, None, '___sec12'),
+              (' Large scale simulations ', 2, None, '___sec13'),
+              (' Nano and macro-scale reactions in rocks ',
+               2,
+               None,
+               '___sec14'),
+              (' Further observations ', 2, None, '___sec15'),
+              (' More observations ', 2, None, '___sec16'),
+              (' Can we catch many birds with one stone? ',
+               2,
+               None,
+               '___sec17'),
+              (' Preliminary summary ', 2, None, '___sec18'),
+              (' What is needed? ', 2, None, '___sec19'),
+              (' Implementation ', 2, None, '___sec20'),
+              (' Implementation in Oslo: The CSE  project ',
+               2,
+               None,
+               '___sec21'),
+              (' Example of bachelor program, astrophysics ',
+               2,
+               None,
+               '___sec22'),
+              (' Example: Computations from day one ', 2, None, '___sec23'),
+              (' Other Examples ', 2, None, '___sec24'),
+              (' Typical implementation in INF1100 ', 2, None, '___sec25'),
+              (' Typical implementation in INF1100 ', 2, None, '___sec26'),
+              (' Learning outcomes three first semesters ',
+               2,
+               None,
+               '___sec27'),
+              (' Later courses ', 2, None, '___sec28'),
+              (' Coordination ', 2, None, '___sec29'),
+              (' FYS-MEK1100 (Mechanics), Second Semester ',
+               2,
+               None,
+               '___sec30'),
+              (' FYS1120 Electromagnetism, Third Semester ',
+               2,
+               None,
+               '___sec31'),
+              (' What can we do with the pendulum? ', 2, None, '___sec32'),
+              (' More Examples from Physics Courses, 2-5 semester ',
+               2,
+               None,
+               '___sec33'),
+              (' First computational physics course ', 2, None, '___sec34'),
+              (' Challenges...  ', 2, None, '___sec35'),
+              (' Challenges and future plans ', 2, None, '___sec36'),
+              (' Which aspects are important for a successful introduction of CSE? ',
+               2,
+               None,
+               '___sec37'),
+              (' Do we get better students? ', 2, None, '___sec38'),
+              (' Summary ', 2, None, '___sec39')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1>Computing in Science Education (CSE): Integrating a computational perspective in the basic science education</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+
+<p>
+<!-- institution(s) -->
+<p>
+<center><h4>February 26, 2015</h4></center> <!-- date -->
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">People and links  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Hans Petter Langtangen, Computer Science</li>
+<li> Knut Morken, Computer Science</li>
+<li> Anders Malthe Sorensen and Arnt Inge Vistnes, Physics</li>
+<li> Tom Lindstrom, Mathematics</li>
+<li> Oyvind Ryan, Mathematics and Computer Science and many more</li>
+<li> Solveig Kristensen, Dean of Education</li>
+<li> Hanne Solna, Director of studies</li>
+<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/" target="_blank"><tt>http://www.mn.uio.no/english/about/collaboration/cse/</tt></a></li>
+<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf" target="_blank"><tt>http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf</tt></a></li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1">More links  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Python and our first programming course, first semester <a href="http://www.uio.no/studier/emner/matnat/ifi/INF1100/h13/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/ifi/INF1100/h13/</tt></a>. Excellent new textbook by Hans Petter Langtangen</li>
+<li> Mathematical modelling course, first semester <a href="http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h13/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h13/</tt></a>. Textbook by Knut Morken to be published by Springer.</li>
+<li> Mechanics, second semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/</tt></a>. New textbook by Anders Malthe-Sorenssen, in press by Springer</li>
+<li> Computational Physics I, fifth semester, <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h13/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS3150/h13/</tt></a></li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Wouldn't it be cool if your mechanics students could reproduce results in a PRL? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<center><p><img src="figures/prl1.png" align="bottom" width=800></p></center>
+
+<p>
+Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<center><p><img src="figures/prl2.png" align="bottom" width=700></p></center>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">Funny aside? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<center><p><img src="figures/old-computer.jpg" align="bottom" width=800></p></center>
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">An important observation and a  question </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+The basic tools for mathematical calculations have changed radically.
+
+<p>
+<b>How does this influence science education?</b>
+
+<ul>
+<li> Modern industry and technology is impossible without mathematics and science</li>
+<li> Weather forecasting, product design, film production, materials science, cellular phones, iPad, lunar missions, GPS, furniture production and much more</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Reality </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Students hear about the relevance of the sciences</li>
+<li> But this relevance is hardly visible in school or the first few years at university</li>
+<li> Much emphasis on renewal of the wrapping of science, little on the content</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Principles </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Central aims behind our CSE reform.</b>
+<p>
+
+<p>
+Algorithmic  thinking as a way to
+
+<ul>
+<li> Enhance instruction based teaching</li>
+<li> Introduce Research based teaching  from day one</li>
+<li> Trigger further insights in math and other disciplines (we need a research program to understand if this is the case)</li>
+<li> Validation and verification of scientific results (the PRL example), with the possibility to emphasize ethical aspects as well. Version control is central.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Research based teaching </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>How do we define it?</b>
+<p>
+One possible definition: It is coupled to a direct participation in actual research and builds upon established
+knowledge and insights about scientific methods.
+
+<ul>
+<li> It is the standard situation at all universities  and takes normally place at the senior undergraduate/graduate level (isn't it too late?)</li>
+<li> It is seldom done in undergraduate courses.</li>
+<li> Taught by a researcher</li>
+<li> The student starts seeing the countour of the scientific approach leading her/him to make new interpretations, develop new insights and understandings that lead  to further research.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Research based education </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What should the education contain?</b>
+<p>
+The standard situation we meet at an almost daily basis:
+
+<ul>
+<li> Theory+experiment+simulation is almost the norm in research and industry</li>
+<li> To be able to model complex systems with no simple answers on closed form. Solve real problems.</li>
+<li> Emphasis on insight and understanding of fundamental principles and laws in the Sciences.</li>
+<li> Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.</li>
+</ul>
+
+Our education should reflect this.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">Research based education </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Normal workflow in Science and Engineering.</b>
+<p>
+
+<ul>
+<li> A problem is properly described using a precise (normal) language.</li>
+<li> It is translated to a mathematical problem using known laws and  principles.</li>
+<li> It is solved, normally via numerical similations.</li>
+<li> The solution is visualized and analyzed.</li>
+<li> The solution to the problem is formulated.</li>
+</ul>
+
+People who master these skills bring an important compentence to society.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">Computers and science teaching </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Education.</b>
+<p>
+
+<ul>
+<li> During the  last 25 years  there has been considerable focus on  technology at all levels in the educational ladder.</li>
+<li> Calculators, text processing, email, digital learning environments etc.</li>
+<li> Much focus on means and technologies, but what about the content, or more importantly, insight into  physical systems?</li>
+</ul>
+
+The basic topics (math, chemistry, physics, biology \dots) are taught more or less in the same fashion as before, unchanged over several decades!
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">More observations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Computation in the Sciences.</b>
+<p>
+
+<ul>
+<li> Computations as a fundamental tool  to gain new insights</li>
+<li> Computer simulations can act as  a lab, can save both time and resources</li> 
+<li> Computations is a central component in modern industry and research in the sciences, spanning almost every field:</li>
+
+<ul>
+ <li> Materials science and nanotechnology, weather forecasting, earthquake simulations and forecasting, medical technology, industrial design, design of new computers, the entertainment industry, almost all aspects of our modern society!!</li>
+</ul>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec12">Large scale simulations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Fluid dynamical simulations central in air industry.
+<center><p><img src="figures/fig10.jpg" align="bottom" width=900></p></center>
+
+<p>
+<!-- \includegraphics[width=0.95\textwidth]{fig10.jpg} -->
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec13">Large scale simulations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Fluid dynamical simulations central in air industry, wings tested.
+<center><p><img src="figures/fig8.jpg" align="bottom" width=900></p></center>
+
+<p>
+<!-- \includegraphics[width=0.95\textwidth]{fig8.jpg} -->
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec14">Nano and macro-scale reactions in rocks </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<center><p><img src="figures/rocks.png" align="bottom" width=900></p></center>
+
+<p>
+<!-- \includegraphics[width=0.9\textwidth]{rocks.pdf} -->
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec15">Further observations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Computations should enter science education.</b>
+<p>
+
+<ul>
+<li> Our teaching should include  an education in basic numerical methods, normally taught in different departments, and often disconnected.</li> 
+<li> The students should also learn to develop new methods and learn new tools when needed.</li>
+<li> Need an adequate computational platform.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec16">More observations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Observations about implementations.</b>
+<p>
+
+<ul>
+<li> One creates different physics courses and graduate programs which bake in computations, typically various Computational Physics courses from sophomore to graduate level.  The problem is that these courses are not compulsory. The result is often an uneven background of the students.</li> 
+<li> Dedicated teachers incorporate numerical exercises (at different levels) in their physics courses. When new teachers take over, the whole initiative may disappear.</li> 
+<li> Some  physics departments in Europe teach their own math and computer science courses! But have still not been able to coordinate properly computational topics.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec17">Can we catch many birds with one stone? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> How can we include and integrate an algorithmic (computational) perspective   in our basic education?</li>
+<li> Can this enhance the students' understanding of mathematics and science?</li>
+<li> Can it strengthen research based teaching?</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec18">Preliminary summary </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Computations should enter basic science education.</b>
+<p>
+
+<ul>
+<li> Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.</li>
+<li> Requires development of algorithmic thinking.</li>
+<li> Basic numerical methods should be part of the compulsory curriculum.</li>
+<li> The students should also learn to develop new numerical methods and adapt to new software tools.</li>
+<li> Requires more training than simple programming in a mathematics course.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec19">What is needed? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Programming.</b>
+<p>
+A compulsory programming course with a strong mathematical flavour. Should give a solid foundation in programming. Programming is understanding!
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Mathematics and numerics.</b>
+<p>
+Mathematics is at least as important as before, but should be supplemented with development and analysis of numerical methods.
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Sciences.</b>
+<p>
+Training in modelling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec20">Implementation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Crucial ingredients.</b>
+<p>
+
+<ul>
+<li> Support from governing bodies (now priority 1 of the CNS@Oslo)</li>
+<li> Cooperation across departmental boundaries</li>
+<li> Willingness by individuals to give priority to teaching reform</li>
+</ul>
+
+Consensus driven approach.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec21">Implementation in Oslo: The CSE  project </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What we do.</b>
+<p>
+
+<ul>
+<li> Coordinated use of computational exercises and numerical tools in most undergraduate courses.</li>
+<li> Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction.</li>
+<li> Teachers get good summer students to aid in introducing computational exercises</li>
+<li> Develop courses and exercise modules with a computational perspective, both for students and teachers.</li> 
+<li> Basic idea: mixture of mathematics, computation, informatics and topics from the physical sciences.</li>
+</ul>
+
+Interesting outcome: higher focus on teaching and pedagogical issues!!
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec22">Example of bachelor program, astrophysics </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<center><p><img src="figures/astronomy.png" align="bottom" width=900></p></center>
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec23">Example: Computations from day one </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Differentiation.</b>
+<p>
+Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
+
+<ul>
+<li> Definition  of the derivative in  MAT1100 (Calculus and analysis)</li> 
+</ul>
+
+$$
+ f'(x)=\lim_{h \rightarrow 0}\frac{f(x+h)-f(x)}{h}.
+$$
+
+
+<ul>
+<li> Algorithms to compute the derivative in MAT-INF1100  (Mathematical modelling with computing)</li>
+</ul>
+
+$$
+ f'(x)\approx \frac{f(x+h)-f(x-h)}{2h}.
+$$
+
+
+<ul>
+<li> Implementation and use in applications in  the programming course INF1100, with Python as programming language.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec24">Other Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<ul>
+<li> Definition of integration  in MAT1100 (Calculus and analysis).</li>
+<li> The algorithm for computing the  integral vha the Trapezoidal rule for an interval \( x \in [a,b] \)</li>
+</ul>
+
+$$
+  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right] 
+$$
+
+
+<ul>
+<li> Taught   in MAT-INF1100  (Mathematical modelling)</li>
+<li> The algorithm is then implemented in  INF1100 (programming course).</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec25">Typical implementation in INF1100 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> <span style="color: #666666">*</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">f1</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> exp(<span style="color: #666666">-</span>x<span style="color: #666666">*</span>x)<span style="color: #666666">*</span>log(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>sin(x))
+
+a <span style="color: #666666">=</span> <span style="color: #666666">1</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">3</span>; n <span style="color: #666666">=</span> <span style="color: #666666">1000</span>
+result <span style="color: #666666">=</span> Trapez(a,b,f1,n)
+<span style="color: #008000; font-weight: bold">print</span> result
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec26">Typical implementation in INF1100 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<p>
+
+<iframe width="950" height="500" frameborder="0"
+        src="http://pythontutor.com/iframe-embed.html#code=from+math+import+%2A%0Adef+Trapez%28a%2Cb%2Cf%2Cn%29%3A%0A+++h+%3D+%28b-a%29%2Ffloat%28n%29%0A+++s+%3D+0%0A+++x+%3D+a%0A+++for+i+in+range%281%2Cn%2C1%29%3A%0A+++++++x+%3D+x%2Bh%0A+++++++s+%3D+s%2B+f%28x%29%0A+++s+%3D+0.5%2A%28f%28a%29%2Bf%28b%29%29+%2Bs%0A+++return+h%2As%0A%0Adef+f1%28x%29%3A%0A++++return+exp%28-x%2Ax%29%2Alog%281%2Bx%2Asin%28x%29%29%0A%0Aa+%3D+1%3B++b+%3D+3%3B+n+%3D+1000%0Aresult+%3D+Trapez%28a%2Cb%2Cf1%2Cn%29%0Aprint+result&curInstr=0&py=2&cumulative=false">
+</iframe>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec27">Learning outcomes three first semesters </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Knowledge of basic algorithms.</b>
+<p>
+
+<ul>
+<li> Differential equations: Euler, modified Euler and Runge-Kutta methods</li>
+<li> Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals</li>
+<li> Random numbers, random walks, probability distributions and Monte Carlo integration</li>
+<li> Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel.</li>
+<li> Root finding and interpolation etc.</li>
+<li> Processing of sound and images.</li>
+</ul>
+
+The students have to code several of these algorithms during the first three semesters.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec28">Later courses </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+<b>Later courses should build on this foundation as much as possible</b>.
+
+<ol>
+<li> In particular, the course should not be too basic! There should be progression in the use of mathematics, numerical methods and programming, as well as science.</li>
+<li> Computational platform: Python, fully object-oriented and allows for seamless integration of c++ and Fortran codes, as well as Matlab-like programming environment. Makes it easy to parallelize codes as well.</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec29">Coordination </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec30">FYS-MEK1100 (Mechanics), Second Semester </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Realistic Pendulum.</b>
+<p>
+
+<p>
+Classical pendulum with damping and external force
+$$
+  ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Asin(\omega t).
+$$
+
+Easy to solve numerically without classical simplification, and then visualize the solution.  Done in first semester!
+Same equation for an RLC circuit 
+$$
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec31">FYS1120 Electromagnetism, Third Semester </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>RLC circuit.</b>
+<p>
+Same equation as the pendulum for an RLC circuit 
+$$
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
+$$
+
+From the numerics, 
+the students found the optimal parameters for studying experimentally chaos
+in an RLC circuit. Then they did the experiment.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec32">What can we do with the pendulum? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Many interesting problems.</b>
+<p>
+
+<ol>
+<li> Can study chaos, theoretically, numerically and experimentally, can choose 'best' parameters  for experimental setup.</li>
+<li> Can test different algorithms for solving ordinary differential equations, from Euler's to fourth-order Runge Kutta methods. Tight connection with algorithm and physics.</li>
+<li> Can make classes of differential equation solvers.</li>
+<li> Can make a general program that can be applied to other scientific cases in later courses, such as electromagnetism (RLC circuits).  Students realize that much of the same mathematics enters many physics cases.</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec33">More Examples from Physics Courses, 2-5 semester </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Second-fourth semester.</b>
+<p>
+
+<ul>
+<li> Air resistance in two and three dimensions with quadratic velocity dependence.</li>
+<li> Launching a probe into a tornado</li>
+<li> Rocket launching with realistic parameters, gravity assist</li>
+<li> How to kick a football and model its trajectory.</li>
+<li> Planet motion and position of planets</li>
+<li> Magnetic fields with various geometries based on Biot-Savart's law</li>
+<li> Harmonic oscillations and various forms of electromagnetic waves.</li>
+<li> Combined effect of different potentials such as the electrostatic potential and the gravitational potential.</li>
+<li> Simple studies of atoms and molecules, and much more</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec34">First computational physics course </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Late: Fifth semester, FYS3150 Computational Physics.</b>
+<p>
+
+<p>
+The first computational physics course can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
+
+<ul>
+<li> Monte carlo methods</li>
+<li> Parallelization</li>
+<li> Solving quantum mechanical problems by Variational Monte Carlo  or other quantum mechanical methods</li>
+<li> Study phase transitions with for example the Ising and Potts model.</li>
+<li> Molecular dynamics simulations etc etc</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec35">Challenges...  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>.. and objections.</b>
+<p>
+
+<p>
+<em>Standard objection: computations take away the attention from other central topics in 'my course'</em>. 
+
+<p>
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.
+
+<ul>
+<li> To help teachers: Developed pedagogical modules which can aid university teachers.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec36">Challenges and future plans </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> The project depends crucially on few individuals.</li> 
+<li> Need to get more teachers involved, not only good TAs.</li>
+<li> How  to implement a CSE perspective in other programs like Chemistry, Molecular Biology,  Biology, Engineering. New courses are being developed.</li>
+<li> Now a national pilot for other universities and regional colleges.</li>
+</ul>
+
+<b>Key issue: modularization of topics and development of a 'technological platform' which glues together different modules</b>
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec37">Which aspects are important for a successful introduction of CSE? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.</li>
+<li> Crucial to learn proper programming at the beginning.</li>
+<li> Choice of software.</li>
+<li> Textbooks and modularization of topics.</li>
+<li> Resources and expenses.</li>
+<li> Tailor to specific disciplines.</li>
+<li> Organizational matters.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec38">Do we get better students? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Molecular dynamics visualization by two MSc students.</b>
+<p>
+<center><p><img src="figures/visualize.jpg" align="bottom" width=700></p></center>
+
+<p>
+<!-- \includegraphics[width=9.5cm]{visualize.jpg} -->
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec39">Summary </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Make our research visible in early undergraduate courses, enhance research based teaching</li>
+<li> Possibility to focus more on understanding and increased insight.</li>
+<li> Impetus for broad cooperation in teaching.</li>
+<li> Strengthening of instruction based teaching (expensive and time-consuming).</li>
+<li> Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.</li>
+<li> And perhaps the most important issue: does this enhance the student's insight in the Sciences?</li>
+</ul>
+</div>
+
+
+<p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

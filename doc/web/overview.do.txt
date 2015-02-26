@@ -1,18 +1,19 @@
 # Strange way of testing for vortex...
 # #ifdef NON_VORTEX
-TITLE: Overview of course material: PHY981 Nuclear Structure 
+TITLE: Slides and various material
 
 TOC: off
 # #else
-TITLE: Overview of course material: PHY981 Nuclear Structure 
+TITLE: Slides and various material
 AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 # #endif
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
-published = ['cse', 'np',]
+published = ['cse', 'csebio', 'np',]
 chapters = {
  'cse': 'Computing in science education',
+ 'csebio': 'Computing in life sience education',
  'np': 'From nuclei to neutron stars; why is matter stable?',
 }
 %>
