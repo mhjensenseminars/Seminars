@@ -40,7 +40,7 @@ chapters = {
 <%def name="slide_types(name)">
 </%def>
 
-The teaching material is produced in various formats for printing and on-screen reading.
+The material is produced in various formats for printing and on-screen reading.
 
 !split
 The PDF files are based on LaTeX and have seldom technical
@@ -54,7 +54,7 @@ files if you find missing or incorrectly rendered
 formulas in HTML or ipython notebook files.
 
 
-======= PHY981: Nuclear Structure notes =======
+======= Slides in various formats =======
 
 % for ch in published:
 ===== ${chapters[ch]} =====
