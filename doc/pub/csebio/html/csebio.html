@@ -1,0 +1,1192 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Integrating computations, mathematics, physics and chemistry in undergraduate biology programs">
+
+<title>Integrating computations, mathematics, physics and chemistry in undergraduate biology programs</title>
+
+
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<style type="text/css">
+h1 {color: #b58900;}  /* yellow */
+/* h1 {color: #cb4b16;}  orange */
+/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
+code { padding: 0px; background-color: inherit; }
+pre {
+  border: 0pt solid #93a1a1;
+  box-shadow: none;
+}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #93a1a1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #eee8d5;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [(' Overarching questions ', 2, None, '___sec0'),
+              (' How to teach computing in biology? ', 2, None, '___sec1'),
+              (' Pilot project: Oct 2014 - Oct 2015 ', 2, None, '___sec2'),
+              (' The pedagogical framework ', 2, None, '___sec3'),
+              (' Example 1: ecoli lab experiment ', 2, None, '___sec4'),
+              (' Visualize data ', 2, None, '___sec5'),
+              (' Concepts must be introduced implicitly in a structured way ',
+               2,
+               None,
+               '___sec6'),
+              (' Read data from file ', 2, None, '___sec7'),
+              (' Lab journal ', 2, None, '___sec8'),
+              (' How can we reason about the process? ', 2, None, '___sec9'),
+              (' The first simple program ', 2, None, '___sec10'),
+              (' The output ', 2, None, '___sec11'),
+              (' Parameter estimation ', 2, None, '___sec12'),
+              (' A program relevant for the biological problem ',
+               2,
+               None,
+               '___sec13'),
+              (' Discuss the nature of such a model ', 2, None, '___sec14'),
+              (' Discuss the limitations of such a model ',
+               2,
+               None,
+               '___sec15'),
+              (' The pedagogical template (to be iterated!) ',
+               2,
+               None,
+               '___sec16'),
+              (' Technology for documenting cases ', 2, None, '___sec17'),
+              (' Immediate tasks ', 2, None, '___sec18'),
+              (' Adding model complexity: Predator-Prey model from ecology ',
+               2,
+               None,
+               '___sec19'),
+              (' Case study from Hudson bay ', 2, None, '___sec20'),
+              (' Hudson bay data ', 2, None, '___sec21'),
+              (' Plotting the data ', 2, None, '___sec22'),
+              (' Hares and lynx in Hudson bay from 1900 to 1920 ',
+               2,
+               None,
+               '___sec23'),
+              (' Why now create a computer model for the hare and lynx populations? ',
+               2,
+               None,
+               '___sec24'),
+              (' The traditional (top-down) approach ', 2, None, '___sec25'),
+              (" The ``new'' discrete bottom-up approach ",
+               2,
+               None,
+               '___sec26'),
+              (' Basic (computer-friendly) mathematics notation ',
+               2,
+               None,
+               '___sec27'),
+              (' Basic dynamics of the population of hares ',
+               2,
+               None,
+               '___sec28'),
+              (' Basic dynamics of the population of lynx ',
+               2,
+               None,
+               '___sec29'),
+              (' Evolution equations ', 2, None, '___sec30'),
+              (' Adapt the model to the Hudson Bay case ',
+               2,
+               None,
+               '___sec31'),
+              (' The program ', 2, None, '___sec32'),
+              (' The plot ', 2, None, '___sec33'),
+              (' Other examples ', 2, None, '___sec34')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+
+
+<center><h1>Integrating computations, mathematics, physics and chemistry in undergraduate biology programs</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, and Hans Petter Langtangen -->
+
+<center>
+<b>Morten Hjorth-Jensen</b> [1, 2]
+</center>
+
+<center>
+<b>Hans Petter Langtangen</b> [3, 4]
+</center>
+
+
+<p>
+<!-- institution(s) -->
+
+<center>[1] <b>Dept. of Physics, UiO</b></center>
+<center>[2] <b>Dept. of Physics, Michigan State University</b></center>
+<center>[3] <b>Dept. of Informatics, UiO</b></center>
+<center>[4] <b>Center for Biomedical Computing, Simula</b></center>
+<p>
+<center><h4>Feb 26, 2015</h4></center> <!-- date -->
+<p>
+<!-- !split -->
+
+<h2 id="___sec0">Overarching questions </h2>
+
+<p>
+<!-- !bpop -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Which skills are needed by MSc candidates in biology?</b>
+<p>
+There is new demand for more
+
+<ul>
+  <li> quantitative methods &amp; reasoning</li>
+  <li> understanding data and phenomena via models</li>
+  <li> creating <em>in silico</em> virtual labs</li>
+</ul>
+</div>
+
+<!-- !epop -->
+
+<p>
+<!-- !bpop -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Challenge:</b>
+<p>
+How to integrate such computing-based activities in the bachelor programs
+when the students are <em>not</em> interested in mathematics, physics, and
+programming?
+</div>
+
+<!-- !epop -->
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec1">How to teach computing in biology? </h2>
+
+<p>
+<!-- !bpop -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
+
+<ul>
+  <li> Uninteresting to first study tools when you want to study biology</li>
+  <li> Little understanding of what the tools are good for</li>
+  <li> Minor utilization of tools later in biology</li>
+</ul>
+</div>
+
+<!-- !epop -->
+
+<p>
+<!-- !bpop -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>It's time for new thinking:</b>
+<p>
+
+<ul>
+  <li> Just-in-time teaching: teach tools <em>when needed</em></li>
+  <li> Teach tools in the <em>context of biology</em></li>
+  <li> Emphasize development of <em>intuition and understanding</em></li>
+  <li> Base learning of the students' own <em>explorations in biology projects</em></li>
+  <li> Integrate lab work with computing tools</li>
+</ul>
+</div>
+
+<!-- !epop -->
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec2">Pilot project: Oct 2014 - Oct 2015 </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Form a project team of dedicated CSE+IBV people and  PhD students</li>
+ <li> Develop a pedagogical framework</li>
+ <li> CSE+IBV people identify a set of possible examples</li>
+ <li> PhD students work closely with CSE+IBV people to find data,
+   define models, and write documents</li>
+ <li> Fall 2015: intro course in computing and programming for IBV teachers, using selected examples</li>
+ <li> Educational workshop at IBV:</li>
+
+<ul>
+   <li> Present results from the project</li>
+   <li> Discuss how and where to implement examples in BIOxxxx courses</li>
+</ul>
+
+ <li> Fall 2016: First integration of computing in courses</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec3">The pedagogical framework </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Aim: Develop intuition about the scientific method.</b>
+<p>
+
+<ul>
+ <li> Method: case-based learning</li>
+ <li> Coherent problem solving <em>in biology</em> by integrating
+   mathematics, programming, physics/chemistry, ...</li>
+ <li> Starting point: data from lab or field experiments</li>
+ <li> Visualize data</li>
+ <li> Derive computational models directly from mathematical/intuitive <em>reasoning</em></li>
+ <li> Program model(s), fit parameters, compare with data</li>
+ <li> Develop intuition and understanding based on</li>
+
+<ul>
+  <li> the principles behind the model</li>
+  <li> exploration of the model (&quot;what if&quot;)</li>
+  <li> prediction of new experiments</li>
+</ul>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec4">Example 1: ecoli lab experiment </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Observations of no of bacteria vs time in seconds,
+stored in Excel and written to a CVS file:
+
+<p>
+<!-- begin verbatim block  txt-->
+<pre><code>0,100
+600,140
+1200,250
+1800,360
+2400,480
+3000,820
+3600,1300
+4200,1700
+4800,2900
+5400,3900
+6000,7000
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec5">Visualize data </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Meet a text editor and a terminal window</li>
+ <li> Very basic Unix</li>
+</ul>
+
+First program:
+
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>t = [0, 600, 1200, 1800, 2400, 3000, 3600,
+     4200, 4800, 5400, 6000]
+N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec6">Concepts must be introduced implicitly in a structured way </h2>
+
+<p>
+<div class="alert alert-block alert-warning alert-text-normal">
+<b>Warning.</b>
+<p>
+
+<ul>
+ <li> Always identify new concepts</li>
+ <li> Train new concepts in simplified (&quot;trivial&quot;) problems</li>
+</ul>
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Concepts in the previous example:</b>
+<p>
+
+<ul>
+ <li> Lists or arrays of numbers</li>
+ <li> Plotting commands</li>
+ <li> Curve = function of time</li>
+</ul>
+</div>
+
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Notice:</b>
+<p>
+The concept of a continuous function \( N(t) \) is not necessary,
+just straight lines between discrete points on a curve.
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec7">Read data from file </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>import numpy as np
+data = np.loadtxt('ecoli.csv', delimiter=',')
+print data  # look at the format
+t = data[:,0]
+N = data[:,1]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Typical pattern:</b>
+<p>
+The population grows faster and faster. Why? Is there an
+underlying (general) mechanism?
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec8">Lab journal </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Use IPython notebook as lab journal.
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec9">How can we reason about the process? </h2>
+
+<p>
+<!-- <a href="http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html" target="_self"><tt>http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html</tt></a> -->
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<!-- !bpop -->
+
+<ol>
+<li> Cells divide after \( T \) seconds on average (one generation)</li>
+<li> \( 2N \) celles divide into twice as many new cells \( \Delta N \) in a time
+   interval \( \Delta t \) as \( N \) cells would: \( \Delta N \propto N \)</li>
+<li> \( N \) cells result in twice as many new individuals \( \Delta N \) in
+   time \( 2\Delta t \) as in time \( \Delta t \): \( \Delta N \propto\Delta t \)</li>
+<li> Same proportionality wrt death (repeat reasoning)</li>
+<li> Proposed model: \( \Delta N = b\Delta t N - d\Delta tN \) for some unknown
+   constants \( b \) (births) and \( d \) (deaths)</li>
+<li> Describe evolution in discrete time: \( t_n=n\Delta t \)</li>
+<li> Program-friendly notation: \( N \) at \( t_n \) is \( N^n \)</li>
+<li> Math model: \( N^{n+1} = N^n + r\Delta t\, N \) (with \( \ r=b-d \))</li>
+<li> Program model: <code>N[n+1] = N[n] + r*dt*N[n]</code></li>
+</ol>
+
+<!-- !epop -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec10">The first simple program </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Let us solve the difference equation in as simple way as possible,
+just to train some programming: \( r=1.5 \), \( N^0=1 \), \( \Delta t=0.5 \)
+
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>import numpy as np
+
+t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 1
+r = 0.5
+
+for n in range(0, N.size-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+    print 'N[%d]=%.1f' % (n+1, N[n+1])
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec11">The output </h2>
+
+<p>
+<!-- begin verbatim block -->
+<pre><code>N[1]=1.2
+N[2]=1.6
+N[3]=2.0
+N[4]=2.4
+N[5]=3.1
+N[6]=3.8
+N[7]=4.8
+N[8]=6.0
+N[9]=7.5
+N[10]=9.3
+N[11]=11.6
+N[12]=14.6
+N[13]=18.2
+N[14]=22.7
+N[15]=28.4
+N[16]=35.5
+N[17]=44.4
+N[18]=55.5
+N[19]=69.4
+N[20]=86.7
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec12">Parameter estimation </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> We do not know \( r \)</li>
+ <li> How can we estimate \( r \) from data?</li>
+</ul>
+
+We can use the difference equation with the experimental data
+
+$$ N^{n+1} = N^n + r\Delta t N^n$$
+
+Say \( N^{n+1} \) and \( N^n \) are known from data, solve wrt \( r \):
+
+$$ r = \frac{N^{n+1}-N^n}{N^n\Delta t} $$
+
+
+<p>
+Use experimental data in the fraction, say \( t_1=600 \), \( t_2=1200 \),
+\( N^1=140 \), \( N^2=250 \): \( r=0.0013 \).
+</div>
+
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>More sophisticated methods.</b>
+<p>
+Can do a nonlinear least squares parameter fit, but that is
+too advanced at this stage.
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec13">A program relevant for the biological problem </h2>
+
+<p>
+<!-- exact r = 0.000694 -->
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>import numpy as np
+
+# Estimate r
+data = np.loadtxt('ecoli.csv', delimiter=',')
+t_e = data[:,0]
+N_e = data[:,1]
+i = 2  # Data point (i,i+1) used to estimate r
+r = (N_e[i+1] - N_e[i])/(N_e[i]*(t_e[i+1] - t_e[i]))
+print 'Estimated r=%.5f' % r
+# Can experiment with r values and see if the model can
+# match the data better
+
+T = 1200     # cell can divide after T sec
+t_max = 5*T  # 5 generations in experiment
+t = np.linspace(0, t_max, 1000)
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 100
+for n in range(0, len(t)-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'r-', t_e, N_e, 'bo')
+plt.xlabel('time [s]');  plt.ylabel('N')
+plt.legend(['model', 'experiment'], loc='upper left')
+plt.show()
+</code></pre>
+<!-- end verbatim block -->
+
+<p>
+Change <code>r</code> in the program and play around to make a better fit!
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec14">Discuss the nature of such a model </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Write up all the biological factors that influence the
+   population size of bacteria</li>
+ <li> Understand that all such effects are merged into one parameter \( r \)</li>
+ <li> Understand that the reasoning must be the same whether we
+   have bacteria, animals or humans - this is a generic model!<br />
+   (even the interest rate in a bank follows the same model)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec15">Discuss the limitations of such a model </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> How many bacteria in the lab after one month?</li>
+ <li> Growth is restricted by environmental resources!</li>
+ <li> Fix the model (logistic growth)</li>
+ <li> Is the logistic model appropriate for a lab experiment?</li>
+ <li> Find data to support the logistic model <br />
+   (it's a <em>very</em> simple model)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec16">The pedagogical template (to be iterated!) </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Start with a real biological problem</li>
+ <li> Be careful with too many new concepts</li>
+ <li> Workflow:</li>
+
+<ul>
+  <li> data</li>
+  <li> visualization</li>
+  <li> patterns</li>
+  <li> modeling (<em>discrete</em>)</li>
+  <li> programming</li>
+  <li> testing</li>
+  <li> parameter estimation (difficult)</li>
+  <li> validation</li>
+  <li> prediction</li>
+</ul>
+
+ <li> Make many small exercises that train the new concepts</li>
+ <li> Repeat the case in a way that makes a complete understanding</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec17">Technology for documenting cases </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Documentation: slides in the doconce format with extra notes<br />
+   (can compile with/without notes)</li>
+ <li> Realistic goal: write out the slides for a gentle book on biocomputing examples</li>
+ <li> The biological case is in a separate file that the students can work
+   with as an IPython notebook</li>
+ <li> Problem: not much basic literature exists</li>
+ <li> Cases must be linked in a learning graph:<br />
+   <em>I want to do nerve cell modeling, but how to progress to this stage?</em></li>
+ <li> Make a list of concepts and where concepts are trained</li>
+ <li> Think of each case as a <em>separate module</em></li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec18">Immediate tasks </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Find a good bacteria growth lab example - do the first example</li>
+ <li> Alternative model: random 2D walk, people meet and make new individuals</li>
+ <li> Predator-pray model: any field experiment to build?</li>
+ <li> Experiments based on technology: imaging, sensors, ...</li>
+ <li> Disease modeling coupled to data</li>
+ <li> Predator-pray with disease</li>
+ <li> Bioinformatics cases and programming</li>
+ <li> ...</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec19">Adding model complexity: Predator-Prey model from ecology </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The population dynamics of a simple predator-prey system is a
+classical example shown in many biology textbooks when ecological
+systems are discussed. The system contains all elements of the
+scientific method:
+
+<ul>
+ <li> The set up of a specific hypothesis combined with</li>
+ <li> the experimental methods needed (one can study existing data or perform experiments)</li>
+ <li> analyzing and interpreting the data and performing further experiments if needed</li>
+ <li> trying to extract general behaviors and extract eventual laws or patterns</li>
+ <li> develop mathematical relations for the uncovered regularities/laws and test these by performing new experiments</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec20">Case study from Hudson bay </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Lots of data about populations of hares and lynx collected from furs in Hudson Bay, Canada, are available. It is known that the populations oscillate. Why?
+We shall demonstrate the scientific method by
+
+<ol>
+<li> plotting the data</li>
+<li> derive a simple model for the population dynamics</li>
+<li> (fitting parameters in the model to the data)</li>
+<li> using the model predict the evolution other predator-pray systems</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec21">Hudson bay data </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Year</th> <th align="center">Hares (x1000)</th> <th align="center">Lynx (x1000)</th> </tr>
+</thead>
+<tbody>
+<tr><td align="left">   1900    </td> <td align="right">   30.0             </td> <td align="right">   4.0             </td> </tr>
+<tr><td align="left">   1901    </td> <td align="right">   47.2             </td> <td align="right">   6.1             </td> </tr>
+<tr><td align="left">   1902    </td> <td align="right">   70.2             </td> <td align="right">   9.8             </td> </tr>
+<tr><td align="left">   1903    </td> <td align="right">   77.4             </td> <td align="right">   35.2            </td> </tr>
+<tr><td align="left">   1904    </td> <td align="right">   36.3             </td> <td align="right">   59.4            </td> </tr>
+<tr><td align="left">   1905    </td> <td align="right">   20.6             </td> <td align="right">   41.7            </td> </tr>
+<tr><td align="left">   1906    </td> <td align="right">   18.1             </td> <td align="right">   19.0            </td> </tr>
+<tr><td align="left">   1907    </td> <td align="right">   21.4             </td> <td align="right">   13.0            </td> </tr>
+<tr><td align="left">   1908    </td> <td align="right">   22.0             </td> <td align="right">   8.3             </td> </tr>
+<tr><td align="left">   1909    </td> <td align="right">   25.4             </td> <td align="right">   9.1             </td> </tr>
+<tr><td align="left">   1910    </td> <td align="right">   27.1             </td> <td align="right">   7.4             </td> </tr>
+<tr><td align="left">   1911    </td> <td align="right">   40.3             </td> <td align="right">   8.0             </td> </tr>
+<tr><td align="left">   1912    </td> <td align="right">   57               </td> <td align="right">   12.3            </td> </tr>
+<tr><td align="left">   1913    </td> <td align="right">   76.6             </td> <td align="right">   19.5            </td> </tr>
+<tr><td align="left">   1914    </td> <td align="right">   52.3             </td> <td align="right">   45.7            </td> </tr>
+<tr><td align="left">   1915    </td> <td align="right">   19.5             </td> <td align="right">   51.1            </td> </tr>
+<tr><td align="left">   1916    </td> <td align="right">   11.2             </td> <td align="right">   29.7            </td> </tr>
+<tr><td align="left">   1917    </td> <td align="right">   7.6              </td> <td align="right">   15.8            </td> </tr>
+<tr><td align="left">   1918    </td> <td align="right">   14.6             </td> <td align="right">   9.7             </td> </tr>
+<tr><td align="left">   1919    </td> <td align="right">   16.2             </td> <td align="right">   10.1            </td> </tr>
+<tr><td align="left">   1920    </td> <td align="right">   24.7             </td> <td align="right">   8.6             </td> </tr>
+</tbody>
+</table>
+
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec22">Plotting the data </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>import numpy as np
+from  matplotlib import pyplot as plt
+
+# Load in data file
+data = np.loadtxt('Hudson_Bay.dat', delimiter=',', skiprows=1)
+# Make arrays containing x-axis and hares and lynx populations
+year = data[:,0]
+hares = data[:,1]
+lynx = data[:,2]
+
+plt.plot(year, hares ,'b-+', year, lynx, 'r-o')
+plt.axis([1900,1920,0, 100.0])
+plt.xlabel(r'Year')
+plt.ylabel(r'Numbers of hares and lynx ')
+plt.legend(('Hares','Lynx'), loc='upper right')
+plt.title(r'Population of hares and lynx from 1900-1920 (x1000)}')
+plt.savefig('Hudson_Bay_data.pdf')
+plt.savefig('Hudson_Bay_data.png')
+plt.show()
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec23">Hares and lynx in Hudson bay from 1900 to 1920 </h2>
+
+<p>
+<center><p><img src="fig/Hudson_Bay_data.png" align="bottom" width=700></p></center>
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec24">Why now create a computer model for the hare and lynx populations? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> We see oscillations in the data</li>
+ <li> What causes cycles to slow or speed up?</li>
+ <li> What affects the amplitude of the oscillation or do you expect to see the oscillations damp to a stable equilibrium?</li>
+ <li> With a model we can better <em>understand the data</em></li>
+ <li> More important: we can understand the ecology dynamics of
+   predator-pray populations</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec25">The traditional (top-down) approach </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The classical way (in all books) is to present the Lotka-Volterra equations:
+
+$$
+\begin{align*}
+\frac{dH}{dt} &= H(a - b L)\\ 
+\frac{dL}{dt} &= - L(d - c  H)
+\end{align*}
+$$
+
+
+<p>
+Here,
+
+<ul>
+ <li> \( H \) is the number of preys</li>
+ <li> \( L \) the number of predators</li>
+ <li> \( a \), \( b \), \( d \), \( c \) are parameters</li>
+</ul>
+
+Most books quickly establish the model and then use considerable space on
+discussing the qualitative properties of this <em>nonlinear system of
+ODEs</em> (which cannot be solved)
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec26">The &quot;new&quot; discrete bottom-up approach </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>The bottom-up approach.</b>
+<p>
+<!-- !bpop -->
+
+<ul>
+ <li> Start with experimental data and discuss the methods which have been used to collect the data, the assumptions, the electronic devices, the aims etc. That is, expose the students to the theory and assumptions behind the data that have been collected and motivate for the scientific method.</li>
+ <li> Where appropriate the students should do the experiment(s) needed to collect the data.</li>
+ <li> The first programming tasks are to read and visualize the data to see if there are patterns or regularities. This strengthens a research-driven intuition.</li>
+ <li> Now we want to increase the understanding through modeling.</li>
+ <li> Most of the biology lies in the <em>derivation</em> of the model. We shall
+   focus on an intuitive discrete approach that leads to difference
+   equations that can be programmed <em>and solved</em> directly.</li>
+</ul>
+
+<!-- !epop -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec27">Basic (computer-friendly) mathematics notation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> Time points: \( t_0,t_1,\ldots,t_m \)</li>
+ <li> Uniform distribution of time points: \( t_n=n\Delta t \)</li>
+ <li> \( H^n \): population of hares at time \( t_n \)</li>
+ <li> \( L^n \): population of lynx at time \( t_n \)</li>
+ <li> We want to model the changes in populations, \( \Delta H=H^{n+1}-H^n \)
+   and \( \Delta L=L^{n+1}-L^n \) during a general time interval \( [t_{n+1},t_n] \)
+   of length \( \Delta t=t_{n+1}-t_n \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec28">Basic dynamics of the population of hares </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The population of hares evolves due to births and deaths exactly as a bacteria population:
+
+$$
+\Delta H = a \Delta t H^n
+$$
+
+However, hares have an additional loss in the population because
+they are eaten by lynx.
+All the hares and lynx can form
+\( H\cdot L \) pairs in total. When such pairs meet during a time
+interval \( \Delta t \), there is some
+small probablity that the lynx will eat the hare.
+So in fraction \( b\Delta t HL \), the lynx eat hares. This
+loss of hares and must be accounted for:
+subtracted in the equation for hares:
+
+$$ \Delta H = a\Delta t H^n - b \Delta t H^nL^n$$
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec29">Basic dynamics of the population of lynx </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We assume that the primary growth for the lynx population depends on sufficient food for raising lynx kittens, which implies an adequate source of nutrients from predation on hares. Thus, the growth of the lynx population does not only depend of how many lynx there are, but on how many hares they can eat.
+In a time interval \( \Delta t HL \) hares and lynx can meet, and in a
+fraction \( b\Delta t HL \) the lynx eats the hare. All of this does not
+contribute to the growth of lynx, again just a fraction of
+\( b\Delta t HL \) that we write as
+\( d\Delta t HL \). In addition, lynx die just as in the population
+dynamics with one isolated animal population, leading to a loss
+\( -c\Delta t L \).
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The accounting of lynx then looks like
+$$ \Delta L = d\Delta t H^nL^n - c\Delta t L^n$$
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec30">Evolution equations </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+By writing up the definition of \( \Delta H \) and \( \Delta L \), and putting
+all assumed known terms \( H^n \) and \( L^n \) on the right-hand side, we have
+
+$$ H^{n+1} = H^n + a\Delta t H^n - b\Delta t H^n L^n $$
+
+
+$$ L^{n+1} = L^n + d\Delta t H^nL^n - c\Delta t L^n $$
+
+
+<p>
+Note:
+
+<ul>
+ <li> These equations are ready to be implemented!</li>
+ <li> But to start, we need \( H^0 \) and \( L^0 \) <br />
+   (which we can get from the data)</li>
+ <li> We also need values for \( a \), \( b \), \( d \), \( c \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec31">Adapt the model to the Hudson Bay case </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> As always, models tend to be general - as here, applicable
+   to &quot;all&quot; predator-pray systems</li>
+ <li> The critical issue is whether the <em>interaction</em> between hares and lynx
+   is sufficiently well modeled by \( \hbox{const}HL \)</li>
+ <li> The parameters \( a \), \( b \), \( d \), and \( c \) must be
+   estimated from data</li>
+ <li> Measure time in years</li>
+ <li> \( t_0=1900 \), \( t_m=1920 \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec32">The program </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<!-- begin verbatim block  pypro-->
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+def solver(m, H0, L0, dt, a, b, c, d, t0):
+    &quot;&quot;&quot;Solve the difference equations for H and L over m years
+    with time step dt (measured in years.&quot;&quot;&quot;
+
+    num_intervals = int(m/float(dt))
+    t = np.linspace(t0, t0 + m, num_intervals+1)
+    H = np.zeros(t.size)
+    L = np.zeros(t.size)
+
+    print 'Init:', H0, L0, dt
+    H[0] = H0
+    L[0] = L0
+
+    for n in range(0, len(t)-1):
+        H[n+1] = H[n] + a*dt*H[n] - b*dt*H[n]*L[n]
+        L[n+1] = L[n] + d*dt*H[n]*L[n] - c*dt*L[n]
+    return H, L, t
+
+# Load in data file
+data = np.loadtxt('Hudson_Bay.csv', delimiter=',', skiprows=1)
+# Make arrays containing x-axis and hares and lynx populations
+t_e = data[:,0]
+H_e = data[:,1]
+L_e = data[:,2]
+
+# Simulate using the model
+H, L, t = solver(m=20, H0=34.91, L0=3.857, dt=0.1,
+                 a=0.4807, b=0.02482, c=0.9272, d=0.02756,
+                 t0=1900)
+
+# Visualize simulations and data
+plt.plot(t_e, H_e, 'b-+', t_e, L_e, 'r-o', t, H, 'm--', t, L, 'k--')
+plt.xlabel('Year')
+plt.ylabel('Numbers of hares and lynx')
+plt.axis([1900, 1920, 0, 140])
+plt.title(r'Population of hares and lynx 1900-1920 (x1000)')
+plt.legend(('H_e', 'L_e', 'H', 'L'), loc='upper left')
+plt.savefig('Hudson_Bay_sim.pdf')
+plt.savefig('Hudson_Bay_sim.png')
+plt.show()
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec33">The plot </h2>
+
+<p>
+<center><p><img src="fig/Hudson_Bay_sim.png" align="bottom" width=700></p></center>
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec34">Other examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+ <li> <a href="http://hplgit.github.io/disease-modeling/doc/web/index.html" target="_self">Disease modeling</a></li>
+ <li> Predator-pray with disease</li>
+ <li> <a href="http://hplgit.github.io/bioinf-py/doc/web/index.html" target="_self">Bioinformatics: searching in strings</a></li>
+ <li> Move from difference equations to differential equations, would this be meaningful? Probably not - it does not give anything in biology before the models are so complex that one needs other things than Forward Euler...</li>
+</ul>
+</div>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
