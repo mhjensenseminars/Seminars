@@ -133,13 +133,13 @@ February 26, 2015
 \begin{itemize}
 \item Hans Petter Langtangen, Computer Science
 
-\item Knut Morken, Computer Science
+\item Knut Morken, Mathematics
 
 \item Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
 
 \item Tom Lindstrom, Mathematics
 
-\item Oyvind Ryan, Mathematics and Computer Science and many more
+\item Oyvind Ryan, Mathematics
 
 \item Solveig Kristensen, Dean of Education
 
@@ -162,13 +162,13 @@ February 26, 2015
 % --- begin paragraph admon ---
 \paragraph{}
 \begin{itemize}
-\item Python and our first programming course, first semester \href{{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h13/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h13/}}. Excellent new textbook by Hans Petter Langtangen
+\item Python and our first programming course, first semester \href{{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/}}{course}. Excellent new textbook by Hans Petter Langtangen, click here for the \href{{http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen}}{textbook} or the \href{{http://hplgit.github.io/primer.html/doc/web/index.html}}{online version}
 
-\item Mathematical modelling course, first semester \href{{http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h13/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h13/}}. Textbook by Knut Morken to be published by Springer.
+\item Mathematical modelling course, first semester \href{{http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/}}{course}. Textbook by Knut Morken to be published by Springer.
 
-\item Mechanics, second semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/}}. New textbook by Anders Malthe-Sorenssen, in press by Springer
+\item Mechanics, second semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/}}{course}. New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
 
-\item Computational Physics I, fifth semester, \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h13/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h13/}}
+\item Computational Physics I, fifth semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/}}{course}. Textbook to be published by IOP in 2015, with \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf}}{online version}.
 \end{itemize}
 
 \noindent
@@ -376,7 +376,7 @@ People who master these skills bring an important compentence to society.
 \end{itemize}
 
 \noindent
-The basic topics (math, chemistry, physics, biology \dots) are taught more or less in the same fashion as before, unchanged over several decades!
+The basic topics (math, chemistry, physics, biology etc) are taught more or less in the same fashion as before, unchanged over several decades!
 % --- end paragraph admon ---
 
 
@@ -412,16 +412,11 @@ The basic topics (math, chemistry, physics, biology \dots) are taught more or le
 \subsection{Large scale simulations}
 
 % --- begin paragraph admon ---
-\paragraph{}
-Fluid dynamical simulations central in air industry.
+\paragraph{Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.}
 
 
 % inline figure
 \centerline{\includegraphics[width=0.6\linewidth]{figures/fig10.jpg}}
-
-
-
-% \includegraphics[width=0.95\textwidth]{fig10.jpg}
 % --- end paragraph admon ---
 
 
@@ -437,10 +432,6 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 % inline figure
 \centerline{\includegraphics[width=1.0\linewidth]{figures/fig8.jpg}}
-
-
-
-% \includegraphics[width=0.95\textwidth]{fig8.jpg}
 % --- end paragraph admon ---
 
 
@@ -455,10 +446,6 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 % inline figure
 \centerline{\includegraphics[width=0.8\linewidth]{figures/rocks.pdf}}
-
-
-
-% \includegraphics[width=0.9\textwidth]{rocks.pdf}
 % --- end paragraph admon ---
 
 
@@ -554,7 +541,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 % --- begin paragraph admon ---
 \paragraph{Programming.}
-A compulsory programming course with a strong mathematical flavour. Should give a solid foundation in programming. Programming is understanding!
+A compulsory programming course with a strong mathematical flavour. \emph{Should give a solid foundation in programming as a problem solving technique in mathematics}. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
 % --- end paragraph admon ---
 
 
@@ -562,7 +549,7 @@ A compulsory programming course with a strong mathematical flavour. Should give 
 
 % --- begin paragraph admon ---
 \paragraph{Mathematics and numerics.}
-Mathematics is at least as important as before, but should be supplemented with development and analysis of numerical methods.
+Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
 % --- end paragraph admon ---
 
 
@@ -584,7 +571,7 @@ Training in modelling and problem solving with numerical methods and visualisati
 \paragraph{Crucial ingredients.}
 
 \begin{itemize}
-\item Support from governing bodies (now priority 1 of the CNS@Oslo)
+\item Support from governing bodies (now priority 1 of the College of Natural Science at UOslo)
 
 \item Cooperation across departmental boundaries
 
@@ -657,14 +644,37 @@ Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 
 \noindent
 \[
- f'(x)\approx \frac{f(x+h)-f(x-h)}{2h}.
+ f'(x)= \frac{f(x+h)-f(x-h)}{2h}+O(h^2).
 \]
 \begin{itemize}
-\item Implementation and use in applications in  the programming course INF1100, with Python as programming language. 
+\item Implementation in Python in INF1100
 \end{itemize}
 
 \noindent
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+def differentiate(f, x, h=1E-5):
+     return (f(x+h) - f(x-h))/(2*h)
+\end{minted}
 % --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Example: Computations from day one}
+
+% --- begin paragraph admon ---
+\paragraph{Differentiation and comparison with symbolic expressions.}
+Combined with the possibility of symbolic calculations with \emph{Sympy}, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+def differentiate(f, x, h=1E-5, symbolic=False):
+    if symbolic:
+        import sympy
+        return sympy.lambdify([x], sympy.diff(f, x))
+    else:
+        return (f(x+h) - f(x-h))/(2*h)
+\end{minted}
+% --- end paragraph admon ---
+
 
 
 
@@ -703,7 +713,7 @@ Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 \paragraph{Integration by Trapezoidal Rule.}
 
 \begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
-from math import *
+from math import exp, log, sin
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
    s = 0
@@ -730,10 +740,14 @@ print result
 \subsection{Typical implementation in INF1100}
 
 % --- begin paragraph admon ---
-\paragraph{Integration by Trapezoidal Rule.}
-
+\paragraph{Symbolic calculations and numerical calculations in one code!}
+Python offers an  extremely versatile programming  environment, allowing for the inclusion of analytical studies in a numerical program. Here we show another example
+where \emph{SymPy} is used to evaluate the integral and compute the absolute error 
+with respect to the numerically evaluated one of the integral
+$\int_0^1 dx 4/(1+x^2) = \pi$: 
 \begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 from math import *
+from sympy import *
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
    s = 0
@@ -744,18 +758,46 @@ def Trapez(a,b,f,n):
    s = 0.5*(f(a)+f(b)) +s
    return h*s
 
-def f1(x):
-    return exp(-x*x)*log(1+x*sin(x))
+#  function to compute pi
+def function(x):
+    return 4.0/(1+x*x)
 
-a = 1;  b = 3; n = 1000
-result = Trapez(a,b,f1,n)
-print result
+a = 0.0;  b = 1.0; n = 100
+result = Trapez(a,b,function,n)
+print "Trapezoidal rule=", result
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, 0.0, 1.0))
+print "Sympy integration=", exact
+# Find relative error
+print "Relative error", abs((exact-result)/exact)
 \end{minted}
-\noindent
-(\href{{http://pythontutor.com/visualize.html\#code=from+math+import+\%2A\%0Adef+Trapez\%28a\%2Cb\%2Cf\%2Cn\%29\%3A\%0A+++h+\%3D+\%28b-a\%29\%2Ffloat\%28n\%29\%0A+++s+\%3D+0\%0A+++x+\%3D+a\%0A+++for+i+in+range\%281\%2Cn\%2C1\%29\%3A\%0A+++++++x+\%3D+x\%2Bh\%0A+++++++s+\%3D+s\%2B+f\%28x\%29\%0A+++s+\%3D+0.5\%2A\%28f\%28a\%29\%2Bf\%28b\%29\%29+\%2Bs\%0A+++return+h\%2As\%0A\%0Adef+f1\%28x\%29\%3A\%0A++++return+exp\%28-x\%2Ax\%29\%2Alog\%281\%2Bx\%2Asin\%28x\%29\%29\%0A\%0Aa+\%3D+1\%3B++b+\%3D+3\%3B+n+\%3D+1000\%0Aresult+\%3D+Trapez\%28a\%2Cb\%2Cf1\%2Cn\%29\%0Aprint+result&mode=display&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&py=2&curInstr=0}}{Visualize execution})
 % --- end paragraph admon ---
 
 
+
+
+% !split
+\subsection{Integrating numerical mathematics with calculus}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing thereby students and teachers to
+
+\begin{itemize}
+\item Validate and verify  their  algorithms. 
+
+\item Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.
+
+\item Validation and verification are then included \emph{naturally} and one can develop a better attitude to what is meant with an enthically sound scientific approach.
+
+\item The above example allows the student to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. The students get trained from day one to think error analysis. 
+
+\item With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebook. 
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
 
 
 
@@ -769,17 +811,17 @@ print result
 \paragraph{Knowledge of basic algorithms.}
 
 \begin{itemize}
-\item Differential equations: Euler, modified Euler and Runge-Kutta methods
+\item Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)
 
-\item Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals
+\item Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals (first semester)
 
-\item Random numbers, random walks, probability distributions and Monte Carlo integration
+\item Random numbers, random walks, probability distributions and Monte Carlo integration  (first semester)
 
-\item Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel.
+\item Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel. (second and third semester)
 
-\item Root finding and interpolation etc.
+\item Root finding and interpolation etc. (all three first semesters)
 
-\item Processing of sound and images.
+\item Processing of sound and images (first semester).
 \end{itemize}
 
 \noindent
@@ -922,7 +964,7 @@ in an RLC circuit. Then they did the experiment.
 % --- begin paragraph admon ---
 \paragraph{Late: Fifth semester, FYS3150 Computational Physics.}
 
-The first computational physics course can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
+The first computational physics \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/}}{course} can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
 
 \begin{itemize}
 \item Monte carlo methods
