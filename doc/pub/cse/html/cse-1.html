@@ -115,34 +115,35 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec28'),
+              (' Error analysis ', 2, None, '___sec29'),
               (' Learning outcomes three first semesters ',
                2,
                None,
-               '___sec29'),
-              (' Later courses ', 2, None, '___sec30'),
-              (' Coordination ', 2, None, '___sec31'),
+               '___sec30'),
+              (' Later courses ', 2, None, '___sec31'),
+              (' Coordination ', 2, None, '___sec32'),
               (' FYS-MEK1100 (Mechanics), Second Semester ',
                2,
                None,
-               '___sec32'),
+               '___sec33'),
               (' FYS1120 Electromagnetism, Third Semester ',
                2,
                None,
-               '___sec33'),
-              (' What can we do with the pendulum? ', 2, None, '___sec34'),
+               '___sec34'),
+              (' What can we do with the pendulum? ', 2, None, '___sec35'),
               (' More Examples from Physics Courses, 2-5 semester ',
                2,
                None,
-               '___sec35'),
-              (' First computational physics course ', 2, None, '___sec36'),
-              (' Challenges...  ', 2, None, '___sec37'),
-              (' Challenges and future plans ', 2, None, '___sec38'),
+               '___sec36'),
+              (' First computational physics course ', 2, None, '___sec37'),
+              (' Challenges...  ', 2, None, '___sec38'),
+              (' Challenges and future plans ', 2, None, '___sec39'),
               (' Which aspects are important for a successful introduction of CSE? ',
                2,
                None,
-               '___sec39'),
-              (' Do we get better students? ', 2, None, '___sec40'),
-              (' Summary ', 2, None, '___sec41')]}
+               '___sec40'),
+              (' Do we get better students? ', 2, None, '___sec41'),
+              (' Summary ', 2, None, '___sec42')]}
 end of tocinfo -->
 
 <body>
@@ -719,7 +720,7 @@ result <span style="color: #666666">=</span> Trapez(a,b,f1,n)
 Python offers an  extremely versatile programming  environment, allowing for the inclusion of analytical studies in a numerical program. Here we show another example
 where <em>SymPy</em> is used to evaluate the integral and compute the absolute error 
 with respect to the numerically evaluated one of the integral
-\( \int_0^1 dx 4/(1+x^2) = \pi \): 
+\( 4\int_0^1 dx/(1+x^2) = \pi \): 
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "default" -->
@@ -765,9 +766,9 @@ The last example shows the potential of combining numerical algorithms with symb
 <ul>
 <li> Validate and verify  their  algorithms.</li> 
 <li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
-<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an enthically sound scientific approach.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
 <li> The above example allows the student to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. The students get trained from day one to think error analysis.</li> 
-<li> With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebook.</li> 
+<li> With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebooks.</li> 
 </ul>
 </div>
 
@@ -775,7 +776,58 @@ The last example shows the potential of combining numerical algorithms with symb
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec29">Learning outcomes three first semesters </h2>
+<h2 id="___sec29">Error analysis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> log10
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> Symbol, integrate
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">plt</span>
+<span style="color: #408080; font-style: italic"># function for the trapezoidal rule</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
+<span style="color: #408080; font-style: italic">#  function to compute pi</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">function</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">4.0/</span>(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>x)
+<span style="color: #408080; font-style: italic"># define integration limits</span>
+a <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">1.0</span>;
+<span style="color: #408080; font-style: italic"># find result from sympy</span>
+<span style="color: #408080; font-style: italic"># define x as a symbol to be used by sympy</span>
+x <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;x&#39;</span>)
+exact <span style="color: #666666">=</span> integrate(function(x), (x, a, b))
+<span style="color: #408080; font-style: italic"># set up the arrays for plotting the relative error</span>
+n <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(<span style="color: #666666">8</span>); y <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(<span style="color: #666666">8</span>);
+<span style="color: #408080; font-style: italic"># find the relative error as function of integration points</span>
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">0</span>, <span style="color: #666666">8</span>, <span style="color: #666666">1</span>):
+    npts <span style="color: #666666">=</span> <span style="color: #666666">10**</span>i
+    result <span style="color: #666666">=</span> Trapez(a,b,function,npts)
+    RelativeError <span style="color: #666666">=</span> <span style="color: #008000">abs</span>((exact<span style="color: #666666">-</span>result)<span style="color: #666666">/</span>exact)
+    n[i] <span style="color: #666666">=</span> log10(npts); y[i] <span style="color: #666666">=</span> log10(RelativeError);   
+plt<span style="color: #666666">.</span>plot(n,y, <span style="color: #BA2121">&#39;ro&#39;</span>)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;n&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;Relative error&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec30">Learning outcomes three first semesters </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Knowledge of basic algorithms.</b>
 <p>
@@ -796,7 +848,7 @@ The students have to code several of these algorithms during the first three sem
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec30">Later courses </h2>
+<h2 id="___sec31">Later courses </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -814,7 +866,7 @@ The students have to code several of these algorithms during the first three sem
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec31">Coordination </h2>
+<h2 id="___sec32">Coordination </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -828,7 +880,7 @@ The students have to code several of these algorithms during the first three sem
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec32">FYS-MEK1100 (Mechanics), Second Semester </h2>
+<h2 id="___sec33">FYS-MEK1100 (Mechanics), Second Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Realistic Pendulum.</b>
 <p>
@@ -850,7 +902,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec33">FYS1120 Electromagnetism, Third Semester </h2>
+<h2 id="___sec34">FYS1120 Electromagnetism, Third Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>RLC circuit.</b>
 <p>
@@ -870,7 +922,7 @@ in an RLC circuit. Then they did the experiment.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec34">What can we do with the pendulum? </h2>
+<h2 id="___sec35">What can we do with the pendulum? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Many interesting problems.</b>
 <p>
@@ -887,7 +939,7 @@ in an RLC circuit. Then they did the experiment.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec35">More Examples from Physics Courses, 2-5 semester </h2>
+<h2 id="___sec36">More Examples from Physics Courses, 2-5 semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Second-fourth semester.</b>
 <p>
@@ -909,7 +961,7 @@ in an RLC circuit. Then they did the experiment.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec36">First computational physics course </h2>
+<h2 id="___sec37">First computational physics course </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Late: Fifth semester, FYS3150 Computational Physics.</b>
 <p>
@@ -930,7 +982,7 @@ The first computational physics <a href="http://www.uio.no/studier/emner/matnat/
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec37">Challenges...  </h2>
+<h2 id="___sec38">Challenges...  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>.. and objections.</b>
 <p>
@@ -952,7 +1004,7 @@ science applications.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec38">Challenges and future plans </h2>
+<h2 id="___sec39">Challenges and future plans </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -973,7 +1025,7 @@ science applications.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec39">Which aspects are important for a successful introduction of CSE? </h2>
+<h2 id="___sec40">Which aspects are important for a successful introduction of CSE? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -993,7 +1045,7 @@ science applications.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec40">Do we get better students? </h2>
+<h2 id="___sec41">Do we get better students? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Molecular dynamics visualization by two MSc students.</b>
 <p>
@@ -1009,7 +1061,7 @@ science applications.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec41">Summary </h2>
+<h2 id="___sec42">Summary </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
