@@ -1,14 +1,13 @@
 # Strange way of testing for vortex...
-TITLE: Slides and various material
+TITLE: Slides and various material for the computing in science education project
 AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
-pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
-published = ['cse', 'csebio', 'np',]
+pub_url = 'http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub'
+published = ['cse', 'csebio',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life sience education',
- 'np': 'From nuclei to neutron stars; why is matter stable?',
 }
 %>
 
@@ -34,7 +33,7 @@ chapters = {
 <%def name="slide_types(name)">
 </%def>
 
-The teaching material is produced in various formats for printing and on-screen reading.
+The material is produced in various formats for printing and on-screen reading.
 
 !split
 The PDF files are based on LaTeX and have seldom technical
@@ -48,7 +47,7 @@ files if you find missing or incorrectly rendered
 formulas in HTML or ipython notebook files.
 
 
-======= PHY981: Nuclear Structure notes =======
+======= Slides in various formats =======
 
 % for ch in published:
 ===== ${chapters[ch]} =====
