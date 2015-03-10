@@ -13,8 +13,6 @@ chapters = {
 
 
 
-
-
 <%def name="text_types(name)">
 
  * LaTeX PDF:

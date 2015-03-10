@@ -9,7 +9,7 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 # #endif
 
 <%
-pub_url = 'http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub'
+pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
 published = ['cse', 'csebio',]
 chapters = {
  'cse': 'Computing in science education',

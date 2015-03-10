@@ -10,8 +10,6 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 
 
-
-
 The material is produced in various formats for printing and on-screen reading.
 
 !split
