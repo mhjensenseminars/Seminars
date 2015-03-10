@@ -34,14 +34,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/pdf/cse-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/pdf/cse-print6.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/pdf/cse-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/pdf/cse-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/pdf/cse-beamer.pdf"
+     * "standard Beamer format": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/pdf/cse-beamer.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/html/cse.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/html/cse-reveal.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/html/cse.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/html/cse-reveal.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/cse/ipynb/cse.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/cse/ipynb/cse.ipynb"
 
 
 
@@ -51,14 +51,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/pdf/csebio-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/pdf/csebio-print6.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/pdf/csebio-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/pdf/csebio-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/pdf/csebio-beamer.pdf"
+     * "standard Beamer format": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/pdf/csebio-beamer.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/html/csebio.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/html/csebio-reveal.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/html/csebio.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/html/csebio-reveal.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub/csebio/ipynb/csebio.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub/csebio/ipynb/csebio.ipynb"
 
 
 

@@ -3,7 +3,7 @@ TITLE: Slides and various material for the computing in science education projec
 AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
-pub_url = 'http://mhjensenseminars.github.io/CentralMichiganMarch2105/doc/pub'
+pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
 published = ['cse', 'csebio',]
 chapters = {
  'cse': 'Computing in science education',
