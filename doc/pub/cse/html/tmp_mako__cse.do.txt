@@ -44,13 +44,6 @@ FIGURE: [figures/prl2.png, width=700 frac=0.5]
     
       
 !split
-===== Funny aside? =====
-!bblock
-FIGURE: [figures/old-computer.jpg, width=800 frac=0.9]
-
-!eblock
-
-!split
 ===== An important observation and a  question =====
 !bblock
 
@@ -147,18 +140,6 @@ The basic topics (math, chemistry, physics, biology etc) are taught more or less
 
 
 !split
-===== More observations =====
-!bblock Computation in the Sciences
-
-* Computations as a fundamental tool  to gain new insights
-* Computer simulations can act as  a lab, can save both time and resources 
-* Computations is a central component in modern industry and research in the sciences, spanning almost every field:
- * Materials science and nanotechnology, weather forecasting, earthquake simulations and forecasting, medical technology, industrial design, design of new computers, the entertainment industry, almost all aspects of our modern society!!
-
-!eblock
-
-
-!split
 ===== Large scale simulations =====
 !bblock   Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner. 
 FIGURE: [figures/fig10.jpg, width=900 frac=0.6]
@@ -172,34 +153,15 @@ Fluid dynamical simulations central in air industry, wings tested.
 FIGURE: [figures/fig8.jpg, width=900 frac=1.0]
 !eblock
 
-
 !split
-===== Nano and macro-scale reactions in rocks =====
-!bblock
-FIGURE: [figures/rocks.pdf, width=900 frac=0.8]
-!eblock
+===== Preliminary summary =====
+!bblock Computations should enter basic science education
 
-
-
-!split
-===== Further observations =====
-!bblock Computations should enter science education 
-
-* Our teaching should include  an education in basic numerical methods, normally taught in different departments, and often disconnected. 
-* The students should also learn to develop new methods and learn new tools when needed.
-* Need an adequate computational platform.
-
-!eblock
-
-
-
-!split
-===== More observations =====
-!bblock Observations about implementations
-
-* One creates different physics courses and graduate programs which bake in computations, typically various Computational Physics courses from sophomore to graduate level.  The problem is that these courses are not compulsory. The result is often an uneven background of the students. 
-* Dedicated teachers incorporate numerical exercises (at different levels) in their physics courses. When new teachers take over, the whole initiative may disappear. 
-* Some  physics departments in Europe teach their own math and computer science courses! But have still not been able to coordinate properly computational topics.
+* Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
+* Requires development of algorithmic thinking.
+* Basic numerical methods should be part of the compulsory curriculum.
+* The students should also learn to develop new numerical methods and adapt to new software tools.
+* Requires more training than simple programming in a mathematics course.
 
 !eblock
 
@@ -210,19 +172,6 @@ FIGURE: [figures/rocks.pdf, width=900 frac=0.8]
 * How can we include and integrate an algorithmic (computational) perspective   in our basic education?
 * Can this enhance the students' understanding of mathematics and science?
 * Can it strengthen research based teaching?
-
-!eblock
-
-
-!split
-===== Preliminary summary =====
-!bblock Computations should enter basic science education
-
-* Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
-* Requires development of algorithmic thinking.
-* Basic numerical methods should be part of the compulsory curriculum.
-* The students should also learn to develop new numerical methods and adapt to new software tools.
-* Requires more training than simple programming in a mathematics course.
 
 !eblock
 
@@ -391,7 +340,7 @@ result = Trapez(a,b,function,n)
 print "Trapezoidal rule=", result
 # define x as a symbol to be used by sympy
 x = Symbol('x')
-exact = integrate(function(x), (x, a, b))
+exact = integrate(function(x), (x, 0.0, 1.0))
 print "Sympy integration=", exact
 # Find relative error
 print "Relative error", abs((exact-result)/exact)
@@ -427,7 +376,7 @@ def Trapez(a,b,f,n):
    s = 0
    x = a
    for i in range(1,n,1):
-       x = x+h 
+       x = x+h
        s = s+ f(x)
    s = 0.5*(f(a)+f(b)) +s
    return h*s
@@ -531,20 +480,6 @@ in an RLC circuit. Then they did the experiment.
 !eblock
 
 
-
-
-!split
-===== What can we do with the pendulum? =====
-!bblock Many interesting problems
-
-o Can study chaos, theoretically, numerically and experimentally, can choose 'best' parameters  for experimental setup.
-o Can test different algorithms for solving ordinary differential equations, from Euler's to fourth-order Runge Kutta methods. Tight connection with algorithm and physics.
-o Can make classes of differential equation solvers.
-o Can make a general program that can be applied to other scientific cases in later courses, such as electromagnetism (RLC circuits).  Students realize that much of the same mathematics enters many physics cases.
-
-!eblock
-
-
 !split
 ===== More Examples from Physics Courses, 2-5 semester =====
 !bblock  Second-fourth semester
@@ -615,6 +550,268 @@ _Key issue: modularization of topics and development of a 'technological platfor
 * Tailor to specific disciplines.
 * Organizational matters.
 !eblock
+
+
+!split
+===== What about life science/biology? Overarching questions =====
+
+!bpop
+!bblock Which skills are needed by candidates in biology?
+There is new demand for more
+
+  * quantitative methods & reasoning
+  * understanding data and phenomena via models
+  * creating *in silico* virtual labs
+!eblock
+!epop
+
+!bpop
+!bblock Challenge:
+How to integrate such computing-based activities in the undergraduate programs
+when the students are *not* interested in mathematics, physics, and
+programming?
+!eblock
+!epop
+
+!split
+===== How to teach computing in biology? =====
+
+!bpop
+!bblock
+Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
+
+  * Uninteresting to first study tools when you want to study biology
+  * Little understanding of what the tools are good for
+  * Minor utilization of tools later in biology
+!eblock
+!epop
+
+!bpop
+!bblock It's time for new thinking:
+  * Just-in-time teaching: teach tools *when needed*
+  * Teach tools in the *context of biology*
+  * Emphasize development of *intuition and understanding*
+  * Base learning of the students' own *explorations in biology projects*
+  * Integrate lab work with computing tools
+!eblock
+!epop
+
+
+!split
+===== The pedagogical framework =====
+
+!bblock Aim: Develop intuition about the scientific method
+ * Method: case-based learning
+ * Coherent problem solving *in biology* by integrating
+   mathematics, programming, physics/chemistry, ...
+ * Starting point: data from lab or field experiments
+ * Visualize data
+ * Derive computational models directly from mathematical/intuitive *reasoning*
+ * Program model(s), fit parameters, compare with data
+ * Develop intuition and understanding based on
+  * the principles behind the model
+  * exploration of the model (``what if'')
+  * prediction of new experiments
+!eblock
+
+!split
+===== Example 1: ecoli lab experiment =====
+
+!bblock
+Observations of no of bacteria vs time in seconds,
+stored in Excel and written to a CVS file:
+
+@@@CODE src/ecoli.csv
+!eblock
+
+!split
+===== Visualize data =====
+
+!bblock
+ * Meet a text editor and a terminal window
+ * Very basic Unix
+
+First program:
+
+!bc pypro
+t = [0, 600, 1200, 1800, 2400, 3000, 3600,
+     4200, 4800, 5400, 6000]
+N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+!ec
+!eblock
+
+
+!split
+===== Concepts must be introduced implicitly in a structured way =====
+
+!bwarning
+ * Always identify new concepts
+ * Train new concepts in simplified (``trivial'') problems
+!ewarning
+
+!bblock Concepts in the previous example:
+ * Lists or arrays of numbers
+ * Plotting commands
+ * Curve = function of time
+!eblock
+
+!bnotice Notice:
+The concept of a continuous function $N(t)$ is not necessary,
+just straight lines between discrete points on a curve.
+!enotice
+
+!split
+===== Read data from file =====
+
+!bblock
+!bc pypro
+import numpy as np
+data = np.loadtxt('ecoli.csv', delimiter=',')
+print data  # look at the format
+t = data[:,0]
+N = data[:,1]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+!ec
+!eblock
+
+!bnotice Typical pattern:
+The population grows faster and faster. Why? Is there an
+underlying (general) mechanism?
+!enotice
+
+!split
+===== Lab journal =====
+
+!bblock
+Use IPython notebook as lab journal.
+!eblock
+
+
+!split
+===== How can we reason about the process? =====
+
+# http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html
+
+!bblock
+!bpop
+ o Cells divide after $T$ seconds on average (one generation)
+ o $2N$ celles divide into twice as many new cells $\Delta N$ in a time
+   interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
+ o $N$ cells result in twice as many new individuals $\Delta N$ in
+   time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
+ o Same proportionality wrt death (repeat reasoning)
+ o Proposed model: $\Delta N = b\Delta t N - d\Delta tN$ for some unknown
+   constants $b$ (births) and $d$ (deaths)
+ o Describe evolution in discrete time: $t_n=n\Delta t$
+ o Program-friendly notation: $N$ at $t_n$ is $N^n$
+ o Math model: $N^{n+1} = N^n + r\Delta t\, N$ (with $\ r=b-d$)
+ o Program model: `N[n+1] = N[n] + r*dt*N[n]`
+!epop
+!eblock
+
+!split
+===== The first simple program =====
+
+!bblock
+Let us solve the difference equation in as simple way as possible,
+just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
+
+@@@CODE src/diffeq.py
+!eblock
+
+
+!split
+===== Parameter estimation =====
+
+!bblock
+ * We do not know $r$
+ * How can we estimate $r$ from data?
+
+We can use the difference equation with the experimental data
+
+!bt
+\[ N^{n+1} = N^n + r\Delta t N^n\]
+!et
+Say $N^{n+1}$ and $N^n$ are known from data, solve wrt $r$:
+
+!bt
+\[ r = \frac{N^{n+1}-N^n}{N^n\Delta t} \]
+!et
+
+Use experimental data in the fraction, say $t_1=600$, $t_2=1200$,
+$N^1=140$, $N^2=250$: $r=0.0013$.
+!eblock
+
+!bnotice More sophisticated methods
+Can do a nonlinear least squares parameter fit, but that is
+too advanced at this stage.
+!enotice
+
+!split
+===== A program relevant for the biological problem =====
+
+# exact r = 0.000694
+
+!bblock
+@@@CODE src/ecoli.py
+
+Change `r` in the program and play around to make a better fit!
+!eblock
+
+!split
+===== Discuss the nature of such a model =====
+
+!bblock
+ * Write up all the biological factors that influence the
+   population size of bacteria
+ * Understand that all such effects are merged into one parameter $r$
+ * Understand that the reasoning must be the same whether we
+   have bacteria, animals or humans - this is a generic model!<linebreak>
+   (even the interest rate in a bank follows the same model)
+!eblock
+
+!split
+===== Discuss the limitations of such a model =====
+
+!bblock
+ * How many bacteria in the lab after one month?
+ * Growth is restricted by environmental resources!
+ * Fix the model (logistic growth)
+ * Is the logistic model appropriate for a lab experiment?
+ * Find data to support the logistic model <linebreak>
+   (it's a *very* simple model)
+!eblock
+
+
+!split
+===== The pedagogical template (to be iterated!) =====
+
+!bblock
+ * Start with a real biological problem
+ * Be careful with too many new concepts
+ * Workflow:
+  * data
+  * visualization
+  * patterns
+  * modeling (*discrete*)
+  * programming
+  * testing
+  * parameter estimation (difficult)
+  * validation
+  * prediction
+ * Make many small exercises that train the new concepts
+ * Repeat the case in a way that makes a complete understanding
+!eblock
+
 
 !split
 ===== Do we get better students? =====

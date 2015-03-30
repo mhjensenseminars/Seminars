@@ -1,124 +1,103 @@
-%%
-%% Automatically generated file from DocOnce source
-%% (https://github.com/hplgit/doconce/)
-%%
-%%
-% #ifdef PTEX2TEX_EXPLANATION
-%%
-%% The file follows the ptex2tex extended LaTeX format, see
-%% ptex2tex: http://code.google.com/p/ptex2tex/
-%%
-%% Run
-%%      ptex2tex myfile
-%% or
-%%      doconce ptex2tex myfile
-%%
-%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
-%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
-%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
-%%
-%%      ptex2tex -DMINTED myfile
-%%      doconce ptex2tex myfile envir=minted
-%%
-%% ptex2tex will typeset code environments according to a global or local
-%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
-%% according to options on the command line (just type doconce ptex2tex to
-%% see examples). If doconce ptex2tex has envir=minted, it enables the
-%% minted style without needing -DMINTED.
-% #endif
 
-% #define PREAMBLE
+% LaTeX Beamer file automatically generated from DocOnce
+% https://github.com/hplgit/doconce
 
-% #ifdef PREAMBLE
-%-------------------- begin preamble ----------------------
+%-------------------- begin beamer-specific preamble ----------------------
 
-\documentclass[%
-twoside,                 % oneside: electronic viewing, twoside: printing
-final,                   % or draft (marks overfull hboxes, figures with paths)
-10pt]{article}
+\documentclass{beamer}
 
-\listfiles               % print all files needed to compile this document
+\usetheme{red_plain}
+\usecolortheme{default}
 
-\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts}
-\usepackage[table]{xcolor}
-\usepackage{bm,microtype}
+% turn off the almost invisible, yet disturbing, navigation symbols:
+\setbeamertemplate{navigation symbols}{}
 
+% Examples on customization:
+%\usecolortheme[named=RawSienna]{structure}
+%\usetheme[height=7mm]{Rochester}
+%\setbeamerfont{frametitle}{family=\rmfamily,shape=\itshape}
+%\setbeamertemplate{items}[ball]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\useoutertheme{infolines}
+%
+%\usefonttheme{}
+%\useinntertheme{}
+%
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+% fine for B/W printing:
+%\usecolortheme{seahorse}
+
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
 \usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{relsize}
 
-\usepackage{ptex2tex}
+\usepackage{fancybox}  % make sure fancybox is loaded before fancyvrb
 
-% #ifdef MINTED
-\usepackage{minted}
-\usemintedstyle{default}
-% #endif
+\usepackage{fancyvrb}
+\usepackage{minted} % requires pygments and latex -shell-escape filename
+%\usepackage{anslistings}
 
-\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,bm}
 %\usepackage[latin1]{inputenc}
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{framed}
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
 
-\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+% --- begin table of contents based on sections ---
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each section:
+% (Only section headings can enter the table of contents in Beamer
+% slides generated from DocOnce source, while subsections are used
+% for the title in ordinary slides.)
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+  \frametitle{}
+  %\frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% --- end table of contents based on sections ---
 
-% Hyperlinks in PDF:
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\newcommand{\shortinlinecomment}[3]{\note{\textbf{#1}: #2}}
+\newcommand{\longinlinecomment}[3]{\shortinlinecomment{#1}{#2}{#3}}
+
 \definecolor{linkcolor}{rgb}{0,0,0.4}
-\usepackage{hyperref}
 \hypersetup{
-    breaklinks=true,
     colorlinks=true,
     linkcolor=linkcolor,
     urlcolor=linkcolor,
-    citecolor=black,
-    filecolor=black,
-    %filecolor=blue,
     pdfmenubar=true,
     pdftoolbar=true,
-    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    bookmarksdepth=3
     }
-%\hyperbaseurl{}   % hyperlinks are relative to this root
-
-\setcounter{tocdepth}{2}  % number chapter, section, subsection
-
-% Tricks for having figures close to where they are defined:
-% 1. define less restrictive rules for where to put figures
-\setcounter{topnumber}{2}
-\setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{4}
-\renewcommand{\topfraction}{0.85}
-\renewcommand{\bottomfraction}{0.85}
-\renewcommand{\textfraction}{0.15}
-\renewcommand{\floatpagefraction}{0.7}
-% 2. ensure all figures are flushed before next section
-\usepackage[section]{placeins}
-% 3. enable begin{figure}[H] (often leads to ugly pagebreaks)
-%\usepackage{float}\restylefloat{figure}
-
-\usepackage[framemethod=TikZ]{mdframed}
-
-% --- begin definitions of admonition environments ---
-
-% --- end of definitions of admonition environments ---
-
-% prevent orhpans and widows
-\clubpenalty = 10000
-\widowpenalty = 10000
+\setlength{\parskip}{0pt}  % {1em}
 
 \newenvironment{doconceexercise}{}{}
 \newcounter{doconceexercisecounter}
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+\newcommand{\subex}[1]{\noindent\textbf{#1}}  % for subexercises: a), b), etc
+
+%-------------------- end beamer-specific preamble ----------------------
+
+% Add user's preamble
 
 
-% ------ header in subexercises ------
-%\newcommand{\subex}[1]{\paragraph{#1}}
-%\newcommand{\subex}[1]{\par\vspace{1.7mm}\noindent{\bf #1}\ \ }
-\makeatletter
-% 1.5ex is the spacing above the header, 0.5em the spacing after subex title
-\newcommand\subex{\@startsection{paragraph}{4}{\z@}%
-                  {1.5ex\@plus1ex \@minus.2ex}%
-                  {-0.5em}%
-                  {\normalfont\normalsize\bfseries}}
-\makeatother
-
-
-% --- end of standard preamble for documents ---
 
 
 % insert custom LaTeX commands...
@@ -130,7 +109,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \begin{document}
 
-% #endif
+
 
 
 % ------------------- main content ----------------------
@@ -140,40 +119,26 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 % ----------------- title -------------------------
 
-\thispagestyle{empty}
-
-\begin{center}
-{\LARGE\bf
-\begin{spacing}{1.25}
-Computing in Science Education (CSE): Integrating a computational perspective in the basic science education
-\end{spacing}
-}
-\end{center}
+\title{Computing in Science Education (CSE): Integrating a computational perspective in the basic science education}
 
 % ----------------- author(s) -------------------------
 
-\begin{center}
-{\bf Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway${}^{}$} \\ [0mm]
-\end{center}
-
-    \begin{center}
-% List of all institutions:
-\end{center}
-    
+\author{Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway\inst{}}
+\institute{}
 % ----------------- end author(s) -------------------------
 
-\begin{center} % date
-February 26, 2015
-\end{center}
+\date{February 26, 2015
+% <optional titlepage figure>
+}
 
-\vspace{1cm}
+\begin{frame}[plain,fragile]
+\titlepage
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{People and links}
 
-% !split
-\subsection{People and links}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
 \item Hans Petter Langtangen, Computer Science
 
@@ -195,16 +160,13 @@ February 26, 2015
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{More links}
 
-
-
-% !split
-\subsection{More links}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
 \item Python and our first programming course, first semester \href{{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/}}{course}. Excellent new textbook by Hans Petter Langtangen, click here for the \href{{http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen}}{textbook} or the \href{{http://hplgit.github.io/primer.html/doc/web/index.html}}{online version}
 
@@ -216,17 +178,13 @@ February 26, 2015
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Wouldn't it be cool if your mechanics students could reproduce results in a PRL?}
 
-
-
-
-% !split
-\subsection{Wouldn't it be cool if your mechanics students could reproduce results in a PRL?}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 
 % inline figure
@@ -235,26 +193,21 @@ February 26, 2015
 
 
 Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
-% --- end paragraph admon ---
-
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\end{block}
+\begin{block}{}
 
 
 % inline figure
 \centerline{\includegraphics[width=0.5\linewidth]{figures/prl2.png}}
-% --- end paragraph admon ---
 
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{An important observation and a  question}
 
-% !split
-\subsection{An important observation and a  question}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 The basic tools for mathematical calculations have changed radically.
 
@@ -267,16 +220,13 @@ The basic tools for mathematical calculations have changed radically.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Reality}
 
-
-
-% !split
-\subsection{Reality}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 \begin{itemize}
 \item Students hear about the relevance of the sciences
@@ -287,16 +237,13 @@ The basic tools for mathematical calculations have changed radically.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Principles}
 
-
-
-% !split
-\subsection{Principles}
-
-% --- begin paragraph admon ---
-\paragraph{Central aims behind our CSE reform.}
+\begin{block}{Central aims behind our CSE reform }
 
 Algorithmic  thinking as a way to
 
@@ -311,17 +258,13 @@ Algorithmic  thinking as a way to
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Research based teaching}
 
-
-
-
-% !split
-\subsection{Research based teaching}
-
-% --- begin paragraph admon ---
-\paragraph{How do we define it?}
+\begin{block}{How do we define it? }
 One possible definition: It is coupled to a direct participation in actual research and builds upon established
 knowledge and insights about scientific methods.
 
@@ -337,17 +280,13 @@ knowledge and insights about scientific methods.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Research based education}
 
-
-
-
-% !split
-\subsection{Research based education}
-
-% --- begin paragraph admon ---
-\paragraph{What should the education contain?}
+\begin{block}{What should the education contain? }
 The standard situation we meet at an almost daily basis:
 
 \begin{itemize}
@@ -362,17 +301,13 @@ The standard situation we meet at an almost daily basis:
 
 \noindent
 Our education should reflect this.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Research based education}
 
-
-
-
-% !split
-\subsection{Research based education}
-
-% --- begin paragraph admon ---
-\paragraph{Normal workflow in Science and Engineering.}
+\begin{block}{Normal workflow in Science and Engineering }
 
 \begin{itemize}
 \item A problem is properly described using a precise (normal) language.
@@ -387,16 +322,14 @@ Our education should reflect this.
 \end{itemize}
 
 \noindent
-People who master these skills bring an important compentence to society.
-% --- end paragraph admon ---
+People who master these skills bring an important compentence to society. 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Computers and science teaching}
 
-
-% !split
-\subsection{Computers and science teaching}
-
-% --- begin paragraph admon ---
-\paragraph{Education.}
+\begin{block}{Education }
 
 \begin{itemize}
 \item During the  last 25 years  there has been considerable focus on  technology at all levels in the educational ladder.
@@ -407,45 +340,41 @@ People who master these skills bring an important compentence to society.
 \end{itemize}
 
 \noindent
-The basic topics (math, chemistry, physics, biology etc) are taught more or less in the same fashion as before, unchanged over several decades!
-% --- end paragraph admon ---
+The basic topics (math, chemistry, physics, biology etc) are taught more or less in the same fashion as before, unchanged over several decades! 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Large scale simulations}
 
-
-
-% !split
-\subsection{Large scale simulations}
-
-% --- begin paragraph admon ---
-\paragraph{Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.}
+\begin{block}{Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.  }
 
 
 % inline figure
 \centerline{\includegraphics[width=0.6\linewidth]{figures/fig10.jpg}}
-% --- end paragraph admon ---
 
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Large scale simulations}
 
-% !split
-\subsection{Large scale simulations}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 Fluid dynamical simulations central in air industry, wings tested.
 
 
 % inline figure
 \centerline{\includegraphics[width=1.0\linewidth]{figures/fig8.jpg}}
-% --- end paragraph admon ---
 
 
+\end{block}
+\end{frame}
 
-% !split
-\subsection{Preliminary summary}
+\begin{frame}[plain,fragile]
+\frametitle{Preliminary summary}
 
-% --- begin paragraph admon ---
-\paragraph{Computations should enter basic science education.}
+\begin{block}{Computations should enter basic science education }
 
 \begin{itemize}
 \item Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
@@ -460,16 +389,13 @@ Fluid dynamical simulations central in air industry, wings tested.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Can we catch many birds with one stone?}
 
-
-
-% !split
-\subsection{Can we catch many birds with one stone?}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
 \item How can we include and integrate an algorithmic (computational) perspective   in our basic education?
 
@@ -479,44 +405,29 @@ Fluid dynamical simulations central in air industry, wings tested.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{What is needed?}
 
-
-
-% !split
-\subsection{What is needed?}
-
-% --- begin paragraph admon ---
-\paragraph{Programming.}
+\begin{block}{Programming }
 A compulsory programming course with a strong mathematical flavour. \emph{Should give a solid foundation in programming as a problem solving technique in mathematics}. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
-% --- end paragraph admon ---
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{Mathematics and numerics.}
+\begin{block}{Mathematics and numerics }
 Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
-% --- end paragraph admon ---
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{Sciences.}
+\begin{block}{Sciences }
 Training in modelling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Implementation}
 
-
-
-
-% !split
-\subsection{Implementation}
-
-% --- begin paragraph admon ---
-\paragraph{Crucial ingredients.}
+\begin{block}{Crucial ingredients }
 
 \begin{itemize}
 \item Support from governing bodies (now priority 1 of the College of Natural Science at UOslo)
@@ -528,17 +439,13 @@ Training in modelling and problem solving with numerical methods and visualisati
 
 \noindent
 Consensus driven approach.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Implementation in Oslo: The CSE  project}
 
-
-
-
-% !split
-\subsection{Implementation in Oslo: The CSE  project}
-
-% --- begin paragraph admon ---
-\paragraph{What we do.}
+\begin{block}{What we do }
 \begin{itemize}
 \item Coordinated use of computational exercises and numerical tools in most undergraduate courses.
 
@@ -553,30 +460,28 @@ Consensus driven approach.
 
 \noindent
 Interesting outcome: higher focus on teaching and pedagogical issues!!
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Example of bachelor program, astrophysics}
 
-
-
-% !split
-\subsection{Example of bachelor program, astrophysics}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 
 % inline figure
 \centerline{\includegraphics[width=0.6\linewidth]{figures/astronomy.png}}
-% --- end paragraph admon ---
 
 
 
 
-% !split
-\subsection{Example: Computations from day one}
+\end{block}
+\end{frame}
 
-% --- begin paragraph admon ---
-\paragraph{Differentiation.}
+\begin{frame}[plain,fragile]
+\frametitle{Example: Computations from day one}
+
+\begin{block}{Differentiation }
 Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 \begin{itemize}
 \item Definition  of the derivative in  MAT1100 (Calculus and analysis) 
@@ -599,39 +504,35 @@ Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 \end{itemize}
 
 \noindent
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 def differentiate(f, x, h=1E-5):
      return (f(x+h) - f(x-h))/(2*h)
-\epycod
-% --- end paragraph admon ---
+\end{minted}
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Example: Computations from day one}
 
-% !split
-\subsection{Example: Computations from day one}
-
-% --- begin paragraph admon ---
-\paragraph{Differentiation and comparison with symbolic expressions.}
+\begin{block}{Differentiation and comparison with symbolic expressions }
 Combined with the possibility of symbolic calculations with \emph{Sympy}, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 def differentiate(f, x, h=1E-5, symbolic=False):
     if symbolic:
         import sympy
         return sympy.lambdify([x], sympy.diff(f, x))
     else:
         return (f(x+h) - f(x-h))/(2*h)
-\epycod
-% --- end paragraph admon ---
+\end{minted}
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Other Examples}
 
-
-
-% !split
-\subsection{Other Examples}
-
-% --- begin paragraph admon ---
-\paragraph{Integration by Trapezoidal Rule.}
+\begin{block}{Integration by Trapezoidal Rule  }
 
 \begin{itemize}
 \item Definition of integration  in MAT1100 (Calculus and analysis).
@@ -650,17 +551,15 @@ def differentiate(f, x, h=1E-5, symbolic=False):
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Typical implementation in INF1100}
 
+\begin{block}{Integration by Trapezoidal Rule  }
 
-% !split
-\subsection{Typical implementation in INF1100}
-
-% --- begin paragraph admon ---
-\paragraph{Integration by Trapezoidal Rule.}
-
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 from math import exp, log, sin
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
@@ -678,22 +577,19 @@ def f1(x):
 a = 1;  b = 3; n = 1000
 result = Trapez(a,b,f1,n)
 print result
-\epycod
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Typical implementation in INF1100}
 
-
-
-% !split
-\subsection{Typical implementation in INF1100}
-
-% --- begin paragraph admon ---
-\paragraph{Symbolic calculations and numerical calculations in one code!}
+\begin{block}{Symbolic calculations and numerical calculations in one code! }
 Python offers an  extremely versatile programming  environment, allowing for the inclusion of analytical studies in a numerical program. Here we show another example
 where \emph{SymPy} is used to evaluate the integral and compute the absolute error 
 with respect to the numerically evaluated one of the integral
 $4\int_0^1 dx/(1+x^2) = \pi$: 
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 from math import *
 from sympy import *
 def Trapez(a,b,f,n):
@@ -719,17 +615,14 @@ exact = integrate(function(x), (x, 0.0, 1.0))
 print "Sympy integration=", exact
 # Find relative error
 print "Relative error", abs((exact-result)/exact)
-\epycod
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Integrating numerical mathematics with calculus}
 
-
-
-% !split
-\subsection{Integrating numerical mathematics with calculus}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing thereby students and teachers to
 
 \begin{itemize}
@@ -745,17 +638,15 @@ The last example shows the potential of combining numerical algorithms with symb
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Error analysis}
 
-
-% !split
-\subsection{Error analysis}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to $10^8$ points one arrives at a region where numerical errors start to accumulate.
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 from math import log10
 import numpy as np
 from sympy import Symbol, integrate
@@ -791,18 +682,14 @@ plt.plot(n,y, 'ro')
 plt.xlabel('n')
 plt.ylabel('Relative error')
 plt.show()
-\epycod
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Learning outcomes three first semesters}
 
-
-
-
-% !split
-\subsection{Learning outcomes three first semesters}
-
-% --- begin paragraph admon ---
-\paragraph{Knowledge of basic algorithms.}
+\begin{block}{Knowledge of basic algorithms }
 
 \begin{itemize}
 \item Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)
@@ -820,16 +707,13 @@ plt.show()
 
 \noindent
 The students have to code several of these algorithms during the first three semesters.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Later courses}
 
-
-
-% !split
-\subsection{Later courses}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 \textbf{Later courses should build on this foundation as much as possible}.
 
@@ -840,31 +724,25 @@ The students have to code several of these algorithms during the first three sem
 \end{enumerate}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Coordination}
 
-
-% !split
-\subsection{Coordination}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
 \item Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{FYS-MEK1100 (Mechanics), Second Semester}
 
-
-
-
-% !split
-\subsection{FYS-MEK1100 (Mechanics), Second Semester}
-
-% --- begin paragraph admon ---
-\paragraph{Realistic Pendulum.}
+\begin{block}{Realistic Pendulum }
 
 Classical pendulum with damping and external force
 \[
@@ -875,16 +753,13 @@ Same equation for an RLC circuit
 \[
 L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
 \]
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{FYS1120 Electromagnetism, Third Semester}
 
-
-
-% !split
-\subsection{FYS1120 Electromagnetism, Third Semester}
-
-% --- begin paragraph admon ---
-\paragraph{RLC circuit.}
+\begin{block}{RLC circuit }
 Same equation as the pendulum for an RLC circuit 
 \[
 L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
@@ -892,16 +767,14 @@ L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
 From the numerics, 
 the students found the optimal parameters for studying experimentally chaos
 in an RLC circuit. Then they did the experiment.
-% --- end paragraph admon ---
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{More Examples from Physics Courses, 2-5 semester}
 
-
-% !split
-\subsection{More Examples from Physics Courses, 2-5 semester}
-
-% --- begin paragraph admon ---
-\paragraph{Second-fourth semester.}
+\begin{block}{Second-fourth semester }
 
 \begin{itemize}
 \item Air resistance in two and three dimensions with quadratic velocity dependence.
@@ -924,15 +797,13 @@ in an RLC circuit. Then they did the experiment.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{First computational physics course}
 
-
-% !split
-\subsection{First computational physics course}
-
-% --- begin paragraph admon ---
-\paragraph{Late: Fifth semester, FYS3150 Computational Physics.}
+\begin{block}{Late: Fifth semester, FYS3150 Computational Physics }
 
 The first computational physics \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/}}{course} can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
 
@@ -949,16 +820,13 @@ The first computational physics \href{{http://www.uio.no/studier/emner/matnat/fy
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Challenges...}
 
-
-
-% !split
-\subsection{Challenges...}
-
-% --- begin paragraph admon ---
-\paragraph{.. and objections.}
+\begin{block}{.. and objections }
 
 \emph{Standard objection: computations take away the attention from other central topics in 'my course'}. 
 
@@ -971,15 +839,13 @@ science applications.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Challenges and future plans}
 
-
-% !split
-\subsection{Challenges and future plans}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 \begin{itemize}
 \item The project depends crucially on few individuals. 
@@ -993,15 +859,14 @@ science applications.
 
 \noindent
 \textbf{Key issue: modularization of topics and development of a 'technological platform' which glues together different modules}
-% --- end paragraph admon ---
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Which aspects are important for a successful introduction of CSE?}
 
-% !split
-\subsection{Which aspects are important for a successful introduction of CSE?}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 \begin{itemize}
 \item Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
@@ -1020,18 +885,14 @@ science applications.
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{What about life science/biology? Overarching questions}
 
-
-
-% !split
-\subsection{What about life science/biology? Overarching questions}
-
-% !bpop
-
-% --- begin paragraph admon ---
-\paragraph{Which skills are needed by candidates in biology?}
+\pause
+\begin{block}{Which skills are needed by candidates in biology? }
 There is new demand for more
 
 \begin{itemize}
@@ -1043,30 +904,21 @@ There is new demand for more
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
 
-
-% !epop
-
-% !bpop
-
-% --- begin paragraph admon ---
-\paragraph{Challenge:}
+\pause
+\begin{block}{Challenge: }
 How to integrate such computing-based activities in the undergraduate programs
 when the students are \emph{not} interested in mathematics, physics, and
 programming?
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{How to teach computing in biology?}
 
-% !epop
-
-% !split
-\subsection{How to teach computing in biology?}
-
-% !bpop
-
-% --- begin paragraph admon ---
-\paragraph{}
+\pause
+\begin{block}{}
 Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
 
 \begin{itemize}
@@ -1078,15 +930,10 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
 
-
-% !epop
-
-% !bpop
-
-% --- begin paragraph admon ---
-\paragraph{It's time for new thinking:}
+\pause
+\begin{block}{It's time for new thinking: }
 \begin{itemize}
   \item Just-in-time teaching: teach tools \emph{when needed}
 
@@ -1100,18 +947,13 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{The pedagogical framework}
 
-% !epop
-
-
-% !split
-\subsection{The pedagogical framework}
-
-
-% --- begin paragraph admon ---
-\paragraph{Aim: Develop intuition about the scientific method.}
+\begin{block}{Aim: Develop intuition about the scientific method }
 \begin{itemize}
  \item Method: case-based learning
 
@@ -1140,20 +982,17 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Example 1: ecoli lab experiment}
 
-
-% !split
-\subsection{Example 1: ecoli lab experiment}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 Observations of no of bacteria vs time in seconds,
 stored in Excel and written to a CVS file:
 
-\btxt
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
 0,100
 600,140
 1200,250
@@ -1165,17 +1004,14 @@ stored in Excel and written to a CVS file:
 4800,2900
 5400,3900
 6000,7000
-\etxt
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Visualize data}
 
-
-% !split
-\subsection{Visualize data}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
  \item Meet a text editor and a terminal window
 
@@ -1185,7 +1021,7 @@ stored in Excel and written to a CVS file:
 \noindent
 First program:
 
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 t = [0, 600, 1200, 1800, 2400, 3000, 3600,
      4200, 4800, 5400, 6000]
 N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
@@ -1194,18 +1030,14 @@ plt.plot(t, N, 'ro')
 plt.xlabel('t [s]')
 plt.ylabel('N')
 plt.show()
-\epypro
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Concepts must be introduced implicitly in a structured way}
 
-
-
-% !split
-\subsection{Concepts must be introduced implicitly in a structured way}
-
-
-% --- begin paragraph admon ---
-\paragraph{Warning.}
+\begin{block}{Warning}
 \begin{itemize}
  \item Always identify new concepts
 
@@ -1213,13 +1045,9 @@ plt.show()
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{Concepts in the previous example:}
+\begin{block}{Concepts in the previous example: }
 \begin{itemize}
  \item Lists or arrays of numbers
 
@@ -1229,26 +1057,19 @@ plt.show()
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{Notice:}
+\begin{block}{Notice: }
 The concept of a continuous function $N(t)$ is not necessary,
 just straight lines between discrete points on a curve.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Read data from file}
 
-
-% !split
-\subsection{Read data from file}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\bpypro
+\begin{block}{}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 import numpy as np
 data = np.loadtxt('ecoli.csv', delimiter=',')
 print data  # look at the format
@@ -1259,80 +1080,73 @@ plt.plot(t, N, 'ro')
 plt.xlabel('t [s]')
 plt.ylabel('N')
 plt.show()
-\epypro
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{Typical pattern:}
+\begin{block}{Typical pattern: }
 The population grows faster and faster. Why? Is there an
 underlying (general) mechanism?
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Lab journal}
 
-
-% !split
-\subsection{Lab journal}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 Use IPython notebook as lab journal.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
-
-
-
-% !split
-\subsection{How can we reason about the process?}
+\begin{frame}[plain,fragile]
+\frametitle{How can we reason about the process?}
 
 % \href{{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}{\nolinkurl{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}
 
-
-% --- begin paragraph admon ---
-\paragraph{}
-% !bpop
+\begin{block}{}
 \begin{enumerate}
+\pause
 \item Cells divide after $T$ seconds on average (one generation)
 
+\pause
 \item $2N$ celles divide into twice as many new cells $\Delta N$ in a time
    interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
 
+\pause
 \item $N$ cells result in twice as many new individuals $\Delta N$ in
    time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
 
+\pause
 \item Same proportionality wrt death (repeat reasoning)
 
+\pause
 \item Proposed model: $\Delta N = b\Delta t N - d\Delta tN$ for some unknown
    constants $b$ (births) and $d$ (deaths)
 
+\pause
 \item Describe evolution in discrete time: $t_n=n\Delta t$
 
+\pause
 \item Program-friendly notation: $N$ at $t_n$ is $N^n$
 
+\pause
 \item Math model: $N^{n+1} = N^n + r\Delta t\, N$ (with $\ r=b-d$)
 
+\pause
 \item Program model: \Verb!N[n+1] = N[n] + r*dt*N[n]!
 \end{enumerate}
 
 \noindent
-% !epop
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{The first simple program}
 
-
-% !split
-\subsection{The first simple program}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 Let us solve the difference equation in as simple way as possible,
 just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
 
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 import numpy as np
 
 t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
@@ -1345,15 +1159,14 @@ r = 0.5
 for n in range(0, N.size-1, 1):
     N[n+1] = N[n] + r*dt*N[n]
     print 'N[%d]=%.1f' % (n+1, N[n+1])
-\epypro
-% --- end paragraph admon ---
+\end{minted}
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{The output}
 
-
-% !split
-\subsection{The output}
-
-\bccq
+\begin{Verbatim}[numbers=none,fontsize=\fontsize{9pt}{9pt},baselinestretch=0.95]
 N[1]=1.2
 N[2]=1.6
 N[3]=2.0
@@ -1374,14 +1187,13 @@ N[17]=44.4
 N[18]=55.5
 N[19]=69.4
 N[20]=86.7
-\eccq
+\end{Verbatim}
+\end{frame}
 
-% !split
-\subsection{Parameter estimation}
+\begin{frame}[plain,fragile]
+\frametitle{Parameter estimation}
 
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
  \item We do not know $r$
 
@@ -1398,28 +1210,21 @@ Say $N^{n+1}$ and $N^n$ are known from data, solve wrt $r$:
 
 Use experimental data in the fraction, say $t_1=600$, $t_2=1200$,
 $N^1=140$, $N^2=250$: $r=0.0013$.
-% --- end paragraph admon ---
+\end{block}
 
-
-
-
-% --- begin paragraph admon ---
-\paragraph{More sophisticated methods.}
+\begin{block}{More sophisticated methods }
 Can do a nonlinear least squares parameter fit, but that is
 too advanced at this stage.
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
-
-
-% !split
-\subsection{A program relevant for the biological problem}
+\begin{frame}[plain,fragile]
+\frametitle{A program relevant for the biological problem}
 
 % exact r = 0.000694
 
-
-% --- begin paragraph admon ---
-\paragraph{}
-\bpypro
+\begin{block}{}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 import numpy as np
 
 # Estimate r
@@ -1447,19 +1252,16 @@ plt.plot(t, N, 'r-', t_e, N_e, 'bo')
 plt.xlabel('time [s]');  plt.ylabel('N')
 plt.legend(['model', 'experiment'], loc='upper left')
 plt.show()
-\epypro
+\end{minted}
 
 Change \Verb!r! in the program and play around to make a better fit!
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Discuss the nature of such a model}
 
-
-% !split
-\subsection{Discuss the nature of such a model}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
  \item Write up all the biological factors that influence the
    population size of bacteria
@@ -1472,16 +1274,13 @@ Change \Verb!r! in the program and play around to make a better fit!
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Discuss the limitations of such a model}
 
-
-% !split
-\subsection{Discuss the limitations of such a model}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
  \item How many bacteria in the lab after one month?
 
@@ -1496,17 +1295,13 @@ Change \Verb!r! in the program and play around to make a better fit!
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{The pedagogical template (to be iterated!)}
 
-
-
-% !split
-\subsection{The pedagogical template (to be iterated!)}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 \begin{itemize}
  \item Start with a real biological problem
 
@@ -1542,75 +1337,13 @@ Change \Verb!r! in the program and play around to make a better fit!
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Do we get better students?}
 
-
-% !split
-\subsection{Technology for documenting cases}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Documentation: slides in the doconce format with extra notes\\
-   (can compile with/without notes)
-
- \item Realistic goal: write out the slides for a gentle book on biocomputing examples
-
- \item The biological case is in a separate file that the students can work
-   with as an IPython notebook
-
- \item Problem: not much basic literature exists
-
- \item Cases must be linked in a learning graph:\\
-   \emph{I want to do nerve cell modeling, but how to progress to this stage?}
-
- \item Make a list of concepts and where concepts are trained
-
- \item Think of each case as a \emph{separate module}
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-% !split
-\subsection{Immediate tasks}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Find a good bacteria growth lab example - do the first example
-
- \item Alternative model: random 2D walk, people meet and make new individuals
-
- \item Predator-pray model: any field experiment to build?
-
- \item Experiments based on technology: imaging, sensors, ...
-
- \item Disease modeling coupled to data
-
- \item Predator-pray with disease
-
- \item Bioinformatics cases and programming
-
- \item ...
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection{Do we get better students?}
-
-% --- begin paragraph admon ---
-\paragraph{Molecular dynamics visualization by two MSc students.}
+\begin{block}{Molecular dynamics visualization by two MSc students }
 
 
 % inline figure
@@ -1619,16 +1352,14 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 % \includegraphics[width=9.5cm]{visualize.jpg}
-% --- end paragraph admon ---
 
+\end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Summary}
 
-
-% !split
-\subsection{Summary}
-
-% --- begin paragraph admon ---
-\paragraph{}
+\begin{block}{}
 
 \begin{itemize}
 \item Make our research visible in early undergraduate courses, enhance research based teaching
@@ -1645,17 +1376,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 \end{itemize}
 
 \noindent
-% --- end paragraph admon ---
-
-
-
-
-% ------------------- end of main content ---------------
-
-
-% #ifdef PREAMBLE
-\printindex
+\end{block}
+\end{frame}
 
 \end{document}
-% #endif
-

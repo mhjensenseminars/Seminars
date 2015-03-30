@@ -3,33 +3,8 @@
 %% (https://github.com/hplgit/doconce/)
 %%
 %%
-% #ifdef PTEX2TEX_EXPLANATION
-%%
-%% The file follows the ptex2tex extended LaTeX format, see
-%% ptex2tex: http://code.google.com/p/ptex2tex/
-%%
-%% Run
-%%      ptex2tex myfile
-%% or
-%%      doconce ptex2tex myfile
-%%
-%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
-%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
-%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
-%%
-%%      ptex2tex -DMINTED myfile
-%%      doconce ptex2tex myfile envir=minted
-%%
-%% ptex2tex will typeset code environments according to a global or local
-%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
-%% according to options on the command line (just type doconce ptex2tex to
-%% see examples). If doconce ptex2tex has envir=minted, it enables the
-%% minted style without needing -DMINTED.
-% #endif
 
-% #define PREAMBLE
 
-% #ifdef PREAMBLE
 %-------------------- begin preamble ----------------------
 
 \documentclass[%
@@ -45,12 +20,10 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \usepackage{graphicx}
 
-\usepackage{ptex2tex}
+\usepackage{fancyvrb} % packages needed for verbatim environments
 
-% #ifdef MINTED
 \usepackage{minted}
 \usemintedstyle{default}
-% #endif
 
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
@@ -102,22 +75,6 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \clubpenalty = 10000
 \widowpenalty = 10000
 
-\newenvironment{doconceexercise}{}{}
-\newcounter{doconceexercisecounter}
-
-
-% ------ header in subexercises ------
-%\newcommand{\subex}[1]{\paragraph{#1}}
-%\newcommand{\subex}[1]{\par\vspace{1.7mm}\noindent{\bf #1}\ \ }
-\makeatletter
-% 1.5ex is the spacing above the header, 0.5em the spacing after subex title
-\newcommand\subex{\@startsection{paragraph}{4}{\z@}%
-                  {1.5ex\@plus1ex \@minus.2ex}%
-                  {-0.5em}%
-                  {\normalfont\normalsize\bfseries}}
-\makeatother
-
-
 % --- end of standard preamble for documents ---
 
 
@@ -130,7 +87,6 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \begin{document}
 
-% #endif
 
 
 % ------------------- main content ----------------------
@@ -170,7 +126,7 @@ February 26, 2015
 
 
 % !split
-\subsection{People and links}
+\subsection*{People and links}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -201,7 +157,7 @@ February 26, 2015
 
 
 % !split
-\subsection{More links}
+\subsection*{More links}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -223,7 +179,7 @@ February 26, 2015
 
 
 % !split
-\subsection{Wouldn't it be cool if your mechanics students could reproduce results in a PRL?}
+\subsection*{Wouldn't it be cool if your mechanics students could reproduce results in a PRL?}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -251,7 +207,7 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 
 
 % !split
-\subsection{An important observation and a  question}
+\subsection*{An important observation and a  question}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -273,7 +229,7 @@ The basic tools for mathematical calculations have changed radically.
 
 
 % !split
-\subsection{Reality}
+\subsection*{Reality}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -293,7 +249,7 @@ The basic tools for mathematical calculations have changed radically.
 
 
 % !split
-\subsection{Principles}
+\subsection*{Principles}
 
 % --- begin paragraph admon ---
 \paragraph{Central aims behind our CSE reform.}
@@ -318,7 +274,7 @@ Algorithmic  thinking as a way to
 
 
 % !split
-\subsection{Research based teaching}
+\subsection*{Research based teaching}
 
 % --- begin paragraph admon ---
 \paragraph{How do we define it?}
@@ -344,7 +300,7 @@ knowledge and insights about scientific methods.
 
 
 % !split
-\subsection{Research based education}
+\subsection*{Research based education}
 
 % --- begin paragraph admon ---
 \paragraph{What should the education contain?}
@@ -369,7 +325,7 @@ Our education should reflect this.
 
 
 % !split
-\subsection{Research based education}
+\subsection*{Research based education}
 
 % --- begin paragraph admon ---
 \paragraph{Normal workflow in Science and Engineering.}
@@ -393,7 +349,7 @@ People who master these skills bring an important compentence to society.
 
 
 % !split
-\subsection{Computers and science teaching}
+\subsection*{Computers and science teaching}
 
 % --- begin paragraph admon ---
 \paragraph{Education.}
@@ -414,7 +370,7 @@ The basic topics (math, chemistry, physics, biology etc) are taught more or less
 
 
 % !split
-\subsection{Large scale simulations}
+\subsection*{Large scale simulations}
 
 % --- begin paragraph admon ---
 \paragraph{Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.}
@@ -428,7 +384,7 @@ The basic topics (math, chemistry, physics, biology etc) are taught more or less
 
 
 % !split
-\subsection{Large scale simulations}
+\subsection*{Large scale simulations}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -442,7 +398,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 % !split
-\subsection{Preliminary summary}
+\subsection*{Preliminary summary}
 
 % --- begin paragraph admon ---
 \paragraph{Computations should enter basic science education.}
@@ -466,7 +422,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 % !split
-\subsection{Can we catch many birds with one stone?}
+\subsection*{Can we catch many birds with one stone?}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -485,7 +441,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 % !split
-\subsection{What is needed?}
+\subsection*{What is needed?}
 
 % --- begin paragraph admon ---
 \paragraph{Programming.}
@@ -513,7 +469,7 @@ Training in modelling and problem solving with numerical methods and visualisati
 
 
 % !split
-\subsection{Implementation}
+\subsection*{Implementation}
 
 % --- begin paragraph admon ---
 \paragraph{Crucial ingredients.}
@@ -535,7 +491,7 @@ Consensus driven approach.
 
 
 % !split
-\subsection{Implementation in Oslo: The CSE  project}
+\subsection*{Implementation in Oslo: The CSE  project}
 
 % --- begin paragraph admon ---
 \paragraph{What we do.}
@@ -559,7 +515,7 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 % !split
-\subsection{Example of bachelor program, astrophysics}
+\subsection*{Example of bachelor program, astrophysics}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -573,7 +529,7 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 % !split
-\subsection{Example: Computations from day one}
+\subsection*{Example: Computations from day one}
 
 % --- begin paragraph admon ---
 \paragraph{Differentiation.}
@@ -599,28 +555,28 @@ Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 \end{itemize}
 
 \noindent
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 def differentiate(f, x, h=1E-5):
      return (f(x+h) - f(x-h))/(2*h)
-\epycod
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 % !split
-\subsection{Example: Computations from day one}
+\subsection*{Example: Computations from day one}
 
 % --- begin paragraph admon ---
 \paragraph{Differentiation and comparison with symbolic expressions.}
 Combined with the possibility of symbolic calculations with \emph{Sympy}, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 def differentiate(f, x, h=1E-5, symbolic=False):
     if symbolic:
         import sympy
         return sympy.lambdify([x], sympy.diff(f, x))
     else:
         return (f(x+h) - f(x-h))/(2*h)
-\epycod
+\end{minted}
 % --- end paragraph admon ---
 
 
@@ -628,7 +584,7 @@ def differentiate(f, x, h=1E-5, symbolic=False):
 
 
 % !split
-\subsection{Other Examples}
+\subsection*{Other Examples}
 
 % --- begin paragraph admon ---
 \paragraph{Integration by Trapezoidal Rule.}
@@ -655,12 +611,12 @@ def differentiate(f, x, h=1E-5, symbolic=False):
 
 
 % !split
-\subsection{Typical implementation in INF1100}
+\subsection*{Typical implementation in INF1100}
 
 % --- begin paragraph admon ---
 \paragraph{Integration by Trapezoidal Rule.}
 
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 from math import exp, log, sin
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
@@ -678,14 +634,14 @@ def f1(x):
 a = 1;  b = 3; n = 1000
 result = Trapez(a,b,f1,n)
 print result
-\epycod
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 
 % !split
-\subsection{Typical implementation in INF1100}
+\subsection*{Typical implementation in INF1100}
 
 % --- begin paragraph admon ---
 \paragraph{Symbolic calculations and numerical calculations in one code!}
@@ -693,7 +649,7 @@ Python offers an  extremely versatile programming  environment, allowing for the
 where \emph{SymPy} is used to evaluate the integral and compute the absolute error 
 with respect to the numerically evaluated one of the integral
 $4\int_0^1 dx/(1+x^2) = \pi$: 
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 from math import *
 from sympy import *
 def Trapez(a,b,f,n):
@@ -719,14 +675,14 @@ exact = integrate(function(x), (x, 0.0, 1.0))
 print "Sympy integration=", exact
 # Find relative error
 print "Relative error", abs((exact-result)/exact)
-\epycod
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 
 % !split
-\subsection{Integrating numerical mathematics with calculus}
+\subsection*{Integrating numerical mathematics with calculus}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -750,12 +706,12 @@ The last example shows the potential of combining numerical algorithms with symb
 
 
 % !split
-\subsection{Error analysis}
+\subsection*{Error analysis}
 
 % --- begin paragraph admon ---
 \paragraph{}
 The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to $10^8$ points one arrives at a region where numerical errors start to accumulate.
-\bpycod
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 from math import log10
 import numpy as np
 from sympy import Symbol, integrate
@@ -791,7 +747,7 @@ plt.plot(n,y, 'ro')
 plt.xlabel('n')
 plt.ylabel('Relative error')
 plt.show()
-\epycod
+\end{minted}
 % --- end paragraph admon ---
 
 
@@ -799,7 +755,7 @@ plt.show()
 
 
 % !split
-\subsection{Learning outcomes three first semesters}
+\subsection*{Learning outcomes three first semesters}
 
 % --- begin paragraph admon ---
 \paragraph{Knowledge of basic algorithms.}
@@ -826,7 +782,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 % !split
-\subsection{Later courses}
+\subsection*{Later courses}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -845,7 +801,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 % !split
-\subsection{Coordination}
+\subsection*{Coordination}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -861,7 +817,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 % !split
-\subsection{FYS-MEK1100 (Mechanics), Second Semester}
+\subsection*{FYS-MEK1100 (Mechanics), Second Semester}
 
 % --- begin paragraph admon ---
 \paragraph{Realistic Pendulum.}
@@ -881,7 +837,7 @@ L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=V(t).
 
 
 % !split
-\subsection{FYS1120 Electromagnetism, Third Semester}
+\subsection*{FYS1120 Electromagnetism, Third Semester}
 
 % --- begin paragraph admon ---
 \paragraph{RLC circuit.}
@@ -898,7 +854,7 @@ in an RLC circuit. Then they did the experiment.
 
 
 % !split
-\subsection{More Examples from Physics Courses, 2-5 semester}
+\subsection*{More Examples from Physics Courses, 2-5 semester}
 
 % --- begin paragraph admon ---
 \paragraph{Second-fourth semester.}
@@ -929,7 +885,7 @@ in an RLC circuit. Then they did the experiment.
 
 
 % !split
-\subsection{First computational physics course}
+\subsection*{First computational physics course}
 
 % --- begin paragraph admon ---
 \paragraph{Late: Fifth semester, FYS3150 Computational Physics.}
@@ -955,7 +911,7 @@ The first computational physics \href{{http://www.uio.no/studier/emner/matnat/fy
 
 
 % !split
-\subsection{Challenges...}
+\subsection*{Challenges...}
 
 % --- begin paragraph admon ---
 \paragraph{.. and objections.}
@@ -976,7 +932,7 @@ science applications.
 
 
 % !split
-\subsection{Challenges and future plans}
+\subsection*{Challenges and future plans}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -998,7 +954,7 @@ science applications.
 
 
 % !split
-\subsection{Which aspects are important for a successful introduction of CSE?}
+\subsection*{Which aspects are important for a successful introduction of CSE?}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -1026,7 +982,7 @@ science applications.
 
 
 % !split
-\subsection{What about life science/biology? Overarching questions}
+\subsection*{What about life science/biology? Overarching questions}
 
 % !bpop
 
@@ -1061,7 +1017,7 @@ programming?
 % !epop
 
 % !split
-\subsection{How to teach computing in biology?}
+\subsection*{How to teach computing in biology?}
 
 % !bpop
 
@@ -1107,7 +1063,7 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 
 
 % !split
-\subsection{The pedagogical framework}
+\subsection*{The pedagogical framework}
 
 
 % --- begin paragraph admon ---
@@ -1145,7 +1101,7 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 
 
 % !split
-\subsection{Example 1: ecoli lab experiment}
+\subsection*{Example 1: ecoli lab experiment}
 
 
 % --- begin paragraph admon ---
@@ -1153,7 +1109,7 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 Observations of no of bacteria vs time in seconds,
 stored in Excel and written to a CVS file:
 
-\btxt
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{text}
 0,100
 600,140
 1200,250
@@ -1165,13 +1121,13 @@ stored in Excel and written to a CVS file:
 4800,2900
 5400,3900
 6000,7000
-\etxt
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 % !split
-\subsection{Visualize data}
+\subsection*{Visualize data}
 
 
 % --- begin paragraph admon ---
@@ -1185,7 +1141,7 @@ stored in Excel and written to a CVS file:
 \noindent
 First program:
 
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 t = [0, 600, 1200, 1800, 2400, 3000, 3600,
      4200, 4800, 5400, 6000]
 N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
@@ -1194,14 +1150,14 @@ plt.plot(t, N, 'ro')
 plt.xlabel('t [s]')
 plt.ylabel('N')
 plt.show()
-\epypro
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 
 % !split
-\subsection{Concepts must be introduced implicitly in a structured way}
+\subsection*{Concepts must be introduced implicitly in a structured way}
 
 
 % --- begin paragraph admon ---
@@ -1243,12 +1199,12 @@ just straight lines between discrete points on a curve.
 
 
 % !split
-\subsection{Read data from file}
+\subsection*{Read data from file}
 
 
 % --- begin paragraph admon ---
 \paragraph{}
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 import numpy as np
 data = np.loadtxt('ecoli.csv', delimiter=',')
 print data  # look at the format
@@ -1259,7 +1215,7 @@ plt.plot(t, N, 'ro')
 plt.xlabel('t [s]')
 plt.ylabel('N')
 plt.show()
-\epypro
+\end{minted}
 % --- end paragraph admon ---
 
 
@@ -1274,7 +1230,7 @@ underlying (general) mechanism?
 
 
 % !split
-\subsection{Lab journal}
+\subsection*{Lab journal}
 
 
 % --- begin paragraph admon ---
@@ -1286,7 +1242,7 @@ Use IPython notebook as lab journal.
 
 
 % !split
-\subsection{How can we reason about the process?}
+\subsection*{How can we reason about the process?}
 
 % \href{{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}{\nolinkurl{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}
 
@@ -1324,7 +1280,7 @@ Use IPython notebook as lab journal.
 
 
 % !split
-\subsection{The first simple program}
+\subsection*{The first simple program}
 
 
 % --- begin paragraph admon ---
@@ -1332,7 +1288,7 @@ Use IPython notebook as lab journal.
 Let us solve the difference equation in as simple way as possible,
 just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
 
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 import numpy as np
 
 t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
@@ -1345,15 +1301,15 @@ r = 0.5
 for n in range(0, N.size-1, 1):
     N[n+1] = N[n] + r*dt*N[n]
     print 'N[%d]=%.1f' % (n+1, N[n+1])
-\epypro
+\end{minted}
 % --- end paragraph admon ---
 
 
 
 % !split
-\subsection{The output}
+\subsection*{The output}
 
-\bccq
+\begin{Verbatim}[numbers=none,fontsize=\fontsize{9pt}{9pt},baselinestretch=0.95]
 N[1]=1.2
 N[2]=1.6
 N[3]=2.0
@@ -1374,10 +1330,10 @@ N[17]=44.4
 N[18]=55.5
 N[19]=69.4
 N[20]=86.7
-\eccq
+\end{Verbatim}
 
 % !split
-\subsection{Parameter estimation}
+\subsection*{Parameter estimation}
 
 
 % --- begin paragraph admon ---
@@ -1412,14 +1368,14 @@ too advanced at this stage.
 
 
 % !split
-\subsection{A program relevant for the biological problem}
+\subsection*{A program relevant for the biological problem}
 
 % exact r = 0.000694
 
 
 % --- begin paragraph admon ---
 \paragraph{}
-\bpypro
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
 import numpy as np
 
 # Estimate r
@@ -1447,7 +1403,7 @@ plt.plot(t, N, 'r-', t_e, N_e, 'bo')
 plt.xlabel('time [s]');  plt.ylabel('N')
 plt.legend(['model', 'experiment'], loc='upper left')
 plt.show()
-\epypro
+\end{minted}
 
 Change \Verb!r! in the program and play around to make a better fit!
 % --- end paragraph admon ---
@@ -1455,7 +1411,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 % !split
-\subsection{Discuss the nature of such a model}
+\subsection*{Discuss the nature of such a model}
 
 
 % --- begin paragraph admon ---
@@ -1477,7 +1433,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 % !split
-\subsection{Discuss the limitations of such a model}
+\subsection*{Discuss the limitations of such a model}
 
 
 % --- begin paragraph admon ---
@@ -1502,7 +1458,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 % !split
-\subsection{The pedagogical template (to be iterated!)}
+\subsection*{The pedagogical template (to be iterated!)}
 
 
 % --- begin paragraph admon ---
@@ -1546,68 +1502,9 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 
-% !split
-\subsection{Technology for documenting cases}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Documentation: slides in the doconce format with extra notes\\
-   (can compile with/without notes)
-
- \item Realistic goal: write out the slides for a gentle book on biocomputing examples
-
- \item The biological case is in a separate file that the students can work
-   with as an IPython notebook
-
- \item Problem: not much basic literature exists
-
- \item Cases must be linked in a learning graph:\\
-   \emph{I want to do nerve cell modeling, but how to progress to this stage?}
-
- \item Make a list of concepts and where concepts are trained
-
- \item Think of each case as a \emph{separate module}
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
 
 % !split
-\subsection{Immediate tasks}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Find a good bacteria growth lab example - do the first example
-
- \item Alternative model: random 2D walk, people meet and make new individuals
-
- \item Predator-pray model: any field experiment to build?
-
- \item Experiments based on technology: imaging, sensors, ...
-
- \item Disease modeling coupled to data
-
- \item Predator-pray with disease
-
- \item Bioinformatics cases and programming
-
- \item ...
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection{Do we get better students?}
+\subsection*{Do we get better students?}
 
 % --- begin paragraph admon ---
 \paragraph{Molecular dynamics visualization by two MSc students.}
@@ -1625,7 +1522,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 
 
 % !split
-\subsection{Summary}
+\subsection*{Summary}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -1653,9 +1550,7 @@ Change \Verb!r! in the program and play around to make a better fit!
 % ------------------- end of main content ---------------
 
 
-% #ifdef PREAMBLE
 \printindex
 
 \end{document}
-% #endif
 

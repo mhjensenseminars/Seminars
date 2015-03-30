@@ -205,20 +205,6 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Funny aside?}
-
-\begin{block}{}
-
-
-% inline figure
-\centerline{\includegraphics[width=0.9\linewidth]{figures/old-computer.jpg}}
-
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
 \frametitle{An important observation and a  question}
 
 \begin{block}{}
@@ -359,29 +345,6 @@ The basic topics (math, chemistry, physics, biology etc) are taught more or less
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{More observations}
-
-\begin{block}{Computation in the Sciences }
-
-\begin{itemize}
-\item Computations as a fundamental tool  to gain new insights
-
-\item Computer simulations can act as  a lab, can save both time and resources 
-
-\item Computations is a central component in modern industry and research in the sciences, spanning almost every field:
-\begin{itemize}
-
- \item Materials science and nanotechnology, weather forecasting, earthquake simulations and forecasting, medical technology, industrial design, design of new computers, the entertainment industry, almost all aspects of our modern society!!
-\end{itemize}
-
-\noindent
-\end{itemize}
-
-\noindent
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
 \frametitle{Large scale simulations}
 
 \begin{block}{Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.  }
@@ -409,46 +372,20 @@ Fluid dynamical simulations central in air industry, wings tested.
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Nano and macro-scale reactions in rocks}
+\frametitle{Preliminary summary}
 
-\begin{block}{}
-
-
-% inline figure
-\centerline{\includegraphics[width=0.8\linewidth]{figures/rocks.pdf}}
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
-\frametitle{Further observations}
-
-\begin{block}{Computations should enter science education  }
+\begin{block}{Computations should enter basic science education }
 
 \begin{itemize}
-\item Our teaching should include  an education in basic numerical methods, normally taught in different departments, and often disconnected. 
+\item Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
 
-\item The students should also learn to develop new methods and learn new tools when needed.
+\item Requires development of algorithmic thinking.
 
-\item Need an adequate computational platform.
-\end{itemize}
+\item Basic numerical methods should be part of the compulsory curriculum.
 
-\noindent
-\end{block}
-\end{frame}
+\item The students should also learn to develop new numerical methods and adapt to new software tools.
 
-\begin{frame}[plain,fragile]
-\frametitle{More observations}
-
-\begin{block}{Observations about implementations }
-
-\begin{itemize}
-\item One creates different physics courses and graduate programs which bake in computations, typically various Computational Physics courses from sophomore to graduate level.  The problem is that these courses are not compulsory. The result is often an uneven background of the students. 
-
-\item Dedicated teachers incorporate numerical exercises (at different levels) in their physics courses. When new teachers take over, the whole initiative may disappear. 
-
-\item Some  physics departments in Europe teach their own math and computer science courses! But have still not been able to coordinate properly computational topics.
+\item Requires more training than simple programming in a mathematics course.
 \end{itemize}
 
 \noindent
@@ -465,27 +402,6 @@ Fluid dynamical simulations central in air industry, wings tested.
 \item Can this enhance the students' understanding of mathematics and science?
 
 \item Can it strengthen research based teaching?
-\end{itemize}
-
-\noindent
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
-\frametitle{Preliminary summary}
-
-\begin{block}{Computations should enter basic science education }
-
-\begin{itemize}
-\item Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
-
-\item Requires development of algorithmic thinking.
-
-\item Basic numerical methods should be part of the compulsory curriculum.
-
-\item The students should also learn to develop new numerical methods and adapt to new software tools.
-
-\item Requires more training than simple programming in a mathematics course.
 \end{itemize}
 
 \noindent
@@ -856,25 +772,6 @@ in an RLC circuit. Then they did the experiment.
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{What can we do with the pendulum?}
-
-\begin{block}{Many interesting problems }
-
-\begin{enumerate}
-\item Can study chaos, theoretically, numerically and experimentally, can choose 'best' parameters  for experimental setup.
-
-\item Can test different algorithms for solving ordinary differential equations, from Euler's to fourth-order Runge Kutta methods. Tight connection with algorithm and physics.
-
-\item Can make classes of differential equation solvers.
-
-\item Can make a general program that can be applied to other scientific cases in later courses, such as electromagnetism (RLC circuits).  Students realize that much of the same mathematics enters many physics cases.
-\end{enumerate}
-
-\noindent
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
 \frametitle{More Examples from Physics Courses, 2-5 semester}
 
 \begin{block}{Second-fourth semester }
@@ -985,6 +882,511 @@ science applications.
 \item Tailor to specific disciplines.
 
 \item Organizational matters.
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{What about life science/biology? Overarching questions}
+
+\pause
+\begin{block}{Which skills are needed by candidates in biology? }
+There is new demand for more
+
+\begin{itemize}
+  \item quantitative methods {\&} reasoning
+
+  \item understanding data and phenomena via models
+
+  \item creating \emph{in silico} virtual labs
+\end{itemize}
+
+\noindent
+\end{block}
+
+\pause
+\begin{block}{Challenge: }
+How to integrate such computing-based activities in the undergraduate programs
+when the students are \emph{not} interested in mathematics, physics, and
+programming?
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{How to teach computing in biology?}
+
+\pause
+\begin{block}{}
+Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
+
+\begin{itemize}
+  \item Uninteresting to first study tools when you want to study biology
+
+  \item Little understanding of what the tools are good for
+
+  \item Minor utilization of tools later in biology
+\end{itemize}
+
+\noindent
+\end{block}
+
+\pause
+\begin{block}{It's time for new thinking: }
+\begin{itemize}
+  \item Just-in-time teaching: teach tools \emph{when needed}
+
+  \item Teach tools in the \emph{context of biology}
+
+  \item Emphasize development of \emph{intuition and understanding}
+
+  \item Base learning of the students' own \emph{explorations in biology projects}
+
+  \item Integrate lab work with computing tools
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The pedagogical framework}
+
+\begin{block}{Aim: Develop intuition about the scientific method }
+\begin{itemize}
+ \item Method: case-based learning
+
+ \item Coherent problem solving \emph{in biology} by integrating
+   mathematics, programming, physics/chemistry, ...
+
+ \item Starting point: data from lab or field experiments
+
+ \item Visualize data
+
+ \item Derive computational models directly from mathematical/intuitive \emph{reasoning}
+
+ \item Program model(s), fit parameters, compare with data
+
+ \item Develop intuition and understanding based on
+\begin{itemize}
+
+  \item the principles behind the model
+
+  \item exploration of the model (``what if'')
+
+  \item prediction of new experiments
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Example 1: ecoli lab experiment}
+
+\begin{block}{}
+Observations of no of bacteria vs time in seconds,
+stored in Excel and written to a CVS file:
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{text}
+0,100
+600,140
+1200,250
+1800,360
+2400,480
+3000,820
+3600,1300
+4200,1700
+4800,2900
+5400,3900
+6000,7000
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Visualize data}
+
+\begin{block}{}
+\begin{itemize}
+ \item Meet a text editor and a terminal window
+
+ \item Very basic Unix
+\end{itemize}
+
+\noindent
+First program:
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
+t = [0, 600, 1200, 1800, 2400, 3000, 3600,
+     4200, 4800, 5400, 6000]
+N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Concepts must be introduced implicitly in a structured way}
+
+\begin{block}{Warning}
+\begin{itemize}
+ \item Always identify new concepts
+
+ \item Train new concepts in simplified (``trivial'') problems
+\end{itemize}
+
+\noindent
+\end{block}
+
+\begin{block}{Concepts in the previous example: }
+\begin{itemize}
+ \item Lists or arrays of numbers
+
+ \item Plotting commands
+
+ \item Curve = function of time
+\end{itemize}
+
+\noindent
+\end{block}
+
+\begin{block}{Notice: }
+The concept of a continuous function $N(t)$ is not necessary,
+just straight lines between discrete points on a curve.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Read data from file}
+
+\begin{block}{}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
+import numpy as np
+data = np.loadtxt('ecoli.csv', delimiter=',')
+print data  # look at the format
+t = data[:,0]
+N = data[:,1]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+\end{minted}
+\end{block}
+
+\begin{block}{Typical pattern: }
+The population grows faster and faster. Why? Is there an
+underlying (general) mechanism?
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Lab journal}
+
+\begin{block}{}
+Use IPython notebook as lab journal.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{How can we reason about the process?}
+
+% \href{{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}{\nolinkurl{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}
+
+\begin{block}{}
+\begin{enumerate}
+\pause
+\item Cells divide after $T$ seconds on average (one generation)
+
+\pause
+\item $2N$ celles divide into twice as many new cells $\Delta N$ in a time
+   interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
+
+\pause
+\item $N$ cells result in twice as many new individuals $\Delta N$ in
+   time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
+
+\pause
+\item Same proportionality wrt death (repeat reasoning)
+
+\pause
+\item Proposed model: $\Delta N = b\Delta t N - d\Delta tN$ for some unknown
+   constants $b$ (births) and $d$ (deaths)
+
+\pause
+\item Describe evolution in discrete time: $t_n=n\Delta t$
+
+\pause
+\item Program-friendly notation: $N$ at $t_n$ is $N^n$
+
+\pause
+\item Math model: $N^{n+1} = N^n + r\Delta t\, N$ (with $\ r=b-d$)
+
+\pause
+\item Program model: \Verb!N[n+1] = N[n] + r*dt*N[n]!
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The first simple program}
+
+\begin{block}{}
+Let us solve the difference equation in as simple way as possible,
+just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
+import numpy as np
+
+t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 1
+r = 0.5
+
+for n in range(0, N.size-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+    print 'N[%d]=%.1f' % (n+1, N[n+1])
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The output}
+
+\begin{Verbatim}[numbers=none,fontsize=\fontsize{9pt}{9pt},baselinestretch=0.95]
+N[1]=1.2
+N[2]=1.6
+N[3]=2.0
+N[4]=2.4
+N[5]=3.1
+N[6]=3.8
+N[7]=4.8
+N[8]=6.0
+N[9]=7.5
+N[10]=9.3
+N[11]=11.6
+N[12]=14.6
+N[13]=18.2
+N[14]=22.7
+N[15]=28.4
+N[16]=35.5
+N[17]=44.4
+N[18]=55.5
+N[19]=69.4
+N[20]=86.7
+\end{Verbatim}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Parameter estimation}
+
+\begin{block}{}
+\begin{itemize}
+ \item We do not know $r$
+
+ \item How can we estimate $r$ from data?
+\end{itemize}
+
+\noindent
+We can use the difference equation with the experimental data
+
+\[ N^{n+1} = N^n + r\Delta t N^n\]
+Say $N^{n+1}$ and $N^n$ are known from data, solve wrt $r$:
+
+\[ r = \frac{N^{n+1}-N^n}{N^n\Delta t} \]
+
+Use experimental data in the fraction, say $t_1=600$, $t_2=1200$,
+$N^1=140$, $N^2=250$: $r=0.0013$.
+\end{block}
+
+\begin{block}{More sophisticated methods }
+Can do a nonlinear least squares parameter fit, but that is
+too advanced at this stage.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{A program relevant for the biological problem}
+
+% exact r = 0.000694
+
+\begin{block}{}
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
+import numpy as np
+
+# Estimate r
+data = np.loadtxt('ecoli.csv', delimiter=',')
+t_e = data[:,0]
+N_e = data[:,1]
+i = 2  # Data point (i,i+1) used to estimate r
+r = (N_e[i+1] - N_e[i])/(N_e[i]*(t_e[i+1] - t_e[i]))
+print 'Estimated r=%.5f' % r
+# Can experiment with r values and see if the model can
+# match the data better
+
+T = 1200     # cell can divide after T sec
+t_max = 5*T  # 5 generations in experiment
+t = np.linspace(0, t_max, 1000)
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 100
+for n in range(0, len(t)-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'r-', t_e, N_e, 'bo')
+plt.xlabel('time [s]');  plt.ylabel('N')
+plt.legend(['model', 'experiment'], loc='upper left')
+plt.show()
+\end{minted}
+
+Change \Verb!r! in the program and play around to make a better fit!
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Discuss the nature of such a model}
+
+\begin{block}{}
+\begin{itemize}
+ \item Write up all the biological factors that influence the
+   population size of bacteria
+
+ \item Understand that all such effects are merged into one parameter $r$
+
+ \item Understand that the reasoning must be the same whether we
+   have bacteria, animals or humans - this is a generic model!\\
+   (even the interest rate in a bank follows the same model)
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Discuss the limitations of such a model}
+
+\begin{block}{}
+\begin{itemize}
+ \item How many bacteria in the lab after one month?
+
+ \item Growth is restricted by environmental resources!
+
+ \item Fix the model (logistic growth)
+
+ \item Is the logistic model appropriate for a lab experiment?
+
+ \item Find data to support the logistic model \\
+   (it's a \emph{very} simple model)
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The pedagogical template (to be iterated!)}
+
+\begin{block}{}
+\begin{itemize}
+ \item Start with a real biological problem
+
+ \item Be careful with too many new concepts
+
+ \item Workflow:
+\begin{itemize}
+
+  \item data
+
+  \item visualization
+
+  \item patterns
+
+  \item modeling (\emph{discrete})
+
+  \item programming
+
+  \item testing
+
+  \item parameter estimation (difficult)
+
+  \item validation
+
+  \item prediction
+
+\end{itemize}
+
+\noindent
+ \item Make many small exercises that train the new concepts
+
+ \item Repeat the case in a way that makes a complete understanding
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Technology for documenting cases}
+
+\begin{block}{}
+\begin{itemize}
+ \item Documentation: slides in the doconce format with extra notes\\
+   (can compile with/without notes)
+
+ \item Realistic goal: write out the slides for a gentle book on biocomputing examples
+
+ \item The biological case is in a separate file that the students can work
+   with as an IPython notebook
+
+ \item Problem: not much basic literature exists
+
+ \item Cases must be linked in a learning graph:\\
+   \emph{I want to do nerve cell modeling, but how to progress to this stage?}
+
+ \item Make a list of concepts and where concepts are trained
+
+ \item Think of each case as a \emph{separate module}
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Immediate tasks}
+
+\begin{block}{}
+\begin{itemize}
+ \item Find a good bacteria growth lab example - do the first example
+
+ \item Alternative model: random 2D walk, people meet and make new individuals
+
+ \item Predator-pray model: any field experiment to build?
+
+ \item Experiments based on technology: imaging, sensors, ...
+
+ \item Disease modeling coupled to data
+
+ \item Predator-pray with disease
+
+ \item Bioinformatics cases and programming
+
+ \item ...
 \end{itemize}
 
 \noindent
