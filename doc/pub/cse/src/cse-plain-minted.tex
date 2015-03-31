@@ -75,22 +75,6 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \clubpenalty = 10000
 \widowpenalty = 10000
 
-\newenvironment{doconceexercise}{}{}
-\newcounter{doconceexercisecounter}
-
-
-% ------ header in subexercises ------
-%\newcommand{\subex}[1]{\paragraph{#1}}
-%\newcommand{\subex}[1]{\par\vspace{1.7mm}\noindent{\bf #1}\ \ }
-\makeatletter
-% 1.5ex is the spacing above the header, 0.5em the spacing after subex title
-\newcommand\subex{\@startsection*{paragraph}{4}{\z@}%
-                  {1.5ex\@plus1ex \@minus.2ex}%
-                  {-0.5em}%
-                  {\normalfont\normalsize\bfseries}}
-\makeatother
-
-
 % --- end of standard preamble for documents ---
 
 
@@ -135,7 +119,7 @@ Computing in Science Education (CSE): Integrating a computational perspective in
 % ----------------- end author(s) -------------------------
 
 \begin{center} % date
-February 26, 2015
+March 31, 2015
 \end{center}
 
 \vspace{1cm}
@@ -1511,65 +1495,6 @@ Change \Verb!r! in the program and play around to make a better fit!
  \item Make many small exercises that train the new concepts
 
  \item Repeat the case in a way that makes a complete understanding
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-% !split
-\subsection*{Technology for documenting cases}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Documentation: slides in the doconce format with extra notes\\
-   (can compile with/without notes)
-
- \item Realistic goal: write out the slides for a gentle book on biocomputing examples
-
- \item The biological case is in a separate file that the students can work
-   with as an IPython notebook
-
- \item Problem: not much basic literature exists
-
- \item Cases must be linked in a learning graph:\\
-   \emph{I want to do nerve cell modeling, but how to progress to this stage?}
-
- \item Make a list of concepts and where concepts are trained
-
- \item Think of each case as a \emph{separate module}
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-% !split
-\subsection*{Immediate tasks}
-
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
- \item Find a good bacteria growth lab example - do the first example
-
- \item Alternative model: random 2D walk, people meet and make new individuals
-
- \item Predator-pray model: any field experiment to build?
-
- \item Experiments based on technology: imaging, sensors, ...
-
- \item Disease modeling coupled to data
-
- \item Predator-pray with disease
-
- \item Bioinformatics cases and programming
-
- \item ...
 \end{itemize}
 
 \noindent

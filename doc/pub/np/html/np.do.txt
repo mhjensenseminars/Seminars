@@ -1,0 +1,48 @@
+# Slides for PHY981
+TITLE: Nuclear Physics courses
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: March 31, 2015
+
+!split
+===== People and links  =====
+!bblock 
+* Hans Petter Langtangen, Computer Science
+* Knut Morken, Mathematics
+* Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
+* Tom Lindstrom, Mathematics
+* Oyvind Ryan, Mathematics
+* Solveig Kristensen, Dean of Education
+* Hanne Solna, Director of studies
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/"
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf"
+
+!eblock
+
+
+!split
+===== More links  =====
+!bblock 
+* Python and our first programming course, first semester "course": "http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/". Excellent new textbook by Hans Petter Langtangen, click here for the "textbook":"http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" or the "online version": "http://hplgit.github.io/primer.html/doc/web/index.html"
+* Mathematical modelling course, first semester "course": "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/". Textbook by Knut Morken to be published by Springer.
+* Mechanics, second semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
+* Computational Physics I, fifth semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/". Textbook to be published by IOP in 2015, with "online version":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf".
+
+!eblock
+
+
+
+!split
+===== Wouldn't it be cool if your mechanics students could reproduce results in a PRL? =====
+!bblock
+FIGURE: [figures/prl1.png, width=800 frac=0.5] 
+
+Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+!eblock
+!bblock 
+FIGURE: [figures/prl2.png, width=700 frac=0.5] 
+!eblock
+    
+      
+
+
+

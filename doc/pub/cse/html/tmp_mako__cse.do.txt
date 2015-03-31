@@ -1,7 +1,7 @@
 # Slides for PHY981
 TITLE: Computing in Science Education (CSE): Integrating a computational perspective in the basic science education
 AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
-DATE: February 26, 2015
+DATE: March 31, 2015
 
 !split
 ===== People and links  =====
