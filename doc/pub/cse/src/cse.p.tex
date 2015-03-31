@@ -147,7 +147,7 @@ Computing in Science Education (CSE): Integrating a computational perspective in
 % ----------------- end author(s) -------------------------
 
 \begin{center} % date
-February 26, 2015
+March 31, 2015
 \end{center}
 
 \vspace{1cm}
@@ -231,19 +231,6 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 \centerline{\includegraphics[width=0.5\linewidth]{figures/prl2.png}}
 % --- end paragraph admon ---
 
-
-
-
-% !split
-\subsection{Funny aside?}
-
-% --- begin paragraph admon ---
-\paragraph{}
-
-
-% inline figure
-\centerline{\includegraphics[width=0.9\linewidth]{figures/old-computer.jpg}}
-% --- end paragraph admon ---
 
 
 
@@ -411,32 +398,6 @@ The basic topics (math, chemistry, physics, biology etc) are taught more or less
 
 
 % !split
-\subsection{More observations}
-
-% --- begin paragraph admon ---
-\paragraph{Computation in the Sciences.}
-
-\begin{itemize}
-\item Computations as a fundamental tool  to gain new insights
-
-\item Computer simulations can act as  a lab, can save both time and resources 
-
-\item Computations is a central component in modern industry and research in the sciences, spanning almost every field:
-\begin{itemize}
-
- \item Materials science and nanotechnology, weather forecasting, earthquake simulations and forecasting, medical technology, industrial design, design of new computers, the entertainment industry, almost all aspects of our modern society!!
-\end{itemize}
-
-\noindent
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
 \subsection{Large scale simulations}
 
 % --- begin paragraph admon ---
@@ -464,55 +425,22 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 
-
 % !split
-\subsection{Nano and macro-scale reactions in rocks}
+\subsection{Preliminary summary}
 
 % --- begin paragraph admon ---
-\paragraph{}
-
-
-% inline figure
-\centerline{\includegraphics[width=0.8\linewidth]{figures/rocks.pdf}}
-% --- end paragraph admon ---
-
-
-
-
-
-% !split
-\subsection{Further observations}
-
-% --- begin paragraph admon ---
-\paragraph{Computations should enter science education.}
+\paragraph{Computations should enter basic science education.}
 
 \begin{itemize}
-\item Our teaching should include  an education in basic numerical methods, normally taught in different departments, and often disconnected. 
+\item Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
 
-\item The students should also learn to develop new methods and learn new tools when needed.
+\item Requires development of algorithmic thinking.
 
-\item Need an adequate computational platform.
-\end{itemize}
+\item Basic numerical methods should be part of the compulsory curriculum.
 
-\noindent
-% --- end paragraph admon ---
+\item The students should also learn to develop new numerical methods and adapt to new software tools.
 
-
-
-
-
-% !split
-\subsection{More observations}
-
-% --- begin paragraph admon ---
-\paragraph{Observations about implementations.}
-
-\begin{itemize}
-\item One creates different physics courses and graduate programs which bake in computations, typically various Computational Physics courses from sophomore to graduate level.  The problem is that these courses are not compulsory. The result is often an uneven background of the students. 
-
-\item Dedicated teachers incorporate numerical exercises (at different levels) in their physics courses. When new teachers take over, the whole initiative may disappear. 
-
-\item Some  physics departments in Europe teach their own math and computer science courses! But have still not been able to coordinate properly computational topics.
+\item Requires more training than simple programming in a mathematics course.
 \end{itemize}
 
 \noindent
@@ -532,30 +460,6 @@ Fluid dynamical simulations central in air industry, wings tested.
 \item Can this enhance the students' understanding of mathematics and science?
 
 \item Can it strengthen research based teaching?
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection{Preliminary summary}
-
-% --- begin paragraph admon ---
-\paragraph{Computations should enter basic science education.}
-
-\begin{itemize}
-\item Computation is a fundamental tool to gain new insights and should be included in our elementary teaching.
-
-\item Requires development of algorithmic thinking.
-
-\item Basic numerical methods should be part of the compulsory curriculum.
-
-\item The students should also learn to develop new numerical methods and adapt to new software tools.
-
-\item Requires more training than simple programming in a mathematics course.
 \end{itemize}
 
 \noindent
@@ -977,30 +881,6 @@ in an RLC circuit. Then they did the experiment.
 
 
 
-
-
-% !split
-\subsection{What can we do with the pendulum?}
-
-% --- begin paragraph admon ---
-\paragraph{Many interesting problems.}
-
-\begin{enumerate}
-\item Can study chaos, theoretically, numerically and experimentally, can choose 'best' parameters  for experimental setup.
-
-\item Can test different algorithms for solving ordinary differential equations, from Euler's to fourth-order Runge Kutta methods. Tight connection with algorithm and physics.
-
-\item Can make classes of differential equation solvers.
-
-\item Can make a general program that can be applied to other scientific cases in later courses, such as electromagnetism (RLC circuits).  Students realize that much of the same mathematics enters many physics cases.
-\end{enumerate}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
 % !split
 \subsection{More Examples from Physics Courses, 2-5 semester}
 
@@ -1128,6 +1008,529 @@ science applications.
 
 
 
+
+% !split
+\subsection{What about life science/biology? Overarching questions}
+
+% !bpop
+
+% --- begin paragraph admon ---
+\paragraph{Which skills are needed by candidates in biology?}
+There is new demand for more
+
+\begin{itemize}
+  \item quantitative methods {\&} reasoning
+
+  \item understanding data and phenomena via models
+
+  \item creating \emph{in silico} virtual labs
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+% !epop
+
+% !bpop
+
+% --- begin paragraph admon ---
+\paragraph{Challenge:}
+How to integrate such computing-based activities in the undergraduate programs
+when the students are \emph{not} interested in mathematics, physics, and
+programming?
+% --- end paragraph admon ---
+
+
+% !epop
+
+% !split
+\subsection{How to teach computing in biology?}
+
+% !bpop
+
+% --- begin paragraph admon ---
+\paragraph{}
+Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
+
+\begin{itemize}
+  \item Uninteresting to first study tools when you want to study biology
+
+  \item Little understanding of what the tools are good for
+
+  \item Minor utilization of tools later in biology
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+% !epop
+
+% !bpop
+
+% --- begin paragraph admon ---
+\paragraph{It's time for new thinking:}
+\begin{itemize}
+  \item Just-in-time teaching: teach tools \emph{when needed}
+
+  \item Teach tools in the \emph{context of biology}
+
+  \item Emphasize development of \emph{intuition and understanding}
+
+  \item Base learning of the students' own \emph{explorations in biology projects}
+
+  \item Integrate lab work with computing tools
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+% !epop
+
+
+% !split
+\subsection{The pedagogical framework}
+
+
+% --- begin paragraph admon ---
+\paragraph{Aim: Develop intuition about the scientific method.}
+\begin{itemize}
+ \item Method: case-based learning
+
+ \item Coherent problem solving \emph{in biology} by integrating
+   mathematics, programming, physics/chemistry, ...
+
+ \item Starting point: data from lab or field experiments
+
+ \item Visualize data
+
+ \item Derive computational models directly from mathematical/intuitive \emph{reasoning}
+
+ \item Program model(s), fit parameters, compare with data
+
+ \item Develop intuition and understanding based on
+\begin{itemize}
+
+  \item the principles behind the model
+
+  \item exploration of the model (``what if'')
+
+  \item prediction of new experiments
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Example 1: ecoli lab experiment}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+Observations of no of bacteria vs time in seconds,
+stored in Excel and written to a CVS file:
+
+\btxt
+0,100
+600,140
+1200,250
+1800,360
+2400,480
+3000,820
+3600,1300
+4200,1700
+4800,2900
+5400,3900
+6000,7000
+\etxt
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Visualize data}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+ \item Meet a text editor and a terminal window
+
+ \item Very basic Unix
+\end{itemize}
+
+\noindent
+First program:
+
+\bpypro
+t = [0, 600, 1200, 1800, 2400, 3000, 3600,
+     4200, 4800, 5400, 6000]
+N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+\epypro
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Concepts must be introduced implicitly in a structured way}
+
+
+% --- begin paragraph admon ---
+\paragraph{Warning.}
+\begin{itemize}
+ \item Always identify new concepts
+
+ \item Train new concepts in simplified (``trivial'') problems
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% --- begin paragraph admon ---
+\paragraph{Concepts in the previous example:}
+\begin{itemize}
+ \item Lists or arrays of numbers
+
+ \item Plotting commands
+
+ \item Curve = function of time
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% --- begin paragraph admon ---
+\paragraph{Notice:}
+The concept of a continuous function $N(t)$ is not necessary,
+just straight lines between discrete points on a curve.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Read data from file}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\bpypro
+import numpy as np
+data = np.loadtxt('ecoli.csv', delimiter=',')
+print data  # look at the format
+t = data[:,0]
+N = data[:,1]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+\epypro
+% --- end paragraph admon ---
+
+
+
+
+% --- begin paragraph admon ---
+\paragraph{Typical pattern:}
+The population grows faster and faster. Why? Is there an
+underlying (general) mechanism?
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Lab journal}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+Use IPython notebook as lab journal.
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{How can we reason about the process?}
+
+% \href{{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}{\nolinkurl{http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html}}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+% !bpop
+\begin{enumerate}
+\item Cells divide after $T$ seconds on average (one generation)
+
+\item $2N$ celles divide into twice as many new cells $\Delta N$ in a time
+   interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
+
+\item $N$ cells result in twice as many new individuals $\Delta N$ in
+   time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
+
+\item Same proportionality wrt death (repeat reasoning)
+
+\item Proposed model: $\Delta N = b\Delta t N - d\Delta tN$ for some unknown
+   constants $b$ (births) and $d$ (deaths)
+
+\item Describe evolution in discrete time: $t_n=n\Delta t$
+
+\item Program-friendly notation: $N$ at $t_n$ is $N^n$
+
+\item Math model: $N^{n+1} = N^n + r\Delta t\, N$ (with $\ r=b-d$)
+
+\item Program model: \Verb!N[n+1] = N[n] + r*dt*N[n]!
+\end{enumerate}
+
+\noindent
+% !epop
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The first simple program}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+Let us solve the difference equation in as simple way as possible,
+just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
+
+\bpypro
+import numpy as np
+
+t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 1
+r = 0.5
+
+for n in range(0, N.size-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+    print 'N[%d]=%.1f' % (n+1, N[n+1])
+\epypro
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The output}
+
+\bccq
+N[1]=1.2
+N[2]=1.6
+N[3]=2.0
+N[4]=2.4
+N[5]=3.1
+N[6]=3.8
+N[7]=4.8
+N[8]=6.0
+N[9]=7.5
+N[10]=9.3
+N[11]=11.6
+N[12]=14.6
+N[13]=18.2
+N[14]=22.7
+N[15]=28.4
+N[16]=35.5
+N[17]=44.4
+N[18]=55.5
+N[19]=69.4
+N[20]=86.7
+\eccq
+
+% !split
+\subsection{Parameter estimation}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+ \item We do not know $r$
+
+ \item How can we estimate $r$ from data?
+\end{itemize}
+
+\noindent
+We can use the difference equation with the experimental data
+
+\[ N^{n+1} = N^n + r\Delta t N^n\]
+Say $N^{n+1}$ and $N^n$ are known from data, solve wrt $r$:
+
+\[ r = \frac{N^{n+1}-N^n}{N^n\Delta t} \]
+
+Use experimental data in the fraction, say $t_1=600$, $t_2=1200$,
+$N^1=140$, $N^2=250$: $r=0.0013$.
+% --- end paragraph admon ---
+
+
+
+
+% --- begin paragraph admon ---
+\paragraph{More sophisticated methods.}
+Can do a nonlinear least squares parameter fit, but that is
+too advanced at this stage.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{A program relevant for the biological problem}
+
+% exact r = 0.000694
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\bpypro
+import numpy as np
+
+# Estimate r
+data = np.loadtxt('ecoli.csv', delimiter=',')
+t_e = data[:,0]
+N_e = data[:,1]
+i = 2  # Data point (i,i+1) used to estimate r
+r = (N_e[i+1] - N_e[i])/(N_e[i]*(t_e[i+1] - t_e[i]))
+print 'Estimated r=%.5f' % r
+# Can experiment with r values and see if the model can
+# match the data better
+
+T = 1200     # cell can divide after T sec
+t_max = 5*T  # 5 generations in experiment
+t = np.linspace(0, t_max, 1000)
+dt = t[1] - t[0]
+N = np.zeros(t.size)
+
+N[0] = 100
+for n in range(0, len(t)-1, 1):
+    N[n+1] = N[n] + r*dt*N[n]
+
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'r-', t_e, N_e, 'bo')
+plt.xlabel('time [s]');  plt.ylabel('N')
+plt.legend(['model', 'experiment'], loc='upper left')
+plt.show()
+\epypro
+
+Change \Verb!r! in the program and play around to make a better fit!
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Discuss the nature of such a model}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+ \item Write up all the biological factors that influence the
+   population size of bacteria
+
+ \item Understand that all such effects are merged into one parameter $r$
+
+ \item Understand that the reasoning must be the same whether we
+   have bacteria, animals or humans - this is a generic model!\\
+   (even the interest rate in a bank follows the same model)
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Discuss the limitations of such a model}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+ \item How many bacteria in the lab after one month?
+
+ \item Growth is restricted by environmental resources!
+
+ \item Fix the model (logistic growth)
+
+ \item Is the logistic model appropriate for a lab experiment?
+
+ \item Find data to support the logistic model \\
+   (it's a \emph{very} simple model)
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{The pedagogical template (to be iterated!)}
+
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+ \item Start with a real biological problem
+
+ \item Be careful with too many new concepts
+
+ \item Workflow:
+\begin{itemize}
+
+  \item data
+
+  \item visualization
+
+  \item patterns
+
+  \item modeling (\emph{discrete})
+
+  \item programming
+
+  \item testing
+
+  \item parameter estimation (difficult)
+
+  \item validation
+
+  \item prediction
+
+\end{itemize}
+
+\noindent
+ \item Make many small exercises that train the new concepts
+
+ \item Repeat the case in a way that makes a complete understanding
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
 % !split
 \subsection{Do we get better students?}
 
@@ -1168,7 +1571,6 @@ science applications.
 
 \noindent
 % --- end paragraph admon ---
-
 
 
 
