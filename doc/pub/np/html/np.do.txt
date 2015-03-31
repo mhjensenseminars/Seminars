@@ -1,48 +1,163 @@
 # Slides for PHY981
-TITLE: Nuclear Physics courses
+TITLE: Nuclear Physics courses, MSU/FRIB theory center and "nuclear TALENT":"http://www.nucleartalent.org"
 AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
 DATE: March 31, 2015
 
 !split
-===== People and links  =====
+===== Motivation  =====
 !bblock 
-* Hans Petter Langtangen, Computer Science
-* Knut Morken, Mathematics
-* Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
-* Tom Lindstrom, Mathematics
-* Oyvind Ryan, Mathematics
-* Solveig Kristensen, Dean of Education
-* Hanne Solna, Director of studies
-* URL: "http://www.mn.uio.no/english/about/collaboration/cse/"
-* URL: "http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf"
+* Develop structured modules which will provide our students with a modern education in nuclear physics
+* Modules/courses should contain a high-level of synchronization
+* A computational perspective is essential
+* They should form a basic curriculum to be integrated with the coming FRIB theory center
+* Coordination with Talent initiative and other Northern American institutions to be elaborated
+
+We have at MSU a  "basic survey course PHY802":"https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html"  and three basic nuclear physics courses "structure":"http://nuclearstructure.github.io/PHY981/doc/web/course.html", "reactions and dynamics":"https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm"  and _Nuclear Astrophysics_. These three basic courses
+have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
 
 !eblock
 
 
 !split
-===== More links  =====
+===== The basic courses/modules (theory) taught at MSU =====
 !bblock 
-* Python and our first programming course, first semester "course": "http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/". Excellent new textbook by Hans Petter Langtangen, click here for the "textbook":"http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" or the "online version": "http://hplgit.github.io/primer.html/doc/web/index.html"
-* Mathematical modelling course, first semester "course": "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/". Textbook by Knut Morken to be published by Springer.
-* Mechanics, second semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
-* Computational Physics I, fifth semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/". Textbook to be published by IOP in 2015, with "online version":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf".
+FIGURE: [struct1.pdf, width=700 frac=0.5] 
+!eblock
 
+
+!split
+===== Nuclear structure course/module  PHY981 =====
+!bblock 
+* Experimental information
+* Single-particle properties and mean-field
+* second quantization
+* Hartree-Fock theory
+* Nuclear forces (?) Can be taken out since we have an advanced Talent module on this
+* Shell model
+* Transitions (EM and $\beta$-decays
+* Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+!eblock
+
+!split
+===== Nuclear dynamics course/module  PHY982 =====
+!bblock 
+
+* Direct reaction theory and applications
+* Reactions of light and heavy ions, from low to relativistic energies
+* Single-channel scattering
+* Integral forms for scattering. Generalizing to many channels
+* Collective couplings. Single-particle couplings. Coupling to the continuum
+* Transfer reactions. Breakup reactions
+* Adiabatic reaction models. Semiclassical approximations (Eikonal and time-dependent approaches)
+* Capture and fusion reactions
+* R-matrix methods
+* Microscopic models for reactions
+* Several computational exercises
+
+!eblock
+
+!split
+===== Nuclear astrophysics course/module PHY983 =====
+!bblock 
+* Neutrinos
+* Equation of state for dense matter
+* Masses - Stability and Decay
+* Reaction Rates
+* Beta decay Rates	
+* The Life of Stars: Stellar burning stages, Hydogen burning, Other burning stages
+* The Death of Stars: Supernovae, Neutron Stars and White Dwarfs
+* Beyond Iron I: r-process, s- and p-process
+* Hydrogen burning at the extremes, the rp process
+!eblock
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+* Nuclear forces (INT 2013, new version 2017)
+* Many-body methods (_GANIL July 2015_)
+  * Many-body perturbation theory
+  * Similarity renormalization group theory
+  * Coupled cluster theory
+  * Green's function theory
+  * FCI (Shell model)
 !eblock
 
 
 
 !split
-===== Wouldn't it be cool if your mechanics students could reproduce results in a PRL? =====
-!bblock
-FIGURE: [figures/prl1.png, width=800 frac=0.5] 
-
-Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
-!eblock
+===== Advanced  modules, Nuclear Talent  =====
 !bblock 
-FIGURE: [figures/prl2.png, width=700 frac=0.5] 
+* Few-body methods for nuclear physics (_ECT* July-August 2015_)
+ * Forces and nuclear models
+ * The Faddeev and Faddeev-Yakubowsky Equations
+ * Methods based on Basis expansions
+ * Few-nucleon reactions with external probes
 !eblock
-    
-      
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+* Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
+* Theory for exploring nuclear structure experiments (GANIL 2014)
+* Theory for exploring nuclear reaction experiments (GANIL 2013)
+!eblock
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+* Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
+  * Stellar evolution, supernova and neutron stars.
+  * Observations and basic properties of neutron stars and supernovae.
+  * Brief review of nuclear forces and nuclear models.
+  * Review of thermodynamics and statistical mechanics.
+  * Basic notions in dense matter theory.
+  * Simple models, the equation of state, and linear response theory.
+  * Homogeneous dense nuclear matter.
+!eblock
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+* Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
+  * Homogeneous dense nuclear matter.
+  * Tolman Oppenheimer Volkoff equations and neutron star structure.
+  * Physics at sub-nuclear density and the properties of the neutron star crust.
+  * Superfluidity and superconductivity in neutron stars.
+  * Phase transitions at high density.
+  * Neutrino processes in dense matter and neutron star cooling.
+  * Transport properties of degenerate matter.
+  * Accreting neutron stars.
+  * Supernova neutrinos.
+  * Gravitational waves from neutron star.
+!eblock
+
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+* Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+* High-performance computing and computational tools for nuclear physics
+  * ECT* 2012, Shell model and variational Monte Carlo
+  * LANL/ORNL in 2016, Monte Carlo methods 
+!eblock
+
+
+!split
+===== Discussion =====
+!bblock 
+* How many basic courses can an institution offer, and which courses should be offered?
+* How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+* Can we integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education? 
+* Most courses offered are theoretical ones. We need a better coordination between theory and experiment. Should we think of an experimental Talent initiative? 
+!eblock
+
+
 
 
 
