@@ -22,7 +22,7 @@ FIGURE: [figures/prl2.png, width=700 frac=0.5]
 ===== Exciting possibilities  =====
 !bblock
 
-_At MSU with the new Department of Computational Mathematics, Science and Engineering (CMSE) we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department_.
+_At MSU with the new Department of Computational Mathematics, Science and Engineering we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department_.
 
 !eblock
 
