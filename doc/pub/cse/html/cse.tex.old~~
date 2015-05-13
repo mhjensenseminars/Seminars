@@ -21,9 +21,9 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \usepackage{graphicx}
 
 \usepackage{fancyvrb} % packages needed for verbatim environments
-
 \usepackage{minted}
 \usemintedstyle{default}
+\usepackage{fancyvrb}
 
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
@@ -87,6 +87,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \begin{document}
 
+% endif for #ifdef PREAMBLE
 
 
 % ------------------- main content ----------------------
@@ -101,7 +102,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \begin{center}
 {\LARGE\bf
 \begin{spacing}{1.25}
-Computing in Science Education (CSE): Integrating a computational perspective in the basic science education
+Integrating a computational perspective in the basic science education
 \end{spacing}
 }
 \end{center}
@@ -119,63 +120,10 @@ Computing in Science Education (CSE): Integrating a computational perspective in
 % ----------------- end author(s) -------------------------
 
 \begin{center} % date
-March 31, 2015
+May 13, 2015
 \end{center}
 
 \vspace{1cm}
-
-
-% !split
-\subsection{People and links}
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
-\item Hans Petter Langtangen, Computer Science
-
-\item Knut Morken, Mathematics
-
-\item Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
-
-\item Tom Lindstrom, Mathematics
-
-\item Oyvind Ryan, Mathematics
-
-\item Solveig Kristensen, Dean of Education
-
-\item Hanne Solna, Director of studies
-
-\item \href{{http://www.mn.uio.no/english/about/collaboration/cse/}}{\nolinkurl{http://www.mn.uio.no/english/about/collaboration/cse/}}
-
-\item \href{{http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf}}{\nolinkurl{http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf}}
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection{More links}
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
-\item Python and our first programming course, first semester \href{{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/}}{course}. Excellent new textbook by Hans Petter Langtangen, click here for the \href{{http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen}}{textbook} or the \href{{http://hplgit.github.io/primer.html/doc/web/index.html}}{online version}
-
-\item Mathematical modelling course, first semester \href{{http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/}}{course}. Textbook by Knut Morken to be published by Springer.
-
-\item Mechanics, second semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/}}{course}. New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
-
-\item Computational Physics I, fifth semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/}}{course}. Textbook to be published by IOP in 2015, with \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf}}{online version}.
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
 
 
 % !split
@@ -207,52 +155,22 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 
 
 % !split
-\subsection{An important observation and a  question}
+\subsection{Exciting possibilities}
 
 % --- begin paragraph admon ---
 \paragraph{}
 
-The basic tools for mathematical calculations have changed radically.
-
-\textbf{How does this influence science education?}
-
-\begin{itemize}
-\item Modern industry and technology is impossible without mathematics and science
-
-\item Weather forecasting, product design, film production, materials science, cellular phones, iPad, lunar missions, GPS, furniture production and much more
-\end{itemize}
-
-\noindent
+\textbf{At MSU with the new Department of Computational Mathematics, Science and Engineering (CMSE) we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department}.
 % --- end paragraph admon ---
 
 
 
 
 % !split
-\subsection{Reality}
+\subsection{Modeling and computations as a way to enhance algorithminc thinking}
 
 % --- begin paragraph admon ---
 \paragraph{}
-
-\begin{itemize}
-\item Students hear about the relevance of the sciences
-
-\item But this relevance is hardly visible in school or the first few years at university
-
-\item Much emphasis on renewal of the wrapping of science, little on the content
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection{Principles}
-
-% --- begin paragraph admon ---
-\paragraph{Central aims behind our CSE reform.}
 
 Algorithmic  thinking as a way to
 
@@ -261,9 +179,11 @@ Algorithmic  thinking as a way to
 
 \item Introduce Research based teaching  from day one
 
-\item Trigger further insights in math and other disciplines (we need a research program to understand if this is the case)
+\item Trigger further insights in math and other disciplines 
 
 \item Validation and verification of scientific results (the PRL example), with the possibility to emphasize ethical aspects as well. Version control is central.
+
+\item Good working practices from day one.
 \end{itemize}
 
 \noindent
@@ -349,27 +269,6 @@ People who master these skills bring an important compentence to society.
 
 
 % !split
-\subsection{Computers and science teaching}
-
-% --- begin paragraph admon ---
-\paragraph{Education.}
-
-\begin{itemize}
-\item During the  last 25 years  there has been considerable focus on  technology at all levels in the educational ladder.
-
-\item Calculators, text processing, email, digital learning environments etc.
-
-\item Much focus on means and technologies, but what about the content, or more importantly, insight into  physical systems?
-\end{itemize}
-
-\noindent
-The basic topics (math, chemistry, physics, biology etc) are taught more or less in the same fashion as before, unchanged over several decades!
-% --- end paragraph admon ---
-
-
-
-
-% !split
 \subsection{Large scale simulations}
 
 % --- begin paragraph admon ---
@@ -394,6 +293,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 % inline figure
 \centerline{\includegraphics[width=1.0\linewidth]{figures/fig8.jpg}}
 % --- end paragraph admon ---
+
 
 
 
@@ -755,6 +655,62 @@ plt.show()
 
 
 % !split
+\subsection{Additional benefits: A structured approach to solving problems}
+
+% --- begin paragraph admon ---
+\paragraph{}
+In this process we easily bake in
+\begin{enumerate}
+  \item How to structure a code in terms of functions
+
+  \item How to make a module
+
+  \item How to read input data flexibly from the command line
+
+  \item How to create graphical/web user interfaces
+
+  \item How to write unit tests (test functions or doctests)
+
+  \item How to refactor code in terms of classes (instead of functions only)
+
+  \item How to conduct and automate large-scale numerical experiments
+
+  \item How to write scientific reports in various formats ({\LaTeX}, HTML)
+\end{enumerate}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Additional benefits: A structure approach to solving problems}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The conventions and techniques outlined here will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
+\begin{enumerate}
+\item New code is added in a modular fashion to a library (modules)
+
+\item Programs are run through convenient user interfaces
+
+\item It takes one quick command to let all your code undergo heavy testing 
+
+\item Tedious manual work with running programs is automated,
+
+\item Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.
+\end{enumerate}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+
+
+% !split
 \subsection{Learning outcomes three first semesters}
 
 % --- begin paragraph admon ---
@@ -963,6 +919,8 @@ science applications.
 \item Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
 
 \item Crucial to learn proper programming at the beginning.
+
+\item Good TAs
 
 \item Choice of software.
 
@@ -1544,6 +1502,57 @@ Change \Verb!r! in the program and play around to make a better fit!
 \noindent
 % --- end paragraph admon ---
 
+
+
+
+% !split
+\subsection{People and links}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Hans Petter Langtangen, Computer Science
+
+\item Knut Morken, Mathematics
+
+\item Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
+
+\item Tom Lindstrom, Mathematics
+
+\item Oyvind Ryan, Mathematics
+
+\item Solveig Kristensen, Dean of Education
+
+\item Hanne Solna, Director of studies
+
+\item \href{{http://www.mn.uio.no/english/about/collaboration/cse/}}{\nolinkurl{http://www.mn.uio.no/english/about/collaboration/cse/}}
+
+\item \href{{http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf}}{\nolinkurl{http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf}}
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{More links}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Python and our first programming course, first semester \href{{http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/}}{course}. Excellent new textbook by Hans Petter Langtangen, click here for the \href{{http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen}}{textbook} or the \href{{http://hplgit.github.io/primer.html/doc/web/index.html}}{online version}
+
+\item Mathematical modelling course, first semester \href{{http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/}}{course}. Textbook by Knut Morken to be published by Springer.
+
+\item Mechanics, second semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/}}{course}. New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
+
+\item Computational Physics I, fifth semester \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/}}{course}. Textbook to be published by IOP in 2015, with \href{{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf}}{online version}.
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
 
 
 

@@ -6,9 +6,9 @@ Automatically generated HTML file from DocOnce source
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
-<meta name="description" content="Computing in Science Education (CSE): Integrating a computational perspective in the basic science education">
+<meta name="description" content="Integrating a computational perspective in the basic science education">
 
-<title>Computing in Science Education (CSE): Integrating a computational perspective in the basic science education</title>
+<title>Integrating a computational perspective in the basic science education</title>
 
 
 <style type="text/css">
@@ -65,107 +65,113 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' People and links  ', 2, None, '___sec0'),
-              (' More links  ', 2, None, '___sec1'),
-              (" Wouldn't it be cool if your mechanics students could reproduce results in a PRL? ",
+ 'sections': [(" Wouldn't it be cool if your mechanics students could reproduce results in a PRL? ",
+               2,
+               None,
+               '___sec0'),
+              (' Exciting possibilities  ', 2, None, '___sec1'),
+              (' Modeling and computations as a way to enhance algorithminc thinking ',
                2,
                None,
                '___sec2'),
-              (' An important observation and a  question ',
-               2,
-               None,
-               '___sec3'),
-              (' Reality ', 2, None, '___sec4'),
-              (' Principles ', 2, None, '___sec5'),
-              (' Research based teaching ', 2, None, '___sec6'),
-              (' Research based education ', 2, None, '___sec7'),
-              (' Research based education ', 2, None, '___sec8'),
-              (' Computers and science teaching ', 2, None, '___sec9'),
-              (' Large scale simulations ', 2, None, '___sec10'),
-              (' Large scale simulations ', 2, None, '___sec11'),
-              (' Preliminary summary ', 2, None, '___sec12'),
+              (' Research based teaching ', 2, None, '___sec3'),
+              (' Research based education ', 2, None, '___sec4'),
+              (' Research based education ', 2, None, '___sec5'),
+              (' Large scale simulations ', 2, None, '___sec6'),
+              (' Large scale simulations ', 2, None, '___sec7'),
+              (' Preliminary summary ', 2, None, '___sec8'),
               (' Can we catch many birds with one stone? ',
                2,
                None,
-               '___sec13'),
-              (' What is needed? ', 2, None, '___sec14'),
-              (' Implementation ', 2, None, '___sec15'),
+               '___sec9'),
+              (' What is needed? ', 2, None, '___sec10'),
+              (' Implementation ', 2, None, '___sec11'),
               (' Implementation in Oslo: The CSE  project ',
                2,
                None,
-               '___sec16'),
+               '___sec12'),
               (' Example of bachelor program, astrophysics ',
                2,
                None,
-               '___sec17'),
-              (' Example: Computations from day one ', 2, None, '___sec18'),
-              (' Example: Computations from day one ', 2, None, '___sec19'),
-              (' Other Examples ', 2, None, '___sec20'),
-              (' Typical implementation in INF1100 ', 2, None, '___sec21'),
-              (' Typical implementation in INF1100 ', 2, None, '___sec22'),
+               '___sec13'),
+              (' Example: Computations from day one ', 2, None, '___sec14'),
+              (' Example: Computations from day one ', 2, None, '___sec15'),
+              (' Other Examples ', 2, None, '___sec16'),
+              (' Typical implementation in INF1100 ', 2, None, '___sec17'),
+              (' Typical implementation in INF1100 ', 2, None, '___sec18'),
               (' Integrating numerical mathematics with calculus ',
                2,
                None,
-               '___sec23'),
-              (' Error analysis ', 2, None, '___sec24'),
+               '___sec19'),
+              (' Error analysis ', 2, None, '___sec20'),
+              (' Additional benefits: A structured approach to solving problems ',
+               2,
+               None,
+               '___sec21'),
+              (' Additional benefits: A structure approach to solving problems ',
+               2,
+               None,
+               '___sec22'),
               (' Learning outcomes three first semesters ',
                2,
                None,
-               '___sec25'),
-              (' Later courses ', 2, None, '___sec26'),
-              (' Coordination ', 2, None, '___sec27'),
+               '___sec23'),
+              (' Later courses ', 2, None, '___sec24'),
+              (' Coordination ', 2, None, '___sec25'),
               (' FYS-MEK1100 (Mechanics), Second Semester ',
                2,
                None,
-               '___sec28'),
+               '___sec26'),
               (' FYS1120 Electromagnetism, Third Semester ',
                2,
                None,
-               '___sec29'),
+               '___sec27'),
               (' More Examples from Physics Courses, 2-5 semester ',
                2,
                None,
-               '___sec30'),
-              (' First computational physics course ', 2, None, '___sec31'),
-              (' Challenges...  ', 2, None, '___sec32'),
-              (' Challenges and future plans ', 2, None, '___sec33'),
+               '___sec28'),
+              (' First computational physics course ', 2, None, '___sec29'),
+              (' Challenges...  ', 2, None, '___sec30'),
+              (' Challenges and future plans ', 2, None, '___sec31'),
               (' Which aspects are important for a successful introduction of CSE? ',
                2,
                None,
-               '___sec34'),
+               '___sec32'),
               (' What about life science/biology? Overarching questions ',
                2,
                None,
-               '___sec35'),
-              (' How to teach computing in biology? ', 2, None, '___sec36'),
-              (' The pedagogical framework ', 2, None, '___sec37'),
-              (' Example 1: ecoli lab experiment ', 2, None, '___sec38'),
-              (' Visualize data ', 2, None, '___sec39'),
+               '___sec33'),
+              (' How to teach computing in biology? ', 2, None, '___sec34'),
+              (' The pedagogical framework ', 2, None, '___sec35'),
+              (' Example 1: ecoli lab experiment ', 2, None, '___sec36'),
+              (' Visualize data ', 2, None, '___sec37'),
               (' Concepts must be introduced implicitly in a structured way ',
                2,
                None,
-               '___sec40'),
-              (' Read data from file ', 2, None, '___sec41'),
-              (' Lab journal ', 2, None, '___sec42'),
-              (' How can we reason about the process? ', 2, None, '___sec43'),
-              (' The first simple program ', 2, None, '___sec44'),
-              (' The output ', 2, None, '___sec45'),
-              (' Parameter estimation ', 2, None, '___sec46'),
+               '___sec38'),
+              (' Read data from file ', 2, None, '___sec39'),
+              (' Lab journal ', 2, None, '___sec40'),
+              (' How can we reason about the process? ', 2, None, '___sec41'),
+              (' The first simple program ', 2, None, '___sec42'),
+              (' The output ', 2, None, '___sec43'),
+              (' Parameter estimation ', 2, None, '___sec44'),
               (' A program relevant for the biological problem ',
                2,
                None,
-               '___sec47'),
-              (' Discuss the nature of such a model ', 2, None, '___sec48'),
+               '___sec45'),
+              (' Discuss the nature of such a model ', 2, None, '___sec46'),
               (' Discuss the limitations of such a model ',
                2,
                None,
-               '___sec49'),
+               '___sec47'),
               (' The pedagogical template (to be iterated!) ',
                2,
                None,
-               '___sec50'),
-              (' Do we get better students? ', 2, None, '___sec51'),
-              (' Summary ', 2, None, '___sec52')]}
+               '___sec48'),
+              (' Do we get better students? ', 2, None, '___sec49'),
+              (' Summary ', 2, None, '___sec50'),
+              (' People and links  ', 2, None, '___sec51'),
+              (' More links  ', 2, None, '___sec52')]}
 end of tocinfo -->
 
 <body>
@@ -203,7 +209,7 @@ MathJax.Hub.Config({
 <!-- Slides for PHY981 -->
 
 
-<center><h1>Computing in Science Education (CSE): Integrating a computational perspective in the basic science education</h1></center>  <!-- document title -->
+<center><h1>Integrating a computational perspective in the basic science education</h1></center>  <!-- document title -->
 
 <p>
 <!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
@@ -212,11 +218,10 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
 <p>
-<center><h4>March 31, 2015</h4></center> <!-- date -->
+<center><h4>May 13, 2015</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->

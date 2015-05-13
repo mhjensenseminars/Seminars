@@ -1,8 +1,33 @@
 # Slides for PHY981
-TITLE: Integrating a computational perspective in the basic science education
+TITLE: Computing in Science Education (CSE): Integrating a computational perspective in the basic science education
 AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
-DATE: May 13, 2015
+DATE: March 31, 2015
 
+!split
+===== People and links  =====
+!bblock 
+* Hans Petter Langtangen, Computer Science
+* Knut Morken, Mathematics
+* Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
+* Tom Lindstrom, Mathematics
+* Oyvind Ryan, Mathematics
+* Solveig Kristensen, Dean of Education
+* Hanne Solna, Director of studies
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/"
+* URL: "http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf"
+
+!eblock
+
+
+!split
+===== More links  =====
+!bblock 
+* Python and our first programming course, first semester "course": "http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/". Excellent new textbook by Hans Petter Langtangen, click here for the "textbook":"http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" or the "online version": "http://hplgit.github.io/primer.html/doc/web/index.html"
+* Mathematical modelling course, first semester "course": "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/". Textbook by Knut Morken to be published by Springer.
+* Mechanics, second semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
+* Computational Physics I, fifth semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/". Textbook to be published by IOP in 2015, with "online version":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf".
+
+!eblock
 
 
 
@@ -19,25 +44,41 @@ FIGURE: [figures/prl2.png, width=700 frac=0.5]
     
       
 !split
-===== Exciting possibilities  =====
+===== An important observation and a  question =====
 !bblock
 
-_At MSU with the new Department of Computational Mathematics, Science and Engineering (CMSE) we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department_.
+The basic tools for mathematical calculations have changed radically.
+
+_How does this influence science education?_
+
+* Modern industry and technology is impossible without mathematics and science
+* Weather forecasting, product design, film production, materials science, cellular phones, iPad, lunar missions, GPS, furniture production and much more
 
 !eblock
 
 
 !split
-===== Modeling and computations as a way to enhance algorithminc thinking =====
+===== Reality =====
 !bblock 
+
+* Students hear about the relevance of the sciences
+* But this relevance is hardly visible in school or the first few years at university
+* Much emphasis on renewal of the wrapping of science, little on the content
+
+!eblock
+
+
+!split
+===== Principles =====
+!bblock Central aims behind our CSE reform
 
 Algorithmic  thinking as a way to
 
 * Enhance instruction based teaching
 * Introduce Research based teaching  from day one
-* Trigger further insights in math and other disciplines 
+* Trigger further insights in math and other disciplines (we need a research program to understand if this is the case)
 * Validation and verification of scientific results (the PRL example), with the possibility to emphasize ethical aspects as well. Version control is central.
-* Good working practices from day one.
+
 !eblock
 
 
@@ -87,6 +128,18 @@ People who master these skills bring an important compentence to society.
 !eblock
 
 !split
+===== Computers and science teaching =====
+!bblock Education
+
+* During the  last 25 years  there has been considerable focus on  technology at all levels in the educational ladder.
+* Calculators, text processing, email, digital learning environments etc.
+* Much focus on means and technologies, but what about the content, or more importantly, insight into  physical systems?
+
+The basic topics (math, chemistry, physics, biology etc) are taught more or less in the same fashion as before, unchanged over several decades! 
+!eblock
+
+
+!split
 ===== Large scale simulations =====
 !bblock   Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner. 
 FIGURE: [figures/fig10.jpg, width=900 frac=0.6]
@@ -99,7 +152,6 @@ FIGURE: [figures/fig10.jpg, width=900 frac=0.6]
 Fluid dynamical simulations central in air industry, wings tested.
 FIGURE: [figures/fig8.jpg, width=900 frac=1.0]
 !eblock
-
 
 !split
 ===== Preliminary summary =====
@@ -355,35 +407,6 @@ plt.show()
 
 
 !split
-===== Additional benefits: A structured approach to solving problems =====
-!bblock 
-In this process we easily bake in
- o   How to structure a code in terms of functions
- o   How to make a module
- o   How to read input data flexibly from the command line
- o   How to create graphical/web user interfaces
- o   How to write unit tests (test functions or doctests)
- o   How to refactor code in terms of classes (instead of functions only)
- o   How to conduct and automate large-scale numerical experiments
- o   How to write scientific reports in various formats (LaTeX, HTML)
-!eblock
-
-
-!split
-===== Additional benefits: A structure approach to solving problems =====
-!bblock 
-The conventions and techniques outlined here will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
- o New code is added in a modular fashion to a library (modules)
- o Programs are run through convenient user interfaces
- o It takes one quick command to let all your code undergo heavy testing 
- o Tedious manual work with running programs is automated,
- o Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.
-!eblock
-
-
-
-
-!split
 ===== Learning outcomes three first semesters =====
 !bblock Knowledge of basic algorithms
 
@@ -521,7 +544,6 @@ _Key issue: modularization of topics and development of a 'technological platfor
 
 * Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
 * Crucial to learn proper programming at the beginning.
-* Good TAs
 * Choice of software.
 * Textbooks and modularization of topics.
 * Resources and expenses.
@@ -706,6 +728,33 @@ just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
 @@@CODE src/diffeq.py
 !eblock
 
+% if FORMAT != 'ipynb':
+!split
+===== The output =====
+
+!bc
+N[1]=1.2
+N[2]=1.6
+N[3]=2.0
+N[4]=2.4
+N[5]=3.1
+N[6]=3.8
+N[7]=4.8
+N[8]=6.0
+N[9]=7.5
+N[10]=9.3
+N[11]=11.6
+N[12]=14.6
+N[13]=18.2
+N[14]=22.7
+N[15]=28.4
+N[16]=35.5
+N[17]=44.4
+N[18]=55.5
+N[19]=69.4
+N[20]=86.7
+!ec
+% endif
 
 !split
 ===== Parameter estimation =====
@@ -815,28 +864,3 @@ FIGURE: [figures/visualize.jpg, width=700 frac=0.7]
 !eblock
 
 
-!split
-===== People and links  =====
-!bblock 
-* Hans Petter Langtangen, Computer Science
-* Knut Morken, Mathematics
-* Anders Malthe Sorensen and Arnt Inge Vistnes, Physics
-* Tom Lindstrom, Mathematics
-* Oyvind Ryan, Mathematics
-* Solveig Kristensen, Dean of Education
-* Hanne Solna, Director of studies
-* URL: "http://www.mn.uio.no/english/about/collaboration/cse/"
-* URL: "http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf"
-
-!eblock
-
-
-!split
-===== More links  =====
-!bblock 
-* Python and our first programming course, first semester "course": "http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/". Excellent new textbook by Hans Petter Langtangen, click here for the "textbook":"http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" or the "online version": "http://hplgit.github.io/primer.html/doc/web/index.html"
-* Mathematical modelling course, first semester "course": "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/". Textbook by Knut Morken to be published by Springer.
-* Mechanics, second semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics
-* Computational Physics I, fifth semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/". Textbook to be published by IOP in 2015, with "online version":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf".
-
-!eblock
