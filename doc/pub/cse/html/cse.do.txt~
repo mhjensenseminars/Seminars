@@ -22,7 +22,7 @@ FIGURE: [figures/prl2.png, width=700 frac=0.5]
 ===== Exciting possibilities  =====
 !bblock
 
-_At MSU with the new Department of Computational Mathematics, Science and Engineering (CMSE) we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department_.
+_At MSU with the new Department of Computational Mathematics, Science and Engineering we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department_.
 
 !eblock
 
@@ -192,7 +192,7 @@ Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
 \]
 !et
 * Implementation in Python in INF1100
-!bc pycod
+!bc pyscpro
 def differentiate(f, x, h=1E-5):
      return (f(x+h) - f(x-h))/(2*h)
 !ec
@@ -203,7 +203,7 @@ def differentiate(f, x, h=1E-5):
 ===== Example: Computations from day one =====
 !bblock Differentiation and comparison with symbolic expressions
 Combined with the possibility of symbolic calculations with *Sympy*, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
-!bc pycod
+!bc pyscpro
 def differentiate(f, x, h=1E-5, symbolic=False):
     if symbolic:
         import sympy
@@ -237,7 +237,7 @@ def differentiate(f, x, h=1E-5, symbolic=False):
 ===== Typical implementation in INF1100 =====
 !bblock Integration by Trapezoidal Rule 
 
-!bc pycod
+!bc pyscpro
 from math import exp, log, sin
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
@@ -266,7 +266,7 @@ Python offers an  extremely versatile programming  environment, allowing for the
 where *SymPy* is used to evaluate the integral and compute the absolute error 
 with respect to the numerically evaluated one of the integral
 $4\int_0^1 dx/(1+x^2) = \pi$: 
-!bc pycod
+!bc pyscpro
 from math import *
 from sympy import *
 def Trapez(a,b,f,n):
@@ -313,7 +313,7 @@ The last example shows the potential of combining numerical algorithms with symb
 ===== Error analysis =====
 !bblock 
 The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to $10^8$ points one arrives at a region where numerical errors start to accumulate.
-!bc pycod
+!bc pyscpro
 from math import log10
 import numpy as np
 from sympy import Symbol, integrate
