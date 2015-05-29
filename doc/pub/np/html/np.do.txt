@@ -88,57 +88,20 @@ They can be taught as a regular one-semester course or half-semester course. The
 !split
 ===== Advanced  modules, Nuclear Talent  =====
 !bblock 
-* Nuclear forces (INT 2013, new version 2017)
-* Many-body methods (_GANIL July 2015_)
-  * Many-body perturbation theory
-  * Similarity renormalization group theory
-  * Coupled cluster theory
-  * Green's function theory
-  * FCI (Shell model)
-!eblock
-
-
-
-!split
-===== Advanced  modules, Nuclear Talent  =====
-!bblock 
-* Few-body methods for nuclear physics (_ECT* July-August 2015_)
- * Forces and nuclear models
- * The Faddeev and Faddeev-Yakubowsky Equations
- * Methods based on Basis expansions
- * Few-nucleon reactions with external probes
-!eblock
-
-
-!split
-===== Advanced  modules, Nuclear Talent  =====
-!bblock 
-* Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
-* Theory for exploring nuclear structure experiments (GANIL 2014)
-* Theory for exploring nuclear reaction experiments (GANIL 2013)
-!eblock
-
-!split
-===== Advanced  modules, Nuclear Talent  =====
-!bblock 
-* Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
-  * Stellar evolution, supernova and neutron stars.
-  * Observations and basic properties of neutron stars and supernovae.
-  * Brief review of nuclear forces and nuclear models.
-  * Review of thermodynamics and statistical mechanics.
-  * Basic notions in dense matter theory.
-  * Simple models, the equation of state, and linear response theory.
-  * Homogeneous dense nuclear matter.
-  * etc 
-!eblock
-
-!split
-===== Advanced  modules, Nuclear Talent  =====
-!bblock 
-* Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
-* High-performance computing and computational tools for nuclear physics
+o Nuclear forces (INT 2013, new version 2017)
+o Many-body methods (_GANIL July 2015_)
+o Few-body methods for nuclear physics (_ECT* July-August 2015_)
+o Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
+o Theory for exploring nuclear structure experiments (GANIL 2014)
+o Theory for exploring nuclear reaction experiments (GANIL 2013)
+o Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
+o Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+o High-performance computing and computational tools for nuclear physics
   * ECT* 2012, Shell model and variational Monte Carlo
   * LANL/ORNL in 2016, Monte Carlo methods 
+
+For all courses (till this year) we have had on average 40 applicants per course.
+
 !eblock
 
 
