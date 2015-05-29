@@ -3,8 +3,33 @@
 %% (https://github.com/hplgit/doconce/)
 %%
 %%
+% #ifdef PTEX2TEX_EXPLANATION
+%%
+%% The file follows the ptex2tex extended LaTeX format, see
+%% ptex2tex: http://code.google.com/p/ptex2tex/
+%%
+%% Run
+%%      ptex2tex myfile
+%% or
+%%      doconce ptex2tex myfile
+%%
+%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
+%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
+%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
+%%
+%%      ptex2tex -DMINTED myfile
+%%      doconce ptex2tex myfile envir=minted
+%%
+%% ptex2tex will typeset code environments according to a global or local
+%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
+%% according to options on the command line (just type doconce ptex2tex to
+%% see examples). If doconce ptex2tex has envir=minted, it enables the
+%% minted style without needing -DMINTED.
+% #endif
 
+% #define PREAMBLE
 
+% #ifdef PREAMBLE
 %-------------------- begin preamble ----------------------
 
 \documentclass[%
@@ -67,6 +92,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \begin{document}
 
 % endif for #ifdef PREAMBLE
+% #endif
 
 
 % ------------------- main content ----------------------
@@ -425,7 +451,9 @@ They can be taught as a regular one-semester course or half-semester course. The
 % ------------------- end of main content ---------------
 
 
+% #ifdef PREAMBLE
 \printindex
 
 \end{document}
+% #endif
 
