@@ -18,8 +18,6 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \usepackage[table]{xcolor}
 \usepackage{bm,microtype}
 
-\usepackage{graphicx}
-
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
 \usepackage{ucs}
@@ -46,20 +44,6 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \setcounter{tocdepth}{2}  % number chapter, section, subsection
 
-% Tricks for having figures close to where they are defined:
-% 1. define less restrictive rules for where to put figures
-\setcounter{topnumber}{2}
-\setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{4}
-\renewcommand{\topfraction}{0.85}
-\renewcommand{\bottomfraction}{0.85}
-\renewcommand{\textfraction}{0.15}
-\renewcommand{\floatpagefraction}{0.7}
-% 2. ensure all figures are flushed before next section
-\usepackage[section]{placeins}
-% 3. enable begin{figure}[H] (often leads to ugly pagebreaks)
-%\usepackage{float}\restylefloat{figure}
-
 \usepackage[framemethod=TikZ]{mdframed}
 
 % --- begin definitions of admonition environments ---
@@ -82,6 +66,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 
 \begin{document}
 
+% endif for #ifdef PREAMBLE
 
 
 % ------------------- main content ----------------------
@@ -96,7 +81,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \begin{center}
 {\LARGE\bf
 \begin{spacing}{1.25}
-Nuclear Physics courses, MSU/FRIB theory center and \href{{http://www.nucleartalent.org}}{nuclear TALENT}
+Nuclear Physics courses, FRIB theory center and \href{{http://www.nucleartalent.org}}{nuclear TALENT}
 \end{spacing}
 }
 \end{center}
@@ -114,7 +99,7 @@ Nuclear Physics courses, MSU/FRIB theory center and \href{{http://www.nucleartal
 % ----------------- end author(s) -------------------------
 
 \begin{center} % date
-March 31, 2015
+First FRIB-China Workshop on Physics of Nuclei and Hadrons, May 28-30 2015
 \end{center}
 
 \vspace{1cm}
@@ -132,31 +117,42 @@ March 31, 2015
 
 \item A computational perspective is essential
 
-\item They should form a basic curriculum to be integrated with the coming FRIB theory center
+\item The FRIB theory center can function as the national coordinating unit
 
-\item Coordination with Talent initiative and other Northern American institutions to be elaborated
+\item Coordination with the "Nuclear Talent":"www.nucleartalent.org" initiative
 \end{itemize}
 
 \noindent
-We have at MSU a  \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and \textbf{Nuclear Astrophysics}. These three basic courses
-have a duration each  of 30-40 hours (2-3 credits).   
-
-They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
 % --- end paragraph admon ---
 
 
 
 
 % !split
-\subsection*{The basic courses/modules (theory) taught at MSU}
+\subsection*{Local situation at MSU}
 
 % --- begin paragraph admon ---
 \paragraph{}
 
+We have at MSU a  
+\begin{itemize}
+\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
 
-% inline figure
-\centerline{\includegraphics[width=0.5\linewidth]{struct1.pdf}}
+\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
+
+\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
+
+\item \textbf{Nuclear Astrophysics}. 
+\end{itemize}
+
+\noindent
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
 % --- end paragraph admon ---
+
+
+
 
 
 
@@ -175,13 +171,15 @@ They can be taught as a regular one-semester course or half-semester course. The
 
 \item Hartree-Fock theory
 
-\item Nuclear forces (?) Can be taken out since we have an advanced Talent module on this
+\item Nuclear forces
 
 \item Shell model
 
 \item Transitions (EM and $\beta$-decays
 
 \item Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+
+\item etc
 \end{itemize}
 
 \noindent
@@ -217,6 +215,8 @@ They can be taught as a regular one-semester course or half-semester course. The
 \item Microscopic models for reactions
 
 \item Several computational exercises
+
+\item etc
 \end{itemize}
 
 \noindent
@@ -247,6 +247,8 @@ They can be taught as a regular one-semester course or half-semester course. The
 \item Beyond Iron I: r-process, s- and p-process
 
 \item Hydrogen burning at the extremes, the rp process
+
+\item etc
 \end{itemize}
 
 \noindent
@@ -354,6 +356,8 @@ They can be taught as a regular one-semester course or half-semester course. The
   \item Simple models, the equation of state, and linear response theory.
 
   \item Homogeneous dense nuclear matter.
+
+  \item etc 
 \end{itemize}
 
 \noindent
@@ -361,47 +365,6 @@ They can be taught as a regular one-semester course or half-semester course. The
 
 \noindent
 % --- end paragraph admon ---
-
-
-
-
-% !split
-\subsection*{Advanced  modules, Nuclear Talent}
-
-% --- begin paragraph admon ---
-\paragraph{}
-\begin{itemize}
-\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
-\begin{itemize}
-
-  \item Homogeneous dense nuclear matter.
-
-  \item Tolman Oppenheimer Volkoff equations and neutron star structure.
-
-  \item Physics at sub-nuclear density and the properties of the neutron star crust.
-
-  \item Superfluidity and superconductivity in neutron stars.
-
-  \item Phase transitions at high density.
-
-  \item Neutrino processes in dense matter and neutron star cooling.
-
-  \item Transport properties of degenerate matter.
-
-  \item Accreting neutron stars.
-
-  \item Supernova neutrinos.
-
-  \item Gravitational waves from neutron star.
-\end{itemize}
-
-\noindent
-\end{itemize}
-
-\noindent
-% --- end paragraph admon ---
-
-
 
 
 
@@ -431,7 +394,7 @@ They can be taught as a regular one-semester course or half-semester course. The
 
 
 % !split
-\subsection*{Discussion}
+\subsection*{To think of}
 
 % --- begin paragraph admon ---
 \paragraph{}
@@ -442,7 +405,11 @@ They can be taught as a regular one-semester course or half-semester course. The
 
 \item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
 
+\item \textbf{Nuclear Talent initiative and Asia} 
+
 \item Most courses offered are theoretical ones. We need a better coordination between theory and experiment. Should we think of an experimental Talent initiative? 
+
+\item Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
 \end{itemize}
 
 \noindent

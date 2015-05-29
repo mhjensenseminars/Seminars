@@ -4,7 +4,7 @@ TITLE: Slides and various material
 
 TOC: off
 # #else
-TITLE: Slides and various material for the computing in science education project
+TITLE: Slides and various material for the computing in science education project and nuclear physics education
 AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 # #endif
 
