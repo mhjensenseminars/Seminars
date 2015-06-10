@@ -10,11 +10,12 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
-published = ['cse', 'csebio', 'np',]
+published = ['cse', 'csebio', 'np', 'talent',]
 chapters = {
  'cse': 'Computing in science education',
- 'csebio': 'Computing in life sience education',
+ 'csebio': 'Computing in life science education',
  'np': 'Nuclear physics courses, Talent and FRIB theory center',
+ 'talent': 'Nuclear Talent perspectives',
 }
 %>
 
