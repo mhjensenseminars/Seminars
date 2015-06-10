@@ -1,0 +1,24 @@
+\frametitle{DocOnce: one file to rule them all}
+
+\begin{block}{}
+
+\href{{http://hplgit.github.io/doconce/doc/web/index.html}}{DocOnce} offers minimalistic typing, great flexibility wrt format, especially for scientific writing with much math and code. Developed by \href{{http://hplgit.github.io/homepage/index.html}}{Hans Petter Langtangen}, University of Oslo and Simula Research lab
+
+\begin{enumerate}
+\item Can generate {\LaTeX}, HTML, Sphinx, Markdown, MediaWiki, Google wiki, Creole wiki, reST, plain text
+
+\item Made for large science books and small notes
+
+\item Targets paper and screen
+
+\item Many special features (code snippets from files, embedded movies, admonitions, modern {\LaTeX} layouts, extended math support for Sphinx/Markdown, ...)
+
+\item Very effective for generating slides from ordinary text
+
+\item Applies Mako: DocOnce text is a program (!)
+
+\item Much like Markdown, less tagged than {\LaTeX}, HTML, Sphinx
+\end{enumerate}
+
+\noindent
+\end{block}

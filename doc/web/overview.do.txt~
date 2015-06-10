@@ -4,17 +4,18 @@ TITLE: Slides and various material
 
 TOC: off
 # #else
-TITLE: Slides and various material for the computing in science education project
+TITLE: Slides and various material for the computing in science education project and nuclear physics education
 AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 # #endif
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/UniversityOhioFeb2015/doc/pub'
-published = ['cse', 'csebio', 'np',]
+published = ['cse', 'csebio', 'talent',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life sience education',
  'np': 'Nuclear physics courses, Talent and FRIB theory center',
+ 'talent': 'Nuclear Talent',
 }
 %>
 

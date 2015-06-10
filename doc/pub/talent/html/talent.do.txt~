@@ -1,0 +1,208 @@
+# Slides for PHY981
+TITLE: "Nuclear TALENT":"http://www.nucleartalent.org", perspectives and future plans
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: Nuclei workshop, MSU and FRIB, June 10-13 2015
+
+!split
+===== Motivation  =====
+!bblock
+* Develop structured modules which will provide our students with a modern education in nuclear physics
+* Modules/courses should contain a high-level of synchronization
+* A computational perspective is essential
+* The FRIB theory center can function as the national coordinating unit
+
+All material at my github address, go to URL:"https://github.com/mhjensen", click on the seminars link.
+!eblock
+
+!split
+===== Nuclear Talent v2.0 =====
+!bblock 
+* Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+
+* How many basic courses can an institution offer, and which courses should be offered?
+* How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+* Can we integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education? 
+* _Nuclear Talent initiative and Asia_ . The Chinese community is very enthusiastic about the Talent initiative
+ 
+!eblock
+
+
+!split
+===== Local situation at MSU  =====
+!bblock
+
+We have at MSU a  
+* "basic survey course PHY802":"https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html"  and three basic nuclear physics courses 
+* "structure":"http://nuclearstructure.github.io/PHY981/doc/web/course.html", 
+* "reactions and dynamics":"https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm"  and 
+* _Nuclear Astrophysics_. 
+
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses.
+
+
+
+!eblock
+
+
+
+
+
+!split
+===== Nuclear structure course/module  PHY981 =====
+!bblock 
+* Experimental information
+* Single-particle properties and mean-field
+* second quantization
+* Hartree-Fock theory
+* Nuclear forces
+* Shell model
+* Transitions (EM and $\beta$-decays
+* Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+* etc
+!eblock
+
+!split
+===== Nuclear dynamics course/module  PHY982 =====
+!bblock 
+
+* Direct reaction theory and applications
+* Reactions of light and heavy ions, from low to relativistic energies
+* Single-channel scattering
+* Integral forms for scattering. Generalizing to many channels
+* Collective couplings. Single-particle couplings. Coupling to the continuum
+* Transfer reactions. Breakup reactions
+* Adiabatic reaction models. Semiclassical approximations (Eikonal and time-dependent approaches)
+* Capture and fusion reactions
+* R-matrix methods
+* Microscopic models for reactions
+* Several computational exercises
+* etc
+!eblock
+
+!split
+===== Nuclear astrophysics course/module PHY983 =====
+!bblock 
+* Neutrinos
+* Equation of state for dense matter
+* Masses - Stability and Decay
+* Reaction Rates
+* Beta decay Rates	
+* The Life of Stars: Stellar burning stages, Hydogen burning, Other burning stages
+* The Death of Stars: Supernovae, Neutron Stars and White Dwarfs
+* Beyond Iron I: r-process, s- and p-process
+* Hydrogen burning at the extremes, the rp process
+* etc
+!eblock
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+o Nuclear forces (INT 2013, new version 2017)
+o Many-body methods (_GANIL July 2015_)
+o Few-body methods for nuclear physics (_ECT* July-August 2015_)
+o Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
+o Theory for exploring nuclear structure experiments (GANIL 2014)
+o Theory for exploring nuclear reaction experiments (GANIL 2013)
+o Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
+o Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+o High-performance computing and computational tools for nuclear physics
+  * ECT* 2012, Shell model and variational Monte Carlo
+  * LANL/ORNL in 2016, Monte Carlo methods 
+
+For all courses (till this year) we have had on average 40 applicants per course.
+
+!eblock
+
+
+!split
+===== Talent v2.0: Scientific writing and publishing for the future =====
+!bblock 
+Scientific writing = LaTeX
+
+o Pre 1980: handwriting/typewriting + publisher
+o Post 1985: scientists write LaTeX
+o Post 2010: a few scientists explore new digital formats
+o Big late 1990s question: Will MS Word replace LaTeX? It never did!
+o LaTeX PDF is mostly suboptimal for the new devices
+o The book will survive (LaTeX is ideal)
+o The classical report/paper will survive (LaTeX is ideal)
+o But there is an explosion of new platforms for digital learning systems!
+o How to write scientific material that can be easily published through old and new media?
+
+!eblock
+
+
+!split
+===== Can I assemble lots of different writings to a new future document (book)? =====
+!bblock 
+Suppose I write various types of scientific material
+o LaTeX document,
+o blog posts (HTML),
+o web pages (HTML),
+o Sphinx documents,
+o IPython notebooks,
+o wikis,
+o Markdown files, ...
+and later want to collect the pieces into a larger document, maybe some book - is that at all feasible?
+
+!eblock
+
+
+!split
+===== Popular tools anno 2014 and their math support  =====
+!bblock 
+o LaTeX: de facto standard for math-instensive documents
+o pdfLaTeX, XeLaTeX, LuaLaTeX: takes over (figures in png, pdf) - use these!
+o MS Word: too clicky math support and ugly fonts, but much used
+o HTML with MathJax: "full" LaTeX math, but much tagging
+o Sphinx: somewhat limited LaTeX math support, but great support for web design, and less tagged than HTML
+o reStructuredText: similar to Sphinx, but no math support, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
+o Markdown: somewhat limited LaTeX math support, but minor tagging, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
+o IPython notebooks: Markdown code/math, combines Python code, interactivity, and visualization, but requires all code snippets to sync together
+o Confluence: Markdown-like input, with limited LaTeX math support, but converted to XML
+o MediaWiki: quite good LaTeX math support (cf. Wikipedia/Wikibooks)
+o Other wiki formats: no math support, great for collaborative editing
+o Wordpress: supports full HTML with LaTeX formulas only
+o Google blogger: supports full HTML with MathJax
+
+!eblock
+
+
+!split
+===== DocOnce: one file to rule them all  =====
+!bblock 
+
+"DocOnce":"http://hplgit.github.io/doconce/doc/web/index.html" offers minimalistic typing, great flexibility wrt format, especially for scientific writing with much math and code. Developed by "Hans Petter Langtangen":"http://hplgit.github.io/homepage/index.html", University of Oslo and Simula Research lab
+
+o Can generate LaTeX, HTML, Sphinx, Markdown, MediaWiki, Google wiki, Creole wiki, reST, plain text
+o Made for large science books and small notes
+o Targets paper and screen
+o Many special features (code snippets from files, embedded movies, admonitions, modern LaTeX layouts, extended math support for Sphinx/Markdown, ...)
+o Very effective for generating slides from ordinary text
+o Applies Mako: DocOnce text is a program (!)
+o Much like Markdown, less tagged than LaTeX, HTML, Sphinx
+
+!eblock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
