@@ -1,0 +1,639 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+%%
+% #ifdef PTEX2TEX_EXPLANATION
+%%
+%% The file follows the ptex2tex extended LaTeX format, see
+%% ptex2tex: http://code.google.com/p/ptex2tex/
+%%
+%% Run
+%%      ptex2tex myfile
+%% or
+%%      doconce ptex2tex myfile
+%%
+%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
+%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
+%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
+%%
+%%      ptex2tex -DMINTED myfile
+%%      doconce ptex2tex myfile envir=minted
+%%
+%% ptex2tex will typeset code environments according to a global or local
+%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
+%% according to options on the command line (just type doconce ptex2tex to
+%% see examples). If doconce ptex2tex has envir=minted, it enables the
+%% minted style without needing -DMINTED.
+% #endif
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+10pt]{article}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,ltablex,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % number chapter, section, subsection
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+% --- begin definitions of admonition environments ---
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "notice" admon
+\colorlet{mdfbox_notice_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_notice_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_notice_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{notice_mdfboxmdframed}
+
+\newenvironment{notice_mdfboxadmon}[1][]{
+\begin{notice_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{notice_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "summary" admon
+\colorlet{mdfbox_summary_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_summary_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_summary_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{summary_mdfboxmdframed}
+
+\newenvironment{summary_mdfboxadmon}[1][]{
+\begin{summary_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{summary_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "warning" admon
+\colorlet{mdfbox_warning_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_warning_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_warning_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{warning_mdfboxmdframed}
+
+\newenvironment{warning_mdfboxadmon}[1][]{
+\begin{warning_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{warning_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "question" admon
+\colorlet{mdfbox_question_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_question_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_question_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{question_mdfboxmdframed}
+
+\newenvironment{question_mdfboxadmon}[1][]{
+\begin{question_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{question_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "block" admon
+\colorlet{mdfbox_block_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_block_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_block_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{block_mdfboxmdframed}
+
+\newenvironment{block_mdfboxadmon}[1][]{
+\begin{block_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{block_mdfboxmdframed}
+}
+
+% --- end of definitions of admonition environments ---
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% matching end for #ifdef PREAMBLE
+% #endif
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\title{Master program in Computational Physics, Mathematics and Life Science}
+
+% ----------------- author(s) -------------------------
+
+\author{Tom Andersen\inst{1}
+\and
+Andreas Austeng\inst{2}
+\and
+Arne Bang Huseby\inst{3}
+\and
+Michele Cascella\inst{4}
+\and
+Geir Dahl\inst{3}
+\and
+Marianne Fyhn\inst{1}
+\and
+Morten Hjorth-Jensen\inst{5}
+\and
+Hans Petter Langtangen\inst{2,6}
+\and
+Katrine Langvad (admin)\inst{5}
+\and
+Anders Malthe-Sørenssen\inst{5}
+\and
+Kend-Andre Mardal\inst{3}
+\and
+Knut Mørken\inst{3}
+\and
+Grete Stavik-Døvle (admin)\inst{5}
+\and
+Joakim Sundnes\inst{2,6}
+\and
+Marte Julie Sætra (student representative)\inst{5}}
+\institute{Department of Biosciences, University of Oslo\inst{1}
+\and
+Department of Informatics, University of Oslo\inst{2}
+\and
+Department of Mathematics, University of Oslo\inst{3}
+\and
+Department of Chemistry, University of Oslo\inst{4}
+\and
+Department of Physics, University of Oslo\inst{5}
+\and
+Simula Research Laboratory\inst{6}}
+% ----------------- end author(s) -------------------------
+
+
+\date{!split
+% <optional titlepage figure>
+% <optional copyright>
+}
+
+\subsection{Master program in Computational Physics, Mathematics and Life Science}
+\begin{block}{}
+
+The program is a collaboration between five departments and classical disciplines:
+
+\begin{itemize}
+ \item Department of Biosciences
+
+ \item Department of Chemistry
+
+ \item Department of Informatics
+
+ \item Department of Mathematics
+
+ \item Department of Physics
+\end{itemize}
+
+\noindent
+\textbf{The program is truly multidisciplinary} and all students who have completed
+undergraduate studies in science and engineering, with a sufficient
+quantitative background, are eligible.  
+
+\end{block}
+
+% !split
+\subsection{The new program combines old and new initiatives}
+\begin{block}{}
+
+This program builds on the strengths and successes of two existing Master of Science programs/directions at the University of Oslo, namely the 
+\begin{itemize}
+ \item Computational Physics (at the Dept.~of Physics) and
+
+ \item Applied Mathematics and Mechanics (at the Dept.~of Mathematics).
+\end{itemize}
+
+\noindent
+These programs/study directions  were established in 2003.
+Based on the experience from these programs, the hope is that the proposed program can enlarge the reach of disciplines where computations play and/or are expected to play  a large. In particular, new directions 
+in Computational Life Science need to  be developed to
+meet coming needs of the scientific community. We believe this new direction is
+best developed in close collaboration with already successful
+computational science programs.  
+
+
+\end{block}
+
+
+% !split
+\subsection{Thesis directions}
+\begin{block}{}
+The program aims at offering thesis projects in a variety of fields. These are
+
+\begin{itemize}
+\item Computational mathematics
+
+\item Computational mechanics and fluid mechanics 
+
+\item Computational chemistry
+
+\item Computational physics
+
+\item Computational materials science
+
+\item Computational life science
+
+\item Computational informatics and big data
+
+\item Image analysis and signal processing
+
+\item Computational finance and statistics 
+
+\item Computational geoscience
+\end{itemize}
+
+\noindent
+The thesis projects will be tailored to the student's needs, wishes and scientific background. The projects can easily incorporate topics from more than one discipline and can be linked up with companies from public and private sector.
+\end{block}
+
+% !split
+\subsection{Recruit widely}
+\begin{block}{}
+The following higher education background qualifies for this program:
+
+\begin{itemize}
+\item A completed bachelor's degree (undergraduate) comparable to a Norwegian bachelor's degree in one of the following disciplines
+\begin{enumerate}
+
+ \item Biology, molecular biology, biochemistry  or any life science degree
+
+ \item Physics, astrophysics, astronomy, geophysics and meteorology
+
+ \item Mathematics, mechanics, statistics and computational mathematics
+
+ \item Computer science and electronics
+
+ \item Chemistry
+
+ \item Materials Science and nanotechnology
+
+ \item Any undergraduate degree in engineering
+
+ \item Mathematical finance and economy
+
+ \item Economy
+
+\end{enumerate}
+
+\noindent
+\item There is a requirement on average mark and credits in mathematics and computer science.
+\end{itemize}
+
+\noindent
+\end{block}
+
+
+% !split
+\subsection{Strategic importance}
+\begin{block}{}
+\begin{itemize}
+\item The program will educate the next generation of cross-disciplinary science students with the knowledge, skills, and values needed to pose and solve current and new scientific, technological and societal challenges. 
+
+\item The program will lay the foundation for cross-disciplinary educational, research and innovation activities at the Faculty. 
+
+\item The program will contribute to building a common cross-disciplinary approach to the key strategic initiatives at the Faculty: Energy, Materials, Life Science, and Enabling Technologies.
+\end{itemize}
+
+\noindent
+\end{block}
+
+% !split
+\subsection{Strategic importance}
+\begin{block}{}
+A specific aim of this program is to develop the students' ability to pose and
+solve problems that combine physical insights with mathematical tools
+and computational skills. This provides a unique combination
+of applied and theoretical knowledge and skills. These features are invaluable
+for the development of multi-disciplinary educational and research programs.
+\end{block}
+
+% !split
+\subsection{Scientific and educational motivation}
+
+\begin{block}{}
+\begin{itemize}
+\item Numerical simulations of various systems in science are central to our basic understanding of nature and technlogy.
+
+\item The increase in computational power, improved algorithms for solving problems in science as well as access to high-performance facilities, allow researchers nowadays to study complicated systems across many length and energy scales. 
+\end{itemize}
+
+\noindent
+Applications span from studying 
+\begin{itemize}
+ \item quantum physical systems in nanotechnology and the characteristics of new materials or subamotic physics at its smallest length scale, to simulating galaxies and the evolution of the universe.
+
+ \item In between, simulations are key to understanding cancer treatment and how the brain works,
+
+ \item predicting climate changes and this week's weather,
+
+ \item simulating natural disasters, semi-conductor devices,
+
+ \item quantum computers, 
+
+ \item as well as assessing risk in the insurance and financial industry. 
+\end{itemize}
+
+\noindent
+These are just a few topics
+already well covered at the University of Oslo and that can be
+topics for coming thesis projects as well as research directions.
+\end{block}
+
+
+
+
+
+% !split
+\subsection{The new program will also host the CSE project}
+\begin{block}{}
+
+\begin{itemize}
+\item The new proposed program will also take a leading responsibility in further developments of the highly successful \href{{http://www.mn.uio.no/english/about/collaboration/cse/}}{Computing in Science Education} initiative at UiO.  
+
+\item Master of science thesis projects linked up to the CSE project will be offered.
+\end{itemize}
+
+\noindent
+\end{block}
+
+
+% !split
+\subsection{Computing competence}
+\begin{block}{}
+Computing means solving scientific problems using computers. It covers
+numerical as well as symbolic computing. Computing is also about
+developing an understanding of the scientific process by enhancing
+algorithmic thinking when solving problems.  Computing competence has
+always been a central part of the science and engineering
+education.
+
+Modern computing competence is about
+
+\begin{itemize}
+\item derivation, verification, and implementation of algorithms
+
+\item understanding what can go wrong with algorithms
+
+\item overview of important, known algorithms
+
+\item understanding how algorithms are used to solve mathematical problems
+
+\item reproducible science and ethics
+
+\item algorithmic thinking for gaining deeper insights about scientific problems
+\end{itemize}
+
+\noindent
+\end{block}
+
+
+% !split
+\subsection{Overarching description of the CPMLS program}
+\begin{block}{}
+Students of this program learn to use the computer as a laboratory for
+solving problems in science and engineering. The program offers
+exciting thesis projects from many disciplines: biology and life
+science, chemistry, mathematics, informatics, physics, geophysics,
+mechanics, geology, computational finance, computational informatics, b
+ig data analysis, digital signal processing
+and image analysis – the candidates select research field according to
+their interests.
+\end{block}
+
+
+
+
+
+% !split
+\subsection{Structure and courses}
+\begin{block}{}
+The table here is an example of a suggested path for a Master of Science project,
+with course work the first year and thesis work the last year.
+
+
+{\footnotesize
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{l}{  } & \multicolumn{1}{l}{ 10 ECTS } & \multicolumn{1}{l}{ 10 ECTS } & \multicolumn{1}{l}{ 10 ECTS } \\
+\hline
+4th semester & Master thesis  & Master Thesis  & Master Thesis  \\
+\hline
+3rd semester & Master thesis  & Master Thesis  & Master Thesis  \\
+\hline
+2nd semester & Master courses & Master courses & Master courses \\
+\hline
+1st semester & Master courses & Master courses & Master courses \\
+\hline
+\end{tabular}
+}
+
+\noindent
+\end{block}
+
+% !split
+\subsection{Structure and specialized modules}
+\begin{block}{}
+The program allows also for replacing regular courses with specialized modules of shorter duration.
+These modules will be developed by the program committee but can also be developed in an ad hoc basis
+and tailored to the individual projects. 
+
+
+
+{\footnotesize
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{l}{  } & \multicolumn{1}{l}{ 10 ECTS } & \multicolumn{1}{l}{ 10 ECTS } & \multicolumn{1}{l}{ 10 ECTS } \\
+\hline
+4th semester & Master thesis  & Master Thesis  & Master Thesis  \\
+\hline
+3rd semester & Master thesis  & Master Thesis  & Master Thesis  \\
+\hline
+2nd semester & Special module & Special module & Special module \\
+\hline
+1st semester & Special module & Special module & Special module \\
+\hline
+\end{tabular}
+}
+
+\noindent
+\end{block}
+
+
+
+
+
+
+
+
+% !split
+\subsection{The program opens up for flexible backgrounds}
+
+\begin{block}{}
+While discipline-based master's programs tend to introduce very strict
+requirements to courses, we believe in adapting a computational thesis
+topic to the student's background, thereby opening up for
+students with a wide range of bachelor's degrees.
+A very heterogeneous student community is thought to be a strength and
+unique feature of this program.
+\end{block}
+
+
+% !split
+\subsection{Career prospects}
+
+\begin{block}{}
+Candidates who are capable of modeling and understanding complicated
+systems in natural science, are in short supply in society.  The
+computational methods and approaches to scientific problems students learn
+when working on their thesis projects are very similar to the methods
+they will use in later stages of their careers.  To handle large
+numerical projects demands structured thinking and good analytical
+skills and a thorough understanding of the problems to be solved. This
+knowledge makes the students unique on the labor market.
+
+
+\end{block}
+
+
+
+
+
+
+
+
+
+
+
+% ------------------- end of main content ---------------
+
+% #ifdef PREAMBLE
+\end{document}
+% #endif
+
