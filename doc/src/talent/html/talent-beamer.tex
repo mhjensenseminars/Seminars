@@ -1,0 +1,363 @@
+
+% LaTeX Beamer file automatically generated from DocOnce
+% https://github.com/hplgit/doconce
+
+%-------------------- begin beamer-specific preamble ----------------------
+
+\documentclass{beamer}
+
+\usetheme{red_plain}
+\usecolortheme{default}
+
+% turn off the almost invisible, yet disturbing, navigation symbols:
+\setbeamertemplate{navigation symbols}{}
+
+% Examples on customization:
+%\usecolortheme[named=RawSienna]{structure}
+%\usetheme[height=7mm]{Rochester}
+%\setbeamerfont{frametitle}{family=\rmfamily,shape=\itshape}
+%\setbeamertemplate{items}[ball]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\useoutertheme{infolines}
+%
+%\usefonttheme{}
+%\useinntertheme{}
+%
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+% fine for B/W printing:
+%\usecolortheme{seahorse}
+
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{relsize}
+
+\usepackage{fancybox}  % make sure fancybox is loaded before fancyvrb
+
+\usepackage{fancyvrb}
+%\usepackage{minted} % requires pygments and latex -shell-escape filename
+%\usepackage{anslistings}
+%\usepackage{listingsutf8}
+
+\usepackage{amsmath,amssymb,bm}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{framed}
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
+
+% --- begin table of contents based on sections ---
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each section:
+% (Only section headings can enter the table of contents in Beamer
+% slides generated from DocOnce source, while subsections are used
+% for the title in ordinary slides.)
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+  \frametitle{}
+  %\frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% --- end table of contents based on sections ---
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\newcommand{\shortinlinecomment}[3]{\note{\textbf{#1}: #2}}
+\newcommand{\longinlinecomment}[3]{\shortinlinecomment{#1}{#2}{#3}}
+
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3
+    }
+\setlength{\parskip}{0pt}  % {1em}
+
+\newenvironment{doconceexercise}{}{}
+\newcounter{doconceexercisecounter}
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+\newcommand{\subex}[1]{\noindent\textbf{#1}}  % for subexercises: a), b), etc
+
+%-------------------- end beamer-specific preamble ----------------------
+
+% Add user's preamble
+
+
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981
+
+
+% ----------------- title -------------------------
+
+\title{\href{{http://www.nucleartalent.org}}{Nuclear TALENT}, perspectives and future plans}
+
+% ----------------- author(s) -------------------------
+
+\author{Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway\inst{}}
+\institute{}
+% ----------------- end author(s) -------------------------
+
+\date{Nuclei workshop, MSU and FRIB, June 10-13 2015
+% <optional titlepage figure>
+}
+
+\begin{frame}[plain,fragile]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Motivation}
+
+\begin{block}{}
+\begin{itemize}
+\item Develop structured modules which will provide our students with a modern education in nuclear physics
+
+\item Modules/courses should contain a high-level of synchronization
+
+\item A computational perspective is essential
+
+\item The FRIB theory center can function as the national coordinating unit
+\end{itemize}
+
+\noindent
+All material at my github address, go to \href{{https://github.com/mhjensen}}{\nolinkurl{https://github.com/mhjensen}}, click on the seminars link.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Nuclear Talent v2.0}
+
+\begin{block}{}
+\begin{itemize}
+\item Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+
+\item How many basic courses can an institution offer, and which courses should be offered?
+
+\item How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+
+\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
+
+\item \textbf{Nuclear Talent initiative and Asia} . The Chinese community is very enthusiastic about the Talent initiative
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Local situation at MSU}
+
+\begin{block}{}
+
+We have at MSU a  
+\begin{itemize}
+\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
+
+\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
+
+\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
+
+\item \textbf{Nuclear Astrophysics}. 
+\end{itemize}
+
+\noindent
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses.
+
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{enumerate}
+\item Nuclear forces (INT 2013, new version 2017)
+
+\item Many-body methods (\textbf{GANIL July 2015})
+
+\item Few-body methods for nuclear physics (\textbf{ECT* July-August 2015})
+
+\item Density functional theory and self-consistent methods (ECT* 2014 and \textbf{York 2016})
+
+\item Theory for exploring nuclear structure experiments (GANIL 2014)
+
+\item Theory for exploring nuclear reaction experiments (GANIL 2013)
+
+\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
+
+\item Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+
+\item High-performance computing and computational tools for nuclear physics
+\begin{itemize}
+
+  \item ECT* 2012, Shell model and variational Monte Carlo
+
+  \item LANL/ORNL in 2016, Monte Carlo methods 
+\end{itemize}
+
+\noindent
+\end{enumerate}
+
+\noindent
+For all courses (till this year) we have had on average 40 applicants per course.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Talent v2.0: Scientific writing and publishing for the future}
+
+\begin{block}{}
+Scientific writing = {\LaTeX}
+
+\begin{enumerate}
+\item Pre 1980: handwriting/typewriting + publisher
+
+\item Post 1985: scientists write {\LaTeX}
+
+\item Post 2010: a few scientists explore new digital formats
+
+\item Big late 1990s question: Will MS Word replace {\LaTeX}? It never did!
+
+\item {\LaTeX} PDF is mostly suboptimal for the new devices
+
+\item The book will survive ({\LaTeX} is ideal)
+
+\item The classical report/paper will survive ({\LaTeX} is ideal)
+
+\item But there is an explosion of new platforms for digital learning systems!
+
+\item How to write scientific material that can be easily published through old and new media?
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Can I assemble lots of different writings to a new future document (book)?}
+
+\begin{block}{}
+Suppose I write various types of scientific material
+\begin{enumerate}
+\item {\LaTeX} document,
+
+\item blog posts (HTML),
+
+\item web pages (HTML),
+
+\item Sphinx documents,
+
+\item IPython notebooks,
+
+\item wikis,
+
+\item Markdown files, ...
+\end{enumerate}
+
+\noindent
+and later want to collect the pieces into a larger document, maybe some book - is that at all feasible?
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Popular tools anno 2014 and their math support}
+
+\begin{block}{}
+\begin{enumerate}
+\item {\LaTeX}: de facto standard for math-instensive documents
+
+\item \textsc{pdf}{\LaTeX}, XeLaTeX, LuaLaTeX: takes over (figures in png, pdf) - use these!
+
+\item MS Word: too clicky math support and ugly fonts, but much used
+
+\item HTML with MathJax: "full" {\LaTeX} math, but much tagging
+
+\item Sphinx: somewhat limited {\LaTeX} math support, but great support for web design, and less tagged than HTML
+
+\item reStructuredText: similar to Sphinx, but no math support, transforms to lots of formats ({\LaTeX}, HTML, XML, Word, OpenOffice, ...)
+
+\item Markdown: somewhat limited {\LaTeX} math support, but minor tagging, transforms to lots of formats ({\LaTeX}, HTML, XML, Word, OpenOffice, ...)
+
+\item IPython notebooks: Markdown code/math, combines Python code, interactivity, and visualization, but requires all code snippets to sync together
+
+\item Confluence: Markdown-like input, with limited {\LaTeX} math support, but converted to XML
+
+\item MediaWiki: quite good {\LaTeX} math support (cf.~Wikipedia/Wikibooks)
+
+\item Other wiki formats: no math support, great for collaborative editing
+
+\item Wordpress: supports full HTML with {\LaTeX} formulas only
+
+\item Google blogger: supports full HTML with MathJax
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{DocOnce: one file to rule them all}
+
+\begin{block}{}
+
+\href{{http://hplgit.github.io/doconce/doc/web/index.html}}{DocOnce} offers minimalistic typing, great flexibility wrt format, especially for scientific writing with much math and code. Developed by \href{{http://hplgit.github.io/homepage/index.html}}{Hans Petter Langtangen}, University of Oslo and Simula Research lab
+
+\begin{enumerate}
+\item Can generate {\LaTeX}, HTML, Sphinx, Markdown, MediaWiki, Google wiki, Creole wiki, reST, plain text
+
+\item Made for large science books and small notes
+
+\item Targets paper and screen
+
+\item Many special features (code snippets from files, embedded movies, admonitions, modern {\LaTeX} layouts, extended math support for Sphinx/Markdown, ...)
+
+\item Very effective for generating slides from ordinary text
+
+\item Applies Mako: DocOnce text is a program (!)
+
+\item Much like Markdown, less tagged than {\LaTeX}, HTML, Sphinx
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\end{document}

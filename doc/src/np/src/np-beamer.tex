@@ -1,0 +1,423 @@
+
+% LaTeX Beamer file automatically generated from DocOnce
+% https://github.com/hplgit/doconce
+
+%-------------------- begin beamer-specific preamble ----------------------
+
+\documentclass{beamer}
+
+\usetheme{red_plain}
+\usecolortheme{default}
+
+% turn off the almost invisible, yet disturbing, navigation symbols:
+\setbeamertemplate{navigation symbols}{}
+
+% Examples on customization:
+%\usecolortheme[named=RawSienna]{structure}
+%\usetheme[height=7mm]{Rochester}
+%\setbeamerfont{frametitle}{family=\rmfamily,shape=\itshape}
+%\setbeamertemplate{items}[ball]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\useoutertheme{infolines}
+%
+%\usefonttheme{}
+%\useinntertheme{}
+%
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+% fine for B/W printing:
+%\usecolortheme{seahorse}
+
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{relsize}
+
+\usepackage{fancybox}  % make sure fancybox is loaded before fancyvrb
+
+\usepackage{fancyvrb}
+%\usepackage{minted} % requires pygments and latex -shell-escape filename
+%\usepackage{anslistings}
+%\usepackage{listingsutf8}
+
+\usepackage{amsmath,amssymb,bm}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{framed}
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
+
+% --- begin table of contents based on sections ---
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each section:
+% (Only section headings can enter the table of contents in Beamer
+% slides generated from DocOnce source, while subsections are used
+% for the title in ordinary slides.)
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+  \frametitle{}
+  %\frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% --- end table of contents based on sections ---
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\newcommand{\shortinlinecomment}[3]{\note{\textbf{#1}: #2}}
+\newcommand{\longinlinecomment}[3]{\shortinlinecomment{#1}{#2}{#3}}
+
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3
+    }
+\setlength{\parskip}{0pt}  % {1em}
+
+\newenvironment{doconceexercise}{}{}
+\newcounter{doconceexercisecounter}
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+\newcommand{\subex}[1]{\noindent\textbf{#1}}  % for subexercises: a), b), etc
+
+%-------------------- end beamer-specific preamble ----------------------
+
+% Add user's preamble
+
+
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981
+
+
+% ----------------- title -------------------------
+
+\title{Nuclear Physics courses, FRIB theory center and \href{{http://www.nucleartalent.org}}{Nuclear TALENT}}
+
+% ----------------- author(s) -------------------------
+
+\author{Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway\inst{}}
+\institute{}
+% ----------------- end author(s) -------------------------
+
+\date{First FRIB-China Workshop on Physics of Nuclei and Hadrons, May 28-30 2015
+% <optional titlepage figure>
+}
+
+\begin{frame}[plain,fragile]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Motivation}
+
+\begin{block}{}
+\begin{itemize}
+\item Develop structured modules which will provide our students with a modern education in nuclear physics
+
+\item Modules/courses should contain a high-level of synchronization
+
+\item A computational perspective is essential
+
+\item The FRIB theory center can function as the national coordinating unit
+
+\item Coordination with the \href{{http://www.nucleartalent.org}}{Nuclear TALENT} initiative
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Local situation at MSU}
+
+\begin{block}{}
+
+We have at MSU a  
+\begin{itemize}
+\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
+
+\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
+
+\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
+
+\item \textbf{Nuclear Astrophysics}. 
+\end{itemize}
+
+\noindent
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
+
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Nuclear structure course/module  PHY981}
+
+\begin{block}{}
+\begin{itemize}
+\item Experimental information
+
+\item Single-particle properties and mean-field
+
+\item second quantization
+
+\item Hartree-Fock theory
+
+\item Nuclear forces
+
+\item Shell model
+
+\item Transitions (EM and $\beta$-decays
+
+\item Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+
+\item etc
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Nuclear dynamics course/module  PHY982}
+
+\begin{block}{}
+
+\begin{itemize}
+\item Direct reaction theory and applications
+
+\item Reactions of light and heavy ions, from low to relativistic energies
+
+\item Single-channel scattering
+
+\item Integral forms for scattering. Generalizing to many channels
+
+\item Collective couplings. Single-particle couplings. Coupling to the continuum
+
+\item Transfer reactions. Breakup reactions
+
+\item Adiabatic reaction models. Semiclassical approximations (Eikonal and time-dependent approaches)
+
+\item Capture and fusion reactions
+
+\item R-matrix methods
+
+\item Microscopic models for reactions
+
+\item Several computational exercises
+
+\item etc
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Nuclear astrophysics course/module PHY983}
+
+\begin{block}{}
+\begin{itemize}
+\item Neutrinos
+
+\item Equation of state for dense matter
+
+\item Masses - Stability and Decay
+
+\item Reaction Rates
+
+\item Beta decay Rates	
+
+\item The Life of Stars: Stellar burning stages, Hydogen burning, Other burning stages
+
+\item The Death of Stars: Supernovae, Neutron Stars and White Dwarfs
+
+\item Beyond Iron I: r-process, s- and p-process
+
+\item Hydrogen burning at the extremes, the rp process
+
+\item etc
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{itemize}
+\item Nuclear forces (INT 2013, new version 2017)
+
+\item Many-body methods (\textbf{GANIL July 2015})
+\begin{itemize}
+
+  \item Many-body perturbation theory
+
+  \item Similarity renormalization group theory
+
+  \item Coupled cluster theory
+
+  \item Green's function theory
+
+  \item FCI (Shell model)
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{itemize}
+\item Few-body methods for nuclear physics (\textbf{ECT* July-August 2015})
+\begin{itemize}
+
+ \item Forces and nuclear models
+
+ \item The Faddeev and Faddeev-Yakubowsky Equations
+
+ \item Methods based on Basis expansions
+
+ \item Few-nucleon reactions with external probes
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{itemize}
+\item Density functional theory and self-consistent methods (ECT* 2014 and \textbf{York 2016})
+
+\item Theory for exploring nuclear structure experiments (GANIL 2014)
+
+\item Theory for exploring nuclear reaction experiments (GANIL 2013)
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{itemize}
+\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
+\begin{itemize}
+
+  \item Stellar evolution, supernova and neutron stars.
+
+  \item Observations and basic properties of neutron stars and supernovae.
+
+  \item Brief review of nuclear forces and nuclear models.
+
+  \item Review of thermodynamics and statistical mechanics.
+
+  \item Basic notions in dense matter theory.
+
+  \item Simple models, the equation of state, and linear response theory.
+
+  \item Homogeneous dense nuclear matter.
+
+  \item etc 
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Advanced  modules, Nuclear Talent}
+
+\begin{block}{}
+\begin{itemize}
+\item Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+
+\item High-performance computing and computational tools for nuclear physics
+\begin{itemize}
+
+  \item ECT* 2012, Shell model and variational Monte Carlo
+
+  \item LANL/ORNL in 2016, Monte Carlo methods 
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{To think of}
+
+\begin{block}{}
+\begin{itemize}
+\item How many basic courses can an institution offer, and which courses should be offered?
+
+\item How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+
+\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
+
+\item \textbf{Nuclear Talent initiative and Asia} 
+
+\item Most courses offered are theoretical ones. We need a better coordination between theory and experiment. Should we think of an experimental Talent initiative? 
+
+\item Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\end{document}

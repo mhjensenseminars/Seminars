@@ -1,0 +1,378 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+%%
+
+
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+twoside,                 % oneside: electronic viewing, twoside: printing
+final,                   % or draft (marks overfull hboxes, figures with paths)
+10pt]{article}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % number chapter, section, subsection
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+% --- begin definitions of admonition environments ---
+
+% --- end of definitions of admonition environments ---
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+\href{{http://www.nucleartalent.org}}{Nuclear TALENT}, perspectives and future plans
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway${}^{}$} \\ [0mm]
+\end{center}
+
+    \begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+\begin{center} % date
+Nuclei workshop, MSU and FRIB, June 10-13 2015
+\end{center}
+
+\vspace{1cm}
+
+
+% !split
+\subsection{Motivation}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Develop structured modules which will provide our students with a modern education in nuclear physics
+
+\item Modules/courses should contain a high-level of synchronization
+
+\item A computational perspective is essential
+
+\item The FRIB theory center can function as the national coordinating unit
+\end{itemize}
+
+\noindent
+All material at my github address, go to \href{{https://github.com/mhjensen}}{\nolinkurl{https://github.com/mhjensen}}, click on the seminars link.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Nuclear Talent v2.0}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+
+\item How many basic courses can an institution offer, and which courses should be offered?
+
+\item How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+
+\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
+
+\item \textbf{Nuclear Talent initiative and Asia} . The Chinese community is very enthusiastic about the Talent initiative
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Local situation at MSU}
+
+% --- begin paragraph admon ---
+\paragraph{}
+
+We have at MSU a  
+\begin{itemize}
+\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
+
+\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
+
+\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
+
+\item \textbf{Nuclear Astrophysics}. 
+\end{itemize}
+
+\noindent
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses.
+% --- end paragraph admon ---
+
+
+
+
+
+
+
+
+% !split
+\subsection{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{enumerate}
+\item Nuclear forces (INT 2013, new version 2017)
+
+\item Many-body methods (\textbf{GANIL July 2015})
+
+\item Few-body methods for nuclear physics (\textbf{ECT* July-August 2015})
+
+\item Density functional theory and self-consistent methods (ECT* 2014 and \textbf{York 2016})
+
+\item Theory for exploring nuclear structure experiments (GANIL 2014)
+
+\item Theory for exploring nuclear reaction experiments (GANIL 2013)
+
+\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
+
+\item Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+
+\item High-performance computing and computational tools for nuclear physics
+\begin{itemize}
+
+  \item ECT* 2012, Shell model and variational Monte Carlo
+
+  \item LANL/ORNL in 2016, Monte Carlo methods 
+\end{itemize}
+
+\noindent
+\end{enumerate}
+
+\noindent
+For all courses (till this year) we have had on average 40 applicants per course.
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Talent v2.0: Scientific writing and publishing for the future}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Scientific writing = {\LaTeX}
+
+\begin{enumerate}
+\item Pre 1980: handwriting/typewriting + publisher
+
+\item Post 1985: scientists write {\LaTeX}
+
+\item Post 2010: a few scientists explore new digital formats
+
+\item Big late 1990s question: Will MS Word replace {\LaTeX}? It never did!
+
+\item {\LaTeX} PDF is mostly suboptimal for the new devices
+
+\item The book will survive ({\LaTeX} is ideal)
+
+\item The classical report/paper will survive ({\LaTeX} is ideal)
+
+\item But there is an explosion of new platforms for digital learning systems!
+
+\item How to write scientific material that can be easily published through old and new media?
+\end{enumerate}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Can I assemble lots of different writings to a new future document (book)?}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Suppose I write various types of scientific material
+\begin{enumerate}
+\item {\LaTeX} document,
+
+\item blog posts (HTML),
+
+\item web pages (HTML),
+
+\item Sphinx documents,
+
+\item IPython notebooks,
+
+\item wikis,
+
+\item Markdown files, ...
+\end{enumerate}
+
+\noindent
+and later want to collect the pieces into a larger document, maybe some book - is that at all feasible?
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Popular tools anno 2014 and their math support}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{enumerate}
+\item {\LaTeX}: de facto standard for math-instensive documents
+
+\item \textsc{pdf}{\LaTeX}, XeLaTeX, LuaLaTeX: takes over (figures in png, pdf) - use these!
+
+\item MS Word: too clicky math support and ugly fonts, but much used
+
+\item HTML with MathJax: "full" {\LaTeX} math, but much tagging
+
+\item Sphinx: somewhat limited {\LaTeX} math support, but great support for web design, and less tagged than HTML
+
+\item reStructuredText: similar to Sphinx, but no math support, transforms to lots of formats ({\LaTeX}, HTML, XML, Word, OpenOffice, ...)
+
+\item Markdown: somewhat limited {\LaTeX} math support, but minor tagging, transforms to lots of formats ({\LaTeX}, HTML, XML, Word, OpenOffice, ...)
+
+\item IPython notebooks: Markdown code/math, combines Python code, interactivity, and visualization, but requires all code snippets to sync together
+
+\item Confluence: Markdown-like input, with limited {\LaTeX} math support, but converted to XML
+
+\item MediaWiki: quite good {\LaTeX} math support (cf.~Wikipedia/Wikibooks)
+
+\item Other wiki formats: no math support, great for collaborative editing
+
+\item Wordpress: supports full HTML with {\LaTeX} formulas only
+
+\item Google blogger: supports full HTML with MathJax
+\end{enumerate}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{DocOnce: one file to rule them all}
+
+% --- begin paragraph admon ---
+\paragraph{}
+
+\href{{http://hplgit.github.io/doconce/doc/web/index.html}}{DocOnce} offers minimalistic typing, great flexibility wrt format, especially for scientific writing with much math and code. Developed by \href{{http://hplgit.github.io/homepage/index.html}}{Hans Petter Langtangen}, University of Oslo and Simula Research lab
+
+\begin{enumerate}
+\item Can generate {\LaTeX}, HTML, Sphinx, Markdown, MediaWiki, Google wiki, Creole wiki, reST, plain text
+
+\item Made for large science books and small notes
+
+\item Targets paper and screen
+
+\item Many special features (code snippets from files, embedded movies, admonitions, modern {\LaTeX} layouts, extended math support for Sphinx/Markdown, ...)
+
+\item Very effective for generating slides from ordinary text
+
+\item Applies Mako: DocOnce text is a program (!)
+
+\item Much like Markdown, less tagged than {\LaTeX}, HTML, Sphinx
+\end{enumerate}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ------------------- end of main content ---------------
+
+
+\printindex
+
+\end{document}
+
