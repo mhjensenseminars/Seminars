@@ -38,6 +38,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/ipynb/cse.ipynb"
 
@@ -55,6 +56,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/ipynb/csebio.ipynb"
 
@@ -72,6 +74,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/ipynb/np.ipynb"
 
@@ -89,6 +92,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/ipynb/talent.ipynb"
 
@@ -106,6 +110,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/ipynb/NPretreatComputation.ipynb"
 
@@ -123,6 +128,7 @@ formulas in HTML or ipython notebook files.
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/ipynb/NPretreatEducation.ipynb"
 
