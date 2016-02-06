@@ -1,0 +1,15 @@
+\frametitle{Other examples}
+
+\begin{block}{}
+\begin{itemize}
+ \item \href{{http://hplgit.github.io/disease-modeling/doc/web/index.html}}{Disease modeling}
+
+ \item Predator-pray with disease
+
+ \item \href{{http://hplgit.github.io/bioinf-py/doc/web/index.html}}{Bioinformatics: searching in strings}
+
+ \item Move from difference equations to differential equations, would this be meaningful? Probably not - it does not give anything in biology before the models are so complex that one needs other things than Forward Euler...
+\end{itemize}
+
+\noindent
+\end{block}

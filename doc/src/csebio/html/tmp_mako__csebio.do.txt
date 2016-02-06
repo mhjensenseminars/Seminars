@@ -1,0 +1,565 @@
+TITLE: Integrating computations, mathematics, physics and chemistry in undergraduate biology programs
+AUTHOR: Morten Hjorth-Jensen at Dept. of Physics, UiO & Dept. of Physics, Michigan State University
+AUTHOR: Hans Petter Langtangen at Dept. of Informatics, UiO & Center for Biomedical Computing, Simula
+DATE: today
+
+!split
+===== Overarching questions =====
+
+!bpop
+!bblock Which skills are needed by MSc candidates in biology?
+There is new demand for more
+
+  * quantitative methods & reasoning
+  * understanding data and phenomena via models
+  * creating *in silico* virtual labs
+!eblock
+!epop
+
+!bpop
+!bblock Challenge:
+How to integrate such computing-based activities in the bachelor programs
+when the students are *not* interested in mathematics, physics, and
+programming?
+!eblock
+!epop
+
+!split
+===== How to teach computing in biology? =====
+
+!bpop
+!bblock
+Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
+
+  * Uninteresting to first study tools when you want to study biology
+  * Little understanding of what the tools are good for
+  * Minor utilization of tools later in biology
+!eblock
+!epop
+
+!bpop
+!bblock It's time for new thinking:
+  * Just-in-time teaching: teach tools *when needed*
+  * Teach tools in the *context of biology*
+  * Emphasize development of *intuition and understanding*
+  * Base learning of the students' own *explorations in biology projects*
+  * Integrate lab work with computing tools
+!eblock
+!epop
+
+
+
+!split
+===== Pilot project: Oct 2014 - Oct 2015 =====
+
+!bblock
+ * Form a project team of dedicated CSE+IBV people and  PhD students
+ * Develop a pedagogical framework
+ * CSE+IBV people identify a set of possible examples
+ * PhD students work closely with CSE+IBV people to find data,
+   define models, and write documents
+ * Fall 2015: intro course in computing and programming for IBV teachers, using selected examples
+ * Educational workshop at IBV:
+   * Present results from the project
+   * Discuss how and where to implement examples in BIOxxxx courses
+ * Fall 2016: First integration of computing in courses
+!eblock
+
+
+!split
+===== The pedagogical framework =====
+
+!bblock Aim: Develop intuition about the scientific method
+ * Method: case-based learning
+ * Coherent problem solving *in biology* by integrating
+   mathematics, programming, physics/chemistry, ...
+ * Starting point: data from lab or field experiments
+ * Visualize data
+ * Derive computational models directly from mathematical/intuitive *reasoning*
+ * Program model(s), fit parameters, compare with data
+ * Develop intuition and understanding based on
+  * the principles behind the model
+  * exploration of the model (``what if'')
+  * prediction of new experiments
+!eblock
+
+!split
+===== Example 1: ecoli lab experiment =====
+
+!bblock
+Observations of no of bacteria vs time in seconds,
+stored in Excel and written to a CVS file:
+
+@@@CODE src/ecoli.csv
+!eblock
+
+!split
+===== Visualize data =====
+
+!bblock
+ * Meet a text editor and a terminal window
+ * Very basic Unix
+
+First program:
+
+!bc pypro
+t = [0, 600, 1200, 1800, 2400, 3000, 3600,
+     4200, 4800, 5400, 6000]
+N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+!ec
+!eblock
+
+
+!split
+===== Concepts must be introduced implicitly in a structured way =====
+
+!bwarning
+ * Always identify new concepts
+ * Train new concepts in simplified (``trivial'') problems
+!ewarning
+
+!bblock Concepts in the previous example:
+ * Lists or arrays of numbers
+ * Plotting commands
+ * Curve = function of time
+!eblock
+
+!bnotice Notice:
+The concept of a continuous function $N(t)$ is not necessary,
+just straight lines between discrete points on a curve.
+!enotice
+
+!split
+===== Read data from file =====
+
+!bblock
+!bc pypro
+import numpy as np
+data = np.loadtxt('ecoli.csv', delimiter=',')
+print data  # look at the format
+t = data[:,0]
+N = data[:,1]
+import matplotlib.pyplot as plt
+plt.plot(t, N, 'ro')
+plt.xlabel('t [s]')
+plt.ylabel('N')
+plt.show()
+!ec
+!eblock
+
+!bnotice Typical pattern:
+The population grows faster and faster. Why? Is there an
+underlying (general) mechanism?
+!enotice
+
+!split
+===== Lab journal =====
+
+!bblock
+Use IPython notebook as lab journal.
+!eblock
+
+
+!split
+===== How can we reason about the process? =====
+
+# http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html
+
+!bblock
+!bpop
+ o Cells divide after $T$ seconds on average (one generation)
+ o $2N$ celles divide into twice as many new cells $\Delta N$ in a time
+   interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
+ o $N$ cells result in twice as many new individuals $\Delta N$ in
+   time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
+ o Same proportionality wrt death (repeat reasoning)
+ o Proposed model: $\Delta N = b\Delta t N - d\Delta tN$ for some unknown
+   constants $b$ (births) and $d$ (deaths)
+ o Describe evolution in discrete time: $t_n=n\Delta t$
+ o Program-friendly notation: $N$ at $t_n$ is $N^n$
+ o Math model: $N^{n+1} = N^n + r\Delta t\, N$ (with $\ r=b-d$)
+ o Program model: `N[n+1] = N[n] + r*dt*N[n]`
+!epop
+!eblock
+
+!split
+===== The first simple program =====
+
+!bblock
+Let us solve the difference equation in as simple way as possible,
+just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
+
+@@@CODE src/diffeq.py
+!eblock
+
+
+!split
+===== Parameter estimation =====
+
+!bblock
+ * We do not know $r$
+ * How can we estimate $r$ from data?
+
+We can use the difference equation with the experimental data
+
+!bt
+\[ N^{n+1} = N^n + r\Delta t N^n\]
+!et
+Say $N^{n+1}$ and $N^n$ are known from data, solve wrt $r$:
+
+!bt
+\[ r = \frac{N^{n+1}-N^n}{N^n\Delta t} \]
+!et
+
+Use experimental data in the fraction, say $t_1=600$, $t_2=1200$,
+$N^1=140$, $N^2=250$: $r=0.0013$.
+!eblock
+
+!bnotice More sophisticated methods
+Can do a nonlinear least squares parameter fit, but that is
+too advanced at this stage.
+!enotice
+
+!split
+===== A program relevant for the biological problem =====
+
+# exact r = 0.000694
+
+!bblock
+@@@CODE src/ecoli.py
+
+Change `r` in the program and play around to make a better fit!
+!eblock
+
+!split
+===== Discuss the nature of such a model =====
+
+!bblock
+ * Write up all the biological factors that influence the
+   population size of bacteria
+ * Understand that all such effects are merged into one parameter $r$
+ * Understand that the reasoning must be the same whether we
+   have bacteria, animals or humans - this is a generic model!<linebreak>
+   (even the interest rate in a bank follows the same model)
+!eblock
+
+!split
+===== Discuss the limitations of such a model =====
+
+!bblock
+ * How many bacteria in the lab after one month?
+ * Growth is restricted by environmental resources!
+ * Fix the model (logistic growth)
+ * Is the logistic model appropriate for a lab experiment?
+ * Find data to support the logistic model <linebreak>
+   (it's a *very* simple model)
+!eblock
+
+
+!split
+===== The pedagogical template (to be iterated!) =====
+
+!bblock
+ * Start with a real biological problem
+ * Be careful with too many new concepts
+ * Workflow:
+  * data
+  * visualization
+  * patterns
+  * modeling (*discrete*)
+  * programming
+  * testing
+  * parameter estimation (difficult)
+  * validation
+  * prediction
+ * Make many small exercises that train the new concepts
+ * Repeat the case in a way that makes a complete understanding
+!eblock
+
+!split
+===== Technology for documenting cases =====
+
+!bblock
+ * Documentation: slides in the doconce format with extra notes<linebreak>
+   (can compile with/without notes)
+ * Realistic goal: write out the slides for a gentle book on biocomputing examples
+ * The biological case is in a separate file that the students can work
+   with as an IPython notebook
+ * Problem: not much basic literature exists
+ * Cases must be linked in a learning graph:<linebreak>
+   *I want to do nerve cell modeling, but how to progress to this stage?*
+ * Make a list of concepts and where concepts are trained
+ * Think of each case as a *separate module*
+!eblock
+
+!split
+===== Immediate tasks =====
+
+!bblock
+ * Find a good bacteria growth lab example - do the first example
+ * Alternative model: random 2D walk, people meet and make new individuals
+ * Predator-pray model: any field experiment to build?
+ * Experiments based on technology: imaging, sensors, ...
+ * Disease modeling coupled to data
+ * Predator-pray with disease
+ * Bioinformatics cases and programming
+ * ...
+!eblock
+
+!split
+===== Adding model complexity: Predator-Prey model from ecology =====
+
+!bblock
+The population dynamics of a simple predator-prey system is a
+classical example shown in many biology textbooks when ecological
+systems are discussed. The system contains all elements of the
+scientific method:
+
+ * The set up of a specific hypothesis combined with
+ * the experimental methods needed (one can study existing data or perform experiments)
+ * analyzing and interpreting the data and performing further experiments if needed
+ * trying to extract general behaviors and extract eventual laws or patterns
+ * develop mathematical relations for the uncovered regularities/laws and test these by performing new experiments
+!eblock
+
+
+!split
+===== Case study from Hudson bay =====
+
+!bblock
+Lots of data about populations of hares and lynx collected from furs in Hudson Bay, Canada, are available. It is known that the populations oscillate. Why?
+We shall demonstrate the scientific method by
+
+ o plotting the data
+ o derive a simple model for the population dynamics
+ o (fitting parameters in the model to the data)
+ o using the model predict the evolution other predator-pray systems
+!eblock
+
+!split
+===== Hudson bay data =====
+
+
+!bblock
+Most mammalian predators rely on a variety of prey, which complicates mathematical modeling; however, a few predators have become highly specialized and seek almost exclusively a single prey species. An example of this simplified predator-prey interaction is seen in Canadian northern forests, where the populations of the lynx and the snowshoe hare are intertwined in a life and death struggle.
+
+One reason that this particular system has been so extensively studied is that the Hudson Bay company kept careful records of all furs from the early 1800s into the 1900s. The records for the furs collected by the Hudson Bay company showed distinct oscillations (approximately 12 year periods), suggesting that these species caused almost periodic fluctuations of each other's populations. The table here shows data from 1900 to 1920.
+
+|------------------------------------------------------|
+|      Year         |     Hares (x1000)  | Lynx (x1000)|
+|---------l-----------------------r--------------r------|
+|  1900 | 30.0  | 4.0  |
+|  1901 | 47.2  | 6.1 |
+|  1902 | 70.2  | 9.8  |
+|  1903 | 77.4  | 35.2  |
+|  1904 | 36.3  | 59.4  |
+|  1905 | 20.6  | 41.7  |
+|  1906 | 18.1  | 19.0  |
+|  1907 | 21.4  | 13.0  |
+|  1908 | 22.0  | 8.3  |
+|  1909 | 25.4  | 9.1  |
+|  1910 | 27.1  | 7.4 |
+|  1911 | 40.3  | 8.0  |
+|  1912 | 57  | 12.3  |
+|  1913 | 76.6  | 19.5  |
+|  1914 | 52.3  | 45.7  |
+|  1915 | 19.5  | 51.1  |
+|  1916 | 11.2  | 29.7  |
+|  1917 | 7.6  | 15.8  |
+|  1918 | 14.6  | 9.7  |
+|  1919 | 16.2  | 10.1  |
+|  1920 | 24.7  | 8.6  |
+|------------------------------------------------------|
+
+!eblock
+
+
+
+!split
+===== Plotting the data =====
+
+!bblock
+@@@CODE src/plot_Hudson.py
+!eblock
+
+
+
+!split
+===== Why now create a computer model for the hare and lynx populations? =====
+!bblock
+We see from the plot that there are indeed fluctuations.
+We would like to create a mathematical model that explains these
+population fluctuations. Ecologists have predicted that in a simple
+predator-prey system that a rise in prey population is followed (with
+a lag) by a rise in the predator population. When the predator
+population is sufficiently high, then the prey population begins
+dropping. After the prey population falls, then the predator
+population falls, which allows the prey population to recover and
+complete one cycle of this interaction. Thus, we see that
+qualitatively oscillations occur. Can a mathematical model predict
+this? What causes cycles to slow or speed up? What affects the
+amplitude of the oscillation or do you expect to see the oscillations
+damp to a stable equilibrium? The models tend to ignore factors like
+climate and other complicating factors. How significant are these?
+!eblock
+
+
+!split
+===== The traditional (top-down) approach =====
+
+!bblock
+The classical way (in all books) is to present the Lotka-Volterra equations:
+
+!bt
+\begin{align*}
+\frac{dH}{dt} &= H(a - b L)\\ 
+\frac{dL}{dt} &= - L(d - c  H)
+\end{align*}
+!et
+
+Here,
+
+ * $H$ is the number of preys
+ * $L$ the number of predators
+ * $a$, $b$, $d$, $c$ are parameters
+
+Most books quickly establish the model and then use considerable space on
+discussing the qualitative properties of this *nonlinear system of
+ODEs* (which cannot be solved)
+!eblock
+
+
+!split
+===== The ``new'' discrete bottom-up approach =====
+
+!bblock The bottom-up approach
+!bpop
+ * Start with experimental data and discuss the methods which have been used to collect the data, the assumptions, the electronic devices, the aims etc. That is, expose the students to the theory and assumptions behind the data that have been collected and motivate for the scientific method.
+ * Where appropriate the students should do the experiment(s) needed to collect the data.
+ * The first programming tasks are to read and visualize the data to see if there are patterns or regularities. This strengthens a research-driven intuition.
+ * Now we want to increase the understanding through modeling.
+ * Most of the biology lies in the *derivation* of the model. We shall
+   focus on an intuitive discrete approach that leads to difference
+   equations that can be programmed *and solved* directly.
+!epop
+!eblock
+
+!split
+===== Basic (computer-friendly) mathematics notation =====
+!bblock
+ * Time points: $t_0,t_1,\ldots,t_m$
+ * Uniform distribution of time points: $t_n=n\Delta t$
+ * $H^n$: population of hares at time $t_n$
+ * $L^n$: population of lynx at time $t_n$
+ * We want to model the changes in populations, $\Delta H=H^{n+1}-H^n$
+   and $\Delta L=L^{n+1}-L^n$ during a general time interval $[t_{n+1},t_n]$
+   of length $\Delta t=t_{n+1}-t_n$
+!eblock
+
+!split
+===== Basic dynamics of the population of hares =====
+
+!bblock
+The population of hares evolves due to births and deaths exactly as a bacteria population:
+
+!bt
+\[
+\Delta H = a \Delta t H^n
+\]
+!et
+However, hares have an additional loss in the population because
+they are eaten by lynx.
+All the hares and lynx can form
+$H\cdot L$ pairs in total. When such pairs meet during a time
+interval $\Delta t$, there is some
+small probablity that the lynx will eat the hare.
+So in fraction $b\Delta t HL$, the lynx eat hares. This
+loss of hares and must be accounted for:
+subtracted in the equation for hares:
+
+!bt
+\[ \Delta H = a\Delta t H^n - b \Delta t H^nL^n\]
+!et
+!eblock
+
+!split
+===== Basic dynamics of the population of lynx =====
+
+!bblock
+We assume that the primary growth for the lynx population depends on sufficient food for raising lynx kittens, which implies an adequate source of nutrients from predation on hares. Thus, the growth of the lynx population does not only depend of how many lynx there are, but on how many hares they can eat.
+In a time interval $\Delta t HL$ hares and lynx can meet, and in a
+fraction $b\Delta t HL$ the lynx eats the hare. All of this does not
+contribute to the growth of lynx, again just a fraction of
+$b\Delta t HL$ that we write as
+$d\Delta t HL$. In addition, lynx die just as in the population
+dynamics with one isolated animal population, leading to a loss
+$-c\Delta t L$.
+!eblock
+
+!bblock
+The accounting of lynx then looks like
+!bt
+\[ \Delta L = d\Delta t H^nL^n - c\Delta t L^n\]
+!et
+!eblock
+
+!split
+===== Evolution equations =====
+
+!bblock
+By writing up the definition of $\Delta H$ and $\Delta L$, and putting
+all assumed known terms $H^n$ and $L^n$ on the right-hand side, we have
+
+!bt
+\[ H^{n+1} = H^n + a\Delta t H^n - b\Delta t H^n L^n \]
+!et
+
+!bt
+\[ L^{n+1} = L^n + d\Delta t H^nL^n - c\Delta t L^n \]
+!et
+
+Note:
+
+ * These equations are ready to be implemented!
+ * But to start, we need $H^0$ and $L^0$ <linebreak>
+   (which we can get from the data)
+ * We also need values for $a$, $b$, $d$, $c$
+!eblock
+
+!split
+===== Adapt the model to the Hudson Bay case =====
+
+!bblock
+ * As always, models tend to be general - as here, applicable
+   to ``all'' predator-pray systems
+ * The critical issue is whether the *interaction* between hares and lynx
+   is sufficiently well modeled by $\hbox{const}HL$
+ * The parameters $a$, $b$, $d$, and $c$ must be
+   estimated from data
+ * Measure time in years
+ * $t_0=1900$, $t_m=1920$
+!eblock
+
+!split
+===== The program =====
+
+!bblock
+@@@CODE src/Hudson_Bay.py
+!eblock
+
+If we perform a least-square fitting, we can find optimal values for the parameters $a$, $b$, $d$, $c$. The optimal parameters are $a=0.4807$, $b=0.02482$, $d=0.9272$ and $c=0.02756$. These parameters result in a slightly modified initial conditions, namely $H(0) = 34.91$ and $L(0)=3.857$. With these parameters we are now ready to solve the equations and plot these data together with the experimental values.
+
+!split
+===== Other examples =====
+!bblock
+ * "Disease modeling": "http://hplgit.github.io/disease-modeling/doc/web/index.html"
+ * Predator-pray with disease
+ * "Bioinformatics: searching in strings": "http://hplgit.github.io/bioinf-py/doc/web/index.html"
+ * Move from difference equations to differential equations, would this be meaningful? Probably not - it does not give anything in biology before the models are so complex that one needs other things than Forward Euler...
+!eblock
+

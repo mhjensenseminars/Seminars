@@ -1,0 +1,431 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+%%
+
+
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+twoside,                 % oneside: electronic viewing, twoside: printing
+final,                   % or draft (marks overfull hboxes, figures with paths)
+10pt]{article}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % number chapter, section, subsection
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+% --- begin definitions of admonition environments ---
+
+% --- end of definitions of admonition environments ---
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+Nuclear Physics courses, FRIB theory center and \href{{http://www.nucleartalent.org}}{Nuclear TALENT}
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA {\&} Department of Physics, University of Oslo, Oslo, Norway${}^{}$} \\ [0mm]
+\end{center}
+
+    \begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+\begin{center} % date
+First FRIB-China Workshop on Physics of Nuclei and Hadrons, May 28-30 2015
+\end{center}
+
+\vspace{1cm}
+
+
+% !split
+\subsection*{Motivation}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Develop structured modules which will provide our students with a modern education in nuclear physics
+
+\item Modules/courses should contain a high-level of synchronization
+
+\item A computational perspective is essential
+
+\item The FRIB theory center can function as the national coordinating unit
+
+\item Coordination with the \href{{http://www.nucleartalent.org}}{Nuclear TALENT} initiative
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection*{Local situation at MSU}
+
+% --- begin paragraph admon ---
+\paragraph{}
+
+We have at MSU a  
+\begin{itemize}
+\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
+
+\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
+
+\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
+
+\item \textbf{Nuclear Astrophysics}. 
+\end{itemize}
+
+\noindent
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
+% --- end paragraph admon ---
+
+
+
+
+
+
+
+% !split
+\subsection*{Nuclear structure course/module  PHY981}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Experimental information
+
+\item Single-particle properties and mean-field
+
+\item second quantization
+
+\item Hartree-Fock theory
+
+\item Nuclear forces
+
+\item Shell model
+
+\item Transitions (EM and $\beta$-decays
+
+\item Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+
+\item etc
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection*{Nuclear dynamics course/module  PHY982}
+
+% --- begin paragraph admon ---
+\paragraph{}
+
+\begin{itemize}
+\item Direct reaction theory and applications
+
+\item Reactions of light and heavy ions, from low to relativistic energies
+
+\item Single-channel scattering
+
+\item Integral forms for scattering. Generalizing to many channels
+
+\item Collective couplings. Single-particle couplings. Coupling to the continuum
+
+\item Transfer reactions. Breakup reactions
+
+\item Adiabatic reaction models. Semiclassical approximations (Eikonal and time-dependent approaches)
+
+\item Capture and fusion reactions
+
+\item R-matrix methods
+
+\item Microscopic models for reactions
+
+\item Several computational exercises
+
+\item etc
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection*{Nuclear astrophysics course/module PHY983}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Neutrinos
+
+\item Equation of state for dense matter
+
+\item Masses - Stability and Decay
+
+\item Reaction Rates
+
+\item Beta decay Rates	
+
+\item The Life of Stars: Stellar burning stages, Hydogen burning, Other burning stages
+
+\item The Death of Stars: Supernovae, Neutron Stars and White Dwarfs
+
+\item Beyond Iron I: r-process, s- and p-process
+
+\item Hydrogen burning at the extremes, the rp process
+
+\item etc
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection*{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Nuclear forces (INT 2013, new version 2017)
+
+\item Many-body methods (\textbf{GANIL July 2015})
+\begin{itemize}
+
+  \item Many-body perturbation theory
+
+  \item Similarity renormalization group theory
+
+  \item Coupled cluster theory
+
+  \item Green's function theory
+
+  \item FCI (Shell model)
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+
+% !split
+\subsection*{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Few-body methods for nuclear physics (\textbf{ECT* July-August 2015})
+\begin{itemize}
+
+ \item Forces and nuclear models
+
+ \item The Faddeev and Faddeev-Yakubowsky Equations
+
+ \item Methods based on Basis expansions
+
+ \item Few-nucleon reactions with external probes
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection*{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Density functional theory and self-consistent methods (ECT* 2014 and \textbf{York 2016})
+
+\item Theory for exploring nuclear structure experiments (GANIL 2014)
+
+\item Theory for exploring nuclear reaction experiments (GANIL 2013)
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection*{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
+\begin{itemize}
+
+  \item Stellar evolution, supernova and neutron stars.
+
+  \item Observations and basic properties of neutron stars and supernovae.
+
+  \item Brief review of nuclear forces and nuclear models.
+
+  \item Review of thermodynamics and statistical mechanics.
+
+  \item Basic notions in dense matter theory.
+
+  \item Simple models, the equation of state, and linear response theory.
+
+  \item Homogeneous dense nuclear matter.
+
+  \item etc 
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection*{Advanced  modules, Nuclear Talent}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+
+\item High-performance computing and computational tools for nuclear physics
+\begin{itemize}
+
+  \item ECT* 2012, Shell model and variational Monte Carlo
+
+  \item LANL/ORNL in 2016, Monte Carlo methods 
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection*{To think of}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item How many basic courses can an institution offer, and which courses should be offered?
+
+\item How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+
+\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
+
+\item \textbf{Nuclear Talent initiative and Asia} 
+
+\item Most courses offered are theoretical ones. We need a better coordination between theory and experiment. Should we think of an experimental Talent initiative? 
+
+\item Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+
+
+
+
+% ------------------- end of main content ---------------
+
+
+\printindex
+
+\end{document}
+

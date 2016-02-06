@@ -1,0 +1,123 @@
+# Slides for PHY981
+TITLE: Nuclear Physics courses, FRIB theory center and "Nuclear TALENT":"http://www.nucleartalent.org"
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: First FRIB-China Workshop on Physics of Nuclei and Hadrons, May 28-30 2015
+
+!split
+===== Motivation  =====
+!bblock
+* Develop structured modules which will provide our students with a modern education in nuclear physics
+* Modules/courses should contain a high-level of synchronization
+* A computational perspective is essential
+* The FRIB theory center can function as the national coordinating unit
+* Coordination with the "Nuclear TALENT":"http://www.nucleartalent.org" initiative
+
+!eblock
+
+
+!split
+===== Local situation at MSU  =====
+!bblock
+
+We have at MSU a  
+* "basic survey course PHY802":"https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html"  and three basic nuclear physics courses 
+* "structure":"http://nuclearstructure.github.io/PHY981/doc/web/course.html", 
+* "reactions and dynamics":"https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm"  and 
+* _Nuclear Astrophysics_. 
+
+These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
+
+They can be taught as a regular one-semester course or half-semester course. There are also experimental courses not discussed here.
+
+
+
+!eblock
+
+
+
+
+
+!split
+===== Nuclear structure course/module  PHY981 =====
+!bblock 
+* Experimental information
+* Single-particle properties and mean-field
+* second quantization
+* Hartree-Fock theory
+* Nuclear forces
+* Shell model
+* Transitions (EM and $\beta$-decays
+* Computational elements: build a Hartree-Fock code and/or a shell model code (diagonalization)
+* etc
+!eblock
+
+!split
+===== Nuclear dynamics course/module  PHY982 =====
+!bblock 
+
+* Direct reaction theory and applications
+* Reactions of light and heavy ions, from low to relativistic energies
+* Single-channel scattering
+* Integral forms for scattering. Generalizing to many channels
+* Collective couplings. Single-particle couplings. Coupling to the continuum
+* Transfer reactions. Breakup reactions
+* Adiabatic reaction models. Semiclassical approximations (Eikonal and time-dependent approaches)
+* Capture and fusion reactions
+* R-matrix methods
+* Microscopic models for reactions
+* Several computational exercises
+* etc
+!eblock
+
+!split
+===== Nuclear astrophysics course/module PHY983 =====
+!bblock 
+* Neutrinos
+* Equation of state for dense matter
+* Masses - Stability and Decay
+* Reaction Rates
+* Beta decay Rates	
+* The Life of Stars: Stellar burning stages, Hydogen burning, Other burning stages
+* The Death of Stars: Supernovae, Neutron Stars and White Dwarfs
+* Beyond Iron I: r-process, s- and p-process
+* Hydrogen burning at the extremes, the rp process
+* etc
+!eblock
+
+
+!split
+===== Advanced  modules, Nuclear Talent  =====
+!bblock 
+o Nuclear forces (INT 2013, new version 2017)
+o Many-body methods (_GANIL July 2015_)
+o Few-body methods for nuclear physics (_ECT* July-August 2015_)
+o Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
+o Theory for exploring nuclear structure experiments (GANIL 2014)
+o Theory for exploring nuclear reaction experiments (GANIL 2013)
+o Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
+o Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
+o High-performance computing and computational tools for nuclear physics
+  * ECT* 2012, Shell model and variational Monte Carlo
+  * LANL/ORNL in 2016, Monte Carlo methods 
+
+For all courses (till this year) we have had on average 40 applicants per course.
+
+!eblock
+
+
+!split
+===== To think of =====
+!bblock 
+* How many basic courses can an institution offer, and which courses should be offered?
+* How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+* Can we integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education? 
+* _Nuclear Talent initiative and Asia_ 
+* Most courses offered are theoretical ones. We need a better coordination between theory and experiment. Should we think of an experimental Talent initiative? 
+* Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
+ 
+!eblock
+
+
+
+
+
