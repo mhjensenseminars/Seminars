@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Integrating a computational perspective in the basic science education</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,126 +52,159 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
 
 
+<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<script>
+$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+});
+</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(" Wouldn't it be cool if your mechanics students could reproduce results in a PRL? ",
+ 'sections': [("Wouldn't it be cool if your mechanics students could reproduce results in a PRL?",
                2,
                None,
                '___sec0'),
-              (' Exciting possibilities  ', 2, None, '___sec1'),
-              (' Modeling and computations as a way to enhance algorithminc thinking ',
+              ('Why is computing comptence important?', 2, None, '___sec1'),
+              ('Computing competence, what is it?', 2, None, '___sec2'),
+              ('What is computing competence about?', 2, None, '___sec3'),
+              ('Continuous verse discrete', 2, None, '___sec4'),
+              ('Why should basic university education undergo a shift from classical mathematics to modern computing?',
                2,
                None,
-               '___sec2'),
-              (' Research based teaching ', 2, None, '___sec3'),
-              (' Research based education ', 2, None, '___sec4'),
-              (' Research based education ', 2, None, '___sec5'),
-              (' Large scale simulations ', 2, None, '___sec6'),
-              (' Large scale simulations ', 2, None, '___sec7'),
-              (' Preliminary summary ', 2, None, '___sec8'),
-              (' Can we catch many birds with one stone? ',
+               '___sec5'),
+              ('Key principle in scientific modeling', 2, None, '___sec6'),
+              ('Computing competence is central to solving scientific problems',
                2,
                None,
-               '___sec9'),
-              (' What is needed? ', 2, None, '___sec10'),
-              (' Implementation ', 2, None, '___sec11'),
-              (' Implementation in Oslo: The CSE  project ',
+               '___sec7'),
+              ('Modeling and computations as a way to enhance algorithminc thinking',
                2,
                None,
-               '___sec12'),
-              (' Example of bachelor program, astrophysics ',
+               '___sec8'),
+              ('Research based teaching', 2, None, '___sec9'),
+              ('Research based education', 2, None, '___sec10'),
+              ('Research based education', 2, None, '___sec11'),
+              ('Large scale simulations', 2, None, '___sec12'),
+              ('Large scale simulations', 2, None, '___sec13'),
+              ('Preliminary summary', 2, None, '___sec14'),
+              ('Can we catch many birds with one stone?',
                2,
                None,
-               '___sec13'),
-              (' Example: Computations from day one ', 2, None, '___sec14'),
-              (' Example: Computations from day one ', 2, None, '___sec15'),
-              (' Other Examples ', 2, None, '___sec16'),
-              (' Typical implementation in INF1100 ', 2, None, '___sec17'),
-              (' Typical implementation in INF1100 ', 2, None, '___sec18'),
-              (' Integrating numerical mathematics with calculus ',
+               '___sec15'),
+              ('What is needed?', 2, None, '___sec16'),
+              ('Implementation', 2, None, '___sec17'),
+              ('Implementation in Oslo: The CSE  project',
+               2,
+               None,
+               '___sec18'),
+              ('Example of bachelor program, astrophysics',
                2,
                None,
                '___sec19'),
-              (' Error analysis ', 2, None, '___sec20'),
-              (' Additional benefits: A structured approach to solving problems ',
-               2,
-               None,
-               '___sec21'),
-              (' Additional benefits: A structure approach to solving problems ',
-               2,
-               None,
-               '___sec22'),
-              (' Learning outcomes three first semesters ',
+              ('Example: Computations from day one', 2, None, '___sec20'),
+              ('Example: Computations from day one', 2, None, '___sec21'),
+              ('Other Examples', 2, None, '___sec22'),
+              ('Typical implementation first semester of study',
                2,
                None,
                '___sec23'),
-              (' Later courses ', 2, None, '___sec24'),
-              (' Coordination ', 2, None, '___sec25'),
-              (' FYS-MEK1100 (Mechanics), Second Semester ',
+              ('Symbolic calculations and numerical calculations in one code',
+               2,
+               None,
+               '___sec24'),
+              ('Error analysis', 2, None, '___sec25'),
+              ('Integrating numerical mathematics with calculus',
                2,
                None,
                '___sec26'),
-              (' FYS1120 Electromagnetism, Third Semester ',
+              ('Additional benefits: A structured approach to solving problems',
                2,
                None,
                '___sec27'),
-              (' More Examples from Physics Courses, 2-5 semester ',
+              ('Additional benefits: A structure approach to solving problems',
                2,
                None,
                '___sec28'),
-              (' First computational physics course ', 2, None, '___sec29'),
-              (' Challenges...  ', 2, None, '___sec30'),
-              (' Challenges and future plans ', 2, None, '___sec31'),
-              (' Which aspects are important for a successful introduction of CSE? ',
+              ('Learning outcomes three first semesters',
+               2,
+               None,
+               '___sec29'),
+              ('Later courses', 2, None, '___sec30'),
+              ('Coordination', 2, None, '___sec31'),
+              ('FYS-MEK1100 (Mechanics), Second Semester',
                2,
                None,
                '___sec32'),
-              (' What about life science/biology? Overarching questions ',
+              ('FYS1120 Electromagnetism, Third Semester',
                2,
                None,
                '___sec33'),
-              (' How to teach computing in biology? ', 2, None, '___sec34'),
-              (' The pedagogical framework ', 2, None, '___sec35'),
-              (' Example 1: ecoli lab experiment ', 2, None, '___sec36'),
-              (' Visualize data ', 2, None, '___sec37'),
-              (' Concepts must be introduced implicitly in a structured way ',
+              ('More Examples from Physics Courses, 2-5 semester',
+               2,
+               None,
+               '___sec34'),
+              ('First computational physics course', 2, None, '___sec35'),
+              ('Challenges...', 2, None, '___sec36'),
+              ('Challenges and future plans', 2, None, '___sec37'),
+              ('Which aspects are important for a successful introduction of CSE?',
                2,
                None,
                '___sec38'),
-              (' Read data from file ', 2, None, '___sec39'),
-              (' Lab journal ', 2, None, '___sec40'),
-              (' How can we reason about the process? ', 2, None, '___sec41'),
-              (' The first simple program ', 2, None, '___sec42'),
-              (' The output ', 2, None, '___sec43'),
-              (' Parameter estimation ', 2, None, '___sec44'),
-              (' A program relevant for the biological problem ',
+              ('What about life science/biology? Overarching questions',
                2,
                None,
-               '___sec45'),
-              (' Discuss the nature of such a model ', 2, None, '___sec46'),
-              (' Discuss the limitations of such a model ',
+               '___sec39'),
+              ('How to teach computing in biology?', 2, None, '___sec40'),
+              ('The pedagogical framework', 2, None, '___sec41'),
+              ('Example 1: ecoli lab experiment', 2, None, '___sec42'),
+              ('Visualize data', 2, None, '___sec43'),
+              ('Concepts must be introduced implicitly in a structured way',
                2,
                None,
-               '___sec47'),
-              (' The pedagogical template (to be iterated!) ',
+               '___sec44'),
+              ('Read data from file', 2, None, '___sec45'),
+              ('Lab journal', 2, None, '___sec46'),
+              ('How can we reason about the process?', 2, None, '___sec47'),
+              ('The first simple program', 2, None, '___sec48'),
+              ('The output', 2, None, '___sec49'),
+              ('Parameter estimation', 2, None, '___sec50'),
+              ('A program relevant for the biological problem',
                2,
                None,
-               '___sec48'),
-              (' Do we get better students? ', 2, None, '___sec49'),
-              (' Summary ', 2, None, '___sec50'),
-              (' People and links  ', 2, None, '___sec51'),
-              (' More links  ', 2, None, '___sec52')]}
+               '___sec51'),
+              ('Discuss the nature of such a model', 2, None, '___sec52'),
+              ('Discuss the limitations of such a model',
+               2,
+               None,
+               '___sec53'),
+              ('The pedagogical template (to be iterated!)',
+               2,
+               None,
+               '___sec54'),
+              ('Do we get better students?', 2, None, '___sec55'),
+              ('Summary', 2, None, '___sec56'),
+              ('People and links', 2, None, '___sec57'),
+              ('More links', 2, None, '___sec58')]}
 end of tocinfo -->
 
 <body>
@@ -204,10 +242,13 @@ MathJax.Hub.Config({
 
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
 <center><h4>May 13, 2015</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Wouldn't it be cool if your mechanics students could reproduce results in a PRL? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -216,7 +257,7 @@ MathJax.Hub.Config({
 <center><p><img src="figures/prl1.png" align="bottom" width=800></p></center>
 
 <p>
-Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+Grand challenge project in FYS-MEK1100 (Mechanics, University of Oslo), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
 </div>
 
 <div class="alert alert-block alert-block alert-text-normal">
@@ -227,24 +268,122 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec1">Exciting possibilities  </h2>
+<h2 id="___sec1">Why is computing comptence important? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+With computing I will mean solving scientific problems using computers. It covers numerical, analytical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing the algorithmic thinking when solving problems.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Computing competence, what is it? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence has always been a central part of the science and engineering education. Traditionally, such competence meant mastering mathematical methods to solve science problems - by pen and paper.
+
+<p>
+Today  our candidates are expected to use all available tools to solve scientific problems; computers primarily, but also pen and paper.
+
+<p>
+I will use the term/word algorithms in the broad meaning:  methods (for example mathematical) to solve science problems, with and without computers.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">What is computing competence about?  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence is about
+
+<ol>
+<li> derivation, verification, and implementation of algorithms</li>
+<li> understanding what can go wrong with algorithms</li>
+<li> overview of important, known algorithms</li>
+<li> understanding how algorithms are used to solve mathematical problems</li>
+<li> reproducible science and ethics</li>
+<li> algorithmic thinking for gaining deeper insights about scientific problems</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Continuous verse discrete </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Algorithms involving pen and paper are traditionally aimed at what we often refer to as continuous models.
+
+<p>
+Application of computers calls for approximate discrete models.
+
+<p>
+Much of the development of methods for continuous models are now being replaced by methods for discrete models in science and industry, simply because much larger problem classes can be addressed with discrete models, often also by simpler and more generic methodologies. However, verification of algorithms and understanding their limitations requires much of the classical knowledge about continuous models.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Why should basic university education undergo a shift from classical mathematics to modern computing? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 
+<ol>
+<li> The impact of the computer on mathematics is tremendous: science and industry now rely on solving mathematical problems through computing.</li>
+<li> Computing increases the relevance in education by solving more realistic problems earlier.</li>
+<li> Computing through programming is excellent training of creativity.</li>
+<li> Computing enhances the understanding of abstractions and generalization.</li>
+<li> Computing decreases the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.</li>
+</ol>
+
+The result is a deeper understanding of mathematical modeling. Not only is computing via programming a very powerful tool, it also a great pedagogical aid.
+For the mathematical training, there is one major new component among the arguments above: understanding abstractions and generalization. While many of the classical methods developed for continuous models are specialized for a particular problem or a narrow class of problems, computing-based algorithms are often developed for problems in a generic form and hence applicable to a large problem class.
+</div>
+
+
 <p>
-<b>At MSU with the new Department of Computational Mathematics, Science and Engineering we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department</b>.
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Key principle in scientific modeling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The power of the scientific method lies in identifying a given problem as a special case of an abstract class of problems, identifying general solution methods for this class of problems, and applying a general method to the specific problem (applying means, in the case of computing, calculations by pen and paper, symbolic computing, or numerical computing by ready-made and/or self-written software). This generic view on problems and methods is particularly important for understanding how to apply available, generic software to solve a particular problem.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Computing competence is central to solving scientific problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+Computing competence represents a central element in scientific problem solving, from basic education and research to essentially almost all advanced problems in modern societies. Computing competence is simply central to further progress. It enlarges the body of tools available to students and scientists beyond classical tools and allows for a more generic handling of problems. Focusing on algorithmic aspects results in deeper insights about scientific problems.
+
+<p>
+Today's project in science and industry tend to involve larger teams. Tools for reliable collaboration must therefore be mastered (e.g., version control systems, automated computer experiments for reproducibility, software and method documentation).
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec2">Modeling and computations as a way to enhance algorithminc thinking </h2>
+<h2 id="___sec8">Modeling and computations as a way to enhance algorithminc thinking </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -263,9 +402,9 @@ Algorithmic  thinking as a way to
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec3">Research based teaching </h2>
+<h2 id="___sec9">Research based teaching </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>How do we define it?</b>
 <p>
@@ -282,9 +421,9 @@ knowledge and insights about scientific methods.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec4">Research based education </h2>
+<h2 id="___sec10">Research based education </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>What should the education contain?</b>
 <p>
@@ -302,9 +441,9 @@ Our education should reflect this.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec5">Research based education </h2>
+<h2 id="___sec11">Research based education </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Normal workflow in Science and Engineering.</b>
 <p>
@@ -322,9 +461,9 @@ People who master these skills bring an important compentence to society.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec6">Large scale simulations </h2>
+<h2 id="___sec12">Large scale simulations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.</b>
 <p>
@@ -333,9 +472,9 @@ People who master these skills bring an important compentence to society.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec7">Large scale simulations </h2>
+<h2 id="___sec13">Large scale simulations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -345,9 +484,9 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec8">Preliminary summary </h2>
+<h2 id="___sec14">Preliminary summary </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Computations should enter basic science education.</b>
 <p>
@@ -363,9 +502,9 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec9">Can we catch many birds with one stone? </h2>
+<h2 id="___sec15">Can we catch many birds with one stone? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -379,9 +518,9 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec10">What is needed? </h2>
+<h2 id="___sec16">What is needed? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Programming.</b>
 <p>
@@ -406,9 +545,9 @@ Training in modelling and problem solving with numerical methods and visualisati
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec11">Implementation </h2>
+<h2 id="___sec17">Implementation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Crucial ingredients.</b>
 <p>
@@ -424,9 +563,9 @@ Consensus driven approach.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec12">Implementation in Oslo: The CSE  project </h2>
+<h2 id="___sec18">Implementation in Oslo: The CSE  project </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>What we do.</b>
 <p>
@@ -444,9 +583,9 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec13">Example of bachelor program, astrophysics </h2>
+<h2 id="___sec19">Example of bachelor program, astrophysics </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -457,9 +596,9 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec14">Example: Computations from day one </h2>
+<h2 id="___sec20">Example: Computations from day one </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Differentiation.</b>
 <p>
@@ -487,42 +626,42 @@ $$
 <li> Implementation in Python in INF1100</li>
 </ul>
 
-<!-- begin verbatim block  pycod-->
-<pre><code>def differentiate(f, x, h=1E-5):
-     return (f(x+h) - f(x-h))/(2*h)
-</code></pre>
-<!-- end verbatim block -->
+<p>
 
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">differentiate</span>(f, x, h<span style="color: #666666">=1E-5</span>):
+     <span style="color: #008000; font-weight: bold">return</span> (f(x<span style="color: #666666">+</span>h) <span style="color: #666666">-</span> f(x<span style="color: #666666">-</span>h))<span style="color: #666666">/</span>(<span style="color: #666666">2*</span>h)
+</pre></div>
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec15">Example: Computations from day one </h2>
+<h2 id="___sec21">Example: Computations from day one </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Differentiation and comparison with symbolic expressions.</b>
 <p>
 Combined with the possibility of symbolic calculations with <em>Sympy</em>, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
-<!-- begin verbatim block  pycod-->
-<pre><code>def differentiate(f, x, h=1E-5, symbolic=False):
-    if symbolic:
-        import sympy
-        return sympy.lambdify([x], sympy.diff(f, x))
-    else:
-        return (f(x+h) - f(x-h))/(2*h)
-</code></pre>
-<!-- end verbatim block -->
+<p>
 
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">differentiate</span>(f, x, h<span style="color: #666666">=1E-5</span>, symbolic<span style="color: #666666">=</span><span style="color: #008000">False</span>):
+    <span style="color: #008000; font-weight: bold">if</span> symbolic:
+        <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sympy</span>
+        <span style="color: #008000; font-weight: bold">return</span> sympy<span style="color: #666666">.</span>lambdify([x], sympy<span style="color: #666666">.</span>diff(f, x))
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> (f(x<span style="color: #666666">+</span>h) <span style="color: #666666">-</span> f(x<span style="color: #666666">-</span>h))<span style="color: #666666">/</span>(<span style="color: #666666">2*</span>h)
+</pre></div>
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec16">Other Examples </h2>
+<h2 id="___sec22">Other Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Integration by Trapezoidal Rule.</b>
 <p>
@@ -545,50 +684,55 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec17">Typical implementation in INF1100 </h2>
+<h2 id="___sec23">Typical implementation first semester of study </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Integration by Trapezoidal Rule.</b>
 <p>
 
 <p>
-<!-- begin verbatim block  pycod-->
-<pre><code>from math import exp, log, sin
-def Trapez(a,b,f,n):
-   h = (b-a)/float(n)
-   s = 0
-   x = a
-   for i in range(1,n,1):
-       x = x+h
-       s = s+ f(x)
-   s = 0.5*(f(a)+f(b)) +s
-   return h*s
 
-def f1(x):
-    return exp(-x*x)*log(1+x*sin(x))
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> exp, log, sin
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
 
-a = 1;  b = 3; n = 1000
-result = Trapez(a,b,f1,n)
-print result
-</code></pre>
-<!-- end verbatim block -->
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">f1</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> exp(<span style="color: #666666">-</span>x<span style="color: #666666">*</span>x)<span style="color: #666666">*</span>log(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>sin(x))
+
+a <span style="color: #666666">=</span> <span style="color: #666666">1</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">3</span>; n <span style="color: #666666">=</span> <span style="color: #666666">1000</span>
+result <span style="color: #666666">=</span> Trapez(a,b,f1,n)
+<span style="color: #008000; font-weight: bold">print</span> result
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec18">Typical implementation in INF1100 </h2>
+<h2 id="___sec24">Symbolic calculations and numerical calculations in one code  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Symbolic calculations and numerical calculations in one code!</b>
+<b></b>
 <p>
-Python offers an  extremely versatile programming  environment, allowing for the inclusion of analytical studies in a numerical program. Here we show another example
-where <em>SymPy</em> is used to evaluate the integral and compute the absolute error 
+Python offers an  extremely versatile programming  environment, allowing for
+the inclusion of analytical studies in a numerical program. Here we show an
+example code with the <b>trapezoidal rule</b> using <b>SymPy</b> to evaluate an integral and compute the absolute error
 with respect to the numerically evaluated one of the integral
-\( 4\int_0^1 dx/(1+x^2) = \pi \): 
-<!-- begin verbatim block  pycod-->
-<pre><code>from math import *
+\( 4\int_0^1 dx/(1+x^2) = \pi \):
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from math import *
 from sympy import *
 def Trapez(a,b,f,n):
    h = (b-a)/float(n)
@@ -606,47 +750,32 @@ def function(x):
 
 a = 0.0;  b = 1.0; n = 100
 result = Trapez(a,b,function,n)
-print &quot;Trapezoidal rule=&quot;, result
+print "Trapezoidal rule=", result
 # define x as a symbol to be used by sympy
 x = Symbol('x')
 exact = integrate(function(x), (x, 0.0, 1.0))
-print &quot;Sympy integration=&quot;, exact
+print "Sympy integration=", exact
 # Find relative error
-print &quot;Relative error&quot;, abs((exact-result)/exact)
-</code></pre>
-<!-- end verbatim block -->
+print "Relative error", abs((exact-result)/exact)
+
+</script></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec19">Integrating numerical mathematics with calculus </h2>
+<h2 id="___sec25">Error analysis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing thereby students and teachers to
-
-<ul>
-<li> Validate and verify  their  algorithms.</li> 
-<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
-<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
-<li> The above example allows the student to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. The students get trained from day one to think error analysis.</li> 
-<li> With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebooks.</li> 
-</ul>
-</div>
-
-
+The following extended version of the trapezoidal rule allows you  to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
 <p>
-<!-- !split -->
 
-<h2 id="___sec20">Error analysis </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
-<!-- begin verbatim block  pycod-->
-<pre><code>from math import log10
+
+<div class="compute"><script type="text/x-sage">
+from math import log10
 import numpy as np
 from sympy import Symbol, integrate
 import matplotlib.pyplot as plt
@@ -670,26 +799,46 @@ a = 0.0;  b = 1.0;
 x = Symbol('x')
 exact = integrate(function(x), (x, a, b))
 # set up the arrays for plotting the relative error
-n = np.zeros(8); y = np.zeros(8);
+n = np.zeros(9); y = np.zeros(9);
 # find the relative error as function of integration points
-for i in range(0, 8, 1):
+for i in range(1, 8, 1):
     npts = 10**i
     result = Trapez(a,b,function,npts)
     RelativeError = abs((exact-result)/exact)
-    n[i] = log10(npts); y[i] = log10(RelativeError);   
+    n[i] = log10(npts); y[i] = log10(RelativeError);
 plt.plot(n,y, 'ro')
 plt.xlabel('n')
 plt.ylabel('Relative error')
 plt.show()
-</code></pre>
-<!-- end verbatim block -->
+
+</script></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec21">Additional benefits: A structured approach to solving problems </h2>
+<h2 id="___sec26">Integrating numerical mathematics with calculus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing thereby students and teachers to
+
+<ul>
+<li> Validate and verify  their  algorithms.</li> 
+<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+<li> The above example allows the student to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. The students get trained from day one to think error analysis.</li> 
+<li> With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebooks.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec27">Additional benefits: A structured approach to solving problems </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -709,9 +858,9 @@ In this process we easily bake in
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec22">Additional benefits: A structure approach to solving problems </h2>
+<h2 id="___sec28">Additional benefits: A structure approach to solving problems </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -728,9 +877,9 @@ The conventions and techniques outlined here will save you a lot of time when yo
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec23">Learning outcomes three first semesters </h2>
+<h2 id="___sec29">Learning outcomes three first semesters </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Knowledge of basic algorithms.</b>
 <p>
@@ -749,9 +898,9 @@ The students have to code several of these algorithms during the first three sem
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec24">Later courses </h2>
+<h2 id="___sec30">Later courses </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -767,9 +916,9 @@ The students have to code several of these algorithms during the first three sem
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec25">Coordination </h2>
+<h2 id="___sec31">Coordination </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -781,9 +930,9 @@ The students have to code several of these algorithms during the first three sem
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec26">FYS-MEK1100 (Mechanics), Second Semester </h2>
+<h2 id="___sec32">FYS-MEK1100 (Mechanics), Second Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Realistic Pendulum.</b>
 <p>
@@ -803,9 +952,9 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec27">FYS1120 Electromagnetism, Third Semester </h2>
+<h2 id="___sec33">FYS1120 Electromagnetism, Third Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>RLC circuit.</b>
 <p>
@@ -823,9 +972,9 @@ in an RLC circuit. Then they did the experiment.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec28">More Examples from Physics Courses, 2-5 semester </h2>
+<h2 id="___sec34">More Examples from Physics Courses, 2-5 semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Second-fourth semester.</b>
 <p>
@@ -845,15 +994,15 @@ in an RLC circuit. Then they did the experiment.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec29">First computational physics course </h2>
+<h2 id="___sec35">First computational physics course </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Late: Fifth semester, FYS3150 Computational Physics.</b>
 <p>
 
 <p>
-The first computational physics <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/" target="_self">course</a> can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
+The first computational physics <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/" target="_blank">course</a> can then be used to summarize many of the gained insights about algorithms, mathematical models, physics etc. And direct the students to more advanced algorithms and applications like
 
 <ul>
 <li> Monte carlo methods</li>
@@ -866,9 +1015,9 @@ The first computational physics <a href="http://www.uio.no/studier/emner/matnat/
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec30">Challenges...  </h2>
+<h2 id="___sec36">Challenges...  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>.. and objections.</b>
 <p>
@@ -882,15 +1031,15 @@ spend time on computational topics  (technicalities), but can focus on the inter
 science applications.
 
 <ul>
-<li> To help teachers: Developed pedagogical modules which can aid university teachers.</li>
+<li> To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.</li>
 </ul>
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec31">Challenges and future plans </h2>
+<h2 id="___sec37">Challenges and future plans </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -909,9 +1058,9 @@ science applications.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec32">Which aspects are important for a successful introduction of CSE? </h2>
+<h2 id="___sec38">Which aspects are important for a successful introduction of CSE? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -930,12 +1079,11 @@ science applications.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec33">What about life science/biology? Overarching questions </h2>
+<h2 id="___sec39">What about life science/biology? Overarching questions </h2>
 
 <p>
-<!-- !bpop -->
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Which skills are needed by candidates in biology?</b>
 <p>
@@ -948,10 +1096,8 @@ There is new demand for more
 </ul>
 </div>
 
-<!-- !epop -->
 
 <p>
-<!-- !bpop -->
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Challenge:</b>
 <p>
@@ -960,15 +1106,13 @@ when the students are <em>not</em> interested in mathematics, physics, and
 programming?
 </div>
 
-<!-- !epop -->
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec34">How to teach computing in biology? </h2>
+<h2 id="___sec40">How to teach computing in biology? </h2>
 
 <p>
-<!-- !bpop -->
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -981,10 +1125,8 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 </ul>
 </div>
 
-<!-- !epop -->
 
 <p>
-<!-- !bpop -->
 <div class="alert alert-block alert-block alert-text-normal">
 <b>It's time for new thinking:</b>
 <p>
@@ -998,12 +1140,11 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 </ul>
 </div>
 
-<!-- !epop -->
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec35">The pedagogical framework </h2>
+<h2 id="___sec41">The pedagogical framework </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1031,9 +1172,9 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec36">Example 1: ecoli lab experiment </h2>
+<h2 id="___sec42">Example 1: ecoli lab experiment </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1043,8 +1184,9 @@ Observations of no of bacteria vs time in seconds,
 stored in Excel and written to a CVS file:
 
 <p>
-<!-- begin verbatim block  txt-->
-<pre><code>0,100
+
+<!-- code=text (!bc txt) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%">0,100
 600,140
 1200,250
 1800,360
@@ -1055,15 +1197,15 @@ stored in Excel and written to a CVS file:
 4800,2900
 5400,3900
 6000,7000
-</code></pre>
-<!-- end verbatim block -->
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec37">Visualize data </h2>
+<h2 id="___sec43">Visualize data </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1078,24 +1220,25 @@ stored in Excel and written to a CVS file:
 First program:
 
 <p>
-<!-- begin verbatim block  pypro-->
-<pre><code>t = [0, 600, 1200, 1800, 2400, 3000, 3600,
-     4200, 4800, 5400, 6000]
-N = [100, 140, 250, 360, 480, 820, 1300, 1700, 2900, 3900, 7000]
-import matplotlib.pyplot as plt
-plt.plot(t, N, 'ro')
-plt.xlabel('t [s]')
-plt.ylabel('N')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%">t <span style="color: #666666">=</span> [<span style="color: #666666">0</span>, <span style="color: #666666">600</span>, <span style="color: #666666">1200</span>, <span style="color: #666666">1800</span>, <span style="color: #666666">2400</span>, <span style="color: #666666">3000</span>, <span style="color: #666666">3600</span>,
+     <span style="color: #666666">4200</span>, <span style="color: #666666">4800</span>, <span style="color: #666666">5400</span>, <span style="color: #666666">6000</span>]
+N <span style="color: #666666">=</span> [<span style="color: #666666">100</span>, <span style="color: #666666">140</span>, <span style="color: #666666">250</span>, <span style="color: #666666">360</span>, <span style="color: #666666">480</span>, <span style="color: #666666">820</span>, <span style="color: #666666">1300</span>, <span style="color: #666666">1700</span>, <span style="color: #666666">2900</span>, <span style="color: #666666">3900</span>, <span style="color: #666666">7000</span>]
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">plt</span>
+plt<span style="color: #666666">.</span>plot(t, N, <span style="color: #BA2121">&#39;ro&#39;</span>)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;t [s]&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;N&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec38">Concepts must be introduced implicitly in a structured way </h2>
+<h2 id="___sec44">Concepts must be introduced implicitly in a structured way </h2>
 
 <p>
 <div class="alert alert-block alert-warning alert-text-normal">
@@ -1132,27 +1275,29 @@ just straight lines between discrete points on a curve.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec39">Read data from file </h2>
+<h2 id="___sec45">Read data from file </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-<!-- begin verbatim block  pypro-->
-<pre><code>import numpy as np
-data = np.loadtxt('ecoli.csv', delimiter=',')
-print data  # look at the format
-t = data[:,0]
-N = data[:,1]
-import matplotlib.pyplot as plt
-plt.plot(t, N, 'ro')
-plt.xlabel('t [s]')
-plt.ylabel('N')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<p>
+
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&#39;ecoli.csv&#39;</span>, delimiter<span style="color: #666666">=</span><span style="color: #BA2121">&#39;,&#39;</span>)
+<span style="color: #008000; font-weight: bold">print</span> data  <span style="color: #408080; font-style: italic"># look at the format</span>
+t <span style="color: #666666">=</span> data[:,<span style="color: #666666">0</span>]
+N <span style="color: #666666">=</span> data[:,<span style="color: #666666">1</span>]
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">plt</span>
+plt<span style="color: #666666">.</span>plot(t, N, <span style="color: #BA2121">&#39;ro&#39;</span>)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;t [s]&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;N&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
@@ -1166,9 +1311,9 @@ underlying (general) mechanism?
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec40">Lab journal </h2>
+<h2 id="___sec46">Lab journal </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1179,12 +1324,12 @@ Use IPython notebook as lab journal.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec41">How can we reason about the process? </h2>
+<h2 id="___sec47">How can we reason about the process? </h2>
 
 <p>
-<!-- <a href="http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html" target="_self"><tt>http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html</tt></a> -->
+<!-- <a href="http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html" target="_blank"><tt>http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html</tt></a> -->
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1212,9 +1357,9 @@ Use IPython notebook as lab journal.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec42">The first simple program </h2>
+<h2 id="___sec48">The first simple program </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1224,32 +1369,35 @@ Let us solve the difference equation in as simple way as possible,
 just to train some programming: \( r=1.5 \), \( N^0=1 \), \( \Delta t=0.5 \)
 
 <p>
-<!-- begin verbatim block  pypro-->
-<pre><code>import numpy as np
 
-t = np.linspace(0, 10, 21)  # 20 intervals in [0, 10]
-dt = t[1] - t[0]
-N = np.zeros(t.size)
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
 
-N[0] = 1
-r = 0.5
+t <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(<span style="color: #666666">0</span>, <span style="color: #666666">10</span>, <span style="color: #666666">21</span>)  <span style="color: #408080; font-style: italic"># 20 intervals in [0, 10]</span>
+dt <span style="color: #666666">=</span> t[<span style="color: #666666">1</span>] <span style="color: #666666">-</span> t[<span style="color: #666666">0</span>]
+N <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
 
-for n in range(0, N.size-1, 1):
-    N[n+1] = N[n] + r*dt*N[n]
-    print 'N[%d]=%.1f' % (n+1, N[n+1])
-</code></pre>
-<!-- end verbatim block -->
+N[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">1</span>
+r <span style="color: #666666">=</span> <span style="color: #666666">0.5</span>
+
+<span style="color: #008000; font-weight: bold">for</span> n <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">0</span>, N<span style="color: #666666">.</span>size<span style="color: #666666">-1</span>, <span style="color: #666666">1</span>):
+    N[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> N[n] <span style="color: #666666">+</span> r<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>N[n]
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;N[</span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">]=</span><span style="color: #BB6688; font-weight: bold">%.1f</span><span style="color: #BA2121">&#39;</span> <span style="color: #666666">%</span> (n<span style="color: #666666">+1</span>, N[n<span style="color: #666666">+1</span>])
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+% if FORMAT != 'ipynb':
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec43">The output </h2>
+<h2 id="___sec49">The output </h2>
 
 <p>
-<!-- begin verbatim block -->
-<pre><code>N[1]=1.2
+
+<!-- code=text typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%">N[1]=1.2
 N[2]=1.6
 N[3]=2.0
 N[4]=2.4
@@ -1269,13 +1417,14 @@ N[17]=44.4
 N[18]=55.5
 N[19]=69.4
 N[20]=86.7
-</code></pre>
-<!-- end verbatim block -->
+</pre></div>
+<p>
+% endif
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec44">Parameter estimation </h2>
+<h2 id="___sec50">Parameter estimation </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1311,9 +1460,9 @@ too advanced at this stage.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec45">A program relevant for the biological problem </h2>
+<h2 id="___sec51">A program relevant for the biological problem </h2>
 
 <p>
 <!-- exact r = 0.000694 -->
@@ -1322,46 +1471,46 @@ too advanced at this stage.
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-<!-- begin verbatim block  pypro-->
-<pre><code>import numpy as np
+<p>
 
-# Estimate r
-data = np.loadtxt('ecoli.csv', delimiter=',')
-t_e = data[:,0]
-N_e = data[:,1]
-i = 2  # Data point (i,i+1) used to estimate r
-r = (N_e[i+1] - N_e[i])/(N_e[i]*(t_e[i+1] - t_e[i]))
-print 'Estimated r=%.5f' % r
-# Can experiment with r values and see if the model can
-# match the data better
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
 
-T = 1200     # cell can divide after T sec
-t_max = 5*T  # 5 generations in experiment
-t = np.linspace(0, t_max, 1000)
-dt = t[1] - t[0]
-N = np.zeros(t.size)
+<span style="color: #408080; font-style: italic"># Estimate r</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&#39;ecoli.csv&#39;</span>, delimiter<span style="color: #666666">=</span><span style="color: #BA2121">&#39;,&#39;</span>)
+t_e <span style="color: #666666">=</span> data[:,<span style="color: #666666">0</span>]
+N_e <span style="color: #666666">=</span> data[:,<span style="color: #666666">1</span>]
+i <span style="color: #666666">=</span> <span style="color: #666666">2</span>  <span style="color: #408080; font-style: italic"># Data point (i,i+1) used to estimate r</span>
+r <span style="color: #666666">=</span> (N_e[i<span style="color: #666666">+1</span>] <span style="color: #666666">-</span> N_e[i])<span style="color: #666666">/</span>(N_e[i]<span style="color: #666666">*</span>(t_e[i<span style="color: #666666">+1</span>] <span style="color: #666666">-</span> t_e[i]))
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Estimated r=</span><span style="color: #BB6688; font-weight: bold">%.5f</span><span style="color: #BA2121">&#39;</span> <span style="color: #666666">%</span> r
+<span style="color: #408080; font-style: italic"># Can experiment with r values and see if the model can</span>
+<span style="color: #408080; font-style: italic"># match the data better</span>
 
-N[0] = 100
-for n in range(0, len(t)-1, 1):
-    N[n+1] = N[n] + r*dt*N[n]
+T <span style="color: #666666">=</span> <span style="color: #666666">1200</span>     <span style="color: #408080; font-style: italic"># cell can divide after T sec</span>
+t_max <span style="color: #666666">=</span> <span style="color: #666666">5*</span>T  <span style="color: #408080; font-style: italic"># 5 generations in experiment</span>
+t <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(<span style="color: #666666">0</span>, t_max, <span style="color: #666666">1000</span>)
+dt <span style="color: #666666">=</span> t[<span style="color: #666666">1</span>] <span style="color: #666666">-</span> t[<span style="color: #666666">0</span>]
+N <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
 
-import matplotlib.pyplot as plt
-plt.plot(t, N, 'r-', t_e, N_e, 'bo')
-plt.xlabel('time [s]');  plt.ylabel('N')
-plt.legend(['model', 'experiment'], loc='upper left')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+N[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">100</span>
+<span style="color: #008000; font-weight: bold">for</span> n <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">0</span>, <span style="color: #008000">len</span>(t)<span style="color: #666666">-1</span>, <span style="color: #666666">1</span>):
+    N[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> N[n] <span style="color: #666666">+</span> r<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>N[n]
 
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">plt</span>
+plt<span style="color: #666666">.</span>plot(t, N, <span style="color: #BA2121">&#39;r-&#39;</span>, t_e, N_e, <span style="color: #BA2121">&#39;bo&#39;</span>)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;time [s]&#39;</span>);  plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;N&#39;</span>)
+plt<span style="color: #666666">.</span>legend([<span style="color: #BA2121">&#39;model&#39;</span>, <span style="color: #BA2121">&#39;experiment&#39;</span>], loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper left&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
 <p>
 Change <code>r</code> in the program and play around to make a better fit!
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec46">Discuss the nature of such a model </h2>
+<h2 id="___sec52">Discuss the nature of such a model </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1380,9 +1529,9 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec47">Discuss the limitations of such a model </h2>
+<h2 id="___sec53">Discuss the limitations of such a model </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1401,9 +1550,9 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec48">The pedagogical template (to be iterated!) </h2>
+<h2 id="___sec54">The pedagogical template (to be iterated!) </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1434,9 +1583,9 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec49">Do we get better students? </h2>
+<h2 id="___sec55">Do we get better students? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Molecular dynamics visualization by two MSc students.</b>
 <p>
@@ -1450,9 +1599,9 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec50">Summary </h2>
+<h2 id="___sec56">Summary </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1469,9 +1618,9 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec51">People and links  </h2>
+<h2 id="___sec57">People and links  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1480,29 +1629,28 @@ Change <code>r</code> in the program and play around to make a better fit!
 <li> Hans Petter Langtangen, Computer Science</li>
 <li> Knut Morken, Mathematics</li>
 <li> Anders Malthe Sorensen and Arnt Inge Vistnes, Physics</li>
-<li> Tom Lindstrom, Mathematics</li>
 <li> Oyvind Ryan, Mathematics</li>
 <li> Solveig Kristensen, Dean of Education</li>
 <li> Hanne Solna, Director of studies</li>
-<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/" target="_self"><tt>http://www.mn.uio.no/english/about/collaboration/cse/</tt></a></li>
-<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf" target="_self"><tt>http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf</tt></a></li>
+<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/" target="_blank"><tt>http://www.mn.uio.no/english/about/collaboration/cse/</tt></a></li>
+<li> <a href="http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf" target="_blank"><tt>http://www.mn.uio.no/english/about/collaboration/cse/national-group/computing-in-science-education.pdf</tt></a></li>
 </ul>
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec52">More links  </h2>
+<h2 id="___sec58">More links  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 
 <ul>
-<li> Python and our first programming course, first semester <a href="http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/" target="_self">course</a>. Excellent new textbook by Hans Petter Langtangen, click here for the <a href="http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" target="_self">textbook</a> or the <a href="http://hplgit.github.io/primer.html/doc/web/index.html" target="_self">online version</a></li>
-<li> Mathematical modelling course, first semester <a href="http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/" target="_self">course</a>. Textbook by Knut Morken to be published by Springer.</li>
-<li> Mechanics, second semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/" target="_self">course</a>. New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics</li>
-<li> Computational Physics I, fifth semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/" target="_self">course</a>. Textbook to be published by IOP in 2015, with <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf" target="_self">online version</a>.</li>
+<li> Python and our first programming course, first semester <a href="http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/" target="_blank">course</a>. Excellent new textbook by Hans Petter Langtangen, click here for the <a href="http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" target="_blank">textbook</a> or the <a href="http://hplgit.github.io/primer.html/doc/web/index.html" target="_blank">online version</a></li>
+<li> Mathematical modelling course, first semester <a href="http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/" target="_blank">course</a>. Textbook by Knut Morken to be published by Springer.</li>
+<li> Mechanics, second semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/" target="_blank">course</a>. New textbook by Anders Malthe-Sorenssen, published by Springer, <a href="http://www.springer.com/us/book/9783319195957" target="_blank">Undergraduate Lecture Notes in Physics</a></li>
+<li> Computational Physics I, fifth semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h15/" target="_blank">course</a>. Textbook to be published by IOP in 2016, with <a href="https://github.com/CompPhysics/ComputationalPhysics1" target="_blank">online version</a></li>
 </ul>
 </div>
 
