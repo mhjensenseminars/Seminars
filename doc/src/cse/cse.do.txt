@@ -1,7 +1,7 @@
-# Slides for PHY981
+# Slides for Computing in science education
 TITLE: Integrating a computational perspective in the basic science education
-AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
-DATE: May 13, 2015
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: April 4, 2016
 
 
 
@@ -20,7 +20,7 @@ FIGURE: [figures/prl2.png, width=700 frac=0.5]
 !split
 ===== Why is computing comptence important? =====
 !bblock   Definition of computing    
-With computing I will mean solving scientific problems using computers. It covers numerical, analytical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing the algorithmic thinking when solving problems.
+With computing I will mean solving scientific problems using computers. It covers numerical, analytical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems.
 !eblock
 
 
