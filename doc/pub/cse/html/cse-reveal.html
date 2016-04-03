@@ -9,6 +9,21 @@
 
 
 
+<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<script>
+$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+});
+</script>
+
 
 
 
@@ -18,6 +33,7 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
 <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
@@ -35,14 +51,21 @@
 <link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
 <link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
 <link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
 -->
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<!-- Printing and PDF exports -->
 <script>
-document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
 </script>
 
 <style type="text/css">
@@ -57,7 +80,7 @@ document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.l
              text-shadow:0 1px 0 rgba(255,255,255,0.5);
              border:5px solid #bababa;
              -webkit-border-radius: 14px; -moz-border-radius: 14px;
-             border-radius:14px
+             border-radius:14px;
              background-position: 10px 10px;
              background-repeat: no-repeat;
              background-size: 38px;
@@ -135,8 +158,11 @@ MathJax.Hub.Config({
 
 <p>&nbsp;<br>
 <!-- institution(s) -->
+
+<br>
 <p>&nbsp;<br>
 <center><h4>May 13, 2015</h4></center> <!-- date -->
+<br>
 </section>
 
 
@@ -148,7 +174,7 @@ MathJax.Hub.Config({
 <center><p><img src="figures/prl1.png" align="bottom" width=800></p></center>
 
 <p>
-Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+Grand challenge project in FYS-MEK1100 (Mechanics, University of Oslo), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
 </div>
 
 <div class="alert alert-block alert-block alert-text-normal">
@@ -160,11 +186,104 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 
 
 <section>
-<h2 id="___sec1">Exciting possibilities  </h2>
+<h2 id="___sec1">Why is computing comptence important? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+With computing I will mean solving scientific problems using computers. It covers numerical, analytical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing the algorithmic thinking when solving problems.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec2">Computing competence, what is it? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-<b>At MSU with the new Department of Computational Mathematics, Science and Engineering we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department</b>.
+Computing competence has always been a central part of the science and engineering education. Traditionally, such competence meant mastering mathematical methods to solve science problems - by pen and paper.
+
+<p>
+Today  our candidates are expected to use all available tools to solve scientific problems; computers primarily, but also pen and paper.
+
+<p>
+I will use the term/word algorithms in the broad meaning:  methods (for example mathematical) to solve science problems, with and without computers.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec3">What is computing competence about?  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence is about
+
+<ol>
+<p><li> derivation, verification, and implementation of algorithms</li>
+<p><li> understanding what can go wrong with algorithms</li>
+<p><li> overview of important, known algorithms</li>
+<p><li> understanding how algorithms are used to solve mathematical problems</li>
+<p><li> reproducible science and ethics</li>
+<p><li> algorithmic thinking for gaining deeper insights about scientific problems</li>
+</ol>
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec4">Continuous verse discrete </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Algorithms involving pen and paper are traditionally aimed at what we often refer to as continuous models.
+
+<p>
+Application of computers calls for approximate discrete models.
+
+<p>
+Much of the development of methods for continuous models are now being replaced by methods for discrete models in science and industry, simply because much larger problem classes can be addressed with discrete models, often also by simpler and more generic methodologies. However, verification of algorithms and understanding their limitations requires much of the classical knowledge about continuous models.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec5">Why should basic university education undergo a shift from classical mathematics to modern computing? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ol>
+<p><li> The impact of the computer on mathematics is tremendous: science and industry now rely on solving mathematical problems through computing.</li>
+<p><li> Computing increases the relevance in education by solving more realistic problems earlier.</li>
+<p><li> Computing through programming is excellent training of creativity.</li>
+<p><li> Computing enhances the understanding of abstractions and generalization.</li>
+<p><li> Computing decreases the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.</li>
+</ol>
+<p>
+
+The result is a deeper understanding of mathematical modeling. Not only is computing via programming a very powerful tool, it also a great pedagogical aid.
+For the mathematical training, there is one major new component among the arguments above: understanding abstractions and generalization. While many of the classical methods developed for continuous models are specialized for a particular problem or a narrow class of problems, computing-based algorithms are often developed for problems in a generic form and hence applicable to a large problem class.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec6">Key principle in scientific modeling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The power of the scientific method lies in identifying a given problem as a special case of an abstract class of problems, identifying general solution methods for this class of problems, and applying a general method to the specific problem (applying means, in the case of computing, calculations by pen and paper, symbolic computing, or numerical computing by ready-made and/or self-written software). This generic view on problems and methods is particularly important for understanding how to apply available, generic software to solve a particular problem.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec7">Computing competence is central to solving scientific problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+Computing competence represents a central element in scientific problem solving, from basic education and research to essentially almost all advanced problems in modern societies. Computing competence is simply central to further progress. It enlarges the body of tools available to students and scientists beyond classical tools and allows for a more generic handling of problems. Focusing on algorithmic aspects results in deeper insights about scientific problems.
+
+<p>
+Today's project in science and industry tend to involve larger teams. Tools for reliable collaboration must therefore be mastered (e.g., version control systems, automated computer experiments for reproducibility, software and method documentation).
 
 
 </div>
@@ -172,7 +291,7 @@ Grand challenge project in FYS-MEK1100 (Mechanics), Second Semester: a friction 
 
 
 <section>
-<h2 id="___sec2">Modeling and computations as a way to enhance algorithminc thinking </h2>
+<h2 id="___sec8">Modeling and computations as a way to enhance algorithminc thinking </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -190,7 +309,7 @@ Algorithmic  thinking as a way to
 
 
 <section>
-<h2 id="___sec3">Research based teaching </h2>
+<h2 id="___sec9">Research based teaching </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>How do we define it?</b>
 <p>
@@ -208,7 +327,7 @@ knowledge and insights about scientific methods.
 
 
 <section>
-<h2 id="___sec4">Research based education </h2>
+<h2 id="___sec10">Research based education </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>What should the education contain?</b>
 <p>
@@ -228,7 +347,7 @@ Our education should reflect this.
 
 
 <section>
-<h2 id="___sec5">Research based education </h2>
+<h2 id="___sec11">Research based education </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Normal workflow in Science and Engineering.</b>
 <ul>
@@ -246,7 +365,7 @@ People who master these skills bring an important compentence to society.
 
 
 <section>
-<h2 id="___sec6">Large scale simulations </h2>
+<h2 id="___sec12">Large scale simulations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Fluid dynamical simulations central in air industry.  Typical university courses which are taught address the physics of the lower left corner.</b>
 <p>
@@ -256,7 +375,7 @@ People who master these skills bring an important compentence to society.
 
 
 <section>
-<h2 id="___sec7">Large scale simulations </h2>
+<h2 id="___sec13">Large scale simulations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -267,7 +386,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <section>
-<h2 id="___sec8">Preliminary summary </h2>
+<h2 id="___sec14">Preliminary summary </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Computations should enter basic science education.</b>
 <ul>
@@ -282,7 +401,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <section>
-<h2 id="___sec9">Can we catch many birds with one stone? </h2>
+<h2 id="___sec15">Can we catch many birds with one stone? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -295,7 +414,7 @@ Fluid dynamical simulations central in air industry, wings tested.
 
 
 <section>
-<h2 id="___sec10">What is needed? </h2>
+<h2 id="___sec16">What is needed? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Programming.</b>
 <p>
@@ -319,7 +438,7 @@ Training in modelling and problem solving with numerical methods and visualisati
 
 
 <section>
-<h2 id="___sec11">Implementation </h2>
+<h2 id="___sec17">Implementation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Crucial ingredients.</b>
 <ul>
@@ -335,7 +454,7 @@ Consensus driven approach.
 
 
 <section>
-<h2 id="___sec12">Implementation in Oslo: The CSE  project </h2>
+<h2 id="___sec18">Implementation in Oslo: The CSE  project </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>What we do.</b>
 <ul>
@@ -353,7 +472,7 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 <section>
-<h2 id="___sec13">Example of bachelor program, astrophysics </h2>
+<h2 id="___sec19">Example of bachelor program, astrophysics </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -365,7 +484,7 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 <section>
-<h2 id="___sec14">Example: Computations from day one </h2>
+<h2 id="___sec20">Example: Computations from day one </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Differentiation.</b>
 <p>
@@ -406,7 +525,7 @@ $$
 
 
 <section>
-<h2 id="___sec15">Example: Computations from day one </h2>
+<h2 id="___sec21">Example: Computations from day one </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Differentiation and comparison with symbolic expressions.</b>
 <p>
@@ -427,7 +546,7 @@ Combined with the possibility of symbolic calculations with <em>Sympy</em>, Pyth
 
 
 <section>
-<h2 id="___sec16">Other Examples </h2>
+<h2 id="___sec22">Other Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Integration by Trapezoidal Rule.</b>
 <ul>
@@ -450,7 +569,7 @@ $$
 
 
 <section>
-<h2 id="___sec17">Typical implementation in INF1100 </h2>
+<h2 id="___sec23">Typical implementation first semester of study </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Integration by Trapezoidal Rule.</b>
 <p>
@@ -480,50 +599,105 @@ result = Trapez(a,b,f1,n)
 
 
 <section>
-<h2 id="___sec18">Typical implementation in INF1100 </h2>
+<h2 id="___sec24">Symbolic calculations and numerical calculations in one code  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Symbolic calculations and numerical calculations in one code!</b>
+<b></b>
 <p>
-Python offers an  extremely versatile programming  environment, allowing for the inclusion of analytical studies in a numerical program. Here we show another example
-where <em>SymPy</em> is used to evaluate the integral and compute the absolute error 
+Python offers an  extremely versatile programming  environment, allowing for
+the inclusion of analytical studies in a numerical program. Here we show an
+example code with the <b>trapezoidal rule</b> using <b>SymPy</b> to evaluate an integral and compute the absolute error
 with respect to the numerically evaluated one of the integral
-\( 4\int_0^1 dx/(1+x^2) = \pi \): 
+\( 4\int_0^1 dx/(1+x^2) = \pi \):
 <p>
 
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">math</span> <span style="color: #8B008B; font-weight: bold">import</span> *
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> *
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">Trapez</span>(a,b,f,n):
-   h = (b-a)/<span style="color: #658b00">float</span>(n)
-   s = <span style="color: #B452CD">0</span>
+
+<div class="compute"><script type="text/x-sage">
+from math import *
+from sympy import *
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
    x = a
-   <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">1</span>,n,<span style="color: #B452CD">1</span>):
+   for i in range(1,n,1):
        x = x+h
        s = s+ f(x)
-   s = <span style="color: #B452CD">0.5</span>*(f(a)+f(b)) +s
-   <span style="color: #8B008B; font-weight: bold">return</span> h*s
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
 
-<span style="color: #228B22">#  function to compute pi</span>
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">function</span>(x):
-    <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">4.0</span>/(<span style="color: #B452CD">1</span>+x*x)
+#  function to compute pi
+def function(x):
+    return 4.0/(1+x*x)
 
-a = <span style="color: #B452CD">0.0</span>;  b = <span style="color: #B452CD">1.0</span>; n = <span style="color: #B452CD">100</span>
+a = 0.0;  b = 1.0; n = 100
 result = Trapez(a,b,function,n)
-<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Trapezoidal rule=&quot;</span>, result
-<span style="color: #228B22"># define x as a symbol to be used by sympy</span>
-x = Symbol(<span style="color: #CD5555">&#39;x&#39;</span>)
-exact = integrate(function(x), (x, <span style="color: #B452CD">0.0</span>, <span style="color: #B452CD">1.0</span>))
-<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Sympy integration=&quot;</span>, exact
-<span style="color: #228B22"># Find relative error</span>
-<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Relative error&quot;</span>, <span style="color: #658b00">abs</span>((exact-result)/exact)
-</pre></div>
+print "Trapezoidal rule=", result
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, 0.0, 1.0))
+print "Sympy integration=", exact
+# Find relative error
+print "Relative error", abs((exact-result)/exact)
+
+</script></div>
 
 </div>
 </section>
 
 
 <section>
-<h2 id="___sec19">Integrating numerical mathematics with calculus </h2>
+<h2 id="___sec25">Error analysis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The following extended version of the trapezoidal rule allows you  to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from math import log10
+import numpy as np
+from sympy import Symbol, integrate
+import matplotlib.pyplot as plt
+# function for the trapezoidal rule
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+#  function to compute pi
+def function(x):
+    return 4.0/(1+x*x)
+# define integration limits
+a = 0.0;  b = 1.0;
+# find result from sympy
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, a, b))
+# set up the arrays for plotting the relative error
+n = np.zeros(9); y = np.zeros(9);
+# find the relative error as function of integration points
+for i in range(1, 8, 1):
+    npts = 10**i
+    result = Trapez(a,b,function,npts)
+    RelativeError = abs((exact-result)/exact)
+    n[i] = log10(npts); y[i] = log10(RelativeError);
+plt.plot(n,y, 'ro')
+plt.xlabel('n')
+plt.ylabel('Relative error')
+plt.show()
+
+</script></div>
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec26">Integrating numerical mathematics with calculus </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -541,57 +715,7 @@ The last example shows the potential of combining numerical algorithms with symb
 
 
 <section>
-<h2 id="___sec20">Error analysis </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The following extended version of the trapezoidal rule allows the student to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
-<p>
-
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">math</span> <span style="color: #8B008B; font-weight: bold">import</span> log10
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> Symbol, integrate
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
-<span style="color: #228B22"># function for the trapezoidal rule</span>
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">Trapez</span>(a,b,f,n):
-   h = (b-a)/<span style="color: #658b00">float</span>(n)
-   s = <span style="color: #B452CD">0</span>
-   x = a
-   <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">1</span>,n,<span style="color: #B452CD">1</span>):
-       x = x+h
-       s = s+ f(x)
-   s = <span style="color: #B452CD">0.5</span>*(f(a)+f(b)) +s
-   <span style="color: #8B008B; font-weight: bold">return</span> h*s
-<span style="color: #228B22">#  function to compute pi</span>
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">function</span>(x):
-    <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">4.0</span>/(<span style="color: #B452CD">1</span>+x*x)
-<span style="color: #228B22"># define integration limits</span>
-a = <span style="color: #B452CD">0.0</span>;  b = <span style="color: #B452CD">1.0</span>;
-<span style="color: #228B22"># find result from sympy</span>
-<span style="color: #228B22"># define x as a symbol to be used by sympy</span>
-x = Symbol(<span style="color: #CD5555">&#39;x&#39;</span>)
-exact = integrate(function(x), (x, a, b))
-<span style="color: #228B22"># set up the arrays for plotting the relative error</span>
-n = np.zeros(<span style="color: #B452CD">8</span>); y = np.zeros(<span style="color: #B452CD">8</span>);
-<span style="color: #228B22"># find the relative error as function of integration points</span>
-<span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>, <span style="color: #B452CD">8</span>, <span style="color: #B452CD">1</span>):
-    npts = <span style="color: #B452CD">10</span>**i
-    result = Trapez(a,b,function,npts)
-    RelativeError = <span style="color: #658b00">abs</span>((exact-result)/exact)
-    n[i] = log10(npts); y[i] = log10(RelativeError);   
-plt.plot(n,y, <span style="color: #CD5555">&#39;ro&#39;</span>)
-plt.xlabel(<span style="color: #CD5555">&#39;n&#39;</span>)
-plt.ylabel(<span style="color: #CD5555">&#39;Relative error&#39;</span>)
-plt.show()
-</pre></div>
-
-</div>
-</section>
-
-
-<section>
-<h2 id="___sec21">Additional benefits: A structured approach to solving problems </h2>
+<h2 id="___sec27">Additional benefits: A structured approach to solving problems </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -620,7 +744,7 @@ In this process we easily bake in
 
 
 <section>
-<h2 id="___sec22">Additional benefits: A structure approach to solving problems </h2>
+<h2 id="___sec28">Additional benefits: A structure approach to solving problems </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -638,7 +762,7 @@ The conventions and techniques outlined here will save you a lot of time when yo
 
 
 <section>
-<h2 id="___sec23">Learning outcomes three first semesters </h2>
+<h2 id="___sec29">Learning outcomes three first semesters </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Knowledge of basic algorithms.</b>
 <ul>
@@ -657,7 +781,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 <section>
-<h2 id="___sec24">Later courses </h2>
+<h2 id="___sec30">Later courses </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -672,7 +796,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 <section>
-<h2 id="___sec25">Coordination </h2>
+<h2 id="___sec31">Coordination </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -683,7 +807,7 @@ The students have to code several of these algorithms during the first three sem
 
 
 <section>
-<h2 id="___sec26">FYS-MEK1100 (Mechanics), Second Semester </h2>
+<h2 id="___sec32">FYS-MEK1100 (Mechanics), Second Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Realistic Pendulum.</b>
 <p>
@@ -706,7 +830,7 @@ $$
 
 
 <section>
-<h2 id="___sec27">FYS1120 Electromagnetism, Third Semester </h2>
+<h2 id="___sec33">FYS1120 Electromagnetism, Third Semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>RLC circuit.</b>
 <p>
@@ -727,7 +851,7 @@ in an RLC circuit. Then they did the experiment.
 
 
 <section>
-<h2 id="___sec28">More Examples from Physics Courses, 2-5 semester </h2>
+<h2 id="___sec34">More Examples from Physics Courses, 2-5 semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Second-fourth semester.</b>
 <ul>
@@ -746,7 +870,7 @@ in an RLC circuit. Then they did the experiment.
 
 
 <section>
-<h2 id="___sec29">First computational physics course </h2>
+<h2 id="___sec35">First computational physics course </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Late: Fifth semester, FYS3150 Computational Physics.</b>
 <p>
@@ -764,7 +888,7 @@ The first computational physics <a href="http://www.uio.no/studier/emner/matnat/
 
 
 <section>
-<h2 id="___sec30">Challenges...  </h2>
+<h2 id="___sec36">Challenges...  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>.. and objections.</b>
 <p>
@@ -776,14 +900,14 @@ spend time on computational topics  (technicalities), but can focus on the inter
 science applications.
 
 <ul>
-<p><li> To help teachers: Developed pedagogical modules which can aid university teachers.</li>
+<p><li> To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.</li>
 </ul>
 </div>
 </section>
 
 
 <section>
-<h2 id="___sec31">Challenges and future plans </h2>
+<h2 id="___sec37">Challenges and future plans </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -802,7 +926,7 @@ science applications.
 
 
 <section>
-<h2 id="___sec32">Which aspects are important for a successful introduction of CSE? </h2>
+<h2 id="___sec38">Which aspects are important for a successful introduction of CSE? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -820,28 +944,26 @@ science applications.
 
 
 <section>
-<h2 id="___sec33">What about life science/biology? Overarching questions </h2>
+<h2 id="___sec39">What about life science/biology? Overarching questions </h2>
 
 <p>
-
-<div class="fragment alert alert-block alert-block alert-text-normal">
+<div class="alert alert-block alert-block alert-text-normal">
 <b>Which skills are needed by candidates in biology?</b>
 <p>
 There is new demand for more
 
 <ul>
 
-<p><li class="fragment"> quantitative methods &amp; reasoning</li>
+<p><li> quantitative methods &amp; reasoning</li>
 
-<p><li class="fragment"> understanding data and phenomena via models</li>
+<p><li> understanding data and phenomena via models</li>
 
-<p><li class="fragment"> creating <em>in silico</em> virtual labs</li>
+<p><li> creating <em>in silico</em> virtual labs</li>
 </ul>
 </div>
 
 <p>
-
-<div class="fragment alert alert-block alert-block alert-text-normal">
+<div class="alert alert-block alert-block alert-text-normal">
 <b>Challenge:</b>
 <p>
 How to integrate such computing-based activities in the undergraduate programs
@@ -852,47 +974,45 @@ programming?
 
 
 <section>
-<h2 id="___sec34">How to teach computing in biology? </h2>
+<h2 id="___sec40">How to teach computing in biology? </h2>
 
 <p>
-
-<div class="fragment alert alert-block alert-block alert-text-normal">
+<div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 Do we need to still follow the tradition and teach mathematics, physics, computations, chemistry, etc. in separate discipline-specific courses?
 
 <ul>
 
-<p><li class="fragment"> Uninteresting to first study tools when you want to study biology</li>
+<p><li> Uninteresting to first study tools when you want to study biology</li>
 
-<p><li class="fragment"> Little understanding of what the tools are good for</li>
+<p><li> Little understanding of what the tools are good for</li>
 
-<p><li class="fragment"> Minor utilization of tools later in biology</li>
+<p><li> Minor utilization of tools later in biology</li>
 </ul>
 </div>
 
 <p>
-
-<div class="fragment alert alert-block alert-block alert-text-normal">
+<div class="alert alert-block alert-block alert-text-normal">
 <b>It's time for new thinking:</b>
 <ul>
 
-<p><li class="fragment"> Just-in-time teaching: teach tools <em>when needed</em></li>
+<p><li> Just-in-time teaching: teach tools <em>when needed</em></li>
 
-<p><li class="fragment"> Teach tools in the <em>context of biology</em></li>
+<p><li> Teach tools in the <em>context of biology</em></li>
 
-<p><li class="fragment"> Emphasize development of <em>intuition and understanding</em></li>
+<p><li> Emphasize development of <em>intuition and understanding</em></li>
 
-<p><li class="fragment"> Base learning of the students' own <em>explorations in biology projects</em></li>
+<p><li> Base learning of the students' own <em>explorations in biology projects</em></li>
 
-<p><li class="fragment"> Integrate lab work with computing tools</li>
+<p><li> Integrate lab work with computing tools</li>
 </ul>
 </div>
 </section>
 
 
 <section>
-<h2 id="___sec35">The pedagogical framework </h2>
+<h2 id="___sec41">The pedagogical framework </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -922,7 +1042,7 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 
 
 <section>
-<h2 id="___sec36">Example 1: ecoli lab experiment </h2>
+<h2 id="___sec42">Example 1: ecoli lab experiment </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -952,7 +1072,7 @@ stored in Excel and written to a CVS file:
 
 
 <section>
-<h2 id="___sec37">Visualize data </h2>
+<h2 id="___sec43">Visualize data </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -983,7 +1103,7 @@ plt.show()
 
 
 <section>
-<h2 id="___sec38">Concepts must be introduced implicitly in a structured way </h2>
+<h2 id="___sec44">Concepts must be introduced implicitly in a structured way </h2>
 
 <p>
 <div class="alert alert-block alert-warning alert-text-normal">
@@ -1015,7 +1135,7 @@ just straight lines between discrete points on a curve.
 
 
 <section>
-<h2 id="___sec39">Read data from file </h2>
+<h2 id="___sec45">Read data from file </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1048,7 +1168,7 @@ underlying (general) mechanism?
 
 
 <section>
-<h2 id="___sec40">Lab journal </h2>
+<h2 id="___sec46">Lab journal </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1060,7 +1180,7 @@ Use IPython notebook as lab journal.
 
 
 <section>
-<h2 id="___sec41">How can we reason about the process? </h2>
+<h2 id="___sec47">How can we reason about the process? </h2>
 
 <p>
 <!-- <a href="http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html" target="_blank"><tt>http://www.zo.utexas.edu/courses/Thoc/PopGrowth.html</tt></a> -->
@@ -1089,7 +1209,7 @@ Use IPython notebook as lab journal.
 
 
 <section>
-<h2 id="___sec42">The first simple program </h2>
+<h2 id="___sec48">The first simple program </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1116,11 +1236,14 @@ r = <span style="color: #B452CD">0.5</span>
 </pre></div>
 
 </div>
+
+<p>
+% if FORMAT != 'ipynb':
 </section>
 
 
 <section>
-<h2 id="___sec43">The output </h2>
+<h2 id="___sec49">The output </h2>
 
 <p>
 
@@ -1146,11 +1269,13 @@ N[18]=55.5
 N[19]=69.4
 N[20]=86.7
 </pre></div>
+<p>
+% endif
 </section>
 
 
 <section>
-<h2 id="___sec44">Parameter estimation </h2>
+<h2 id="___sec50">Parameter estimation </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1189,7 +1314,7 @@ too advanced at this stage.
 
 
 <section>
-<h2 id="___sec45">A program relevant for the biological problem </h2>
+<h2 id="___sec51">A program relevant for the biological problem </h2>
 
 <p>
 <!-- exact r = 0.000694 -->
@@ -1235,7 +1360,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec46">Discuss the nature of such a model </h2>
+<h2 id="___sec52">Discuss the nature of such a model </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1253,7 +1378,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec47">Discuss the limitations of such a model </h2>
+<h2 id="___sec53">Discuss the limitations of such a model </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1271,7 +1396,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec48">The pedagogical template (to be iterated!) </h2>
+<h2 id="___sec54">The pedagogical template (to be iterated!) </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1309,7 +1434,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec49">Do we get better students? </h2>
+<h2 id="___sec55">Do we get better students? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Molecular dynamics visualization by two MSc students.</b>
 <p>
@@ -1324,7 +1449,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec50">Summary </h2>
+<h2 id="___sec56">Summary </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -1340,14 +1465,13 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec51">People and links  </h2>
+<h2 id="___sec57">People and links  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
 <p><li> Hans Petter Langtangen, Computer Science</li>
 <p><li> Knut Morken, Mathematics</li>
 <p><li> Anders Malthe Sorensen and Arnt Inge Vistnes, Physics</li>
-<p><li> Tom Lindstrom, Mathematics</li>
 <p><li> Oyvind Ryan, Mathematics</li>
 <p><li> Solveig Kristensen, Dean of Education</li>
 <p><li> Hanne Solna, Director of studies</li>
@@ -1359,14 +1483,14 @@ Change <code>r</code> in the program and play around to make a better fit!
 
 
 <section>
-<h2 id="___sec52">More links  </h2>
+<h2 id="___sec58">More links  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
 <p><li> Python and our first programming course, first semester <a href="http://www.uio.no/studier/emner/matnat/ifi/INF1100/h14/" target="_blank">course</a>. Excellent new textbook by Hans Petter Langtangen, click here for the <a href="http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering-ebook/dp/B00DGER1NQ/ref=sr_1_2?ie=UTF8&qid=1425382942&sr=8-2&keywords=langtangen" target="_blank">textbook</a> or the <a href="http://hplgit.github.io/primer.html/doc/web/index.html" target="_blank">online version</a></li>
 <p><li> Mathematical modelling course, first semester <a href="http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/" target="_blank">course</a>. Textbook by Knut Morken to be published by Springer.</li>
-<p><li> Mechanics, second semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/" target="_blank">course</a>. New textbook by Anders Malthe-Sorenssen, in press by Springer, Undergraduate Lecture Notes in Physics</li>
-<p><li> Computational Physics I, fifth semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/" target="_blank">course</a>. Textbook to be published by IOP in 2015, with <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf" target="_blank">online version</a>.</li>
+<p><li> Mechanics, second semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/" target="_blank">course</a>. New textbook by Anders Malthe-Sorenssen, published by Springer, <a href="http://www.springer.com/us/book/9783319195957" target="_blank">Undergraduate Lecture Notes in Physics</a></li>
+<p><li> Computational Physics I, fifth semester <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h15/" target="_blank">course</a>. Textbook to be published by IOP in 2016, with <a href="https://github.com/CompPhysics/ComputationalPhysics1" target="_blank">online version</a></li>
 </ul>
 </div>
 </section>
@@ -1377,7 +1501,7 @@ Change <code>r</code> in the program and play around to make a better fit!
 </div> <!-- class="reveal" -->
 
 <script src="reveal.js/lib/js/head.min.js"></script>
-<script src="reveal.js/js/reveal.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
