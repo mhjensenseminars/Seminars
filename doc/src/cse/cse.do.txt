@@ -629,7 +629,10 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
   * Minor utilization of tools later in biology
 !eblock
 
-!bblock It's time for new thinking:
+
+!split
+===== It's time for new thinking  =====
+!bblock 
   * Just-in-time teaching: teach tools *when needed*
   * Teach tools in the *context of biology*
   * Emphasize development of *intuition and understanding*
@@ -690,18 +693,18 @@ plt.show()
 !split
 ===== Concepts must be introduced implicitly in a structured way =====
 
-!bwarning
+!bblock
  * Always identify new concepts
  * Train new concepts in simplified (``trivial'') problems
-!ewarning
-
-!bblock Concepts in the previous example:
+!eblock
+!bblock 
+Concepts in the previous example:
  * Lists or arrays of numbers
  * Plotting commands
  * Curve = function of time
 !eblock
 
-!bnotice Notice:
+!bnotice
 The concept of a continuous function $N(t)$ is not necessary,
 just straight lines between discrete points on a curve.
 !enotice
@@ -769,7 +772,6 @@ just to train some programming: $r=1.5$, $N^0=1$, $\Delta t=0.5$
 @@@CODE src/diffeq.py
 !eblock
 
-% if FORMAT != 'ipynb':
 !split
 ===== The output =====
 
@@ -795,7 +797,6 @@ N[18]=55.5
 N[19]=69.4
 N[20]=86.7
 !ec
-% endif
 
 !split
 ===== Parameter estimation =====
