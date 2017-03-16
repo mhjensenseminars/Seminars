@@ -1,0 +1,129 @@
+TITLE: Hans Petter Langtangen til minne
+AUTHOR: Morten Hjorth-Jensen at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: Det Norske Vitenskaps-Akademi, 16 Mars, 2017
+
+
+
+
+!split
+===== Minnetale over Professor Hans Petter Langtangen =====
+!bblock
+FIGURE: [figures/hp3.jpg, width=500 frac=0.6] 
+!eblock
+
+
+!split
+===== Hans Petter Langtangen, akademisk liv og levnet (ikke fullstendig) =====
+!bblock
+o 3 Januar 1962-10 Oktober 2016
+o Dr Scient i Mekanikk  fra Universitetet i Oslo 1989
+o Cand Scient i Mekanikk fra Universitetet i Oslo 1985
+o Vitenskapelig assistent Matematisk Institutt, Universitetet i Oslo 1986-1990
+o Forsker, Anvendt Matematikk, Sintef 1990-1991 og 1991-1997
+o 1. Amanuensis, Matematisk Institutt, Universitetet i Oslo 1991-1998
+o Professor, Matematisk Institutt, Universitetet i Oslo 1998-1999
+o Professor, Institutt for Informatikk, Universitetet i Oslo 1999-2016
+o Forskingsprofessor Simula, 2001-2012, Fellow, Simula fra 2012
+o Leder for senter for fremragende forskning (SFF) Center for Biomedical Computing, 2007-2016
+
+
+!eblock
+
+!split
+===== Hans Petters unike forfatterskap =====
+!bblock   
+
+o H. P. Langtangen. Computational Partial Differential Equations - Numerical Methods and Diffpack Programming. Lecture Notes in Computational Science and Engineering. Springer, 1999. 682 sider
+o H. P. Langtangen. Computational Partial Differential Equations - Numerical Methods and Diffpack Programming. Texts in Computational Science and Engineering. Springer, second (significantly expaned and revised) edition, 2003. 855 sider
+o H. P. Langtangen. Python Scripting for Computational Science. Texts in Computational Science and Engineering. Springer, third edition, 2008. 750 sider
+o A. Tveito, X. Cai, H. P. Langtangen, and B. F. Nielsen. Elements of Scientific Computing. Texts in Computational Science and Engineering. Springer, 2010.
+o H. P. Langtangen. A Primer on Scientific Programming with Python. Texts in Computational Science and Engineering. Springer, fourth edition, 2014. 792 sider
+o S. Linge and H. P. Langtangen. Programming for Computations - A Gentle Introduction to Numerical Simulations with Python. Texts in Computational Science and Engineering. Springer, 2016.
+o S. Linge and H. P. Langtangen. Programming for Computations - A Gentle Introduction to Numerical Simulations with MATLAB/Octave. Texts in Computational Science and Engineering. Springer, 2016. 
+o H. P. Langtangen. Finite Difference Computing with Exponential Decay Models. Lecture Notes in Computational Science and Engineering. Springer, 2016.
+o H. P. Langtangen and G. K. Pedersen. Scaling of Differential Equations. SimulaSpringerBriefs. Springer, 2016.
+o H. P. Langtangen and S. Linge. Finite Difference Computing with Partial Differential Equations. Texts in Computational Science and Engineering. Springer, 2016.
+
+Samt flere hundre forskningsartikler i vitenskapelige tidsskrift, bidrag til konferanser, foredrag og mye mer. 
+
+!eblock
+
+
+
+!split
+===== Hans Petter, en sann akademiker =====
+!bblock
+
+o 69 Master og 7 siv-ing studenter som hovedvegleder eller medvegleder
+o 24 PhD studenter som hovedvegleier eller medvegleder
+o Totalt 100 studenter!!
+o Editor-in-Chief for  SIAM (Society of Industrial and Applied Mathematics) Journal on Scientific Computing (2011-2015)
+o Redaksjonsmedlem (associated editor) for flere vitenskapelige tidsskrift (6)
+o Medlem av Det Norske Vitenskaps-akademi siden 2014 og medlem av det Europeiske Vitenskapsakademiet
+o Leder og medlem av organisasjonskomiteer for flere store internasjonal konferanser, bla. SIAM Conference on Computational Science and Engineering 2013
+o Flere forskningspriser samt Olav Thon Stiftelsens pris for Fremragende undervisning i 2016 og Universitetet i Oslo sin pris for Fremragende undervisning i 2011.
+o Utvikla og undervist et titalls ulike kurs ved Universitetet i Oslo, samt mange spesialiserte skoler og intensive kurs
+o og mye mer....
+!eblock
+
+
+!split
+===== Hans Petter, forskning =====
+!bblock
+
+En stor del av  Hans Petters forskning og undervising var retta mot 
+
+o Numeriske metoder i fluidmekanikk
+o Numeriske metoder for stokastiske mekanikk problem
+o Numerisk software med vekt mot skripting og objektorientert programmering
+
+Hans Petter var drifkrafta i utviklinga av Diffpack, et objektorientert  softwareprodukt for studier av partielle differensiallikninger. Leda til firmaet Numerical Objects A/S. I 2003 blei teknologien bak Diffpack solgt til det tyske firmaet inuTech. Kundelista for Diffpack spenner fra NASA og Intel til verdenskjente universitet sm Cambridge, Cornell og Stanford. 
+
+!eblock
+
+
+!split
+===== Hans Petters hjertebarn, utdanning =====
+!bblock
+
+Hans Petters var brennende opptatt av utdanning og var en stor inspirasjonskilde for oss alle, med et hav av bidrag og anerkjennelser, bla
+
+o flere priser som beste foreleser
+o Universitetet i Oslos pris for fremragende undervisning i 2011
+o Olav Thon stiftelsens pris for fremragende undervisning i 2016
+
+Hans Petter var en sentral drifkraft i i Computing in Science Education initiativet ved Universitetet i Oslo  samt det nye senteret for fremrangende undervisning
+_Center for Computing in Science Education_ ved samme universitet. Hans Petter var brennende opptatt av alle aspekt ved utdanninga. 
+
+!eblock
+
+
+
+!split
+===== Computing in Science Education, et unikt prosjekt i universitetssammenheng =====
+!bblock  
+o The impact of the computer on mathematics is tremendous: science and industry now rely on solving mathematical problems through computing.
+o Computing increases the relevance in education by solving more realistic problems earlier.
+o Computing through programming is excellent training of creativity.
+o Computing enhances the understanding of abstractions and generalization.
+o Computing decreases the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.
+
+The result is a deeper understanding of mathematical modeling. Not only is computing via programming a very powerful tool, it also a great pedagogical aid.
+For the mathematical training, there is one major new component among the arguments above: understanding abstractions and generalization. While many of the classical methods developed for continuous models are specialized for a particular problem or a narrow class of problems, computing-based algorithms are often developed for problems in a generic form and hence applicable to a large problem class.
+!eblock
+
+
+!split
+===== Vi hedrer  Hans Petter Langtangen og lyser fred over hans minne =====
+!bblock 
+FIGURE: [figures/langtangenb.jpg, width=700 frac=0.5] 
+!eblock
+
+
+!split
+===== Vi hedrer  Hans Petter Langtangen og lyser fred over hans minne =====
+!bblock 
+FIGURE: [figures/hp4.jpg, width=600 frac=0.5] 
+!eblock
+
+
