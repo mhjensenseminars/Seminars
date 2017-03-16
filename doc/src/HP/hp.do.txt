@@ -1,5 +1,7 @@
 TITLE: Hans Petter Langtangen til minne
 AUTHOR: Morten Hjorth-Jensen at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+AUTHOR: Anders Malthe-Soerenssen at Department of Physics, University of Oslo, Oslo, Norway 
+AUTHOR: Ragnar Winther at Department of Mathematics, University of Oslo, Oslo, Norway 
 DATE: Det Norske Vitenskaps-Akademi, 16 Mars, 2017
 
 
