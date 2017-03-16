@@ -1,0 +1,171 @@
+# Slides for NSCL retreat
+TITLE: Computation and Education, NSCL retreat
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: February 6 2016
+
+
+!split
+===== Some observations =====
+!bblock
+
+_Computations play a central role in scientific discovery_
+
+_High-ligthing  computations and education is essential for progress and for attracting good students_
+
+ 
+There are several new developments that can allow us to  
+make FRIB the leading center in theoretical developments in the nuclear physics few- and many-body
+problem, from QCD via the nuclear many-body problem to stars and the synthesis of the elements.
+
+!eblock
+
+
+!split
+===== Exciting possibilities and synergy effects =====
+!bblock
+
+* Many new hires where computation plays a  central role
+  * Computational astrophysics and nuclear astrophysics
+  * Lattice QCD
+  * Many-body physics (almost all relevant many-body methods except Monte Carlo for Schroedinger equation)
+
+* New developments with exciting synergy possibilities
+  * FRIB theory alliance and a strong theory group
+  * At MSU with the new Department of Computational Mathematics, Science and Engineering we have a unique opportunity to include a computational perspective in our basic science education across disciplines, in addition to the educational programs that will be developed by the new department.
+
+!eblock
+
+
+
+!split
+===== Student background and our education =====
+!bblock
+
+* Heterogenous group of students with varying background
+  * Only few students have a good training in scientific computing
+  * Learn computing by looking at recipes, no deep learning and competence
+  * Difficult to transfer to new problems
+
+* Need a more coherent education in computational science and physics
+  * FRIB/NSCL adn PA in collaboration with CSME develop strategies for including computational elements in basic education and graduate education. 
+
+_Computing competence is in general weak or lacks totally._  This hampers our scientific progress.
+!eblock
+
+
+
+
+
+!split
+===== What do we mean with computing competence?  =====
+!bblock
+
+_Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing and analytical calculations. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems._
+
+This  competence involves:
+
+* derivation, verification, and implementation of algorithms
+* understanding what can go wrong with algorithms
+* overview of important, known algorithms
+* understanding how algorithms are used to solve complicated problems
+* reproducible science and ethics
+* algorithmic thinking for gaining deeper insights about scientific problems
+
+All these elements (and many more) are central for  maturing and gaining a better understanding of the scientific process *per se*. 
+!eblock
+
+
+!split
+===== Why should basic university education undergo a shift from classical mathematics to modern computing?  =====
+!bblock
+
+* Algorithms involving pen and paper are traditionally aimed at what we often refer to as continuous models. 
+* Application of computers calls for approximate discrete models. 
+* Much of the development of methods for continuous models are now being replaced by methods  for discrete models in science and industry, simply because much larger problem classes can be addressed with discrete models, often also by simpler and more generic methodologies. 
+
+However, verification of algorithms and understanding their limitations requires much 
+of the classical knowledge about continuous models.
+
+So, why should basic university education undergo a shift from classical mathematics to modern computing?
+
+!eblock
+
+
+!split
+===== Why should basic university education undergo a shift from classical mathematics to modern computing?  =====
+!bblock
+
+The impact of the computer on mathematics and science is tremendous: science and industry now rely on solving mathematical problems through computing.
+* Computing increases the relevance in education by solving more realistic problems earlier.
+* Computing through programming is excellent training of creativity.
+* Computing enhances the understanding of abstractions and generalization.
+* Computing decreases the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.
+
+!eblock
+
+
+!split
+===== Programming is understanding  =====
+!bblock
+
+
+The result is a deeper understanding of mathematical modeling. 
+Not only is computing via programming a very powerful tool, it also a great pedagogical aid. 
+
+For the mathematical training, there is one major new component among the arguments above: understanding abstractions and generalization. While many of the classical methods developed for continuous models are specialized for a particular problem or a narrow class of problems, computing-based algorithms are often developed for problems in a generic form and hence applicable to a large problem class.
+
+!eblock
+
+!split 
+=====  Key principle in scientific modeling =====
+!bblock
+The power of the scientific method lies in identifying a given problem as a special case of an abstract class of problems, identifying general solution methods for this class of problems, and applying a general method to the specific problem (applying means, in the case of computing, calculations by pen and paper, symbolic computing, or numerical computing by ready-made and/or self-written software). 
+
+
+This generic view on problems and methods is particularly important for understanding how to apply available, generic software to solve a particular problem.
+
+Computing competence represents a central element in scientific problem solving, from basic education and research to essentially almost all advanced problems in modern societies. Computing competence is simply central to further progress. It enlarges the body of tools available to students and scientists beyond classical tools and allows for a more generic handling of problems. Focusing on algorithmic aspects results in deeper insights about scientific problems.
+
+Today's project in science and industry tend to involve larger teams. Tools for reliable collaboration must therefore be mastered (e.g., version control systems, automated computer experiments for reproducibility, software and method documentation).
+
+!eblock
+
+!split 
+=====  Back to us =====
+!bblock
+* Heterogenous group of students with varying background
+  * Only few students have a good training in scientific computing
+  * Learn computing by looking at recipes, no deep learning and competence
+  * Difficult to transfer to new problems
+
+* Need a more coherent education in computational science and physics
+
+What can we do to improve the situation and flag MSU as the place where computational science
+is done? And  Nuclear physics with its ramifications.
+!eblock
+
+
+!split 
+=====  Courses in computational science and physics =====
+!bblock
+* "Computational Physics PHY 480/905(section 002)":"https://github.com/CompPhysics/ComputationalPhysicsMSU"
+* PHY 905 (section 004) High-performance computing"
+* Scattered elements of computations here and there (_not a complete list_)
+  * PHY 981 Nuclear structure: students write a Hartree-Fock program and a shell-model program
+  * PHY 982 Nuclear dynamics: students analyse nuclear reactions using FRESCO 
+
+Many possible paths in order to improve the situation:
+* Proper graduate course(s) in computational physics
+* Computational projects in nuclear physics courses
+* Most "Nuclear Talent":"http://www.nucleartalent.org" courses have computational projects
+!eblock
+
+
+
+!split 
+===== What can be done to profile computations and education? Some first steps =====
+!bblock
+* FRIB TA and the theory group  in collaboration with PA and CSME coordinate better computational education 
+* Nuclear physics education: Coordination with the Nuclear Talent initiative and FRIB TA
+* Develop learning outcomes in both nuclear physics outcomes and computational physics
+!eblock

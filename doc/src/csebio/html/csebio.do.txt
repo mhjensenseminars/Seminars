@@ -351,7 +351,7 @@ scientific method:
  * the experimental methods needed (one can study existing data or perform experiments)
  * analyzing and interpreting the data and performing further experiments if needed
  * trying to extract general behaviors and extract eventual laws or patterns
- * develop mathematical relations for the uncovered regularities/laws and test these by performing new experiments
+ * develop mathematical relations for the uncovered regularities/laws and test these by per forming new experiments
 !eblock
 
 

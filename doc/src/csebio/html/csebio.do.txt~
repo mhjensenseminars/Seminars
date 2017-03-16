@@ -48,29 +48,17 @@ Do we need to still follow the tradition and teach mathematics, physics, computa
 !epop
 
 
-!split
-===== Current status: CSE is ready for biology =====
-
-!bblock
- * CSE (*Computing in Science Education*) in life science is a faculty
-   priority area
- * Core professors in the CSE project and 5 IBV professors
-   are dedicated to implementation
- * 4 CINPLA PhD students have excellent background for and strong interests
-   in the implementation
- * Let's roll!
-!eblock
 
 !split
-===== Suggested pilot project: Oct 2014 - Oct 2015 =====
+===== Pilot project: Oct 2014 - Oct 2015 =====
 
 !bblock
- * Form a project team of dedicated CSE+IBV people and CINPLA PhD students
+ * Form a project team of dedicated CSE+IBV people and  PhD students
  * Develop a pedagogical framework
  * CSE+IBV people identify a set of possible examples
  * PhD students work closely with CSE+IBV people to find data,
    define models, and write documents
- * Spring 2015: intro course in computing and programming for IBV teachers, using selected examples
+ * Fall 2015: intro course in computing and programming for IBV teachers, using selected examples
  * Educational workshop at IBV:
    * Present results from the project
    * Discuss how and where to implement examples in BIOxxxx courses
@@ -185,7 +173,7 @@ Use IPython notebook as lab journal.
 !bblock
 !bpop
  o Cells divide after $T$ seconds on average (one generation)
- o $2N$ celles divide otn twice as many new cells $\Delta N$ in a time
+ o $2N$ celles divide into twice as many new cells $\Delta N$ in a time
    interval $\Delta t$ as $N$ cells would: $\Delta N \propto N$
  o $N$ cells result in twice as many new individuals $\Delta N$ in
    time $2\Delta t$ as in time $\Delta t$: $\Delta N \propto\Delta t$
@@ -424,8 +412,6 @@ One reason that this particular system has been so extensively studied is that t
 !split
 ===== Plotting the data =====
 
-[hpl: I greatly simplified the plotting and used only basic Matplotlib syntax, and made sure we prefix `plt.`. The plot is approx the same apart from smaller fontsize (by default).]
-
 !bblock
 @@@CODE src/plot_Hudson.py
 !eblock
@@ -629,4 +615,3 @@ If we perform a least-square fitting, we can find optimal values for the paramet
  * Move from difference equations to differential equations, would this be meaningful? Probably not - it does not give anything in biology before the models are so complex that one needs other things than Forward Euler...
 !eblock
 
-[hpl: Revision consists of simplifying and condesing text for a slide-style format and presentation. Programs are simplified. Data files are now in CSV format (e.g., from Excel) and autoread into two-dim arrays. Plots appear only if not notebook :triumph: Program variables corresponding to the math notation 1-1. ]
