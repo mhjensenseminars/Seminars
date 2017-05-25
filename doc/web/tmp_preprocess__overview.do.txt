@@ -4,7 +4,7 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/EducationalSeminars/doc/pub'
-published = ['cse', 'csebio', 'np', 'talent', 'NPretreatComputation', 'NPretreatEducation',]
+published = ['cse', 'csebio', 'np', 'talent', 'NPretreatComputation', 'NPretreatEducation', 'cleancode',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life science education',
@@ -12,6 +12,7 @@ chapters = {
  'talent': 'Nuclear Talent perspectives',
  'NPretreatComputation': 'Computations and education',
  'NPretreatEducation': 'Nuclear physics  education',
+ 'cleancode': 'Why clean code matters',
 }
 %>
 

@@ -1,0 +1,1399 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="How to write good code  and why it matters">
+
+<title>How to write good code  and why it matters</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<script>
+$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+});
+</script>
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('What is the only test of  a properly written code?',
+               2,
+               None,
+               '___sec0'),
+              ('The number of WTFs/minute', 2, None, '___sec1'),
+              ('How to write good code', 2, None, '___sec2'),
+              ('Disasters attributable to bad numerical computing',
+               2,
+               None,
+               '___sec3'),
+              ('Why is computing competence important and clean code important?',
+               2,
+               None,
+               '___sec4'),
+              ('Computing competence, what is it?', 2, None, '___sec5'),
+              ('Continuous versus discrete', 2, None, '___sec6'),
+              ('Key principle in scientific modeling', 2, None, '___sec7'),
+              ('Computing competence is central to solving scientific problems',
+               2,
+               None,
+               '___sec8'),
+              ('What is computing competence about?', 2, None, '___sec9'),
+              ('Getting started: How to use Symbolic tools to verify your code',
+               2,
+               None,
+               '___sec10'),
+              ('Typical implementation', 2, None, '___sec11'),
+              ('Symbolic calculations and numerical calculations in one code',
+               2,
+               None,
+               '___sec12'),
+              ('Error analysis', 2, None, '___sec13'),
+              ('Integrating numerical mathematics with calculus',
+               2,
+               None,
+               '___sec14'),
+              ('How to automatize and autogenerate code with sympy',
+               2,
+               None,
+               '___sec15'),
+              ('We can improve our first attempt', 2, None, '___sec16'),
+              ('And second derivatives', 2, None, '___sec17'),
+              ('Old dusty Fortran deck, this function is 509 lines long',
+               2,
+               None,
+               '___sec18'),
+              ('Yet another Fortran babe', 2, None, '___sec19'),
+              ('Would more comments help here?', 2, None, '___sec20'),
+              ('Use proper names for variables, comments may not be needed',
+               2,
+               None,
+               '___sec21'),
+              ('Functions should be short and do as few operations as possible',
+               2,
+               None,
+               '___sec22'),
+              ('Comments, functions, classes, names and much more',
+               2,
+               None,
+               '___sec23'),
+              ('Important ingredients to have in codes', 2, None, '___sec24'),
+              ('A structured approach to solving problems',
+               2,
+               None,
+               '___sec25'),
+              ('Additional benefits', 2, None, '___sec26'),
+              ('Code quality', 2, None, '___sec27'),
+              ('Unit Testing', 2, None, '___sec28'),
+              ('Unit Testing, benefits', 2, None, '___sec29'),
+              ('Simple example of unit test', 2, None, '___sec30'),
+              ('Simple example of unit test', 2, None, '___sec31'),
+              ('"Unit tests":"https://github.com/philsquared/Catch/blob/master/docs/tutorial.md"',
+               2,
+               None,
+               '___sec32'),
+              ('Examples', 2, None, '___sec33'),
+              ('Factorial Example', 2, None, '___sec34'),
+              ('What did we do (1)?', 2, None, '___sec35'),
+              ('What did we do (2)?', 2, None, '___sec36'),
+              ('Unit test summary and testing approach', 2, None, '___sec37'),
+              ('How do we time our code?', 2, None, '___sec38'),
+              ('Memory management', 2, None, '___sec39'),
+              ('Memory and communication', 2, None, '___sec40'),
+              ('Measuring performance', 2, None, '___sec41'),
+              ('Problems with measuring time', 2, None, '___sec42'),
+              ('Problems with cold start', 2, None, '___sec43'),
+              ('Problems with smart compilers', 2, None, '___sec44'),
+              ('Problems with interference', 2, None, '___sec45'),
+              ('Problems with measuring performance', 2, None, '___sec46'),
+              ('Summary and recommendations', 2, None, '___sec47'),
+              ('Summary and recommendations', 2, None, '___sec48'),
+              ('The final word?', 2, None, '___sec49')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+
+
+<center><h1>How to write good code  and why it matters</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no -->
+
+<center>
+<b>Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no</b> [1, 2]
+</center>
+
+<p>
+<!-- institution(s) -->
+
+<center>[1] <b>National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</b></center>
+<center>[2] <b>Department of Physics, University of Oslo, Oslo, Norway</b></center>
+<br>
+<p>
+<center><h4>May 24, 2017</h4></center> <!-- date -->
+<br>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">What is the only test of  a properly written code? </h2>
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1">The number of WTFs/minute </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/pict1.png" align="bottom" width=800></p></center><br /><br />
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">How to write good code </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/good_code.png" align="bottom" width=800></p></center><br /><br />
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">Disasters attributable to bad numerical computing </h2>
+
+<p>
+Have you been paying attention in your numerical analysis or scientific computation courses? If not, it could be a costly mistake. Here are some real life examples of what can happen when numerical algorithms are not correctly applied.
+
+<ol>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/patriot.html" target="_blank">The Patriot Missile failure</a>, in Dharan, Saudi Arabia, on February 25, 1991 which resulted in 28 deaths, is ultimately attributable to poor handling of rounding errors.</li>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/ariane.html" target="_blank">The explosion of the Ariane 5 rocket</a> just after lift-off on its maiden voyage off French Guiana, on June 4, 1996, was ultimately the consequence of a simple overflow.</li>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/sleipner.html" target="_blank">The sinking of the Sleipner A</a> offshore platform in Gandsfjorden near Stavanger, Norway, on August 23, 1991, resulted in a loss of nearly one billion dollars. It was found to be the result of inaccurate finite element analysis.</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Why is computing competence important and clean code important? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+With computing I will mean solving scientific problems using computers. It covers numerical, analytical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems. Well written code is a piece of art by itself and expresses clarity.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Computing competence, what is it? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence has always been a central part of the science and engineering education. Traditionally, such competence meant mastering mathematical methods to solve science problems - by pen and paper.
+
+<p>
+Today <b>we</b> are expected to use all available tools to solve scientific problems; computers primarily, but also pen and paper.
+
+<p>
+I will use the term/word algorithms in the broad meaning:  methods (for example mathematical) to solve science problems, with and without computers.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Continuous versus discrete </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Algorithms involving pen and paper are traditionally aimed at what we often refer to as continuous models.
+
+<p>
+Application of computers calls for approximate discrete models.
+
+<p>
+Much of the development of methods for continuous models are now being replaced by methods for discrete models in science and industry, simply because much larger problem classes can be addressed with discrete models, often also by simpler and more generic methodologies. However, verification of algorithms and understanding their limitations requires much of the classical knowledge about continuous models.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Key principle in scientific modeling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The power of the scientific method lies in identifying a given problem as a special case of an abstract class of problems, identifying general solution methods for this class of problems, and applying a general method to the specific problem (applying means, in the case of computing, calculations by pen and paper, symbolic computing, or numerical computing by ready-made and/or self-written software). This generic view on problems and methods is particularly important for understanding how to apply available, generic software to solve a particular problem.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Computing competence is central to solving scientific problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Definition of computing.</b>
+<p>
+Computing competence represents a central element in scientific problem solving, from basic education and research to essentially almost all advanced problems in modern societies. Computing competence is simply central to further progress. It enlarges the body of tools available to students and scientists beyond classical tools and allows for a more generic handling of problems. Focusing on algorithmic aspects results in deeper insights about scientific problems.
+
+<p>
+Today's project in science and industry tend to involve larger teams. Tools for reliable collaboration must therefore be mastered (e.g., version control systems, automated computer experiments for reproducibility, software and method documentation).   <b>In order to be efficient and to have code which can be extended upon, clean code matters even more</b>.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">What is computing competence about?  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence is about
+
+<ol>
+<li> derivation, verification, and implementation of algorithms</li>
+<li> understanding what can go wrong with algorithms</li>
+<li> overview of important, known algorithms</li>
+<li> understanding how algorithms are used to solve mathematical problems</li>
+<li> reproducible science and ethics</li>
+<li> algorithmic thinking for gaining deeper insights about scientific problems</li>
+<li> computing competence is also about writing clear code</li>
+</ol>
+
+Computing is understanding.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">Getting started: How to use Symbolic tools to verify your code </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<ul>
+<li> The algorithm for computing the  integral vha the Trapezoidal rule for an interval \( x \in [a,b] \)</li>
+</ul>
+
+$$
+  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right] 
+$$
+
+The quantity \( h \) is the so-called step length defined as 
+$$
+h = \frac{b-a}{n}
+$$
+
+with \( n \) being the number of integration points. Ideally we want \( h \) as small as possible. The mathematical error goes like \( \sim O(h^2) \) (global error).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">Typical implementation  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> exp, log
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">f1</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> exp(<span style="color: #666666">-</span>x<span style="color: #666666">*</span>x)<span style="color: #666666">*</span>log(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>sin(x))
+
+a <span style="color: #666666">=</span> <span style="color: #666666">1</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">3</span>; n <span style="color: #666666">=</span> <span style="color: #666666">1000</span>
+result <span style="color: #666666">=</span> Trapez(a,b,f1,n)
+<span style="color: #008000; font-weight: bold">print</span> result
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec12">Symbolic calculations and numerical calculations in one code  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Python offers an  extremely versatile programming  environment, allowing for
+the inclusion of analytical studies in a numerical program. Here we show an
+example code with the <b>trapezoidal rule</b> using <b>SymPy</b> to evaluate an integral and compute the absolute error
+with respect to the numerically evaluated one of the integral
+\( 4\int_0^1 dx/(1+x^2) = \pi \):
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> Symbol, integrate
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
+
+<span style="color: #408080; font-style: italic">#  function to compute pi</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">function</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">4.0/</span>(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>x)
+
+a <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">1.0</span>; n <span style="color: #666666">=</span> <span style="color: #666666">100</span>
+result <span style="color: #666666">=</span> Trapez(a,b,function,n)
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Trapezoidal rule=&quot;</span>, result
+<span style="color: #408080; font-style: italic"># define x as a symbol to be used by sympy</span>
+x <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;x&#39;</span>)
+exact <span style="color: #666666">=</span> integrate(function(x), (x, <span style="color: #666666">0.0</span>, <span style="color: #666666">1.0</span>))
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Sympy integration=&quot;</span>, exact
+<span style="color: #408080; font-style: italic"># Find relative error</span>
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Relative error&quot;</span>, <span style="color: #008000">abs</span>((exact<span style="color: #666666">-</span>result)<span style="color: #666666">/</span>exact)
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec13">Error analysis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The following extended version of the trapezoidal rule allows you  to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from math import log10
+import numpy as np
+from sympy import Symbol, integrate
+import matplotlib.pyplot as plt
+# function for the trapezoidal rule
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+#  function to compute pi
+def function(x):
+    return 4.0/(1+x*x)
+# define integration limits
+a = 0.0;  b = 1.0;
+# find result from sympy
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+#exact = integrate(function(x), (x, a, b))
+exact = pi
+# set up the arrays for plotting the relative error
+n = np.zeros(9); y = np.zeros(9);
+# find the relative error as function of integration points
+for i in range(1, 8, 1):
+    npts = 10**i
+    result = Trapez(a,b,function,npts)
+    RelativeError = abs((exact-result)/exact)
+    n[i] = log10(npts); y[i] = log10(RelativeError);
+plt.plot(n,y, 'ro')
+plt.xlabel('n')
+plt.ylabel('Relative error')
+plt.show()
+
+</script></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec14">Integrating numerical mathematics with calculus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing you to
+
+<ul>
+<li> Validate and verify  your  algorithms.</li> 
+<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+<li> The above example allows you to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. From day one start to think error analysis.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec15">How to automatize and autogenerate code with sympy </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For the computation of various derivatives with different types of wave functions, you will find it useful to use python with symbolic python, that is sympy, see <a href="http://docs.sympy.org/latest/index.html" target="_blank">online manual</a>.  Using sympy allows you autogenerate both Latex code as well c++, python or Fortran codes. Here you will find some simple examples. We want to compute various derivatives of hydrogen-like single-particle state functions like 
+the \( 2s \) hydrogen-orbital
+$$
+ \phi_{2s}(\boldsymbol{r}) = (Zr - 2)\exp{-(\frac{1}{2}Zr)},
+$$
+
+with \( r^2 = x^2 + y^2 + z^2 \).
+
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, diff, exp, sqrt
+x, y, z, Z <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;x y z Z&#39;</span>)
+r <span style="color: #666666">=</span> sqrt(x<span style="color: #666666">*</span>x <span style="color: #666666">+</span> y<span style="color: #666666">*</span>y <span style="color: #666666">+</span> z<span style="color: #666666">*</span>z)
+r
+phi <span style="color: #666666">=</span> (Z<span style="color: #666666">*</span>r <span style="color: #666666">-</span> <span style="color: #666666">2</span>)<span style="color: #666666">*</span>exp(<span style="color: #666666">-</span>Z<span style="color: #666666">*</span>r<span style="color: #666666">/2</span>)
+phi
+diff(phi, x)
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec16">We can improve our first attempt </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can improve our output by factorizing and substituting expressions
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, diff, exp, sqrt, factor, Symbol, printing
+x, y, z, Z <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;x y z Z&#39;</span>)
+r <span style="color: #666666">=</span> sqrt(x<span style="color: #666666">*</span>x <span style="color: #666666">+</span> y<span style="color: #666666">*</span>y <span style="color: #666666">+</span> z<span style="color: #666666">*</span>z)
+phi <span style="color: #666666">=</span> (Z<span style="color: #666666">*</span>r <span style="color: #666666">-</span> <span style="color: #666666">2</span>)<span style="color: #666666">*</span>exp(<span style="color: #666666">-</span>Z<span style="color: #666666">*</span>r<span style="color: #666666">/2</span>)
+R <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;r&#39;</span>) <span style="color: #408080; font-style: italic">#Creates a symbolic equivalent of r</span>
+<span style="color: #408080; font-style: italic">#print latex and c++ code</span>
+<span style="color: #008000; font-weight: bold">print</span> printing<span style="color: #666666">.</span>latex(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
+<span style="color: #008000; font-weight: bold">print</span> printing<span style="color: #666666">.</span>ccode(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec17">And second derivatives </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can in turn look at second derivatives
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, diff, exp, sqrt, factor, Symbol, printing
+x, y, z, Z <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;x y z Z&#39;</span>)
+r <span style="color: #666666">=</span> sqrt(x<span style="color: #666666">*</span>x <span style="color: #666666">+</span> y<span style="color: #666666">*</span>y <span style="color: #666666">+</span> z<span style="color: #666666">*</span>z)
+phi <span style="color: #666666">=</span> (Z<span style="color: #666666">*</span>r <span style="color: #666666">-</span> <span style="color: #666666">2</span>)<span style="color: #666666">*</span>exp(<span style="color: #666666">-</span>Z<span style="color: #666666">*</span>r<span style="color: #666666">/2</span>)
+R <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;r&#39;</span>) <span style="color: #408080; font-style: italic">#Creates a symbolic equivalent of r</span>
+(diff(diff(phi, x), x) <span style="color: #666666">+</span> diff(diff(phi, y), y) <span style="color: #666666">+</span> diff(diff(phi, z), z))<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R)
+<span style="color: #408080; font-style: italic"># Collect the Z values</span>
+(diff(diff(phi, x), x) <span style="color: #666666">+</span> diff(diff(phi, y), y) <span style="color: #666666">+</span>diff(diff(phi, z), z))<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>collect(Z)<span style="color: #666666">.</span>subs(r, R)
+<span style="color: #408080; font-style: italic"># Factorize also the r**2 terms</span>
+(diff(diff(phi, x), x) <span style="color: #666666">+</span> diff(diff(phi, y), y) <span style="color: #666666">+</span> diff(diff(phi, z), z))<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>collect(Z)<span style="color: #666666">.</span>subs(r, R)<span style="color: #666666">.</span>subs(r<span style="color: #666666">**2</span>, R<span style="color: #666666">**2</span>)<span style="color: #666666">.</span>factor()
+<span style="color: #008000; font-weight: bold">print</span> printing<span style="color: #666666">.</span>ccode((diff(diff(phi, x), x) <span style="color: #666666">+</span> diff(diff(phi, y), y) <span style="color: #666666">+</span> diff(diff(phi, z), z))<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>collect(Z)<span style="color: #666666">.</span>subs(r, R)<span style="color: #666666">.</span>subs(r<span style="color: #666666">**2</span>, R<span style="color: #666666">**2</span>)<span style="color: #666666">.</span>factor())
+</pre></div>
+<p>
+With some practice this allows one to be able to check one's own calculation and translate automatically into code lines. Saves a lot of time and is much less error prone.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec18">Old dusty Fortran deck, this function is 509 lines long </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>
+
+<!-- code=fortran (!bc fcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>      <span style="color: #B00040">REAL </span><span style="color: #008000; font-weight: bold">FUNCTION </span>GMOSH<span style="color: #666666">*8</span>(N,L,NC,LC,N1,L1,N2,L2,LR,D)
+C GENERALIZED TRANSFORMATION BRACKETS WRITTEN BY XXX<span style="color: #408080; font-style: italic">!</span>
+C REF  M.SOTONA <span style="color: #008000">AND </span>M.GMITRO  COMP.PHYS.COMM <span style="color: #666666">3</span>(<span style="color: #666666">1972</span>)<span style="color: #666666">53</span>
+C  D<span style="color: #666666">=</span>MASS1<span style="color: #666666">/</span>MASS2
+      <span style="color: #008000; font-weight: bold">IMPLICIT </span><span style="color: #B00040">REAL</span><span style="color: #666666">*8</span>(A<span style="color: #666666">-</span>H,O<span style="color: #666666">-</span>Z)
+      <span style="color: #008000; font-weight: bold">DIMENSION </span>F(<span style="color: #666666">50</span>),G(<span style="color: #666666">50</span>),W(<span style="color: #666666">50</span>)
+      IORD<span style="color: #666666">=0</span>
+      ZERO<span style="color: #666666">=0.0</span>D0
+      HALF<span style="color: #666666">=0.5</span>D0
+      EIN<span style="color: #666666">=1.0</span>D0
+      <span style="color: #008000; font-weight: bold">IF</span>(IORD<span style="color: #666666">-10</span>) <span style="color: #666666">5</span>,<span style="color: #666666">6</span>,<span style="color: #666666">5</span>
+    <span style="color: #666666">5</span> IORD<span style="color: #666666">=10</span>
+      F(<span style="color: #666666">1</span>)<span style="color: #666666">=</span>ZERO
+      G(<span style="color: #666666">1</span>)<span style="color: #666666">=</span><span style="color: #008000">DLOG</span>(HALF)
+      W(<span style="color: #666666">1</span>)<span style="color: #666666">=</span>ZERO
+      <span style="color: #008000; font-weight: bold">DO </span><span style="color: #666666">10</span> I<span style="color: #666666">=2</span>,<span style="color: #666666">50</span>
+      A<span style="color: #666666">=</span>I<span style="color: #666666">-1</span>
+      F(I)<span style="color: #666666">=</span>F(I<span style="color: #666666">-1</span>)<span style="color: #666666">+</span><span style="color: #008000">DLOG</span>(A)
+      G(I)<span style="color: #666666">=</span>G(I<span style="color: #666666">-1</span>)<span style="color: #666666">+</span><span style="color: #008000">DLOG</span>(A<span style="color: #666666">+</span>HALF)
+   <span style="color: #666666">10</span> W(I)<span style="color: #666666">=</span><span style="color: #008000">DLOG</span>(A<span style="color: #666666">+</span>A<span style="color: #666666">+</span>EIN)
+    <span style="color: #666666">6</span> GMOSH<span style="color: #666666">=</span>ZERO
+      <span style="color: #008000; font-weight: bold">IF</span>(N<span style="color: #666666">+</span>N<span style="color: #666666">+</span>NC<span style="color: #666666">+</span>NC<span style="color: #666666">+</span>L<span style="color: #666666">+</span>LC<span style="color: #666666">-</span>N1<span style="color: #666666">-</span>N1<span style="color: #666666">-</span>N2<span style="color: #666666">-</span>N2<span style="color: #666666">-</span>L1<span style="color: #666666">-</span>L2) <span style="color: #666666">500</span>,<span style="color: #666666">12</span>,<span style="color: #666666">500</span>
+   <span style="color: #666666">12</span> <span style="color: #008000; font-weight: bold">IF</span>(L<span style="color: #666666">+</span>LC<span style="color: #666666">-</span>LR) <span style="color: #666666">500</span>,<span style="color: #666666">13</span>,<span style="color: #666666">13</span>
+   <span style="color: #666666">13</span> <span style="color: #008000; font-weight: bold">IF</span>(L1<span style="color: #666666">+</span>L2<span style="color: #666666">-</span>LR) <span style="color: #666666">500</span>,<span style="color: #666666">14</span>,<span style="color: #666666">14</span>
+   <span style="color: #666666">14</span> <span style="color: #008000; font-weight: bold">IF</span>(<span style="color: #008000">IABS</span>(L<span style="color: #666666">-</span>LC)<span style="color: #666666">-</span>LR) <span style="color: #666666">15</span>,<span style="color: #666666">15</span>,<span style="color: #666666">500</span>
+   <span style="color: #666666">15</span> <span style="color: #008000; font-weight: bold">IF</span>(<span style="color: #008000">IABS</span>(L1<span style="color: #666666">-</span>L2)<span style="color: #666666">-</span>LR) <span style="color: #666666">16</span>,<span style="color: #666666">16</span>,<span style="color: #666666">500</span>
+   <span style="color: #666666">16</span> DL<span style="color: #666666">=</span><span style="color: #008000">DLOG</span>(D)
+      D1L<span style="color: #666666">=</span><span style="color: #008000">DLOG</span>(D<span style="color: #666666">+</span>EIN)
+C  it goes on like this, in total <span style="color: #666666">509</span> lines.
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec19">Yet another Fortran babe </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>
+
+<!-- code=fortran (!bc fcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>      <span style="color: #008000; font-weight: bold">SUBROUTINE </span>argonne(j,l,lp,<span style="color: #008000; font-weight: bold">is</span>,v1,v2,v3,r,n)
+      <span style="color: #008000; font-weight: bold">IMPLICIT </span><span style="color: #B00040">REAL</span><span style="color: #666666">*8</span>(A<span style="color: #666666">-</span>H,O<span style="color: #666666">-</span>Z)
+      <span style="color: #008000; font-weight: bold">DIMENSION </span>v1(<span style="color: #666666">500</span>),v2(<span style="color: #666666">500</span>),v3(<span style="color: #666666">500</span>),r(<span style="color: #666666">500</span>)
+      <span style="color: #008000; font-weight: bold">data </span>cte<span style="color: #666666">/3.72681</span>d0<span style="color: #666666">/</span>,xmu<span style="color: #666666">/0.6995</span>d0<span style="color: #666666">/</span>
+
+      <span style="color: #008000; font-weight: bold">DO </span>i<span style="color: #666666">=1</span>,n
+         v1(i)<span style="color: #666666">=0.</span>d0
+         v2(i)<span style="color: #666666">=0.</span>d0
+         v3(i)<span style="color: #666666">=0.</span>d0
+      ENDDO
+      it<span style="color: #666666">=1-</span><span style="color: #008000">MOD</span>(l<span style="color: #666666">+</span><span style="color: #008000; font-weight: bold">is</span>,<span style="color: #666666">2</span>)
+      xs<span style="color: #666666">=</span>DFLOAT(<span style="color: #008000; font-weight: bold">is</span>)
+      xj<span style="color: #666666">=</span>DFLOAT(j)
+      xl<span style="color: #666666">=</span>DFLOAT(l)
+      xlp<span style="color: #666666">=</span>DFLOAT(lp)
+      xit<span style="color: #666666">=</span>DFLOAT(it)
+      xb<span style="color: #666666">=</span>(xj<span style="color: #666666">*</span>(xj<span style="color: #666666">+1.</span>d0)<span style="color: #666666">-</span>xl<span style="color: #666666">*</span>(xl<span style="color: #666666">+1.</span>d0)<span style="color: #666666">-</span>xs<span style="color: #666666">*</span>(xs<span style="color: #666666">+1.</span>d0))<span style="color: #666666">*0.5</span>d0
+      xq<span style="color: #666666">=</span>xl<span style="color: #666666">*</span>(xl<span style="color: #666666">+1.</span>d0)
+      yspin<span style="color: #666666">=4.</span>d0<span style="color: #666666">*</span>xs<span style="color: #666666">-3.</span>d0
+      yisos<span style="color: #666666">=4.</span>d0<span style="color: #666666">*</span>xit<span style="color: #666666">-3.</span>d0
+      xqp<span style="color: #666666">=</span>xlp<span style="color: #666666">*</span>(xlp<span style="color: #666666">+1.</span>d0)
+      xbp<span style="color: #666666">=</span>(xj<span style="color: #666666">*</span>(xj<span style="color: #666666">+1.</span>d0)<span style="color: #666666">-</span>xlp<span style="color: #666666">*</span>(xlp<span style="color: #666666">+1.</span>d0)<span style="color: #666666">-</span>xs<span style="color: #666666">*</span>(xs<span style="color: #666666">+1.</span>d0))<span style="color: #666666">*0.5</span>d0
+      <span style="color: #008000; font-weight: bold">IF</span>(l.EQ.j) xten<span style="color: #666666">=2.</span>d0
+      <span style="color: #008000; font-weight: bold">IF</span>(l.EQ.j<span style="color: #666666">+1</span>) xten<span style="color: #666666">=-2.</span>d0<span style="color: #666666">*</span>(xj<span style="color: #666666">+2.</span>d0)<span style="color: #666666">/</span>(<span style="color: #666666">2.</span>d0<span style="color: #666666">*</span>xj<span style="color: #666666">+1.</span>d0)
+      <span style="color: #008000; font-weight: bold">IF</span>(l.EQ.j<span style="color: #666666">-1</span>) xten<span style="color: #666666">=-2.</span>d0<span style="color: #666666">*</span>(xj<span style="color: #666666">-1.</span>d0)<span style="color: #666666">/</span>(<span style="color: #666666">2.</span>d0<span style="color: #666666">*</span>xj<span style="color: #666666">+1.</span>d0)
+      xten<span style="color: #666666">=</span>xten<span style="color: #666666">*</span>xs
+      vaux<span style="color: #666666">=-4.801125</span>d0<span style="color: #666666">+</span>yisos<span style="color: #666666">*0.798925+1.189325*</span>yspin
+     &amp;     <span style="color: #666666">+0.182875*</span>yisos<span style="color: #666666">*</span>yspin<span style="color: #666666">-0.1575*</span>xten<span style="color: #666666">-</span>
+     &amp;     <span style="color: #666666">0.7525*</span>xten<span style="color: #666666">*</span>yisos<span style="color: #666666">+0.5625*</span>xb<span style="color: #666666">+0.0475*</span>xb<span style="color: #666666">*</span>yisos 
+     &amp;     <span style="color: #666666">+0.070625*</span>xq<span style="color: #666666">-0.148125*</span>xq<span style="color: #666666">*</span>yisos<span style="color: #666666">-0.040625*</span>
+     &amp;     xq<span style="color: #666666">*</span>yspin<span style="color: #666666">-0.001875*</span>xq<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>yspin
+     &amp;     <span style="color: #666666">-0.5425*</span>xb<span style="color: #666666">*</span>xb<span style="color: #666666">+0.0025*</span>xb<span style="color: #666666">*</span>xb<span style="color: #666666">*</span>yisos
+       vaux1<span style="color: #666666">=2061.5625-477.3125*</span>yisos<span style="color: #666666">-502.3125*</span>yspin<span style="color: #666666">+</span>
+     &amp;       <span style="color: #666666">97.0625*</span>yisos<span style="color: #666666">*</span>yspin<span style="color: #666666">+108.75*</span>xten<span style="color: #666666">+297.25*</span>xten<span style="color: #666666">*</span>yisos
+     &amp;       <span style="color: #666666">-719.75*</span>xb<span style="color: #666666">-159.25*</span>xb<span style="color: #666666">*</span>yisos<span style="color: #666666">+8.625*</span>xq<span style="color: #666666">+5.625*</span>xq<span style="color: #666666">*</span>yisos<span style="color: #666666">+</span>
+     &amp;       <span style="color: #666666">17.375*</span>xq<span style="color: #666666">*</span>yspin<span style="color: #666666">-33.625*</span>xq<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>yspin<span style="color: #666666">+391.</span> <span style="color: #666666">*</span>xb<span style="color: #666666">*</span>xb<span style="color: #666666">+145.0</span> 
+     &amp;       <span style="color: #666666">*</span>xb<span style="color: #666666">*</span>xb<span style="color: #666666">*</span>yisos
+       <span style="color: #008000; font-weight: bold">DO </span>i<span style="color: #666666">=1</span>,n
+          xr<span style="color: #666666">=</span>r(i)
+          xexp<span style="color: #666666">=</span><span style="color: #008000">DEXP</span>(<span style="color: #666666">-</span>xmu<span style="color: #666666">*</span>xr)<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xr)
+          xgauss<span style="color: #666666">=1.</span>d0<span style="color: #666666">-</span><span style="color: #008000">DEXP</span>(<span style="color: #666666">-2.</span>d0<span style="color: #666666">*</span>xr<span style="color: #666666">*</span>xr)
+          y<span style="color: #666666">=</span>xexp<span style="color: #666666">*</span>xgauss
+          t<span style="color: #666666">=</span>y<span style="color: #666666">*</span>xgauss<span style="color: #666666">*</span>(<span style="color: #666666">1.</span>d0<span style="color: #666666">+3.</span>d0<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xr)<span style="color: #666666">+3.</span>d0<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xmu<span style="color: #666666">*</span>xr<span style="color: #666666">*</span>xr))
+          tt<span style="color: #666666">=</span>t<span style="color: #666666">*</span>t
+          ws<span style="color: #666666">=1.</span>d0<span style="color: #666666">/</span>(<span style="color: #666666">1.</span>d0<span style="color: #666666">+</span><span style="color: #008000">DEXP</span>((xr<span style="color: #666666">-0.5</span>d0)<span style="color: #666666">/0.2</span>d0))
+          v1(i)<span style="color: #666666">=</span>vaux<span style="color: #666666">*</span>tt<span style="color: #666666">+</span>
+     &amp;           vaux1<span style="color: #666666">*</span>ws<span style="color: #666666">+</span>cte<span style="color: #666666">*</span>yspin<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>y<span style="color: #666666">+</span>cte<span style="color: #666666">*</span>t<span style="color: #666666">*</span>xten<span style="color: #666666">*</span>yisos
+       ENDDO
+       <span style="color: #008000; font-weight: bold">IF</span>(l.NE.lp) <span style="color: #008000; font-weight: bold">THEN</span>
+<span style="color: #008000; font-weight: bold">          </span>xten<span style="color: #666666">=-2.</span>d0<span style="color: #666666">*</span>(xj<span style="color: #666666">+2.</span>d0)<span style="color: #666666">/</span>(<span style="color: #666666">2.</span>d0<span style="color: #666666">*</span>xj<span style="color: #666666">+1.</span>d0)
+          xten<span style="color: #666666">=</span>xten<span style="color: #666666">*</span>xs
+          vaux<span style="color: #666666">=-4.801125</span>d0<span style="color: #666666">+</span>yisos<span style="color: #666666">*0.798925+1.189325*</span>yspin
+     &amp;         <span style="color: #666666">+0.182875*</span>yisos<span style="color: #666666">*</span>yspin<span style="color: #666666">-0.1575*</span>xten<span style="color: #666666">-</span>
+     &amp;          <span style="color: #666666">0.7525*</span>xten<span style="color: #666666">*</span>yisos<span style="color: #666666">+0.5625*</span>xbp<span style="color: #666666">+0.0475*</span>xbp<span style="color: #666666">*</span>yisos 
+     &amp;         <span style="color: #666666">+0.070625*</span>xqp<span style="color: #666666">-0.148125*</span>xqp<span style="color: #666666">*</span>yisos<span style="color: #666666">-0.040625*</span>
+     &amp;         xqp<span style="color: #666666">*</span>yspin<span style="color: #666666">-0.001875*</span>xqp<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>yspin
+     &amp;         <span style="color: #666666">-0.5425*</span>xbp<span style="color: #666666">*</span>xbp<span style="color: #666666">+0.0025*</span>xbp<span style="color: #666666">*</span>xbp<span style="color: #666666">*</span>yisos
+          vaux1<span style="color: #666666">=2061.5625-477.3125*</span>yisos<span style="color: #666666">-502.3125*</span>yspin<span style="color: #666666">+</span>
+     &amp;          <span style="color: #666666">97.0625*</span>yisos<span style="color: #666666">*</span>yspin<span style="color: #666666">+108.75*</span>xten<span style="color: #666666">+297.25*</span>xten<span style="color: #666666">*</span>yisos
+     &amp;          <span style="color: #666666">-719.75*</span>xbp<span style="color: #666666">-159.25*</span>xbp<span style="color: #666666">*</span>yisos<span style="color: #666666">+8.625*</span>xqp
+     &amp;          <span style="color: #666666">+5.625*</span>xqp<span style="color: #666666">*</span>yisos<span style="color: #666666">+</span>
+     &amp;          <span style="color: #666666">17.375*</span>xqp<span style="color: #666666">*</span>yspin<span style="color: #666666">-33.625*</span>xqp<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>yspin
+     &amp;          <span style="color: #666666">+391.</span> <span style="color: #666666">*</span>xbp<span style="color: #666666">*</span>xbp<span style="color: #666666">+145.0</span> 
+     &amp;          <span style="color: #666666">*</span>xbp<span style="color: #666666">*</span>xbp<span style="color: #666666">*</span>yisos
+          xten2<span style="color: #666666">=</span> <span style="color: #666666">6.</span>d0<span style="color: #666666">*</span><span style="color: #008000">DSQRT</span>(xj<span style="color: #666666">*</span>(xj<span style="color: #666666">+1.</span>d0))<span style="color: #666666">/</span>(<span style="color: #666666">2.</span>d0<span style="color: #666666">*</span>xj<span style="color: #666666">+1.</span>d0)
+          xten2<span style="color: #666666">=</span>xten2<span style="color: #666666">*</span>xs
+          <span style="color: #008000; font-weight: bold">DO </span>i<span style="color: #666666">=1</span>,n
+             xr<span style="color: #666666">=</span>r(i)
+             xexp<span style="color: #666666">=</span><span style="color: #008000">dexp</span>(<span style="color: #666666">-</span>xmu<span style="color: #666666">*</span>xr)<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xr)
+             xgauss<span style="color: #666666">=1.</span>d0<span style="color: #666666">-</span><span style="color: #008000">dexp</span>(<span style="color: #666666">-2.</span>d0<span style="color: #666666">*</span>xr<span style="color: #666666">*</span>xr)
+             y<span style="color: #666666">=</span>xexp<span style="color: #666666">*</span>xgauss
+             t<span style="color: #666666">=</span>y<span style="color: #666666">*</span>xgauss<span style="color: #666666">*</span>(<span style="color: #666666">1.</span>d0<span style="color: #666666">+3.</span>d0<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xr)<span style="color: #666666">+3.</span>d0<span style="color: #666666">/</span>(xmu<span style="color: #666666">*</span>xmu<span style="color: #666666">*</span>xr<span style="color: #666666">*</span>xr))
+             tt<span style="color: #666666">=</span>t<span style="color: #666666">*</span>t
+             ws<span style="color: #666666">=1.</span>d0<span style="color: #666666">/</span>(<span style="color: #666666">1.</span>d0<span style="color: #666666">+</span><span style="color: #008000">dexp</span>((xr<span style="color: #666666">-0.5</span>d0)<span style="color: #666666">/0.2</span>d0))
+             v2(i)<span style="color: #666666">=</span>vaux<span style="color: #666666">*</span>tt<span style="color: #666666">+</span>vaux1<span style="color: #666666">*</span>ws<span style="color: #666666">+</span>cte<span style="color: #666666">*</span>yspin<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>y<span style="color: #666666">+</span>
+     &amp;             cte<span style="color: #666666">*</span>t<span style="color: #666666">*</span>xten<span style="color: #666666">*</span>yisos
+             v3(i)<span style="color: #666666">=</span>cte<span style="color: #666666">*</span>t<span style="color: #666666">*</span>xten2<span style="color: #666666">*</span>yisos<span style="color: #666666">-0.1575*</span>xten2<span style="color: #666666">*</span>tt<span style="color: #666666">-</span>
+     &amp;             <span style="color: #666666">0.7525*</span>xten2<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>tt
+     &amp;             <span style="color: #666666">+108.75*</span>xten2<span style="color: #666666">*</span>ws<span style="color: #666666">+297.25*</span>xten2<span style="color: #666666">*</span>yisos<span style="color: #666666">*</span>ws
+          ENDDO
+       ENDIF
+
+       <span style="color: #008000; font-weight: bold">DO </span>i<span style="color: #666666">=1</span>,n
+          v1(i)<span style="color: #666666">=</span>v1(i)<span style="color: #666666">/41.47</span>
+          v2(i)<span style="color: #666666">=</span>v2(i)<span style="color: #666666">/41.47</span>
+          v3(i)<span style="color: #666666">=</span>v3(i)<span style="color: #666666">/41.47</span>
+       ENDDO
+       <span style="color: #008000; font-weight: bold">RETURN</span>
+<span style="color: #008000; font-weight: bold">       END</span>
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec20">Would more comments help here?  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/pict3.png" align="bottom" width=800></p></center><br /><br />
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec21">Use proper names for variables, comments may not be needed </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">// Main program begins here</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #B00040">int</span> argc, <span style="color: #B00040">char</span><span style="color: #666666">*</span> argv[])
+{
+  string filename;
+  <span style="color: #B00040">int</span> NumberSpins, MonteCarloCycles;
+  <span style="color: #B00040">double</span> InitialTemp, FinalTemp, TempStep;
+  .....
+  <span style="color: #408080; font-style: italic">// Start Monte Carlo sampling by looping over the selected Temperatures</span>
+  <span style="color: #008000; font-weight: bold">for</span> (<span style="color: #B00040">double</span> Temperature <span style="color: #666666">=</span> InitialTemp; Temperature <span style="color: #666666">&lt;=</span> FinalTemp; Temperature<span style="color: #666666">+=</span>TempStep){
+    vec ExpectationValues <span style="color: #666666">=</span> zeros<span style="color: #666666">&lt;</span>mat<span style="color: #666666">&gt;</span>(<span style="color: #666666">5</span>);
+    <span style="color: #408080; font-style: italic">// Start Monte Carlo computation and get expectation values</span>
+    MetropolisSampling(NumberSpins, MonteCarloCycles, Temperature, ExpectationValues);
+    WriteResultstoFile(NumberSpins, MonteCarloCycles, Temperature, ExpectationValues);
+  }
+  ofile.close();  <span style="color: #408080; font-style: italic">// close output file</span>
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec22">Functions should be short and do as few operations as possible </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Don't overload functions by transfering gazillions of variables and returning ditto, even this function has too many variables.
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #B00040">void</span> <span style="color: #0000FF">InitializeLattice</span>(<span style="color: #B00040">int</span> NumberSpins, mat <span style="color: #666666">&amp;</span>SpinMatrix,  <span style="color: #B00040">double</span><span style="color: #666666">&amp;</span> Energy, <span style="color: #B00040">double</span><span style="color: #666666">&amp;</span> MagneticMoment)
+{
+  <span style="color: #408080; font-style: italic">// setup spin matrix and initial magnetization</span>
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> x <span style="color: #666666">=0</span>; x <span style="color: #666666">&lt;</span> NumberSpins; x<span style="color: #666666">++</span>) {
+    <span style="color: #008000; font-weight: bold">for</span> (<span style="color: #B00040">int</span> y<span style="color: #666666">=</span> <span style="color: #666666">0</span>; y <span style="color: #666666">&lt;</span> NumberSpins; y<span style="color: #666666">++</span>){
+      SpinMatrix(x,y) <span style="color: #666666">=</span> <span style="color: #666666">1.0</span>; <span style="color: #408080; font-style: italic">// spin orientation for the ground state</span>
+      MagneticMoment <span style="color: #666666">+=</span>   SpinMatrix(x,y);
+    }
+  }
+  <span style="color: #408080; font-style: italic">// setup initial energy</span>
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> x <span style="color: #666666">=0</span>; x <span style="color: #666666">&lt;</span> NumberSpins; x<span style="color: #666666">++</span>) {
+    <span style="color: #008000; font-weight: bold">for</span> (<span style="color: #B00040">int</span> y<span style="color: #666666">=</span> <span style="color: #666666">0</span>; y <span style="color: #666666">&lt;</span> NumberSpins; y<span style="color: #666666">++</span>){
+      Energy <span style="color: #666666">-=</span>  SpinMatrix(x,y)<span style="color: #666666">*</span>(SpinMatrix(PeriodicBoundary(x,y<span style="color: #666666">-1</span>)<span style="color: #666666">+</span>SpinMatrix(x,y<span style="color: #666666">+1</span>));
+    }
+  }
+}<span style="color: #408080; font-style: italic">// end function InitializeLattice</span>
+</pre></div>
+<p>
+How could we improve upon this?
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec23">Comments, functions, classes, names and much more </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Avoid complicated  function animals  and transfering too many variables</li>
+<li> Use meaningful names, reduces the amount of clutter and need of comments</li>
+<li> Don't overcomplicate things, write clean and simple classes (important for high-performance computing)</li>
+<li> Avoid transfering many variables to functions, try to stay with as few as possible</li>
+<li> A function should return mainly one thing, that is do one thing.</li>
+<li> Keep as many variables as possible as private  in classes</li>
+</ul>
+
+<br /><br /><center><p><img src="figures/pict2.png" align="bottom" width=800></p></center><br /><br />
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec24">Important ingredients to have in codes </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Be able to validate and verify  the  algorithms.</li> 
+<li> Include concepts like unit testing. Gives the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec25">A structured approach to solving problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In the steps that lead to the development of clean code you should  think of 
+
+<ol>
+  <li> How to structure a code in terms of functions  (use IDEs or advanced text editors like sublime or atom)</li>
+  <li> How to make a module</li>
+  <li> How to read input data flexibly from the command line or files</li>
+  <li> How to create graphical/web user interfaces</li>
+  <li> How to write unit tests</li>  
+  <li> How to refactor code in terms of classes (instead of functions only)</li>
+  <li> How to conduct and automate large-scale numerical experiments</li>
+  <li> How to write scientific reports in various formats (LaTeX, HTML, doconce)</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec26">Additional benefits  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Many of the above aspetcs  will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
+
+<ol>
+<li> New code is added in a modular fashion to a library (modules)</li>
+<li> Programs are run through convenient user interfaces</li>
+<li> It takes one quick command to let all your code undergo heavy testing</li> 
+<li> Tedious manual work with running programs is automated,</li>
+<li> Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices. Use version control software like <a href="https://git-scm.com/" target="_blank">git</a> and repositories like <a href="https://github.com/" target="_blank">github</a></li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec27">Code quality </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/code_quality.png" align="bottom" width=800></p></center><br /><br />
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec28">Unit Testing </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Unit Testing is the practice of testing the smallest testable parts,
+called units, of an application individually and independently to
+determine if they behave exactly as expected.
+
+<p>
+Unit tests (short code
+fragments) are usually written such that they can be preformed at any
+time during the development to continually verify the behavior of the
+code.
+
+<p>
+In this way, possible bugs will be identified early in the
+development cycle, making the debugging at later stages much
+easier.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec29">Unit Testing, benefits </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+There are many benefits associated with Unit Testing, such as
+
+<ul>
+  <li> It increases confidence in changing and maintaining code. Big changes can be made to the code quickly, since the tests will ensure that everything still is working properly.</li>
+  <li> Since the code needs to be modular to make Unit Testing possible, the code will be easier to reuse. This improves the code design.</li>
+  <li> Debugging is easier, since when a test fails, only the latest changes need to be debugged.</li>
+
+<ul>
+   <li> Different parts of a project can be tested without the need to wait for the other parts to be available.</li>
+</ul>
+
+  <li> A unit test can serve as a documentation on the functionality of a unit of the code.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec30">Simple example of unit test </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Look up the guide on how to install unit tests for c++ at course webpage. This is the version with classes.
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;unittest++/UnitTest++.h&gt;</span><span style="color: #BC7A00"></span>
+
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyMultiplyClass</span>{
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #666666">:</span>
+    <span style="color: #B00040">double</span> multiply(<span style="color: #B00040">double</span> x, <span style="color: #B00040">double</span> y) {
+        <span style="color: #008000; font-weight: bold">return</span> x <span style="color: #666666">*</span> y;
+    }
+};
+
+TEST(MyMath) {
+    MyMultiplyClass my;
+    CHECK_EQUAL(<span style="color: #666666">56</span>, my.multiply(<span style="color: #666666">7</span>,<span style="color: #666666">8</span>));
+}
+
+<span style="color: #B00040">int</span> main()
+{
+    <span style="color: #008000; font-weight: bold">return</span> UnitTest<span style="color: #666666">::</span>RunAllTests();
+}
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec31">Simple example of unit test </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+And without classes
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;unittest++/UnitTest++.h&gt;</span><span style="color: #BC7A00"></span>
+
+
+<span style="color: #B00040">double</span> <span style="color: #0000FF">multiply</span>(<span style="color: #B00040">double</span> x, <span style="color: #B00040">double</span> y) {
+    <span style="color: #008000; font-weight: bold">return</span> x <span style="color: #666666">*</span> y;
+}
+
+TEST(MyMath) {
+    CHECK_EQUAL(<span style="color: #666666">56</span>, multiply(<span style="color: #666666">7</span>,<span style="color: #666666">8</span>));
+}
+
+<span style="color: #B00040">int</span> main()
+{
+    <span style="color: #008000; font-weight: bold">return</span> UnitTest<span style="color: #666666">::</span>RunAllTests();
+} 
+</pre></div>
+<p>
+For Fortran users, the link at <a href="http://sourceforge.net/projects/fortranxunit/" target="_blank"><tt>http://sourceforge.net/projects/fortranxunit/</tt></a> contains a similar
+software for unit testing.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec32"><a href="https://github.com/philsquared/Catch/blob/master/docs/tutorial.md" target="_blank">Unit tests</a>  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+There are many types of <b>unit test</b> libraries. One which is very popular with C++ programmers is <a href="https://github.com/philsquared/Catch/blob/master/docs/tutorial.md" target="_blank">Catch</a>
+
+<p>
+Catch is header only. All you need to do is drop the file(s) somewhere reachable from your project - either in some central location you can set your header search path to find, or directly into your project tree itself!
+
+<p>
+This is a particularly good option for other Open-Source projects that want to use Catch for their test suite.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec33">Examples </h2>
+
+<p>
+Computing factorials
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">inline</span> <span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">Factorial</span>( <span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> number ) {
+  <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">&gt;</span> <span style="color: #666666">1</span> <span style="color: #666666">?</span> Factorial(number<span style="color: #666666">-1</span>)<span style="color: #666666">*</span><span style="color: #A0A000">number</span> : <span style="color: #666666">1</span>;
+}
+</pre></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec34">Factorial Example </h2>
+
+<p>
+Simple test where we put everything in a single file
+
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#define CATCH_CONFIG_MAIN  </span><span style="color: #408080; font-style: italic">// This tells Catch to provide a main()</span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;catch.hpp&quot;</span><span style="color: #BC7A00"></span>
+<span style="color: #008000; font-weight: bold">inline</span> <span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> <span style="color: #0000FF">Factorial</span>( <span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> number ) {
+  <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">&gt;</span> <span style="color: #666666">1</span> <span style="color: #666666">?</span> Factorial(number<span style="color: #666666">-1</span>)<span style="color: #666666">*</span><span style="color: #A0A000">number</span> : <span style="color: #666666">1</span>;
+}
+
+TEST_CASE( <span style="color: #BA2121">&quot;Factorials are computed&quot;</span>, <span style="color: #BA2121">&quot;[factorial]&quot;</span> ) {
+    REQUIRE( Factorial(<span style="color: #666666">0</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span> );
+    REQUIRE( Factorial(<span style="color: #666666">1</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span> );
+    REQUIRE( Factorial(<span style="color: #666666">2</span>) <span style="color: #666666">==</span> <span style="color: #666666">2</span> );
+    REQUIRE( Factorial(<span style="color: #666666">3</span>) <span style="color: #666666">==</span> <span style="color: #666666">6</span> );
+    REQUIRE( Factorial(<span style="color: #666666">10</span>) <span style="color: #666666">==</span> <span style="color: #666666">3628800</span> );
+}
+</pre></div>
+<p>
+This will compile to a complete executable which responds to command line arguments. If you just run it with no arguments it will execute all test cases (in this case there is just one), report any failures, report a summary of how many tests passed and failed and return the number of failed tests.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec35">What did we do (1)? </h2>
+All we did was 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#define </span>
+</pre></div>
+<p>
+one identifier and 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#include</span><span style="color: #408080; font-style: italic"> </span><span style="color: #BC7A00"></span>
+</pre></div>
+<p>
+one header and we got everything - even an implementation of main() that will respond to command line arguments. 
+Once you have more than one file with unit tests in you'll just need to 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;catch.hpp&quot; </span><span style="color: #BC7A00"></span>
+</pre></div>
+<p>
+and go. Usually it's a good idea to have a dedicated implementation file that just has 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#define CATCH_CONFIG_MAIN </span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;catch.hpp&quot;. </span><span style="color: #BC7A00"></span>
+</pre></div>
+<p>
+You can also provide your own implementation of main and drive Catch yourself.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec36">What did we do (2)? </h2>
+We introduce test cases with the 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>TEST_CASE 
+</pre></div>
+<p>
+macro.
+
+<p>
+The test name must be unique. You can run sets of tests by specifying a wildcarded test name or a tag expression. 
+All we did was <b>define</b> one identifier and <b>include</b> one header and we got everything.
+
+<p>
+We write our individual test assertions using the 
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>REQUIRE 
+</pre></div>
+<p>
+macro.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec37">Unit test summary and testing approach </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Three levels of tests
+
+<ol>
+<li> Microscopic level: testing small parts of code, use often unit test libraries</li>
+<li> Mesoscopic level: testing the integration of various parts  of your code</li>
+<li> Macroscopic level: testing that the final result is ok</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec38">How do we time our code? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ol>
+<li> This is not trivial!</li>   
+<li> And why should we care and how is this related to writing good code?</li>
+</ol>
+
+We need to think of how data flows in our code and how we can utilize memory in the most efficient way. And avoid memory problems (which can lead to undesired problems).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec39">Memory management </h2>
+The main memory contains the program data
+
+<ul>
+<li> Cache memory contains a copy of the main memory data</li>
+<li> Cache is faster but consumes more space and power. It is normally assumed to be much faster than main memory</li>
+<li> Registers contain working data only</li>
+
+<ul>
+ <li> Modern CPUs perform most or all operations only on data in register</li>
+</ul>
+
+<li> Multiple Cache memories contain a copy of the main memory data</li>
+
+<ul>
+ <li> Cache items accessed by their address in main memory</li>
+ <li> L1 cache is the fastest but has the least capacity</li>
+ <li> L2, L3 provide intermediate performance/size tradeoffs</li>
+</ul>
+
+</ul>
+
+Loads and stores to memory can be as important as floating point operations when we measure performance.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec40">Memory and communication  </h2>
+
+<ul>
+<li> Most communication in a computer is carried out in chunks, blocks of bytes of data that move together</li>
+<li> In the memory hierarchy, data moves between memory and cache, and between different levels of cache, in groups called lines</li>
+
+<ul>
+ <li> Lines are typically 64-128 bytes, or 8-16 double precision words</li>
+ <li> Even if you do not use the data, it is moved and occupies space in the cache</li>
+</ul>
+
+<li> This performance feature is not captured in most programming languages</li>
+</ul>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec41">Measuring performance </h2>
+
+<p>
+How do we measure erformance? What is wrong with this code to time a loop?
+<p>
+
+<!-- code=text typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  clock_t start, finish;
+  start = clock();
+  for (int j = 0; j &lt; i; j++) {
+    a[j] = b[j]+b[j]*c[j];
+  }
+  finish = clock();
+  double timeused = (double) (finish - start)/(CLOCKS_PER_SEC );
+</pre></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec42">Problems with measuring time </h2>
+
+<ol>
+<li> Timers are not infinitely accurate</li>
+<li> All clocks have a granularity, the minimum time that they can measure</li>
+<li> The error in a time measurement, even if everything is perfect, may be the size of this granularity (sometimes called a clock tick)</li>
+<li> Always know what your clock granularity is</li>
+<li> Ensure that your measurement is for a long enough duration (say 100 times the <b>tick</b>)</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec43">Problems with cold start </h2>
+
+<p>
+What happens when the code is executed? The assumption is that the code is ready to
+execute. But
+
+<ol>
+<li> Code may still be on disk, and not even read into memory.</li>
+<li> Data may be in slow memory rather than fast (which may be wrong or right for what you are measuring)</li>
+<li> Multiple tests often necessary to ensure that cold start effects are not present</li>
+<li> Special effort often required to ensure data in the intended part of the memory hierarchy.</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec44">Problems with smart compilers </h2>
+
+<ol>
+<li> If the result of the computation is not used, the compiler may eliminate the code</li>
+<li> Performance will look impossibly fantastic</li>
+<li> Even worse, eliminate some of the code so the performance looks plausible</li>
+<li> Ensure that the results are (or may be) used.</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec45">Problems with interference </h2>
+
+<ol>
+<li> Other activities are sharing your processor</li>
+
+<ul>
+  <li> Operating system, system demons, other users</li>
+
+<ul>
+   <li> Some parts of the hardware do not always perform with exactly the same performance</li>
+</ul>
+
+</ul>
+
+<li> Make multiple tests and report</li>
+<li> Easy choices include</li>
+
+<ul>
+  <li> Average tests represent what users might observe over time</li>
+</ul>
+
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec46">Problems with measuring performance  </h2>
+
+<ol>
+<li> Accurate, reproducible performance measurement is hard</li>
+<li> Think carefully about your experiment:
+
+<ol type="a"></li>
+ <li> What is it, precisely, that you want to measure</li>
+ <li> How representative is your test to the situation that you are trying to measure?</li>
+</ol>
+
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec47">Summary and recommendations  </h2>
+Writing clean and clear code is an art and reflects 
+your understanding of 
+
+<ol>
+<li> derivation, verification, and implementation of algorithms</li>
+<li> what can go wrong with algorithms</li>
+<li> overview of important, known algorithms</li>
+<li> how algorithms are used to solve mathematical problems</li>
+<li> reproducible science and ethics</li>
+<li> algorithmic thinking for gaining deeper insights about scientific problems</li>
+</ol>
+
+Computing is understanding and your understanding is reflected in your abilities to
+write clear and clean code.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec48">Summary and recommendations  </h2>
+Some simple hints and tips in order to write clean and clear code
+
+<ol>
+<li> Spell out the algorithm and have a top-down approach to the flow of data</li>
+<li> Start with coding as close as possible to eventual mathematical expressions</li>
+<li> Use meaningful names for variables</li>
+<li> Split tasks in simple functions and modules/classes</li>
+<li> Functions should return as few as possible variables</li>
+<li> Use unit tests and make sure your codes are producing the correct results</li>
+<li> Where possible use symbolic coding to autogenerate code and check results</li>
+<li> Make a proper timing of your algorithms</li>
+<li> Use version control and make your science reproducible</li>
+<li> Use IDEs or smart editors with debugging and analysis tools.</li>
+<li> Automatize your computations interfacing high-level and compiled languages like C++ and Fortran.</li>
+<li> .....</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec49">The final word?  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/cartoon37.png" align="bottom" width=900></p></center><br /><br />
+</div>
+
+
+<p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 1999-2017, Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+
+
+</body>
+</html>
+    
+
