@@ -1,5 +1,5 @@
 # Slides for Computing in science education
-TITLE: Computing in Physics Education
+TITLE: Computing in Physics Education (Metodi numerici nell'insegnamento della fisica)
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics and "Center for Computing in Science Education":"http://www.mn.uio.no/ccse/english/people/index.html", University of Oslo, Oslo, Norway
 DATE: Congresso Nazionale della SIF, Trento, 11-15 Settembre 2017
 
@@ -130,7 +130,7 @@ Mathematics is at least as important as before, but should be supplemented with 
 !eblock
 
 !bblock Sciences
-Training in modelling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+Training in modeling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
 !eblock
 
 
@@ -139,7 +139,7 @@ Training in modelling and problem solving with numerical methods and visualisati
 ===== Implementation =====
 !bblock Crucial ingredients
 
-* Support from governing bodies (now priority 1 of the College of Natural Science at UOslo)
+* Support from governing bodies (high priorities at the College of Natural Science at UOslo and the Physics and Astronomy department of Michigan State University)
 * Cooperation across departmental boundaries
 * Willingness by individuals to give priority to teaching reform
 
@@ -154,7 +154,7 @@ Consensus driven approach.
 * Coordinated use of computational exercises and numerical tools in most undergraduate courses.
 * Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction.
 * Teachers get good summer students to aid in introducing computational exercises
-* Develop courses and exercise modules with a computational perspective, both for students and teachers. 
+* Develop courses and exercise modules with a computational perspective, both for students and teachers. New textbooks!! 
 * Basic idea: mixture of mathematics, computation, informatics and topics from the physical sciences.
  
 Interesting outcome: higher focus on teaching and pedagogical issues!!
@@ -162,7 +162,7 @@ Interesting outcome: higher focus on teaching and pedagogical issues!!
 
 
 !split
-===== Example of bachelor program, astrophysics =====
+===== Example of bachelor program, Physics and Astronomy (astro path), University of Oslo =====
 !bblock
 FIGURE: [figures/astronomy.png, width=900 frac=0.6] 
 
@@ -229,8 +229,25 @@ o Computational platform: Python, fully object-oriented and allows for seamless 
 !bblock
 * Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.
 
+!eblock
+
+
+!split
+===== Challenges...  =====
+!bblock .. and objections
+
+*Standard objection: computations take away the attention from other central topics in 'my course'*. 
+
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.  Coordination and synchronization across departments and courses. Increases collaboration on teaching and awareness of pedagical research.
+
+* To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.
 
 !eblock
+
+
+
 
 !split
 =====  Examples of simple algorithms, initial value problems and proper scaling of equations =====
@@ -368,7 +385,7 @@ with the corresponding vectors $\mathbf{v} = (v_1, v_2, \dots,v_n)^T$ allows us 
 including the boundary conditions as a standard eigenvalue problem
 !bt
 \[
-   \mathbf{A}\mathbf{u} = \lambda\mathbf{v}.
+   \mathbf{A}\mathbf{v} = \lambda\mathbf{v}.
 \]
 !et
 The Toeplitz matrix has analytical eigenpairs!! Adding a potential along the diagonals allows us to reuse this problem for many types of physics cases.
@@ -652,20 +669,6 @@ The last example shows the potential of combining numerical algorithms with anal
 
 
 
-!split
-===== Challenges...  =====
-!bblock .. and objections
-
-*Standard objection: computations take away the attention from other central topics in 'my course'*. 
-
-CSE incorporates computations from day one, and courses higher up do not need to
-spend time on computational topics  (technicalities), but can focus on the interesting
-science applications.
-
-* To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.
-
-!eblock
-
 
 !split
 ===== Which aspects are important for a successful introduction of CSE? =====
@@ -675,10 +678,11 @@ science applications.
 * Crucial to learn proper programming at the beginning.
 * Good TAs
 * Choice of software.
-* Textbooks and modularization of topics.
+* Textbooks and modularization of topics, ask for details
 * Resources and expenses.
 * Tailor to specific disciplines.
 * Organizational matters.
+* With a local  physics education group one can do much more!! At MSU we have a very strong "Physics Education Research group headed by Danny Caballero and Washti Sawtelle":"http://create4stem.msu.edu/group/perl"
 !eblock
 
 
@@ -689,10 +693,12 @@ science applications.
 
 * Make our research visible in early undergraduate courses, enhance research based teaching
 * Possibility to focus more on understanding and increased insight.
-* Impetus for broad cooperation in teaching.
+* Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.
 * Strengthening of instruction based teaching (expensive and time-consuming).
 * Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.
 * And perhaps the most important issue: does this enhance the student's insight in the Sciences?
+
+We invite you to visit (online and/or in real life) our new center on "Computing in Science Education":"http://www.mn.uio.no/ccse/english/"
 
 !eblock
 
@@ -706,7 +712,7 @@ science applications.
 * Mathematical modelling course, first semester "course": "http://www.uio.no/studier/emner/matnat/math/MAT-INF1100/h14/". Textbook by Knut Morken to be published by Springer.
 * Mechanics, second semester "course": "http://www.uio.no/studier/emner/matnat/fys/FYS-MEK1100/v12/". New textbook by Anders Malthe-Sorenssen, published by Springer, "Undergraduate Lecture Notes in Physics":"http://www.springer.com/us/book/9783319195957"
 * Computational Physics I, fifth semester "course":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h15/". Textbook to be published by IOP in 2016, with "online version":"https://github.com/CompPhysics/ComputationalPhysics1"
-
+* Book on waves and motion, Statistical Physics and Quantum physics to come, stay tuned!!
 !eblock
 
 
