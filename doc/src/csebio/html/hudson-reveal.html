@@ -585,45 +585,49 @@ plt.show()
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
 <div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">math</span> <span style="color: #8B008B; font-weight: bold">import</span> *
 <span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
 
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">solver</span>(m, H0, L0, dt, a, b, c, d, t0):
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">solver</span>(m, dt, t0):
     <span style="color: #CD5555">&quot;&quot;&quot;Solve the difference equations for H and L over m years</span>
 <span style="color: #CD5555">    with time step dt (measured in years.&quot;&quot;&quot;</span>
 
     num_intervals = <span style="color: #658b00">int</span>(m/<span style="color: #658b00">float</span>(dt))
     t = np.linspace(t0, t0 + m, num_intervals+<span style="color: #B452CD">1</span>)
-    H = np.zeros(t.size)
-    L = np.zeros(t.size)
+    x = np.zeros(t.size)
+    y = np.zeros(t.size)
+    vx = np.zeros(t.size)
+    vy = np.zeros(t.size)
+    r = np.zeros(t.size)
+    v = np.zeros(t.size)
 
-    <span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&#39;Init:&#39;</span>, H0, L0, dt
-    H[<span style="color: #B452CD">0</span>] = H0
-    L[<span style="color: #B452CD">0</span>] = L0
 
+    x[<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">1.0</span>
+    y[<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">0.0</span>
+    vx[<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">2.0</span>*pi
+    vy[<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">0.0</span>
+    pi4 = <span style="color: #B452CD">4.0</span>*pi*pi
     <span style="color: #8B008B; font-weight: bold">for</span> n <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #B452CD">0</span>, <span style="color: #658b00">len</span>(t)-<span style="color: #B452CD">1</span>):
-        H[n+<span style="color: #B452CD">1</span>] = H[n] + a*dt*H[n] - b*dt*H[n]*L[n]
-        L[n+<span style="color: #B452CD">1</span>] = L[n] + d*dt*H[n]*L[n] - c*dt*L[n]
-    <span style="color: #8B008B; font-weight: bold">return</span> H, L, t
+        x[n+<span style="color: #B452CD">1</span>] = x[n] + dt*vx[n]
+        y[n+<span style="color: #B452CD">1</span>] = y[n] + dt*vy[n]
+        r3 = (x[n]*x[n]+y[n]*y[n])**<span style="color: #B452CD">3</span>
+        vx[n+<span style="color: #B452CD">1</span>] = vx[n] -dt*pi4*x[n]/r3
+        vy[n+<span style="color: #B452CD">1</span>] = vy[n] -dt*pi4*y[n]/r3
+        v[n+<span style="color: #B452CD">1</span>] = sqrt(vx[n+<span style="color: #B452CD">1</span>]*vx[n+<span style="color: #B452CD">1</span>]+vy[n+<span style="color: #B452CD">1</span>]*vy[n+<span style="color: #B452CD">1</span>])
+        r[n+<span style="color: #B452CD">1</span>] = sqrt(x[n+<span style="color: #B452CD">1</span>]*x[n+<span style="color: #B452CD">1</span>]+y[n+<span style="color: #B452CD">1</span>]*y[n+<span style="color: #B452CD">1</span>])
 
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&#39;Hudson_Bay.csv&#39;</span>, delimiter=<span style="color: #CD5555">&#39;,&#39;</span>, skiprows=<span style="color: #B452CD">1</span>)
-<span style="color: #228B22"># Make arrays containing x-axis and hares and lynx populations</span>
-t_e = data[:,<span style="color: #B452CD">0</span>]
-H_e = data[:,<span style="color: #B452CD">1</span>]
-L_e = data[:,<span style="color: #B452CD">2</span>]
-
+    <span style="color: #8B008B; font-weight: bold">return</span> r, v, t
 <span style="color: #228B22"># Simulate using the model</span>
-H, L, t = solver(m=<span style="color: #B452CD">20</span>, H0=<span style="color: #B452CD">34.91</span>, L0=<span style="color: #B452CD">3.857</span>, dt=<span style="color: #B452CD">0.1</span>,
-                 a=<span style="color: #B452CD">0.4807</span>, b=<span style="color: #B452CD">0.02482</span>, c=<span style="color: #B452CD">0.9272</span>, d=<span style="color: #B452CD">0.02756</span>,
-                 t0=<span style="color: #B452CD">1900</span>)
-
+m =<span style="color: #B452CD">20</span> <span style="color: #228B22"># 20 years</span>
+dt =<span style="color: #B452CD">0.01</span> <span style="color: #228B22"># stepsize</span>
+t0 =<span style="color: #B452CD">0.0</span>
+r, v, t = solver(m, dt,t0)
 <span style="color: #228B22"># Visualize simulations and data</span>
-plt.plot(t_e, H_e, <span style="color: #CD5555">&#39;b-+&#39;</span>, t_e, L_e, <span style="color: #CD5555">&#39;r-o&#39;</span>, t, H, <span style="color: #CD5555">&#39;m--&#39;</span>, t, L, <span style="color: #CD5555">&#39;k--&#39;</span>)
-plt.xlabel(<span style="color: #CD5555">&#39;Year&#39;</span>)
-plt.ylabel(<span style="color: #CD5555">&#39;Numbers of hares and lynx&#39;</span>)
-plt.axis([<span style="color: #B452CD">1900</span>, <span style="color: #B452CD">1920</span>, <span style="color: #B452CD">0</span>, <span style="color: #B452CD">140</span>])
-plt.title(<span style="color: #CD5555">r&#39;Population of hares and lynx 1900-1920 (x1000)&#39;</span>)
-plt.legend((<span style="color: #CD5555">&#39;H_e&#39;</span>, <span style="color: #CD5555">&#39;L_e&#39;</span>, <span style="color: #CD5555">&#39;H&#39;</span>, <span style="color: #CD5555">&#39;L&#39;</span>), loc=<span style="color: #CD5555">&#39;upper left&#39;</span>)
+plt.plot(r, v, <span style="color: #CD5555">&#39;b-+&#39;</span>)
+plt.xlabel(<span style="color: #CD5555">&#39;r&#39;</span>)
+plt.ylabel(<span style="color: #CD5555">&#39;velocity&#39;</span>)
+plt.axis([<span style="color: #B452CD">0</span>, <span style="color: #B452CD">2.0</span>, <span style="color: #B452CD">0</span>, <span style="color: #B452CD">4</span>*pi])
+plt.title(<span style="color: #CD5555">r&#39;Velocity versus position&#39;</span>)
 plt.savefig(<span style="color: #CD5555">&#39;SunEarth.pdf&#39;</span>)
 plt.show()
 </pre></div>

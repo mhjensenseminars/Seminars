@@ -597,45 +597,49 @@ plt<span style="color: #666666">.</span>show()
 
 <!-- code=python (!bc pycod) typeset with pygments style "default" -->
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> <span style="color: #666666">*</span>
 <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">plt</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">solver</span>(m, H0, L0, dt, a, b, c, d, t0):
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">solver</span>(m, dt, t0):
     <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Solve the difference equations for H and L over m years</span>
 <span style="color: #BA2121; font-style: italic">    with time step dt (measured in years.&quot;&quot;&quot;</span>
 
     num_intervals <span style="color: #666666">=</span> <span style="color: #008000">int</span>(m<span style="color: #666666">/</span><span style="color: #008000">float</span>(dt))
     t <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(t0, t0 <span style="color: #666666">+</span> m, num_intervals<span style="color: #666666">+1</span>)
-    H <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
-    L <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    x <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    y <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    vx <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    vy <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    r <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
+    v <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(t<span style="color: #666666">.</span>size)
 
-    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Init:&#39;</span>, H0, L0, dt
-    H[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> H0
-    L[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> L0
 
+    x[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">1.0</span>
+    y[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>
+    vx[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">2.0*</span>pi
+    vy[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>
+    pi4 <span style="color: #666666">=</span> <span style="color: #666666">4.0*</span>pi<span style="color: #666666">*</span>pi
     <span style="color: #008000; font-weight: bold">for</span> n <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">0</span>, <span style="color: #008000">len</span>(t)<span style="color: #666666">-1</span>):
-        H[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> H[n] <span style="color: #666666">+</span> a<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>H[n] <span style="color: #666666">-</span> b<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>H[n]<span style="color: #666666">*</span>L[n]
-        L[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> L[n] <span style="color: #666666">+</span> d<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>H[n]<span style="color: #666666">*</span>L[n] <span style="color: #666666">-</span> c<span style="color: #666666">*</span>dt<span style="color: #666666">*</span>L[n]
-    <span style="color: #008000; font-weight: bold">return</span> H, L, t
+        x[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> x[n] <span style="color: #666666">+</span> dt<span style="color: #666666">*</span>vx[n]
+        y[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> y[n] <span style="color: #666666">+</span> dt<span style="color: #666666">*</span>vy[n]
+        r3 <span style="color: #666666">=</span> (x[n]<span style="color: #666666">*</span>x[n]<span style="color: #666666">+</span>y[n]<span style="color: #666666">*</span>y[n])<span style="color: #666666">**3</span>
+        vx[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> vx[n] <span style="color: #666666">-</span>dt<span style="color: #666666">*</span>pi4<span style="color: #666666">*</span>x[n]<span style="color: #666666">/</span>r3
+        vy[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> vy[n] <span style="color: #666666">-</span>dt<span style="color: #666666">*</span>pi4<span style="color: #666666">*</span>y[n]<span style="color: #666666">/</span>r3
+        v[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> sqrt(vx[n<span style="color: #666666">+1</span>]<span style="color: #666666">*</span>vx[n<span style="color: #666666">+1</span>]<span style="color: #666666">+</span>vy[n<span style="color: #666666">+1</span>]<span style="color: #666666">*</span>vy[n<span style="color: #666666">+1</span>])
+        r[n<span style="color: #666666">+1</span>] <span style="color: #666666">=</span> sqrt(x[n<span style="color: #666666">+1</span>]<span style="color: #666666">*</span>x[n<span style="color: #666666">+1</span>]<span style="color: #666666">+</span>y[n<span style="color: #666666">+1</span>]<span style="color: #666666">*</span>y[n<span style="color: #666666">+1</span>])
 
-<span style="color: #408080; font-style: italic"># Load in data file</span>
-data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&#39;Hudson_Bay.csv&#39;</span>, delimiter<span style="color: #666666">=</span><span style="color: #BA2121">&#39;,&#39;</span>, skiprows<span style="color: #666666">=1</span>)
-<span style="color: #408080; font-style: italic"># Make arrays containing x-axis and hares and lynx populations</span>
-t_e <span style="color: #666666">=</span> data[:,<span style="color: #666666">0</span>]
-H_e <span style="color: #666666">=</span> data[:,<span style="color: #666666">1</span>]
-L_e <span style="color: #666666">=</span> data[:,<span style="color: #666666">2</span>]
-
+    <span style="color: #008000; font-weight: bold">return</span> r, v, t
 <span style="color: #408080; font-style: italic"># Simulate using the model</span>
-H, L, t <span style="color: #666666">=</span> solver(m<span style="color: #666666">=20</span>, H0<span style="color: #666666">=34.91</span>, L0<span style="color: #666666">=3.857</span>, dt<span style="color: #666666">=0.1</span>,
-                 a<span style="color: #666666">=0.4807</span>, b<span style="color: #666666">=0.02482</span>, c<span style="color: #666666">=0.9272</span>, d<span style="color: #666666">=0.02756</span>,
-                 t0<span style="color: #666666">=1900</span>)
-
+m <span style="color: #666666">=20</span> <span style="color: #408080; font-style: italic"># 20 years</span>
+dt <span style="color: #666666">=0.01</span> <span style="color: #408080; font-style: italic"># stepsize</span>
+t0 <span style="color: #666666">=0.0</span>
+r, v, t <span style="color: #666666">=</span> solver(m, dt,t0)
 <span style="color: #408080; font-style: italic"># Visualize simulations and data</span>
-plt<span style="color: #666666">.</span>plot(t_e, H_e, <span style="color: #BA2121">&#39;b-+&#39;</span>, t_e, L_e, <span style="color: #BA2121">&#39;r-o&#39;</span>, t, H, <span style="color: #BA2121">&#39;m--&#39;</span>, t, L, <span style="color: #BA2121">&#39;k--&#39;</span>)
-plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;Year&#39;</span>)
-plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;Numbers of hares and lynx&#39;</span>)
-plt<span style="color: #666666">.</span>axis([<span style="color: #666666">1900</span>, <span style="color: #666666">1920</span>, <span style="color: #666666">0</span>, <span style="color: #666666">140</span>])
-plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Population of hares and lynx 1900-1920 (x1000)&#39;</span>)
-plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;H_e&#39;</span>, <span style="color: #BA2121">&#39;L_e&#39;</span>, <span style="color: #BA2121">&#39;H&#39;</span>, <span style="color: #BA2121">&#39;L&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper left&#39;</span>)
+plt<span style="color: #666666">.</span>plot(r, v, <span style="color: #BA2121">&#39;b-+&#39;</span>)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">&#39;r&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">&#39;velocity&#39;</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">0</span>, <span style="color: #666666">2.0</span>, <span style="color: #666666">0</span>, <span style="color: #666666">4*</span>pi])
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Velocity versus position&#39;</span>)
 plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;SunEarth.pdf&#39;</span>)
 plt<span style="color: #666666">.</span>show()
 </pre></div>
