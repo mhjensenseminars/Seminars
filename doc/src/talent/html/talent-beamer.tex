@@ -29,7 +29,7 @@
 % fine for B/W printing:
 %\usecolortheme{seahorse}
 
-\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{pgf}
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{relsize}
@@ -110,7 +110,9 @@
 
 \begin{document}
 
-% endif for #ifdef PREAMBLE
+% matching end for #ifdef PREAMBLE
+
+\newcommand{\exercisesection}[1]{\subsection*{#1}}
 
 
 
@@ -121,7 +123,7 @@
 
 % ----------------- title -------------------------
 
-\title{\href{{http://www.nucleartalent.org}}{Nuclear TALENT}, perspectives and future plans}
+\title{\href{{http://www.nucleartalent.org}}{Nuclear TALENT}:perspectives and future plans}
 
 % ----------------- author(s) -------------------------
 
@@ -129,8 +131,9 @@
 \institute{}
 % ----------------- end author(s) -------------------------
 
-\date{Nuclei workshop, MSU and FRIB, June 10-13 2015
+\date{Second China-US RIB meeting, Beijing, October 16-18, 2017
 % <optional titlepage figure>
+% <optional copyright>
 }
 
 \begin{frame}[plain,fragile]
@@ -138,26 +141,222 @@
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Motivation}
+\frametitle{\href{{http://www.nucleartalent.org}}{What is Talent}}
+
+\begin{block}{}
+\textbf{The TALENT initiative aims at providing an advanced and comprehensive training to graduate students and young researchers in low-energy nuclear theory and experiment.}
+
+The network aims at developing a broad curriculum that will provide the platform for a cutting-edge theory for understanding nuclei and nuclear reactions. These objectives are being met by offering intensive three-week courses on a rotating set of topics, commissioned from experienced teachers in nuclear theory and experiment. The educational material generated under this program will be collected in the form of web-based courses, textbooks, and a variety of modern educational resources. No such all-encompassing material is available at present; its development will allow dispersed university groups to profit from the best expertise available.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Motivations and aims}
 
 \begin{block}{}
 \begin{itemize}
 \item Develop structured modules which will provide our students with a modern education in nuclear physics
 
+\item Help smaller university groups which cannot cover the whole range and breadth of nuclear physics
+
 \item Modules/courses should contain a high-level of synchronization
 
 \item A computational perspective is essential
 
-\item The FRIB theory center can function as the national coordinating unit
+\item plus many other aspects
 \end{itemize}
 
 \noindent
-All material at my github address, go to \href{{https://github.com/mhjensen}}{\nolinkurl{https://github.com/mhjensen}}, click on the seminars link.
 \end{block}
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Nuclear Talent v2.0}
+\frametitle{\href{{http://fribtheoryalliance.org/TALENT/content/board.php}}{Present Talent board}}
+
+\begin{block}{}
+\begin{itemize}
+\item Northern American Board members:
+\begin{itemize}
+
+  \item Dick Furnstahl (Ohio State University), heading the board
+
+  \item Chuck Horowitz (Indiana University) 
+
+  \item Filomena Nunes (Michigan State University) 
+
+  \item Martin Savage (University of  Washington) 
+
+\end{itemize}
+
+\noindent
+\item European Board Members:
+\begin{itemize}
+
+  \item Jacek Dobaczewski (Poland, Finland, and UK) 
+
+  \item Christian Forssen (Chalmers, Sweden) 
+
+  \item Francesca Gulminelli (Caen and GANIL, France) 
+
+  \item Morten Hjorth-Jensen (MSU, USA and University of Oslo, Norway)
+
+  \item Jeff Tostevin (Surrey, UK) 
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+Board members serve for periods up to six years. With the strong interest in China, the board should be extended to include members from Asian countries
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{\href{{http://fribtheoryalliance.org/TALENT/courses/courses.php}}{Nuclear Talent courses}  offered 2012-2017}
+
+\begin{block}{}
+In total we have organized 12 courses at several different places
+\begin{enumerate}
+\item Nuclear forces (INT 2013)
+
+\item Many-body methods (\textbf{GANIL July 2015})
+
+\item Few-body methods for nuclear physics (\textbf{ECT 2015})
+
+\item Density functional theory and self-consistent methods (\textbf{ECT 2014} and \textbf{York 2016})
+
+\item Theory for exploring nuclear structure experiments (\textbf{GANIL 2014} and \textbf{ECT 2017})
+
+\item Theory for exploring nuclear reaction experiments (\textbf{GANIL 2013})
+
+\item Nuclear theory for astrophysics (\textbf{MSU 2014} and \textbf{INT 2015})
+
+\item Theoretical approaches to describe  exotic nuclei (planned for 2018/2019, INT)
+
+\item High-performance computing and computational tools for nuclear physics (\textbf{ECT 2012} and \textbf{North Carolina State University 2016})
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{\href{{http://fribtheoryalliance.org/TALENT/courses/courses.php}}{2017 and plans for 2018/2019 Nuclear Talent courses}}
+
+\begin{block}{}
+For all courses (till this year) we have had on average more than 40 applicants per course. The Shell-model course held this year had 52 applicants and we accepted 31 students. They came from 16 different countries and 20 different institutions/laboratories.
+
+
+\begin{enumerate}
+\item \href{{https://github.com/NuclearTalent/NuclearStructure}}{Theory for exploring nuclear structure experiments}, \textbf{ECT 2017}
+
+\item Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018 at \href{{http://www.htu.cn/english/}}{Henan Normal University}, Xin-Xiang with Chung-Wang Ma as local host
+
+\item The first edition of Course 10 on Fundamental Symmetries will be offered at the INT in the summer of 2018. Contact: Michael Ramsey-Musolf (mjrm@physics.umass.edu)
+
+\item The first edition of Course 8 on Theoretical approaches to describe exotic nuclei will be titled Atomic Nuclei as Open Quantum Systems: Unifying Nuclear Structure and Reactions. It will be offered in the summer of 2019 at the \textbf{INT}. Contact: Christian Forssen (christian.forssen@chalmers.se)
+\end{enumerate}
+
+\noindent
+The second edition of Course 6: Theory for exploring nuclear reaction experiments, will most likely be postponed to later.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The 2018 course at \href{{http://www.htu.cn/english/}}{Henan Normal University, Xin-Xiang}.}
+
+\begin{block}{}
+The aim is to run a three-week Talent course at Henan Normal University in Xin-Xiang. Chung-Wang Ma is the local host. 
+
+The Chinese community had a course on Reaction theory for nuclear experiments (course 6) as the ideal. It has however been difficult to set up this course and a possibility is to rather organize a course on
+
+\begin{itemize}
+\item Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018.
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The 2018 course at \href{{http://www.htu.cn/english/}}{Henan Normal University, Xin-Xiang}. Possible paths}
+
+\begin{block}{}
+We have already a group of potential organizers and teachers and the following possibilities could be
+\begin{enumerate}
+\item Focus on two central (and partly new) many-body methods like Coupled Cluster theory and In-medium Renormalization group theory with applications to nuclear structure studies and reaction theory studies.
+
+\item Focus more on shell-model studies and for example coupled-cluster theory with applications to nuclear structure studies and inputs to reaction theory studies
+\end{enumerate}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The 2018 course at \href{{http://www.htu.cn/english/}}{Henan Normal University, Xin-Xiang}, China}
+
+\begin{block}{}
+The first path
+\begin{itemize}
+\item Many-body methods like Coupled Cluster theory and In-medium Renormalization group theory with applications to nuclear structure studies and reaction theory studies
+\end{itemize}
+
+\noindent
+would favor more theoretically inclined students while
+\begin{itemize}
+\item Shell-model studies (with perhaps an additional many-body method) as basis for applications to nuclear structure studies and inputs to reaction theory studies
+\end{itemize}
+
+\noindent
+could be of interest for both theorists and experimentalists since the shell-model approach has a lower level of complexity than the other two many-body methods.
+Quantities like spectroscopic factors and one-body densities which enter reaction theory studies are easier to study within a shell-model framework.
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The 2018 course at \href{{http://www.htu.cn/english/}}{Henan Normal University}, important sides of the Talent courses}
+
+\begin{block}{}
+Important aspects of the Talent courses have been
+\begin{itemize}
+\item students aquire skills and konwledge that would have been difficult or almost impossible to aquire while following traditional courses
+
+\item most Talent courses have computational elements where students write code that have many of the elements of codes used in nuclear physics research.
+
+\item close contact between teachers and students. 
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{The 2018 course at \href{{http://www.htu.cn/english/}}{Henan Normal University}, questions to think of}
+
+\begin{block}{}
+
+The nuclear shell-model is an example of codes which can be written and developed for simpler systems during a Talent course of three weeks. Combined with a professional research code like NushellX or similar nuclear structure tools, it is easier to understand the input and the theory which the analysis of nuclar structure and reaction experiments. 
+
+The hands-on aspects of the Talent courses is highly appreciated by the participants.  We may need to think of
+\begin{itemize}
+\item which skills and learning outcomes do we want our students to aquire? See the \href{{https://github.com/NuclearTalent/NuclearStructure}}{2017 course as an example}
+
+\item and what is pedagogically possible to achieve?
+
+\item and what is desirable and useful to the Chinese community? 
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Nuclear Talent v2.0, questions}
 
 \begin{block}{}
 \begin{itemize}
@@ -165,11 +364,11 @@ All material at my github address, go to \href{{https://github.com/mhjensen}}{\n
 
 \item How many basic courses can an institution offer, and which courses should be offered?
 
-\item How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
+\item How can we  coordinate an advanced training in nuclear physics?
 
-\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education? 
+\item Can we integrate the (\emph{ad hoc}) Nuclear Talent courses/initiative  in our education?
 
-\item \textbf{Nuclear Talent initiative and Asia} . The Chinese community is very enthusiastic about the Talent initiative
+\item Can we use efficiently version control tools  like \href{{https://git-scm.com/}}{git} and \href{{https://github.com/}}{Github} or other modern tools? 
 \end{itemize}
 
 \noindent
@@ -177,71 +376,7 @@ All material at my github address, go to \href{{https://github.com/mhjensen}}{\n
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Local situation at MSU}
-
-\begin{block}{}
-
-We have at MSU a  
-\begin{itemize}
-\item \href{{https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html}}{basic survey course PHY802}  and three basic nuclear physics courses 
-
-\item \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{structure}, 
-
-\item \href{{https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm}}{reactions and dynamics}  and 
-
-\item \textbf{Nuclear Astrophysics}. 
-\end{itemize}
-
-\noindent
-These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
-
-They can be taught as a regular one-semester course or half-semester course. There are also experimental courses.
-
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
-\frametitle{Advanced  modules, Nuclear Talent}
-
-\begin{block}{}
-\begin{enumerate}
-\item Nuclear forces (INT 2013, new version 2017)
-
-\item Many-body methods (\textbf{GANIL July 2015})
-
-\item Few-body methods for nuclear physics (\textbf{ECT* July-August 2015})
-
-\item Density functional theory and self-consistent methods (ECT* 2014 and \textbf{York 2016})
-
-\item Theory for exploring nuclear structure experiments (GANIL 2014)
-
-\item Theory for exploring nuclear reaction experiments (GANIL 2013)
-
-\item Nuclear theory for astrophysics (MSU 2014 and \textbf{INT 2015})
-
-\item Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
-
-\item High-performance computing and computational tools for nuclear physics
-\begin{itemize}
-
-  \item ECT* 2012, Shell model and variational Monte Carlo
-
-  \item LANL/ORNL in 2016, Monte Carlo methods 
-\end{itemize}
-
-\noindent
-\end{enumerate}
-
-\noindent
-For all courses (till this year) we have had on average 40 applicants per course.
-
-\end{block}
-\end{frame}
-
-\begin{frame}[plain,fragile]
-\frametitle{Talent v2.0: Scientific writing and publishing for the future}
+\frametitle{Nuclear Talent v2.0, technicalities: Scientific writing and publishing for the future}
 
 \begin{block}{}
 Scientific writing = {\LaTeX}
@@ -271,7 +406,7 @@ Scientific writing = {\LaTeX}
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Can I assemble lots of different writings to a new future document (book)?}
+\frametitle{Can one assemble lots of different writings to a new future document (or even a book)?}
 
 \begin{block}{}
 Suppose I write various types of scientific material
@@ -284,7 +419,7 @@ Suppose I write various types of scientific material
 
 \item Sphinx documents,
 
-\item IPython notebooks,
+\item IPython/Jupyter notebooks,
 
 \item wikis,
 
@@ -298,7 +433,7 @@ and later want to collect the pieces into a larger document, maybe some book - i
 \end{frame}
 
 \begin{frame}[plain,fragile]
-\frametitle{Popular tools anno 2014 and their math support}
+\frametitle{Popular tools anno 2017 and their math support}
 
 \begin{block}{}
 \begin{enumerate}
@@ -316,8 +451,18 @@ and later want to collect the pieces into a larger document, maybe some book - i
 
 \item Markdown: somewhat limited {\LaTeX} math support, but minor tagging, transforms to lots of formats ({\LaTeX}, HTML, XML, Word, OpenOffice, ...)
 
-\item IPython notebooks: Markdown code/math, combines Python code, interactivity, and visualization, but requires all code snippets to sync together
+\item IPython/Jupyter notebooks: Markdown code/math, combines Python code, interactivity, and visualization, and is becoming a standard in many courses
+\end{enumerate}
 
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{More popular tools anno 2017 and their math support}
+
+\begin{block}{}
+\begin{enumerate}
 \item Confluence: Markdown-like input, with limited {\LaTeX} math support, but converted to XML
 
 \item MediaWiki: quite good {\LaTeX} math support (cf.~Wikipedia/Wikibooks)
@@ -327,6 +472,8 @@ and later want to collect the pieces into a larger document, maybe some book - i
 \item Wordpress: supports full HTML with {\LaTeX} formulas only
 
 \item Google blogger: supports full HTML with MathJax
+
+\item and more...
 \end{enumerate}
 
 \noindent

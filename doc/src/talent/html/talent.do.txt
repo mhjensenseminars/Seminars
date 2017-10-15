@@ -1,77 +1,167 @@
 # Slides for PHY981
-TITLE: "Nuclear TALENT":"http://www.nucleartalent.org", perspectives and future plans
+TITLE: "Nuclear TALENT":"http://www.nucleartalent.org":perspectives and future plans
 AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
-DATE: Nuclei workshop, MSU and FRIB, June 10-13 2015
+DATE: Second China-US RIB meeting, Beijing, October 16-18, 2017
+
 
 !split
-===== Motivation  =====
+===== "What is Talent":"http://www.nucleartalent.org"  =====
 !bblock
-* Develop structured modules which will provide our students with a modern education in nuclear physics
-* Modules/courses should contain a high-level of synchronization
-* A computational perspective is essential
-* The FRIB theory center can function as the national coordinating unit
+_The TALENT initiative aims at providing an advanced and comprehensive training to graduate students and young researchers in low-energy nuclear theory and experiment._
 
-All material at my github address, go to URL:"https://github.com/mhjensen", click on the seminars link.
+The network aims at developing a broad curriculum that will provide the platform for a cutting-edge theory for understanding nuclei and nuclear reactions. These objectives are being met by offering intensive three-week courses on a rotating set of topics, commissioned from experienced teachers in nuclear theory and experiment. The educational material generated under this program will be collected in the form of web-based courses, textbooks, and a variety of modern educational resources. No such all-encompassing material is available at present; its development will allow dispersed university groups to profit from the best expertise available.
+
 !eblock
 
 !split
-===== Nuclear Talent v2.0 =====
+===== Motivations and aims  =====
+!bblock
+* Develop structured modules which will provide our students with a modern education in nuclear physics
+* Help smaller university groups which cannot cover the whole range and breadth of nuclear physics
+* Modules/courses should contain a high-level of synchronization
+* A computational perspective is essential
+* plus many other aspects
+!eblock
+
+
+!split
+===== "Present Talent board":"http://fribtheoryalliance.org/TALENT/content/board.php"  =====
+!bblock
+* Northern American Board members:
+  * Dick Furnstahl (Ohio State University), heading the board
+  * Chuck Horowitz (Indiana University) 
+  * Filomena Nunes (Michigan State University) 
+  * Martin Savage (University of  Washington) 
+
+* European Board Members:
+  * Jacek Dobaczewski (Poland, Finland, and UK) 
+  * Christian Forssen (Chalmers, Sweden) 
+  * Francesca Gulminelli (Caen and GANIL, France) 
+  * Morten Hjorth-Jensen (MSU, USA and University of Oslo, Norway)
+  * Jeff Tostevin (Surrey, UK) 
+
+
+Board members serve for periods up to six years. With the strong interest in China, the board should be extended to include members from Asian countries
+!eblock
+
+!split
+===== "Nuclear Talent courses":"http://fribtheoryalliance.org/TALENT/courses/courses.php"  offered 2012-2017 =====
+!bblock
+In total we have organized 12 courses at several different places
+o Nuclear forces (INT 2013)
+o Many-body methods (_GANIL July 2015_)
+o Few-body methods for nuclear physics (_ECT 2015_)
+o Density functional theory and self-consistent methods (_ECT 2014_ and _York 2016_)
+o Theory for exploring nuclear structure experiments (_GANIL 2014_ and _ECT 2017_)
+o Theory for exploring nuclear reaction experiments (_GANIL 2013_)
+o Nuclear theory for astrophysics (_MSU 2014_ and _INT 2015_)
+o Theoretical approaches to describe  exotic nuclei (planned for 2018/2019, INT)
+o High-performance computing and computational tools for nuclear physics (_ECT 2012_ and _North Carolina State University 2016_)
+
+
+!eblock
+
+
+!split
+===== "2017 and plans for 2018/2019 Nuclear Talent courses":"http://fribtheoryalliance.org/TALENT/courses/courses.php"  =====
+!bblock 
+For all courses (till this year) we have had on average more than 40 applicants per course. The Shell-model course held this year had 52 applicants and we accepted 31 students. They came from 16 different countries and 20 different institutions/laboratories.
+
+
+o "Theory for exploring nuclear structure experiments":"https://github.com/NuclearTalent/NuclearStructure", _ECT 2017_
+o Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018 at "Henan Normal University":"http://www.htu.cn/english/", Xin-Xiang with Chung-Wang Ma as local host
+o The first edition of Course 10 on Fundamental Symmetries will be offered at the INT in the summer of 2018. Contact: Michael Ramsey-Musolf (mjrm@physics.umass.edu)
+o The first edition of Course 8 on Theoretical approaches to describe exotic nuclei will be titled Atomic Nuclei as Open Quantum Systems: Unifying Nuclear Structure and Reactions. It will be offered in the summer of 2019 at the _INT_. Contact: Christian Forssen (christian.forssen@chalmers.se)
+
+The second edition of Course 6: Theory for exploring nuclear reaction experiments, will most likely be postponed to later.
+
+!eblock
+
+
+
+!split
+===== The 2018 course at "Henan Normal University, Xin-Xiang":"http://www.htu.cn/english/".   =====
+!bblock 
+The aim is to run a three-week Talent course at Henan Normal University in Xin-Xiang. Chung-Wang Ma is the local host. 
+
+The Chinese community had a course on Reaction theory for nuclear experiments (course 6) as the ideal. It has however been difficult to set up this course and a possibility is to rather organize a course on
+
+* Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018.
+
+
+!eblock
+
+
+!split
+===== The 2018 course at "Henan Normal University, Xin-Xiang":"http://www.htu.cn/english/". Possible paths  =====
+!bblock 
+We have already a group of potential organizers and teachers and the following possibilities could be
+o Focus on two central (and partly new) many-body methods like Coupled Cluster theory and In-medium Renormalization group theory with applications to nuclear structure studies and reaction theory studies.
+o Focus more on shell-model studies and for example coupled-cluster theory with applications to nuclear structure studies and inputs to reaction theory studies
+
+!eblock
+
+
+
+
+
+!split
+===== The 2018 course at "Henan Normal University, Xin-Xiang":"http://www.htu.cn/english/", China  =====
+!bblock 
+The first path
+* Many-body methods like Coupled Cluster theory and In-medium Renormalization group theory with applications to nuclear structure studies and reaction theory studies
+would favor more theoretically inclined students while
+* Shell-model studies (with perhaps an additional many-body method) as basis for applications to nuclear structure studies and inputs to reaction theory studies
+could be of interest for both theorists and experimentalists since the shell-model approach has a lower level of complexity than the other two many-body methods.
+Quantities like spectroscopic factors and one-body densities which enter reaction theory studies are easier to study within a shell-model framework.
+
+
+!eblock
+
+
+!split
+===== The 2018 course at "Henan Normal University":"http://www.htu.cn/english/", important sides of the Talent courses  =====
+!bblock 
+Important aspects of the Talent courses have been
+* students aquire skills and konwledge that would have been difficult or almost impossible to aquire while following traditional courses
+* most Talent courses have computational elements where students write code that have many of the elements of codes used in nuclear physics research.
+* close contact between teachers and students. 
+
+!eblock
+
+
+!split
+===== The 2018 course at "Henan Normal University":"http://www.htu.cn/english/", questions to think of  =====
+!bblock 
+
+The nuclear shell-model is an example of codes which can be written and developed for simpler systems during a Talent course of three weeks. Combined with a professional research code like NushellX or similar nuclear structure tools, it is easier to understand the input and the theory which the analysis of nuclar structure and reaction experiments. 
+
+The hands-on aspects of the Talent courses is highly appreciated by the participants.  We may need to think of
+* which skills and learning outcomes do we want our students to aquire? See the "2017 course as an example":"https://github.com/NuclearTalent/NuclearStructure"
+* and what is pedagogically possible to achieve?
+* and what is desirable and useful to the Chinese community? 
+!eblock
+
+
+
+
+
+
+!split
+===== Nuclear Talent v2.0, questions =====
 !bblock 
 * Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
-
 * How many basic courses can an institution offer, and which courses should be offered?
-* How can the coming FRIB theory center be used to coordinate an advanced training in nuclear physics?
-* Can we integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education? 
-* _Nuclear Talent initiative and Asia_ . The Chinese community is very enthusiastic about the Talent initiative
+* How can we  coordinate an advanced training in nuclear physics?
+* Can we integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education?
+* Can we use efficiently version control tools  like "git":"https://git-scm.com/" and "Github":"https://github.com/" or other modern tools? 
  
 !eblock
 
 
-!split
-===== Local situation at MSU  =====
-!bblock
-
-We have at MSU a  
-* "basic survey course PHY802":"https://people.nscl.msu.edu/~witek/Classes/PHY802/NuclPhys802-2015.html"  and three basic nuclear physics courses 
-* "structure":"http://nuclearstructure.github.io/PHY981/doc/web/course.html", 
-* "reactions and dynamics":"https://people.nscl.msu.edu/~nunes/phy982/phy982web2015.htm"  and 
-* _Nuclear Astrophysics_. 
-
-These three basic courses have a duration each  of 30-40 hours (2-3 credits).   
-
-They can be taught as a regular one-semester course or half-semester course. There are also experimental courses.
-
-
-
-!eblock
-
-
-
-
-
 
 !split
-===== Advanced  modules, Nuclear Talent  =====
-!bblock 
-o Nuclear forces (INT 2013, new version 2017)
-o Many-body methods (_GANIL July 2015_)
-o Few-body methods for nuclear physics (_ECT* July-August 2015_)
-o Density functional theory and self-consistent methods (ECT* 2014 and _York 2016_)
-o Theory for exploring nuclear structure experiments (GANIL 2014)
-o Theory for exploring nuclear reaction experiments (GANIL 2013)
-o Nuclear theory for astrophysics (MSU 2014 and _INT 2015_)
-o Theoretical approaches to describe  exotic nuclei (planned for 2016, Chalmers, Gothenburg)
-o High-performance computing and computational tools for nuclear physics
-  * ECT* 2012, Shell model and variational Monte Carlo
-  * LANL/ORNL in 2016, Monte Carlo methods 
-
-For all courses (till this year) we have had on average 40 applicants per course.
-
-!eblock
-
-
-!split
-===== Talent v2.0: Scientific writing and publishing for the future =====
+===== Nuclear Talent v2.0, technicalities: Scientific writing and publishing for the future =====
 !bblock 
 Scientific writing = LaTeX
 
@@ -89,14 +179,14 @@ o How to write scientific material that can be easily published through old and 
 
 
 !split
-===== Can I assemble lots of different writings to a new future document (book)? =====
+===== Can one assemble lots of different writings to a new future document (or even a book)? =====
 !bblock 
 Suppose I write various types of scientific material
 o LaTeX document,
 o blog posts (HTML),
 o web pages (HTML),
 o Sphinx documents,
-o IPython notebooks,
+o IPython/Jupyter notebooks,
 o wikis,
 o Markdown files, ...
 and later want to collect the pieces into a larger document, maybe some book - is that at all feasible?
@@ -105,7 +195,7 @@ and later want to collect the pieces into a larger document, maybe some book - i
 
 
 !split
-===== Popular tools anno 2014 and their math support  =====
+===== Popular tools anno 2017 and their math support  =====
 !bblock 
 o LaTeX: de facto standard for math-instensive documents
 o pdfLaTeX, XeLaTeX, LuaLaTeX: takes over (figures in png, pdf) - use these!
@@ -114,14 +204,22 @@ o HTML with MathJax: "full" LaTeX math, but much tagging
 o Sphinx: somewhat limited LaTeX math support, but great support for web design, and less tagged than HTML
 o reStructuredText: similar to Sphinx, but no math support, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
 o Markdown: somewhat limited LaTeX math support, but minor tagging, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
-o IPython notebooks: Markdown code/math, combines Python code, interactivity, and visualization, but requires all code snippets to sync together
+o IPython/Jupyter notebooks: Markdown code/math, combines Python code, interactivity, and visualization, and is becoming a standard in many courses
+!eblock
+
+
+!split
+===== More popular tools anno 2017 and their math support  =====
+!bblock 
 o Confluence: Markdown-like input, with limited LaTeX math support, but converted to XML
 o MediaWiki: quite good LaTeX math support (cf. Wikipedia/Wikibooks)
 o Other wiki formats: no math support, great for collaborative editing
 o Wordpress: supports full HTML with LaTeX formulas only
 o Google blogger: supports full HTML with MathJax
-
+o and more...
 !eblock
+
+
 
 
 !split
