@@ -145,6 +145,7 @@ end of tocinfo -->
 <p>
 
 <ol>
+<li> IPython/Jupyter notebooks: Markdown code/math, combines Python code, interactivity, and visualization, and is becoming a standard in many courses</li>
 <li> Confluence: Markdown-like input, with limited LaTeX math support, but converted to XML</li>
 <li> MediaWiki: quite good LaTeX math support (cf. Wikipedia/Wikibooks)</li>
 <li> Other wiki formats: no math support, great for collaborative editing</li>

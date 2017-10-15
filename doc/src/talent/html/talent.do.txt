@@ -73,7 +73,7 @@ o Many-body methods for nuclear structure and reactions (courses 5 and 6), July-
 o The first edition of Course 10 on Fundamental Symmetries will be offered at the INT in the summer of 2018. Contact: Michael Ramsey-Musolf (mjrm@physics.umass.edu)
 o The first edition of Course 8 on Theoretical approaches to describe exotic nuclei will be titled Atomic Nuclei as Open Quantum Systems: Unifying Nuclear Structure and Reactions. It will be offered in the summer of 2019 at the _INT_. Contact: Christian Forssen (christian.forssen@chalmers.se)
 
-The second edition of Course 6: Theory for exploring nuclear reaction experiments, will most likely be postponed to later.
+
 
 !eblock
 
@@ -204,13 +204,13 @@ o HTML with MathJax: "full" LaTeX math, but much tagging
 o Sphinx: somewhat limited LaTeX math support, but great support for web design, and less tagged than HTML
 o reStructuredText: similar to Sphinx, but no math support, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
 o Markdown: somewhat limited LaTeX math support, but minor tagging, transforms to lots of formats (LaTeX, HTML, XML, Word, OpenOffice, ...)
-o IPython/Jupyter notebooks: Markdown code/math, combines Python code, interactivity, and visualization, and is becoming a standard in many courses
 !eblock
 
 
 !split
 ===== More popular tools anno 2017 and their math support  =====
 !bblock 
+o IPython/Jupyter notebooks: Markdown code/math, combines Python code, interactivity, and visualization, and is becoming a standard in many courses
 o Confluence: Markdown-like input, with limited LaTeX math support, but converted to XML
 o MediaWiki: quite good LaTeX math support (cf. Wikipedia/Wikibooks)
 o Other wiki formats: no math support, great for collaborative editing
