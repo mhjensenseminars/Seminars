@@ -29,6 +29,3 @@ temp*
 *.project
 # misc:
 .DS_Store
-Trash
-# doconce:
-.*_html_file_collection

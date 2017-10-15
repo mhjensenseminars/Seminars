@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{numpy} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{np}
+\PYGdefault{k+kn}{from}  \PYGdefault{n+nn}{matplotlib} \PYGdefault{k+kn}{import} \PYGdefault{n}{pyplot} \PYGdefault{k}{as} \PYGdefault{n}{plt}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Load in data file}
+\PYGdefault{n}{data} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{loadtxt}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay.dat\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{delimiter}\PYGdefault{o}{=}\PYGdefault{l+s+s1}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{skiprows}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Make arrays containing x\PYGdefaultZhy{}axis and hares and lynx populations}
+\PYGdefault{n}{year} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}
+\PYGdefault{n}{hares} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+\PYGdefault{n}{lynx} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{]}
+
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{year}\PYGdefault{p}{,} \PYGdefault{n}{hares} \PYGdefault{p}{,}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}b\PYGdefaultZhy{}+\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{year}\PYGdefault{p}{,} \PYGdefault{n}{lynx}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}r\PYGdefaultZhy{}o\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{axis}\PYGdefault{p}{([}\PYGdefault{l+m+mi}{1900}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{1920}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{,} \PYGdefault{l+m+mf}{100.0}\PYGdefault{p}{])}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{xlabel}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{r\PYGdefaultZsq{}Year\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{r\PYGdefaultZsq{}Numbers of hares and lynx \PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{legend}\PYGdefault{p}{((}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hares\PYGdefaultZsq{}}\PYGdefault{p}{,}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Lynx\PYGdefaultZsq{}}\PYGdefault{p}{),} \PYGdefault{n}{loc}\PYGdefault{o}{=}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}upper right\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{r\PYGdefaultZsq{}Population of hares and lynx from 1900\PYGdefaultZhy{}1920 (x1000)\PYGdefaultZcb{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay\PYGdefaultZus{}data.pdf\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay\PYGdefaultZus{}data.png\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{show}\PYGdefault{p}{()}
+\end{Verbatim}

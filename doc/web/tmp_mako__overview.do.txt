@@ -134,5 +134,23 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Why clean code matters =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-beamer.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/ipynb/cleancode.ipynb"
+
+
+
 
 

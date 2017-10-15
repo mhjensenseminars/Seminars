@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{numpy} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{np}
+\PYGdefault{k+kn}{import} \PYGdefault{n+nn}{matplotlib.pyplot} \PYGdefault{k+kn}{as} \PYGdefault{n+nn}{plt}
+
+\PYGdefault{k}{def} \PYGdefault{n+nf}{solver}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{p}{,} \PYGdefault{n}{H0}\PYGdefault{p}{,} \PYGdefault{n}{L0}\PYGdefault{p}{,} \PYGdefault{n}{dt}\PYGdefault{p}{,} \PYGdefault{n}{a}\PYGdefault{p}{,} \PYGdefault{n}{b}\PYGdefault{p}{,} \PYGdefault{n}{c}\PYGdefault{p}{,} \PYGdefault{n}{d}\PYGdefault{p}{,} \PYGdefault{n}{t0}\PYGdefault{p}{):}
+    \PYGdefault{l+s+sd}{\PYGdefaultZdq{}\PYGdefaultZdq{}\PYGdefaultZdq{}Solve the difference equations for H and L over m years}
+\PYGdefault{l+s+sd}{    with time step dt (measured in years.\PYGdefaultZdq{}\PYGdefaultZdq{}\PYGdefaultZdq{}}
+
+    \PYGdefault{n}{num\PYGdefaultZus{}intervals} \PYGdefault{o}{=} \PYGdefault{n+nb}{int}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{o}{/}\PYGdefault{n+nb}{float}\PYGdefault{p}{(}\PYGdefault{n}{dt}\PYGdefault{p}{))}
+    \PYGdefault{n}{t} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{linspace}\PYGdefault{p}{(}\PYGdefault{n}{t0}\PYGdefault{p}{,} \PYGdefault{n}{t0} \PYGdefault{o}{+} \PYGdefault{n}{m}\PYGdefault{p}{,} \PYGdefault{n}{num\PYGdefaultZus{}intervals}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+    \PYGdefault{n}{H} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{zeros}\PYGdefault{p}{(}\PYGdefault{n}{t}\PYGdefault{o}{.}\PYGdefault{n}{size}\PYGdefault{p}{)}
+    \PYGdefault{n}{L} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{zeros}\PYGdefault{p}{(}\PYGdefault{n}{t}\PYGdefault{o}{.}\PYGdefault{n}{size}\PYGdefault{p}{)}
+
+    \PYGdefault{k}{print} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}Init:\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{H0}\PYGdefault{p}{,} \PYGdefault{n}{L0}\PYGdefault{p}{,} \PYGdefault{n}{dt}
+    \PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]} \PYGdefault{o}{=} \PYGdefault{n}{H0}
+    \PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]} \PYGdefault{o}{=} \PYGdefault{n}{L0}
+
+    \PYGdefault{k}{for} \PYGdefault{n}{n} \PYGdefault{o+ow}{in} \PYGdefault{n+nb}{range}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{,} \PYGdefault{n+nb}{len}\PYGdefault{p}{(}\PYGdefault{n}{t}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{):}
+        \PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]} \PYGdefault{o}{=} \PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]} \PYGdefault{o}{+} \PYGdefault{n}{a}\PYGdefault{o}{*}\PYGdefault{n}{dt}\PYGdefault{o}{*}\PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]} \PYGdefault{o}{\PYGdefaultZhy{}} \PYGdefault{n}{b}\PYGdefault{o}{*}\PYGdefault{n}{dt}\PYGdefault{o}{*}\PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]}\PYGdefault{o}{*}\PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]}
+        \PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]} \PYGdefault{o}{=} \PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]} \PYGdefault{o}{+} \PYGdefault{n}{d}\PYGdefault{o}{*}\PYGdefault{n}{dt}\PYGdefault{o}{*}\PYGdefault{n}{H}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]}\PYGdefault{o}{*}\PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]} \PYGdefault{o}{\PYGdefaultZhy{}} \PYGdefault{n}{c}\PYGdefault{o}{*}\PYGdefault{n}{dt}\PYGdefault{o}{*}\PYGdefault{n}{L}\PYGdefault{p}{[}\PYGdefault{n}{n}\PYGdefault{p}{]}
+    \PYGdefault{k}{return} \PYGdefault{n}{H}\PYGdefault{p}{,} \PYGdefault{n}{L}\PYGdefault{p}{,} \PYGdefault{n}{t}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Load in data file}
+\PYGdefault{n}{data} \PYGdefault{o}{=} \PYGdefault{n}{np}\PYGdefault{o}{.}\PYGdefault{n}{loadtxt}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay.csv\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{delimiter}\PYGdefault{o}{=}\PYGdefault{l+s+s1}{\PYGdefaultZsq{},\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{skiprows}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Make arrays containing x\PYGdefaultZhy{}axis and hares and lynx populations}
+\PYGdefault{n}{t\PYGdefaultZus{}e} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}
+\PYGdefault{n}{H\PYGdefaultZus{}e} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}
+\PYGdefault{n}{L\PYGdefaultZus{}e} \PYGdefault{o}{=} \PYGdefault{n}{data}\PYGdefault{p}{[:,}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{]}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Simulate using the model}
+\PYGdefault{n}{H}\PYGdefault{p}{,} \PYGdefault{n}{L}\PYGdefault{p}{,} \PYGdefault{n}{t} \PYGdefault{o}{=} \PYGdefault{n}{solver}\PYGdefault{p}{(}\PYGdefault{n}{m}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{20}\PYGdefault{p}{,} \PYGdefault{n}{H0}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{34.91}\PYGdefault{p}{,} \PYGdefault{n}{L0}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{3.857}\PYGdefault{p}{,} \PYGdefault{n}{dt}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{0.1}\PYGdefault{p}{,}
+                 \PYGdefault{n}{a}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{0.4807}\PYGdefault{p}{,} \PYGdefault{n}{b}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{0.02482}\PYGdefault{p}{,} \PYGdefault{n}{c}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{0.9272}\PYGdefault{p}{,} \PYGdefault{n}{d}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{0.02756}\PYGdefault{p}{,}
+                 \PYGdefault{n}{t0}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1900}\PYGdefault{p}{)}
+
+\PYGdefault{c+c1}{\PYGdefaultZsh{} Visualize simulations and data}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{plot}\PYGdefault{p}{(}\PYGdefault{n}{t\PYGdefaultZus{}e}\PYGdefault{p}{,} \PYGdefault{n}{H\PYGdefaultZus{}e}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}b\PYGdefaultZhy{}+\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{t\PYGdefaultZus{}e}\PYGdefault{p}{,} \PYGdefault{n}{L\PYGdefaultZus{}e}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}r\PYGdefaultZhy{}o\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{t}\PYGdefault{p}{,} \PYGdefault{n}{H}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}m\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{n}{t}\PYGdefault{p}{,} \PYGdefault{n}{L}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}k\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{xlabel}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Year\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{ylabel}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Numbers of hares and lynx\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{axis}\PYGdefault{p}{([}\PYGdefault{l+m+mi}{1900}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{1920}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{0}\PYGdefault{p}{,} \PYGdefault{l+m+mi}{140}\PYGdefault{p}{])}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{title}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{r\PYGdefaultZsq{}Population of hares and lynx 1900\PYGdefaultZhy{}1920 (x1000)\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{legend}\PYGdefault{p}{((}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}H\PYGdefaultZus{}e\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}L\PYGdefaultZus{}e\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}H\PYGdefaultZsq{}}\PYGdefault{p}{,} \PYGdefault{l+s+s1}{\PYGdefaultZsq{}L\PYGdefaultZsq{}}\PYGdefault{p}{),} \PYGdefault{n}{loc}\PYGdefault{o}{=}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}upper left\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay\PYGdefaultZus{}sim.pdf\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{savefig}\PYGdefault{p}{(}\PYGdefault{l+s+s1}{\PYGdefaultZsq{}Hudson\PYGdefaultZus{}Bay\PYGdefaultZus{}sim.png\PYGdefaultZsq{}}\PYGdefault{p}{)}
+\PYGdefault{n}{plt}\PYGdefault{o}{.}\PYGdefault{n}{show}\PYGdefault{p}{()}
+\end{Verbatim}
