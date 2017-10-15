@@ -85,7 +85,7 @@ cp $name.tex ${name}-plain-minted.tex
 system doconce format ipynb $name $opt
 
 # Publish
-dest=../pub
+dest=../../../pub
 if [ ! -d $dest/$name ]; then
 mkdir $dest/$name
 mkdir $dest/$name/pdf
