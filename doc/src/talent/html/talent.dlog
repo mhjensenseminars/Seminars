@@ -1,0 +1,100 @@
+translating doconce text in talent.do.txt to html
+
+*** error: inconsistent no of = in heading:
+===== "Nuclear Talent courses":"http://fribtheoryalliance.org/TALENT/courses/courses.php"  offered 2012-2017=====
+    lengths: 5 and 14, must be equal and odd
+translating doconce text in talent.do.txt to html
+output in talent-reveal.html
+translating doconce text in talent.do.txt to html
+output in talent.html
+translating doconce text in talent.do.txt to html
+output in talent-plain.html
+translating doconce text in talent.do.txt to html
+output in talent-1.html
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to ipynb
+*** error: problem with character when writing to file:
+'ascii' codec can't encode character u'\xe9' in position 5600: ordinal not in range(128)
+ordinal of this character is 233
+u'ncipal lecturers will be Christian Forss\xe9n (Chalmers University of Technology), '
+                                          ^
+    remedies: fix character or try --encoding=utf-8
+translating doconce text in talent.do.txt to html
+output in talent-reveal.html
+translating doconce text in talent.do.txt to html
+output in talent.html
+translating doconce text in talent.do.txt to html
+output in talent-plain.html
+translating doconce text in talent.do.txt to html
+output in talent-1.html
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to ipynb
+*** error: problem with character when writing to file:
+'ascii' codec can't encode character u'\xe9' in position 5785: ordinal not in range(128)
+ordinal of this character is 233
+u'te University). Contact: Christian Forss\xe9n (christian.forssen@chalmers.se)\\n",\n '
+                                          ^
+    remedies: fix character or try --encoding=utf-8
+translating doconce text in talent.do.txt to html
+output in talent-reveal.html
+translating doconce text in talent.do.txt to html
+output in talent.html
+translating doconce text in talent.do.txt to html
+output in talent-plain.html
+translating doconce text in talent.do.txt to html
+output in talent-1.html
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to ipynb
+*** error: problem with character when writing to file:
+'ascii' codec can't encode character u'\xe9' in position 5484: ordinal not in range(128)
+ordinal of this character is 233
+u'at the **INT**. Contact: Christian Forss\xe9n (christian.forssen@chalmers.se)\\n",\n '
+                                          ^
+    remedies: fix character or try --encoding=utf-8
+translating doconce text in talent.do.txt to html
+output in talent-reveal.html
+translating doconce text in talent.do.txt to html
+output in talent.html
+translating doconce text in talent.do.txt to html
+output in talent-plain.html
+translating doconce text in talent.do.txt to html
+output in talent-1.html
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to ipynb
+output in talent.ipynb
+translating doconce text in talent.do.txt to html
+output in talent-reveal.html
+translating doconce text in talent.do.txt to html
+output in talent.html
+translating doconce text in talent.do.txt to html
+output in talent-plain.html
+translating doconce text in talent.do.txt to html
+output in talent-1.html
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to pdflatex
+output in talent.p.tex
+translating doconce text in talent.do.txt to ipynb
+output in talent.ipynb

@@ -1,0 +1,289 @@
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to ipynb
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+*** error: cannot do import nbformat.v4 or IPython.nbformat.v4
+    make sure IPython notebook or Jupyter is installed correctly
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-reveal.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-plain.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-1.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to ipynb
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+*** error: cannot do import nbformat.v4 or IPython.nbformat.v4
+    make sure IPython notebook or Jupyter is installed correctly
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+ERROR: 16 !bblock do not match 15 !eblock directives
+
+
+Two !bblock after each other!
+
+!bblock
+Computing competence represents a central element
+in scientific problem solving, from basic education and research to
+essentially almost all advanced problems in modern
+societies.
+
+Computing competence _enlarges the body of tools available to students_ and
+scientists beyond classical tools and _allows for a more generic
+handling of problems_. Focusing on algorithmic aspects _results in
+deeper insights_ about scientific problems.
+
+
+
+
+!split
+===== Why is computing competence important? =====
+The impact of the computer on mathematics and science is tremendous: _science and industry now rely on solving mathematical problems through computing_.
+* Computing can increase the relevance in education by solving more realistic problems earlier.
+* Computing through programming can be excellent training of creativity.
+* Computing can enhance the understanding of abstractions and generalization.
+* Computing can decrease the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.
+
+
+!split
+===== Come introdurre metodi numerici nelle scuole superiori: Un modello per prede e predatori  =====
+
+!bblock
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-reveal.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-plain.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-1.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to ipynb
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+*** error: cannot do import nbformat.v4 or IPython.nbformat.v4
+    make sure IPython notebook or Jupyter is installed correctly
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-reveal.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-plain.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to html
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.png for format html
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.png for format html
+output in hudson-1.html
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to pdflatex
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+figure file fig/Hudson_Bay_data:
+    can use fig/Hudson_Bay_data.pdf for format pdflatex
+figure file fig/Hudson_Bay_sim:
+    can use fig/Hudson_Bay_sim.pdf for format pdflatex
+output in hudson.p.tex
+running mako on hudson.do.txt to make tmp_mako__hudson.do.txt
+translating doconce text in tmp_mako__hudson.do.txt to ipynb
+copy complete file src/plot_Hudson.py (format: pypro)
+copy complete file src/Hudson_Bay.py (format: pypro)
+*** error: cannot do import nbformat.v4 or IPython.nbformat.v4
+    make sure IPython notebook or Jupyter is installed correctly
