@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 OCT 2017 00:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 OCT 2017 08:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1173,10 +1173,10 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [6]
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 555.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 555.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 557.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 557.
  (./talent.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 555.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 557.
 
 
  *File List*
@@ -1309,17 +1309,17 @@ gettitlestring.sty    2016/05/16 v1.5 Cleanup title references (HO)
   omslmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 555.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 557.
 Package rerunfilecheck Info: File `talent.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 555.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 557.
  ) 
 Here is how much of TeX's memory you used:
- 26751 strings out of 493014
- 508025 string characters out of 6133351
+ 26750 strings out of 493014
+ 508010 string characters out of 6133351
  593269 words of memory out of 5000000
  29708 multiletter control sequences out of 15000+600000
- 50096 words of font info for 79 fonts, out of 8000000 for 9000
+ 50013 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,5n,64p,10391b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1330,10 +1330,10 @@ type1/public/lm/lmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
 lic/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7
 .pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on talent.pdf (7 pages, 159510 bytes).
+Output written on talent.pdf (7 pages, 160084 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 93 named destinations out of 1000 (max. 500000)
  15373 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -9,7 +9,7 @@ DATE: Second China-US RIB meeting, Beijing, October 16-18, 2017
 !bblock
 _The TALENT initiative aims at providing an advanced and comprehensive training to graduate students and young researchers in low-energy nuclear theory and experiment._
 
-The network aims at developing a broad curriculum that will provide the platform for a cutting-edge theory for understanding nuclei and nuclear reactions. These objectives are being met by offering intensive three-week courses on a rotating set of topics, commissioned from experienced teachers in nuclear theory and experiment. The educational material generated under this program will be collected in the form of web-based courses, textbooks, and a variety of modern educational resources. No such all-encompassing material is available at present; its development will allow dispersed university groups to profit from the best expertise available.
+The network aims at developing a broad curriculum that will provide the platform for a cutting-edge theory for understanding nuclei and nuclear reactions. These objectives are being met by offering intensive three-week courses on a rotating set of topics, commissioned from experienced teachers in nuclear theory and experiment. The educational material generated under this program will be collected in the form of web-based courses, "textbooks":"http://www.springer.com/gp/book/9783319533353", and a variety of modern educational resources. No such all-encompassing material is available at present; its development will allow dispersed university groups to profit from the best expertise available.
 
 !eblock
 
@@ -48,16 +48,16 @@ Board members serve for periods up to six years. With the strong interest in Chi
 ===== "Nuclear Talent courses":"http://fribtheoryalliance.org/TALENT/courses/courses.php"  offered 2012-2017 =====
 !bblock
 In total we have organized 12 courses at several different places
-o Nuclear forces (INT 2013)
-o Many-body methods (_GANIL July 2015_)
+o Nuclear forces (_INT 2013_)
+o Many-body methods (_GANIL 2015_ and  _Henan 2018_)
 o Few-body methods for nuclear physics (_ECT 2015_)
 o Density functional theory and self-consistent methods (_ECT 2014_ and _York 2016_)
 o Theory for exploring nuclear structure experiments (_GANIL 2014_ and _ECT 2017_)
 o Theory for exploring nuclear reaction experiments (_GANIL 2013_)
 o Nuclear theory for astrophysics (_MSU 2014_ and _INT 2015_)
-o Theoretical approaches to describe  exotic nuclei (planned for 2018/2019, INT)
+o Theoretical approaches to describe  exotic nuclei (_planned for 2019/2020, INT_)
 o High-performance computing and computational tools for nuclear physics (_ECT 2012_ and _North Carolina State University 2016_)
-
+o Fundamental Symmetries (_INT in the summer of 2018_)
 
 !eblock
 
@@ -71,7 +71,7 @@ For all courses (till this year) we have had on average more than 40 applicants 
 o "Theory for exploring nuclear structure experiments":"https://github.com/NuclearTalent/NuclearStructure", _ECT 2017_
 o Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018 at "Henan Normal University":"http://www.htu.cn/english/", Xin-Xiang with Chung-Wang Ma as local host
 o The first edition of Course 10 on Fundamental Symmetries will be offered at the INT in the summer of 2018. Contact: Michael Ramsey-Musolf (mjrm@physics.umass.edu)
-o The first edition of Course 8 on Theoretical approaches to describe exotic nuclei will be titled Atomic Nuclei as Open Quantum Systems: Unifying Nuclear Structure and Reactions. It will be offered in the summer of 2019 at the _INT_. Contact: Christian Forssen (christian.forssen@chalmers.se)
+o The first edition of Course 8 on Theoretical approaches to describe exotic nuclei will be titled Atomic Nuclei as Open Quantum Systems: Unifying Nuclear Structure and Reactions. It will be offered in the summer of 2019/2020 at the _INT_. Contact: Christian Forssen (christian.forssen@chalmers.se)
 
 
 
@@ -82,11 +82,11 @@ o The first edition of Course 8 on Theoretical approaches to describe exotic nuc
 !split
 ===== The 2018 course at "Henan Normal University, Xin-Xiang":"http://www.htu.cn/english/".   =====
 !bblock 
-The aim is to run a three-week Talent course at Henan Normal University in Xin-Xiang. Chung-Wang Ma is the local host. 
+The aim is to run a three-week Talent course at Henan Normal University in Xin-Xiang. Professor Chung-Wang Ma is the local host. 
 
-The Chinese community had a course on Reaction theory for nuclear experiments (course 6) as the ideal. It has however been difficult to set up this course and a possibility is to rather organize a course on
+The Chinese community had a course on Reaction theory for nuclear experiments (course 6) as their first choice. It has however been difficult to set up this course and a possibility is to rather organize a course on
 
-* Many-body methods for nuclear structure and reactions (courses 5 and 6), July-August 2018.
+* Many-body methods for nuclear structure and reactions (a mix courses 2, 5 and 6), July-August 2018.
 
 
 !eblock
