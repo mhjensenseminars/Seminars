@@ -92,8 +92,18 @@ The impact of the computer on mathematics and science is tremendous: _science an
 * Computing can enhance the understanding of abstractions and generalization.
 * Computing can decrease the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.
 
+!split
+===== Disasters attributable to poor management of code =====
 
+Have you been paying attention in your numerical analysis or scientific computation courses? If not, it could be a costly mistake. Here are some real life examples of what can happen when numerical algorithms are not correctly applied.
 
+o "The Patriot Missile failure":"http://www-users.math.umn.edu/~arnold/disasters/patriot.html", in Dharan, Saudi Arabia, on February 25, 1991 which resulted in 28 deaths, is ultimately attributable to poor handling of rounding errors.
+
+o "The explosion of the Ariane 5 rocket":"http://www-users.math.umn.edu/~arnold/disasters/ariane.html" just after lift-off on its maiden voyage off French Guiana, on June 4, 1996, was ultimately the consequence of a simple overflow.
+
+o "The sinking of the Sleipner A":"http://www-users.math.umn.edu/~arnold/disasters/sleipner.html" offshore platform in Gandsfjorden near Stavanger, Norway, on August 23, 1991, resulted in a loss of nearly one billion dollars. It was found to be the result of inaccurate finite element analysis.
+
+o Add about Mars expedition
 
 !split
 ===== Modeling and computations as a way to enhance algorithminc thinking =====
@@ -1164,3 +1174,7 @@ Change `r` in the program and play around to make a better fit!
 !eblock
 
 
+
+
+
+    
