@@ -134,6 +134,24 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== What do we need =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-beamer.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/ipynb/NPCompetences.ipynb"
+
+
+
 ===== Why clean code matters =====
 
 
