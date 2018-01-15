@@ -1,6 +1,6 @@
 # Slides for PHY981
 TITLE: Nuclear Physics courses and which competences should our students have?
-AUTHOR: Alex Brown and Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+AUTHOR: Alex Brown and Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA
 DATE: Today
 
 !split
@@ -8,7 +8,7 @@ DATE: Today
 !bblock
 * Develop structured courses/modules which will provide our students with a modern education in nuclear physics
 * Modules/courses should contain a high-level of synchronization
-* A computational perspective is essential. In 2020 it is expected that one out two jobs in the STEM fields will be within computing
+* A computational perspective is essential. In 2020 it is expected that one out of two jobs in the STEM fields will be within computing
 * What kind of competences should our students have?
 * Should we develop learning outcomes?
 
@@ -28,7 +28,7 @@ We have at MSU a
 
 These  basic courses have a duration each  of 30-40 hours (2-3 credits).   
 
-We have also an advanced course on Special topics in Nuclear Physics, reaction theory, PHY 989.
+We have also advanced courses on Special topics in Nuclear Physics like PHY 989.
 
 !eblock
 
@@ -131,7 +131,7 @@ _Computing competence is in general weak or lacks totally._
 ===== To think of =====
 !bblock 
 * How many basic courses can an institution offer, and which courses should be offered?
-* How can the coming FRIB theory alliance be used to coordinate an advanced training in nuclear physics?
+* How can the FRIB theory alliance be used to coordinate an advanced training in nuclear physics?
 * How to integrate the (*ad hoc*) Nuclear Talent courses/initiative  in our education? 
 * Most courses offered are theoretical ones. We need a better coordination between theory and experiment.  
 * Is it possible to integrate material developed in different Talent courses, offering thereby a coherent source for educating the next generation of nuclear physicists? Keyword: Modularization of topics.
