@@ -1,0 +1,176 @@
+TITLE: Hans Petter Langtangen til minne
+AUTHOR: Morten Hjorth-Jensen at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: Det Norske Vitenskaps Akademi, 16 Mars, 2017
+
+===== Minnetale over Professor Hans Petter Langtangen =====
+
+FIGURE: [figures/hp3.jpg, width=500 frac=0.6] 
+
+Hans Petter Langtangen (født 3 januar 1962) forlot oss 10 oktober
+2016, etter nesten to års kamp mot kreft. Det er med stor tristhet vi
+skriver disse ord, for Hans Petter var en stor inspirasjonskilde for
+oss alle, både for kollegaer og studenter, her hjemme og i det store
+utland. Hans Petter levde opp til alle våre idealer om den sanne
+akademiker, en inspirerende foreleser som vant mang en pris for sitt
+engasjement og interesse for studentene og en topp internasjonal
+forsker, med flere populære og anerkjente tekstbøker i sitt
+forfatterskap. I tillegg var Hans Petter en person som alltid ga alt
+av seg sjøl til sine omgivelser. Han var alltid opptatt av å skape
+unike forsknings og utdanningsmiljø, miljø som var intellektuelt
+stimulerende uansett hvor han var og hvem han henvendte seg til, enten
+det var en førsteårsstudent eller en erfaren forsker. Hans Petter var
+en unik drivkraft i akademia og etterlater seg et stort tomrom,
+intellektuelt og ikke minst som medmenneske og god kollega.
+
+Hans Petter begynte å tråkke sine akademiske barnesko ved universitetet i Oslo
+(UiO) tidlig på åttitallet og levert sin Cand. Scient. oppgave i
+mekanikk i 1985. Deretter fulgte fire år som stipendiat og
+doktorgradsstudier før han disputert i 1989, igjen med fagfeltet
+mekanikk (med hovedtyngde mot numerisk mekanikk) ved matematisk
+institutt ved UiO som hovedfokus. Hans interesse for
+beregningsorientert naturvitenskap og datamaskiner blei nok vekt i
+løpet av dette tiåret.  Deretter fulgte stilling som forsker i anvendt
+matematikk ved Sintef sin Oslo avdeling (1990-1991 og 1991-1997)
+samtidig som han blei ansatt som førsteamanuensis ved matematisk
+institutt UiO i 1991. I 1998 blei han forfremma til professor ved
+samme institutt, før han skifta til institutt for informatikk UiO,
+hvor han blei til sin bortgang.  Hans Petter var også sentral i
+stiftelsen av det suksessrike forskningslaboratoriet Simula, hvor han
+var forskningsprofessor i tida 2001-2012 og deretter Simula Fellow fra
+og med 2012. I løpet av noen få hektiske uker forfatta Hans Petter
+søknaden til det som blei til et nytt senter for fremragende
+forsknings (SFF), senteret for for Biomedical Computing, hvor han var
+leder fra starten av i 2007 til han blei alvorlig sjuk.
+
+
+=== Et unikt forfatterskap ===
+
+Hans Petter var ikke bare en glimrende forsker og underviser, men også
+en meget visjonær og produktiv forfatter i numerisk matematikk og
+beregningsorientert naturvitenskap. Mange av bøkene springer ut av
+hans iver etter å undervise nye temaer. Et ypperlig eksempel er den
+vidt populære læreboka i programmering, med  vekt på
+programmeringsspråket Python. I 2007 blei det bestemt at flere
+studieprogram ved det Matematisk-Naturvitenskapelige fakultetet ved
+UiO skulle tilby et introduksjonskurs i programmering med fokus på
+naturvitenskapelige anvendelser. Dette kurset la grunnlaget for videreutviklinga av et av
+UiO sine viktigste prosjekt på utdanningssida, nemlig det såkalla
+Computing in Science Education prosjektet. Med det nye kurset kunne en
+introdusere numeriske oppgaver i første semester og gjenbruke denne
+kunnskapen i videregående fysikk kurs, matematikk kurs og relaterte
+disipliner. Dette har skapt et betydelig momentum hva utdanning angår
+og gjort at UiO er et av de ledende universitetet i verden når det
+gjelder innføring og synkronisering av  numeriske metoder i begynnerkurs i realfag.
+Første utkast av den  ovennevnte læreboka, med tittel *A Primer on Scientific Programming with Python*,  blei til i løpet av sommerferien 2007 og var nesten ferdig til semesterstart. Siden den gang har boka kommet ut i flere opplag med over titusen solgte eksemplarer. Utgaven fra 2016 har nesten 100000 nedlastninger fra Springer sin hjemmeside. 
+
+Hans Petter hadde alltid mange nye ideer til tekstbøker og lærebøker,
+med flere uferdige manuskript. Under sitt sjukeleie klarte Hans
+Petter, enten som aleineforfatter eller sammen med gode kollegaer, å
+ferdigstille fem nye bøker. Noen av disse bøkene er små perler i numeriske
+metoder.  I tillegg til mange bøker består Hans Petter sitt
+forfatterskap av mange forskningsartikler i vitenskapelige tidsskrift,
+bidrag til konferanser, foredrag og mye mer. Ei liste over
+Hans Petter sitt bokforfatterskap følger til slutt.
+
+
+En stor del av Hans Petters forskning og undervisning, noe tekstbøkene
+gjenspeiler, var retta mot numeriske metoder i fluidmekanikk,
+mumeriske metoder for stokastiske mekanikk problem, og ikke minst
+numerisk programvare med vekt mot skripting og objektorientert
+programmering.
+
+Han var drifkrafta i utviklinga av Diffpack, noe han starta i
+sin tid på Sintef. Diffpack er et objektorientert programvareprodukt for
+studier av partielle differensiallikninger. Denne programvaren leda
+til etableringa av firmaet Numerical Objects A/S. I 2003 blei
+teknologien bak Diffpack solgt til det tyske firmaet
+inuTech. Kundelista for Diffpack spenner fra NASA og Intel til
+verdenskjente universitet sm Cambridge, Cornell og Stanford, for å
+nevne noen.
+
+I tillegg til sitt omfattende faglige engasjement bidro Hans Petter til
+en betydelig styrking av eget fagfelt nasjonalt og internasjonalt. Anerkjennelsen
+for dette arbeidet resulterte i den meget prestisjetunge jobben som
+hovedredaktør for SIAM (Society of Industrial and Applied Mathematics) sitt
+tidsskrift om Scientific Computing, en jobb han utførte med stor glede
+og nytte for fellesskapet fra 2011 til sjukdommen tok over i 2015. I
+tillegg var Hans Petter redaksjonsmedlem (associated editor) for seks
+andre vitenskapelige tidsskrift. Han blei medlem av Det Norske
+Vitenskaps-akademi i 2014 og var også medlem av det Europeiske
+Vitenskapsakademiet. I tillegg til flere forskningspriser var han
+leder og medlem av organisasjonskomiteer for flere store internasjonal
+konferanser, bla. SIAM Conference on Computational Science and
+Engineering i Boston, USA, i 2013.
+
+=== Hans Petter Langtangen, en sann akademiker ===
+
+I tillegg til en imponerende faglig merittliste, er det neppe en
+overdrivelse å si at Hans Petter store hjertebarn var undervisning og
+hans omtanke for studentenes faglige ve og vel. Hans lojalitet var
+alltid retta mot universitetets ideer og idealer, samt studentene
+våre.  I løpet av sin tid som universitetslærer var Hans Petter med å
+veglede 100 studenter, derav 24 som doktorgradsstudenter, 69 som
+masterstudenter og 7 sivilingeniør studenter. Hans iver og innsikt
+etter å starte nye kurs som ga studentene de ferdighetene og
+kompetanser som kvalifiserte dem for et moderne arbeidsliv, var
+enestående og forut for sin tid. Hans grunnkurs i programmering hadde
+flere hundre studenter hvert høstsemester. Et gjengs sitat fra mange
+studenter som opplevde Hans Petter som foreleser er *hvor heldige vi
+var som møtte professor Langtangen når vi begynte på UiO*.
+
+Hans Petters var brennende opptatt av utdanning og var en stor
+inspirasjonskilde for oss alle, med et hav av bidrag og
+anerkjennelser, flere priser som beste foreleser og ikke minste
+universitetet i Oslos pris for fremragende undervisning i 2011, den
+nasjonale NOKUT prisen i 2012 samt den nasjonale Olav Thon stiftelsens
+pris for fremragende undervisning i 2016.
+
+Hans Petter var en sentral drifkraft i Computing in Science Education
+initiativet ved universitetet i Oslo, samt det nye senteret for
+fremrangende undervisning *Center for Computing in Science Education*
+ved samme universitet. Hans Petter var brennende opptatt av alle sider
+ved utdanning og Computing in Science Education prosjektet ved UiO
+har vært med å forandre måten numeriske beregninger inkluderes i
+grunnleggende realfagsundervisning, med flere universitet i inn og
+utland som prøver å få til liknende tiltak. 
+
+Beregninger og datamaskiner spiller idag en heilt sentral rolle i den
+teknologiske utviklinga og Hans Petter så tidlig at programmering,
+numeriske beregninger og datamaskiner, med det engelske order Computing som samlebegrep, gir
+oss universitetslærere heilt nye muligheter. Som lærer kan en bringe
+mer forskningsnære eksempler fra tidlig av og dermed stimulere
+studentenes forståelse og vitenskapelige kreativitet på et tidligere
+stadium i utdanningsløpet.  Det gir studentene muligheten for å lage
+generaliseringer og abstraksjoner som en ikke kan få til via vanlige
+analytiske øvelser med papir og blyant. Det minsker behovet for til
+tider unødige manipulasjoner av matematiske uttrykk. En kan fokusere
+og utforske vitenskapelige problem på et anna nivå enn tidligere og
+dermed gi studentene en djupere forståelse av naturvitenskapelige
+problem og den vitenskapelige prosessen. Resultatet er også et større
+fokus på universitets pedagogikk. Hans Petter brant inderlig for dette
+og var alltid en ettertrakta foredragsholder om pedagogiske tiltak og
+nyvinninger.  
+
+
+Vi hedrer Hans Petter Langtangen og lyser fred over hans minne og våre
+tanker går til hans nærmeste familie og kjære.  
+Vi som kollegaer og venner har mista en fantastisk person og inspirasjonskilde. Det var
+ekstra morsomt å gå pa jobb når en visste at Hans Petter stakk
+innom. Hans evne til å gi av seg sjøl i enhver situasjon og inspirere
+er sterkt savna.
+
+FIGURE: [figures/langtangenb.jpg, width=700 frac=0.5] 
+
+
+=== Bøker av Hans Petter Langtangen ===
+o H. P. Langtangen. Computational Partial Differential Equations - Numerical Methods and Diffpack Programming. Lecture Notes in Computational Science and Engineering. Springer, 1999. 682 sider
+o H. P. Langtangen. Computational Partial Differential Equations - Numerical Methods and Diffpack Programming. Texts in Computational Science and Engineering. Springer, second (significantly expaned and revised) edition, 2003. 855 sider
+o H. P. Langtangen. Python Scripting for Computational Science. Texts in Computational Science and Engineering. Springer, third edition, 2008. 750 sider
+o A. Tveito, X. Cai, H. P. Langtangen, and B. F. Nielsen. Elements of Scientific Computing. Texts in Computational Science and Engineering. Springer, 2010.
+o H. P. Langtangen. A Primer on Scientific Programming with Python. Texts in Computational Science and Engineering. Springer, fourth edition, 2014. 792 sider
+o S. Linge and H. P. Langtangen. Programming for Computations - A Gentle Introduction to Numerical Simulations with Python. Texts in Computational Science and Engineering. Springer, 2016.
+o S. Linge and H. P. Langtangen. Programming for Computations - A Gentle Introduction to Numerical Simulations with MATLAB/Octave. Texts in Computational Science and Engineering. Springer, 2016. 
+o H. P. Langtangen. Finite Difference Computing with Exponential Decay Models. Lecture Notes in Computational Science and Engineering. Springer, 2016.
+o H. P. Langtangen and G. K. Pedersen. Scaling of Differential Equations. SimulaSpringerBriefs. Springer, 2016.
+o H. P. Langtangen and S. Linge. Finite Difference Computing with Partial Differential Equations. Texts in Computational Science and Engineering. Springer, 2016.
+
