@@ -10,21 +10,6 @@
 
 
 
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
-<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
-<script>
-$(function () {
-    // Make the div with id 'mycell' a Sage cell
-    sagecell.makeSagecell({inputLocation:  '#mycell',
-                           template:       sagecell.templates.minimal,
-                           evalButtonText: 'Activate'});
-    // Make *any* div with class 'compute' a Sage cell
-    sagecell.makeSagecell({inputLocation: 'div.compute',
-                           evalButtonText: 'Evaluate'});
-});
-</script>
-
 
 
 
@@ -162,7 +147,7 @@ MathJax.Hub.Config({
 <center><b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>NS3 Nuclear Physics Summer School 2018, Nuclear Models</h4></center> <!-- date -->
+<center><h4>NS3 Nuclear Physics Summer School 2018</h4></center> <!-- date -->
 <br>
 <p>
 
@@ -182,7 +167,12 @@ nuclear stability, is one of the
 overarching aims and intellectual challenges 
 of basic research in nuclear physics. To relate the stability of matter
 to the underlying fundamental forces and particles of nature as manifested in nuclear matter, is central
-to present and planned rare isotope facilities. 
+to present and planned rare isotope facilities.
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
 Important properties of nuclear systems which can reveal information about these topics 
 are for example masses, and thereby binding energies, and density distributions of nuclei.  
 These are quantities which convey important information on 
@@ -242,7 +232,10 @@ During this summer school you will meet several of the above theoretical approac
 
 <p>
 The aim here is provide you with the starting point for modeling nuclei and nuclear matter.
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 Where we do start from? 
 
@@ -269,7 +262,10 @@ Neutron (or proton)-rich nuclei are particularly interesting. As a particular ch
 of isotopes (isotones) becomes more and more neutron (proton) rich, one reaches finally the limit of stability, the so-called
 dripline, where one additional neutron (proton) makes the next isotope (isotone)  unstable with respect 
 to the previous ones.
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 The appearence or not of magic numbers and shell structures,
 the formation of for example neutron skins and halos
@@ -386,6 +382,11 @@ we are capable of parametrizing the abovementioned interactions in
 order to reproduce say the excitation spectrum of a nucleus like
 \( {}^{17}\mbox{O} \).
 
+
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 With such a parametrized interaction we are able to solve
 Schroedinger's equation for the motion of one nucleon in a given
@@ -410,7 +411,10 @@ An improvement to these simpler single-nucleon potentials is given by
 the Hartree-Fock method, where the variational principle is used to
 define a mean-field which the nucleons move in. There are many
 different classes of mean-field methods.
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 An important difference
 between these methods and the simpler parametrized mean-field
@@ -431,11 +435,14 @@ functional theory can be considered as essential <em>kitchen items</em> in our a
 <b></b>
 <p>
 The aim here is to present some of the experimental data we
-will confront theory with. In particular, we will focus on separation
+use to motivate our ansatz for a many-body wave function. In particular, we will focus on separation energies
 and shell-gap energies and use these to build a picture of nuclei in
 terms of (from a philosophical stand we would call this a reductionist
 approach) a single-particle picture.
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 The harmonic oscillator will
 serve as an excellent starting point in building nuclei from the
@@ -443,15 +450,11 @@ bottom and up. Here we will neglect a theoretical description in terms of the un
 
 
 </div>
-</section>
 
-
-<section>
-<h2 id="___sec13">Aims here </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The aims here are to develop our physics intuition of nuclear
+We want to develop our physics intuition of nuclear
 systems using a theoretical approach where we describe data in terms
 of the motion of individual nucleons and their mutual interactions.
 
@@ -461,7 +464,7 @@ of the motion of individual nucleons and their mutual interactions.
 
 
 <section>
-<h2 id="___sec14">Do we understand the physics of dripline systems? </h2>
+<h2 id="___sec13">Do we understand the physics of dripline systems? </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -471,8 +474,11 @@ Our first approach in analyzing data theoretically, is to see if we can use expe
 <p><li> Extract information about a <em>so-called</em> single-particle  behavior</li>
 <p><li> And interpret such a behavior in terms of the underlying forces and microscopic physics</li>
 </ul>
-<p>
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
 The next step is to see if we could use these interpretations to say something about shell closures and magic numbers. Since we focus on single-particle properties, a quantity we can extract from experiment is the separation energy for protons and neutrons. Before we proceed, we need to define quantities like masses and binding energies.   Two excellent reviews on 
 recent trends in the determination of nuclear masses can be found in the articles of <a href="http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021" target="_blank">Lunney and co-workers</a> and <a href="http://iopscience.iop.org/1402-4896/2013/T152/014017/" target="_blank">Blaum and co-workers</a>
 </div>
@@ -480,12 +486,15 @@ recent trends in the determination of nuclear masses can be found in the article
 
 
 <section>
-<h2 id="___sec15">Masses and Binding energies </h2>
+<h2 id="___sec14">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 A basic quantity which can be measured for the ground states of nuclei is the atomic mass \( M(N, Z) \) of the neutral atom with atomic mass number \( A \) and charge \( Z \). The number of neutrons is \( N \).
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 Atomic masses are usually tabulated in terms of the mass excess defined by
 <p>&nbsp;<br>
@@ -508,7 +517,7 @@ data from the 2003 compilation of <a href="http://www.sciencedirect.com/science/
 
 
 <section>
-<h2 id="___sec16">Masses and Binding energies </h2>
+<h2 id="___sec15">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -525,7 +534,10 @@ $$
 m_n = 939.56536(8)\hspace{0.1cm} \mathrm{MeV}/c^2 = 1.0086649156(6)u.
 $$
 <p>&nbsp;<br>
+</div>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 In the 2003 mass evaluation there are 2127 nuclei measured with an accuracy of 0.2
 MeV or better, and 101 nuclei measured with an accuracy of greater than 0.2 MeV. For
@@ -535,7 +547,7 @@ heavy nuclei one observes several chains of nuclei with a constant \( N-Z \) val
 
 
 <section>
-<h2 id="___sec17">Masses and Binding energies </h2>
+<h2 id="___sec16">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -563,38 +575,36 @@ where \( \Delta_H c^2 = 7.2890 \) MeV and \( \Delta_n c^2 = 8.0713 \) MeV.
 
 
 <section>
-<h2 id="___sec18">Masses and Binding energies </h2>
+<h2 id="___sec17">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number \( A \). One notices clearly a saturation of the binding energy per nucleon at \( A\approx 56 \).
 <p>
 
-
-<div class="compute"><script type="text/x-sage">
-import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/bindingenergies.dat")
-# Make arrays containing x-axis and binding energies as function of A
-x = data[:,2]
-bexpt = data[:,3]
-plt.plot(x, bexpt ,'ro')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment'), loc='upper right')
-plt.title(r'Binding energies from experiment')
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
+<span style="color: #228B22"># Load in data file</span>
+data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.dat&quot;</span>)
+<span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of A</span>
+x = data[:,<span style="color: #B452CD">2</span>]
+bexpt = data[:,<span style="color: #B452CD">3</span>]
+plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;ro&#39;</span>)
+plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
+plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
+plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
+plt.legend((<span style="color: #CD5555">&#39;Experiment&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
+plt.title(<span style="color: #CD5555">r&#39;Binding energies from experiment&#39;</span>)
 plt.show()
-
-</script></div>
+</pre></div>
 
 </div>
 </section>
 
 
 <section>
-<h2 id="___sec19">Liquid drop model as a simple parametrization of binding energies  </h2>
+<h2 id="___sec18">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -614,7 +624,7 @@ to the experimental data.
 
 
 <section>
-<h2 id="___sec20">Liquid drop model as a simple parametrization of binding energies  </h2>
+<h2 id="___sec19">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -629,7 +639,7 @@ To arrive at the above expression we have assumed that we can make the following
 
 
 <section>
-<h2 id="___sec21">Liquid drop model as a simple parametrization of binding energies, continues  </h2>
+<h2 id="___sec20">Liquid drop model as a simple parametrization of binding energies, continues  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -637,12 +647,15 @@ To arrive at the above expression we have assumed that we can make the following
 
 <p><li> There is an asymmetry term \( a_4\frac{(N-Z)^2}{A} \). This term is associated with the Pauli exclusion principle and reflectd the fact that the proton-neutron interaction is more attractive on the average than the neutron-neutron and proton-proton interactions.</li>
 </ul>
-<p>
+</div>
 
-We could also add a so-called pairing term, which is a correction term that
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We could also add a so-called pairing term (an important model in nuclear physics), which is a correction term that
 arises from the tendency of proton pairs and neutron pairs to
 occur. An even number of particles is more stable than an odd number. 
-Performing a least-square fit to data, we obtain the following numerical values for the various constants
+Performing a least-square fit to data (try this), we obtain the following numerical values for the various constants
 
 <ul>
 <p><li> \( a_1=15.49 \) MeV</li>
@@ -655,7 +668,7 @@ Performing a least-square fit to data, we obtain the following numerical values 
 
 
 <section>
-<h2 id="___sec22">Masses and Binding energies </h2>
+<h2 id="___sec21">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -685,7 +698,7 @@ plt.show()
 
 
 <section>
-<h2 id="___sec23">Masses and Binding energies </h2>
+<h2 id="___sec22">Masses and Binding energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -731,7 +744,7 @@ A cute article which uses Machine Learning to extract info on mass models
 
 
 <section>
-<h2 id="___sec24">\( Q \)-values and separation energies </h2>
+<h2 id="___sec23">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -755,7 +768,7 @@ $$
 
 
 <section>
-<h2 id="___sec25">\( Q \)-values and separation energies </h2>
+<h2 id="___sec24">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -779,7 +792,7 @@ $$
 
 
 <section>
-<h2 id="___sec26">Motivation </h2>
+<h2 id="___sec25">Motivation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Do we understand the physics of dripline systems?</b>
 <p>
@@ -804,7 +817,7 @@ $$
 
 
 <section>
-<h2 id="___sec27">\( Q \)-values and separation energies </h2>
+<h2 id="___sec26">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -821,7 +834,7 @@ Spontaneous decay involves a single initial nuclear state and is allowed if \( Q
 
 
 <section>
-<h2 id="___sec28">\( Q \)-values and separation energies </h2>
+<h2 id="___sec27">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -859,7 +872,7 @@ $$
 
 
 <section>
-<h2 id="___sec29">Separation energies and energy gaps </h2>
+<h2 id="___sec28">Separation energies and energy gaps </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -898,7 +911,7 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 
 
 <section>
-<h2 id="___sec30">Separation energies for oxygen isotopes </h2>
+<h2 id="___sec29">Separation energies for oxygen isotopes </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -928,7 +941,7 @@ plt.show()
 
 
 <section>
-<h2 id="___sec31">Energy gaps for oxygen isotopes </h2>
+<h2 id="___sec30">Energy gaps for oxygen isotopes </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -958,7 +971,7 @@ plt.show()
 
 
 <section>
-<h2 id="___sec32">Features to be noted  </h2>
+<h2 id="___sec31">Features to be noted  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -979,7 +992,7 @@ One may thus infer that intrinsic properties of nucleons in a nucleus are close 
 
 
 <section>
-<h2 id="___sec33">Features to be noted, continues  </h2>
+<h2 id="___sec32">Features to be noted, continues  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -998,8 +1011,11 @@ In the exercise below you will be asked to perform a similar analysis for other 
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec34">Exercise 1: Masses and binding energies </h2>
+<h2 id="___sec33">Exercise 1: Masses and binding energies </h2>
 
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 The data on binding energies can be found in the file bedata.dat (go to the datafiles folder)
 
@@ -1034,6 +1050,7 @@ Make a plot of the binding energies as function of the number of nucleons \( A \
 <b>d)</b>
 Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
 Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment.  Comment your results.
+</div>
 
 <p>
 <!-- --- end exercise --- -->
@@ -1041,14 +1058,14 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 
 
 <section>
-<h2 id="___sec35">Our first attempt at a model,  harmonic oscillator spectrum  </h2>
+<h2 id="___sec34">Our first attempt at a model,  harmonic oscillator spectrum  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 <center>  <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 3:  Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force. </p></center>
-<p><img src="figslides/singleparticle.png" align="bottom" width=500></p>
+<p><img src="figslides/singleparticle.png" align="bottom" width=800></p>
 </center>
 
 
@@ -1057,7 +1074,7 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 
 
 <section>
-<h2 id="___sec36">The Woods-Saxon potential  </h2>
+<h2 id="___sec35">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1078,7 +1095,7 @@ The value for \( r_0 \) can be extracted from a fit to data, see for example <a 
 
 
 <section>
-<h2 id="___sec37">The Woods-Saxon potential  </h2>
+<h2 id="___sec36">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1130,7 +1147,7 @@ From the plot we notice that the potential
 
 
 <section>
-<h2 id="___sec38">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec37">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1157,7 +1174,7 @@ $$
 
 
 <section>
-<h2 id="___sec39">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec38">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1193,7 +1210,7 @@ $$
 
 
 <section>
-<h2 id="___sec40">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec39">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1226,7 +1243,7 @@ This term arises from the nuclear force in a natural way.
 
 
 <section>
-<h2 id="___sec41">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec40">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1255,7 +1272,7 @@ $$
 
 
 <section>
-<h2 id="___sec42">Single-particle Hamiltonians and spin-orbit force </h2>
+<h2 id="___sec41">Single-particle Hamiltonians and spin-orbit force </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1263,6 +1280,11 @@ We can also add, in case of proton, a Coulomb potential. The
 Woods-Saxon potential has been widely used in parametrizations of
 effective single-particle potentials.
 
+
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 <b>However, as was the case with
 the harmonic oscillator, none of these potentials are linked directly
@@ -1278,7 +1300,7 @@ on the nucleon-nucleon interaction and forms the basis for the discussions of Br
 
 
 <section>
-<h2 id="___sec43">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec42">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1301,7 +1323,7 @@ To solve the above equation is however rather straightforward numerically.
 
 
 <section>
-<h2 id="___sec44">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec43">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1326,7 +1348,7 @@ $$
 
 
 <section>
-<h2 id="___sec45">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec44">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1346,7 +1368,7 @@ with \( n=0,1,2,\dots \) and \( l=0,1,2,\dots \).
 
 
 <section>
-<h2 id="___sec46">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec45">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1368,7 +1390,7 @@ The boundary conditions are \( u(0)=0 \) and \( u(\infty)=0 \).
 
 
 <section>
-<h2 id="___sec47">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec46">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1403,7 +1425,7 @@ $$
 
 
 <section>
-<h2 id="___sec48">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec47">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1434,7 +1456,7 @@ $$
 
 
 <section>
-<h2 id="___sec49">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec48">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1460,7 +1482,7 @@ the eigenvalues for \( l=0 \) are
 
 
 <section>
-<h2 id="___sec50">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec49">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1486,7 +1508,7 @@ You need to check your results for the energies against different values
 
 
 <section>
-<h2 id="___sec51">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec50">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1523,7 +1545,7 @@ $$
 
 
 <section>
-<h2 id="___sec52">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec51">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1549,7 +1571,7 @@ In this case the non-diagonal matrix elements are given by a mere constant. <em>
 
 
 <section>
-<h2 id="___sec53">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec52">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1589,7 +1611,7 @@ $$
 
 
 <section>
-<h2 id="___sec54">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec53">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1617,7 +1639,7 @@ The solution is zero in both cases.
 
 
 <section>
-<h2 id="___sec55">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec54">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1629,7 +1651,7 @@ The following python program is an example of how one can obtain the eigenvalues
 
 
 <section>
-<h2 id="___sec56">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec55">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1711,8 +1733,11 @@ plt.show()
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec57">Exercise 2: Eigenstates and eigenvalues of single-particle problems </h2>
+<h2 id="___sec56">Exercise 2: Eigenstates and eigenvalues of single-particle problems </h2>
 
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
 <b>a)</b>
 Compute the eigenvalues of the three lowest states with a given orbital momentum and oscillator frequency \( \omega \). Study these results as functions of the the maximum value of \( r \) and the number of integration points \( n \), starting with  \( r_{\mathrm{max}}=10 \). Compare the computed ones with the exact values and comment your results.
@@ -1723,7 +1748,8 @@ Plot thereafter the eigenfunctions as functions of \( r \) for the lowest-lying 
 
 <p>
 <b>c)</b>
-Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
+Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest three eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
+</div>
 
 <p>
 <!-- --- end exercise --- -->
@@ -1731,7 +1757,7 @@ Replace thereafter the harmonic oscillator potential with a Woods-Saxon potentia
 
 
 <section>
-<h2 id="___sec58">Where do we go from here? </h2>
+<h2 id="___sec57">Where do we go from here? </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1739,7 +1765,7 @@ Replace thereafter the harmonic oscillator potential with a Woods-Saxon potentia
 <p>
 With a single-particle basis (an orthonormal basis) we can construct a basis of anti-symmetrized and orthogonal many-body states
 (called Slater determinants). This basis can then be used to study various many-body methods and properties of nuclei.
-Recall that nuclei are complicated many-body systems.
+Recall that nuclei are complicated many-body systems. It is an essential input to Brown's and Hergert's talks later this week.
 </div>
 
 <p>
@@ -1750,7 +1776,11 @@ A single-particle basis like the harmonic oscillator basis is also a useful basi
 </div>
 
 <p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
 Hopefully, this gives you an input to the discussions to come of Alex Brown and Heiko Hergert.  Best wishes to you all and enjoy your time at MSU.
+</div>
 </section>
 
 
