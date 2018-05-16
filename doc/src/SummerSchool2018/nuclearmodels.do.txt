@@ -1,6 +1,6 @@
-TITLE: NS3 Nuclear Physics Summer School 2018
+TITLE: Nuclear Models
 AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-DATE:  May 2018
+DATE:  NS3 Nuclear Physics Summer School 2018, Nuclear Models
 
 !split 
 ===== Stability of matter ===== 
@@ -20,63 +20,69 @@ away from  the valley of stability.
 
 !eblock
 
+!split
+===== Motivation and the many scales of the nuclear many-body problem  =====
+!bblock
+To understand nuclei and nuclear matter theoretically means
+* Understand how the laws of motion and  the fundamental forces at play govern the _nuclear world_
+* Quantum Chromodynamics with quarks and gluons is the model for the strong force
+* The degrees of freedom from quarks and gluons are too complicated for an *effective* theoretical study of nuclei and nuclear matter
+* Effective degrees of freedom (*dof*) in terms of protons, neutrons and selected mesons like pions. These *dof* lead to an effective field theory for the nuclear forces 
+* Solve the nuclear many-body problem using various mathematical algorithms, large scale diagonalization, renormalization techniques, quantum computing, machine learning, lattice quantum chromodynamics etc etc. The math spans from eigenvalue problems to stochastic modeling.
+!eblock
+
+!split
+===== Where to find the material =====
+!bblock
+The Ipython (Jupyter) Notebook is at the link URL:"https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb"
+
+The material in various formats (jupyter notebooks, various html and pdf formats) is at URL:"http://mhjensenseminars.github.io/EducationalSeminars/doc/web/overview.html"
+
+The main Github address for all material is at URL:"https://github.com/mhjensenseminars/EducationalSeminars"
+
+Feel free to use this material as you wish.
+!eblock
+
+
+!split
+===== The nuclear many-body problem, where do we start?  =====
+!bblock
+During this summer school you will meet several of the above theoretical approaches to understand nuclei from a bottom-up type of approach
+(lectures of Brown and Hergert).
+
+The aim here is provide you with the starting point for modeling nuclei and nuclear matter.   
+
+Where we do start from? 
+!bpop
+Our main ansatz for a many-body wave function starts with a product of single-particle wave function. 
+* What is the rationale for doing so? 
+* And what kind of data do we have which motivates this? Hint: Think of the periodic system of atoms
+!epop
+
+!eblock
+
+
+
 !split 
 ===== Drip lines ===== 
 !bblock 
 
-Neutron-rich nuclei are particularly interesting for the above endeavour. As a particular chain
-of isotopes becomes more and more neutron rich, one reaches finally the limit of stability, the so-called
-dripline, where one additional neutron makes the next isotopes unstable with respect 
-to the previous ones. The appearence or not of magic numbers and shell structures,
-the formation of neutron skins and halos
+Neutron (or proton)-rich nuclei are particularly interesting. As a particular chain
+of isotopes (isotones) becomes more and more neutron (proton) rich, one reaches finally the limit of stability, the so-called
+dripline, where one additional neutron (proton) makes the next isotope (isotone)  unstable with respect 
+to the previous ones. 
+
+The appearence or not of magic numbers and shell structures,
+the formation of for example neutron skins and halos
 can thence be probed via investigations of quantities like  the binding energy
 or the charge radii and neutron rms radii of neutron-rich nuclei. 
 These quantities have in turn important 
 consequences for theoretical models of nuclear structure and their application in astrophysics.
 !eblock
 
-!split 
-===== More on "Neutron-rich nuclei":"http://iopscience.iop.org/1402-4896/2013/T152" ===== 
-!bblock 
-
-
-Neutron radius of ${}^{208}\mbox{Pb}$, recently extracted from the PREX 
-experiment at Jefferson Laboratory  can be used to constrain the equation of state of 
-neutron matter. A related quantity to the
-neutron rms radius $r_n^{\mathrm{rms}}=\langle r^2\rangle_n^{1/2}$ is the neutron skin 
-$r_{\mathrm{skin}}=r_n^{\mathrm{rms}}-r_p^{\mathrm{rms}}$,
-where $r_p^{\mathrm{rms}}$ is the corresponding proton rms radius.  
-There are several properties which relate the thickness of the neutron skin to quantities in nuclei and 
-nuclear matter, such as the symmetry energy at the saturation point for nuclear matter, the slope
-of the equation of state for neutron matter
-or the low-energy electric dipole strength due to the pigmy dipole resonance. 
-
-!eblock
-
-
 
 !split 
-===== Motivation ===== 
-!bblock 
-Having access to precise measurements of masses, radii, and
-electromagnetic moments for a wide range of nuclei allows to study
-trends with varying neutron excess. A quantitative description of
-various experimental data with quantified uncertainty still remains a
-major challenge for nuclear structure theory.  Global theoretical
-studies of isotopic chains, such as the Ca chain shown in the figure below here, make it possible to test systematic
-properties of effective interactions between nucleons. Such calculations also
-provide critical tests of limitations of many-body methods. As one
-approaches the particle emission thresholds, it becomes increasingly
-important to describe correctly the coupling to the continuum of
-decays and scattering channels. While the
-full treatment of antisymmetrization and short-range correlations has
-become routine in first principle  approaches (to be defined later) to nuclear bound states, the
-many-body problem becomes more difficult when long-range correlations
-and continuum effects are considered.
-!eblock
-
-!split 
-===== FRIB limits  ===== 
+===== FRIB limits for the chain of calcium isotopes ===== 
 !bblock 
 
 FIGURE: [figslides/careach.png, width=500 frac=0.6] Expected experimental information on the calcium isotopes that can be obtained at FRIB. The limits for detailed spectroscopic information are around $A\sim 60$.
@@ -84,23 +90,27 @@ FIGURE: [figslides/careach.png, width=500 frac=0.6] Expected experimental inform
 
 
 !split 
-===== Motivation and aims ===== 
+===== More on "Neutron-rich nuclei":"http://iopscience.iop.org/1402-4896/2013/T152" ===== 
 !bblock 
-
-The aim of the first part of this course is to present some of the
-experimental data which can be used to extract information about
-correlations in nuclear systems. In particular, we will start with a
-theoretical analysis of a quantity called the separation energy for
-neutrons or protons. This quantity, to be discussed below, is defined
-as the difference between two binding energies (masses) of neighboring
-nuclei. As we will see from various figures below and exercises as
-well, the separation energies display a varying behavior as function
-of the number of neutrons or protons. These variations from one
-nucleus to another one, laid the foundation for the introduction of
-so-called magic numbers and a mean-field picture in order to describe
-nuclei theoretically.
-
+The neutron radius of ${}^{208}\mbox{Pb}$, recently extracted from the PREX 
+experiment at Jefferson Laboratory  can be used to constrain the equation of state of 
+neutron matter. 
 !eblock
+
+!bblock
+A related quantity to the
+neutron rms radius $r_n^{\mathrm{rms}}=\langle r^2\rangle_n^{1/2}$ is the neutron skin 
+$r_{\mathrm{skin}}=r_n^{\mathrm{rms}}-r_p^{\mathrm{rms}}$,
+where $r_p^{\mathrm{rms}}$ is the corresponding proton rms radius.  
+There are several properties which relate the thickness of the neutron skin to quantities in nuclei and 
+nuclear matter, such as the symmetry energy at the saturation point for nuclear matter, the slope
+of the equation of state for neutron matter
+or the low-energy electric dipole strength due to the pigmy dipole resonance. 
+!eblock
+
+
+
+
 
 
 
@@ -108,9 +118,12 @@ nuclei theoretically.
 ===== Mean-field picture ===== 
 !bblock 
 
-With a mean- or average-field picture we mean that a given nucleon (either a proton or a neutron) moves in an average potential field which is set up by all other nucleons in the system. Consider for example a nucleus like ${}^{17}\mbox{O}$ with nine neutrons and eight protons. Many properties  of this nucleus can be interpreted in terms of a picture where we can view it as
-one neutron on top of ${}^{16}\mbox{O}$. We infer from data and our theoretical interpretations that this additional neutron behaves almost as an individual neutron which *sees* an average interaction set up by the remaining 16 nucleons in   ${}^{16}\mbox{O}$. A nucleus like ${}^{16}\mbox{O}$ is an example of what we in this course will denote as a good closed-shell nucleus. We will come back to what this means later.
+With a mean- or average-field picture we mean that a given nucleon (either a proton or a neutron) moves in an average potential field which is set up by all other nucleons in the system. Consider for example a nucleus like ${}^{17}\mbox{O}$ with nine neutrons and eight protons. 
+!eblock
 
+!bblock
+Many properties  of this nucleus can be interpreted in terms of a picture where we can view it as
+one neutron on top of ${}^{16}\mbox{O}$. We infer from data and our theoretical interpretations that this additional neutron behaves almost as an individual neutron which *sees* an average interaction set up by the remaining 16 nucleons in   ${}^{16}\mbox{O}$. A nucleus like ${}^{16}\mbox{O}$ is an example of what we will denote as a good closed-shell nucleus. More later.
 
 !eblock
 
@@ -118,13 +131,16 @@ one neutron on top of ${}^{16}\mbox{O}$. We infer from data and our theoretical 
 !split 
 ===== Mean-field picture, which potential do we opt for?  ===== 
 !bblock 
-
-
 A simple potential model which enjoys quite some popularity in nuclear
 physics, is the _three-dimensional harmonic oscillator_. This potential
 model captures some of the physics of deeply bound single-particle
 states but fails in reproducing the less bound single-particle
 states. 
+!eblock
+
+!split 
+===== Mean-field picture, more realistic model  ===== 
+!bblock 
 
 A parametrized, and more realistic, potential model which is
 widely used in nuclear physics, is the so-called _Woods-Saxon_
@@ -158,6 +174,7 @@ solve a single-particle problem with say a Woods-Saxon
 potential. 
 
 !eblock
+
 !split 
 ===== Motivation, better mean-fields ===== 
 !bblock 
@@ -165,13 +182,15 @@ potential.
 An improvement to these simpler single-nucleon potentials is given by
 the Hartree-Fock method, where the variational principle is used to
 define a mean-field which the nucleons move in. There are many
-different classes of mean-field methods.  An important difference
+different classes of mean-field methods.  
+
+An important difference
 between these methods and the simpler parametrized mean-field
 potentials like the harmonic oscillator and the Woods-Saxon
 potentials, is that the resulting equations contain information about
 the nuclear forces present in our models for solving Schroedinger's
 equation. Hartree-Fock and other mean-field methods like density
-functional theory form core topics in later lectures.
+functional theory can be considered as essential *kitchen items* in our attempts in solving the nuclear many-body problem.
 
 !eblock
 
@@ -185,97 +204,28 @@ The aim here is to present some of the experimental data we
 will confront theory with. In particular, we will focus on separation
 and shell-gap energies and use these to build a picture of nuclei in
 terms of (from a philosophical stand we would call this a reductionist
-approach) a single-particle picture. The harmonic oscillator will
+approach) a single-particle picture. 
+
+The harmonic oscillator will
 serve as an excellent starting point in building nuclei from the
-bottom and up. Here we will neglect nuclear forces, these are
-introduced in the next section when we discuss the Hartree-Fock
-method.
-
-The aim of this course is to develop our physics intuition of nuclear systems using  a theoretical approach  where we describe data in terms of 
-the motion of individual nucleons and their mutual interactions. 
-
-_How our theoretical pictures and models can be used to interpret data is in essence what this course is about_. Our narrative will lead us along a path where we start with single-particle models and end with the theory of the nuclear shell-model. The latter will be used to understand and analyze excitation spectra and decay patterns of nuclei, linking our theoretical understanding with interpretations of experiment. The way we build up our theoretical descriptions and interpretations follows what we may call a standard reductionistic approach, that is we start with what we believe are our effective degrees of freedom (nucleons in our case) and interactions amongst these and solve thereafter the underlying equations of motions. This defines the nuclear many-body problem, and mean-field approaches like Hartree-Fock theory and the nuclear shell-model represent different approaches to our solutions of Schroedinger's equation. 
+bottom and up. Here we will neglect a theoretical description in terms of the underlying nuclear forces (see Brown's and Hergert's lectures).
 
 !eblock
 
 
 !split 
-===== Aims of this course ===== 
+===== Aims here ===== 
 !bblock 
 
 
 
-The aims of this course are to develop our physics intuition of nuclear
+The aims here are to develop our physics intuition of nuclear
 systems using a theoretical approach where we describe data in terms
 of the motion of individual nucleons and their mutual interactions.
 
-_How our theoretical pictures and models can be used to interpret data is in essence what this course is about_. Our narrative will lead us
-along a path where we start with single-particle models and end with
-the theory of the nuclear shell-model. The latter will be used to
-understand and analyze excitation spectra and decay patterns of
-nuclei, linking our theoretical understanding with interpretations of
-experiment. The way we build up our theoretical descriptions and
-interpretations follows what we may call a standard reductionistic
-approach, that is we start with what we believe are our effective
-degrees of freedom (nucleons in our case) and interactions amongst
-these and solve thereafter the underlying equations of motions. This
-defines the nuclear many-body problem, and mean-field approaches like
-Hartree-Fock theory and the nuclear shell-model represent different
-approaches to our solutions of Schroedinger's equation.
-
 !eblock
 
 
-
-
-
-!split 
-===== Back to the stability of matter questions  ===== 
-!bblock Do we understand the physics of dripline systems?
-
-We start our tour of experimental data and our interpretations by
-considering the chain of oxygen isotopes. In the exercises below you
-will be asked to perform similar analyses for other chains of
-isotopes.
-
-The oxygen isotopes are the heaviest isotopes for which the drip line
-is well established.  The drip line is defined as the point where
-adding one more nucleon leads to an unbound nucleus. Below we will see
-that we can define the dripline by studying the separation
-energy. Where the neutron (proton) separation energy changes sign as a
-function of the number of neutrons (protons) defines the neutron
-(proton) drip line.
-
-
-!eblock
-
-
-!split 
-===== Back to the stability of matter questions  ===== 
-!bblock Do we understand the physics of dripline systems?
-
-
-The oxygen isotopes are simple enough to be described by some few
-selected single-particle degrees of freedom.
-
-* Two out of four stable even-even isotopes exhibit a doubly magic nature, namely ${}^{22}\mbox{O}$ ($Z=8$, $N=14$) and ${}^{24}\mbox{O}$ ($Z=8$, $N=16$).
-* The structure of ${}^{22}\mbox{O}$ and ${}^{24}\mbox{O}$ is assumed to be governed by the evolution of the $1s_{1/2}$ and $0d_{5/2}$  one-quasiparticle states.
-* The isotopes ${}^{25}\mbox{O}$, ${}^{26}\mbox{O}$, ${}^{27}\mbox{O}$ and ${}^{28}\mbox{O}$ are outside the drip line, since the $0d_{3/2}$ orbit is not bound.
-!eblock
-
-
-
-
-!split 
-===== Recent articles on Oxygen isotopes ===== 
-!bblock Many experiments and theoretical calculations worldwide!
- 
-* ${}^{24}\mbox{O}$ and lighter:  C.~R.~Hoffman *et al.*, Phys.~Lett.~B _672_, 17 (2009); R.~Kanungo *et al*., Phys.~Rev.~Lett.~_102_, 152501 (2009); C.~R.~Hoffman *et al*., Phys.~Rev.~C _83_, 031303(R) (2011); Stanoiu *et al*., Phys. Rev. C _69_, 034312 (2004)
-* ${}^{25}\mbox{O}$: C.~R.~Hoffman *et al*., Phys.~Rev.~Lett. _102_,152501  (2009). 
-* ${}^{26}\mbox{O}$: E.~Lunderberg *et al*., Phys.~Rev.~Lett. _108_, 142503 (2012). 
-* ${}^{26}\mbox{O}$: Z.~Kohley  *et al*., Study of two-neutron radioactivity in the decay of 26O, Phys.~Rev.~Lett., _110_, 152501 (2013). 
-* Theory: Oxygen isotopes with three-body forces,  Otsuka *et al*., Phys.~Rev.~Lett. _105_, 032501  (2010).  Hagen *et al.*, Phys.~Rev.~Lett., _108_, 242501 (2012). 
-!eblock
 
 
 !split 
@@ -308,7 +258,7 @@ where $u$ is the Atomic Mass Unit
 u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
 \]
 !et
-In this course we will mainly use 
+Here we will use
 data from the 2003 compilation of "Audi, Wapstra and Thibault":"http://www.sciencedirect.com/science/journal/03759474/729/1".
 !eblock
 
@@ -373,8 +323,6 @@ plt.xlabel(r'$A$')
 plt.ylabel(r'Binding energies in [MeV]')
 plt.legend(('Experiment'), loc='upper right')
 plt.title(r'Binding energies from experiment')
-plt.savefig('expbindingenergies.pdf')
-plt.savefig('expbindingenergies.png')
 plt.show()
 !ec
 !eblock
@@ -433,7 +381,7 @@ Performing a least-square fit to data, we obtain the following numerical values 
 ===== Masses and Binding energies ===== 
 !bblock
 The following python program reads now in the experimental data on binding energies as well as the results from the above liquid drop model and plots these energies as function of the mass number $A$. One sees that for larger values of $A$, there is a better agreement with data. 
-!bc pyscpro
+!bc pycod
 import numpy as np
 from  matplotlib import pyplot as plt
 # Load in data file
@@ -448,8 +396,6 @@ plt.xlabel(r'$A$')
 plt.ylabel(r'Binding energies in [MeV]')
 plt.legend(('Experiment','Liquid Drop'), loc='upper right')
 plt.title(r'Binding energies from experiment and liquid drop')
-plt.savefig('bindingenergies.pdf')
-plt.savefig('bindingenergies.png')
 plt.show()
 !ec
 !eblock
@@ -459,14 +405,9 @@ plt.show()
 !split 
 ===== Masses and Binding energies ===== 
 !bblock
-The   python program on the next slide reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
-!eblock
+This   python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
 
-
-!split 
-===== Masses and Binding energies, the code ===== 
-!bblock
-!bc pyscpro
+!bc pycod
 import numpy as np
 from scipy.optimize import curve_fit
 from  matplotlib import pyplot as plt
@@ -490,10 +431,13 @@ plt.xlabel(r'$A$')
 plt.ylabel(r'Binding energies in [MeV]')
 plt.legend(('Experiment','Liquid Drop'), loc='upper right')
 plt.title(r'Binding energies from experiment and liquid drop')
-plt.savefig('bindingenergies.pdf')
-plt.savefig('bindingenergies.png')
 plt.show()
 !ec
+Try to add more terms to the fitting as an exercise, or feel tempted to study Machine Learning!
+A cute article which uses Machine Learning to extract info on mass models
+* "Utama and Piekarewicz, Validating neural-network refinements of nuclear mass models, Phys. Rev. C 97, 014306 ":"https://journals.aps.org/prc/abstract/10.1103/PhysRevC.97.014306"
+
+
 !eblock
 
 
@@ -633,7 +577,7 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 =====  Separation energies for oxygen isotopes ===== 
 !bblock
 The following python programs can now be used to plot the separation energies and the energy gaps for the oxygen isotopes.  The following python code reads the separation energies from file for all oxygen isotopes from $A=13$ to $A=25$, The data are taken from the file *snox.dat*.  This files contains the separation energies and the shell gap energies.
-!bc pyscpro
+!bc pycod
 
 import numpy as np
 from  matplotlib import pyplot as plt
@@ -649,8 +593,6 @@ plt.xlabel(r'Number of neutrons $N$',fontsize=20)
 plt.ylabel(r'$S_n$ [MeV]',fontsize=20)
 plt.legend(('Separation energies for oxygen isotpes'), loc='upper right')
 plt.title(r'Separation energy for the oxygen isotopes')
-plt.savefig('snoxygen.pdf')
-plt.savefig('snoxygen.png')
 plt.show()
 !ec
 !eblock
@@ -660,7 +602,7 @@ plt.show()
 =====  Energy gaps for oxygen isotopes ===== 
 !bblock
 Here we display the python program for plotting the corresponding results for shell gaps for the oxygen isotopes. 
-!bc pyscpro
+!bc pycod
 
 import numpy as np
 from  matplotlib import pyplot as plt
@@ -676,8 +618,6 @@ plt.xlabel(r'Number of neutrons $N$',fontsize=20)
 plt.ylabel(r'$\Delta S_n$ [MeV]',fontsize=20)
 plt.legend(('Shell gap energies for oxygen isotpes'), loc='upper right')
 plt.title(r'Shell gap energies for the oxygen isotopes')
-plt.savefig('gapoxygen.pdf')
-plt.savefig('gapoxygen.png')
 plt.show()
 !ec
 
@@ -689,12 +629,11 @@ plt.show()
 !split
 ===== Features to be noted  =====
 !bblock
-Since we will focus in the beginning on single-particle degrees of freedom and mean-field approaches before we
-start with nuclear forces and many-body approaches like the nuclear shell-model, there are some features to be noted
+Since we will focus in the beginning on single-particle degrees of freedom and mean-field approaches there are some features to be noted
 
 * In the discussion of the liquid drop model and binding energies, we note that the total binding energy is not that different from the sum of the individual neutron and proton masses. 
 One may thus infer that intrinsic properties of nucleons in a nucleus are close to those of free nucleons.
-* In the discussion of the neutron separation energies for the oxygen isotopes, we note  a clear staggering effect between odd and even isotopes with the even ones being more bound (larger separation energies). We will later link this to strong pairing correlations in nuclei.
+* In the discussion of the neutron separation energies for the oxygen isotopes, we note  a clear staggering effect between odd and even isotopes with the even ones being more bound (larger separation energies). This is linked with a  strong pairing correlations in nuclei.
 
 !eblock 
 
@@ -705,559 +644,46 @@ One may thus infer that intrinsic properties of nucleons in a nucleus are close 
 * The neutron separation energy becomes negative at ${}^{25}\mbox{O}$, making this nucleus unstable with respect to the emission of one neutron. A nucleus like ${}^{24}\mbox{O}$ is thus the last stable oxygen isotopes which has been observed. Oxygen-26 has been "found":"journals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503"  to be unbound with respect to ${}^{24}\mbox{O}$.
 * We note also that there are large shell-gaps for some nuclei, meaning that more energy is needed to remove one nucleon. These gaps are used to define so-called magic numbers. For the oxygen isotopes we see a clear gap for ${}^{16}\mbox{O}$. We will interpret this gap as one of several experimental properties that define so-called magic numbers. In our discussion below we will make a first interpretation using  single-particle states from the harmonic oscillator and the Woods-Saxon potential. 
 
-In the exercises below you will be asked to perform a similar analysis for other chains of isotopes and interpret the results. 
+In the exercise below you will be asked to perform a similar analysis for other chains of isotopes and interpret the results. 
 !eblock 
 
+!split
+=====  Exercise: Masses and binding energies   =====
+The data on binding energies can be found in the file bedata.dat (go to the datafiles folder)
+!bsubex
+Write a small program which reads in the proton and neutron numbers and the binding energies 
+and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
+!bt
+\[
+S_n= BE(N,Z)-BE(N-1,Z).
+\]
+!et
+Comment your results. 
+!esubex
+
+!bsubex
+Include in the same figure(s) the liquid drop model results, namely
+!bt
+\[
+BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
+\]
+!et 
+with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV. Comment your results
+!esubex
+!bsubex
+Make a plot of the binding energies as function of the number of nucleons $A$ using the data in the file on bindingenergies and the above liquid drop model. 
+!esubex
+!bsubex
+Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
+Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment.  Comment your results.
+!esubex
 
 
 !split
-===== Radii  =====
-!bblock
-The root-mean-square (rms) charge radius has been measured for the ground states of many
-nuclei. For a spherical charge density, $\rho(\bm{r})$, the mean-square radius is defined by
-!bt
-\[
-\langle r^2\rangle = \frac{ \int  d \bm{r} \rho(\bm{r}) r^2}{ \int  d \bm{r} \rho(\bm{r})},
-\]
-!et
-and the rms radius is the square root of this quantity denoted by
-!bt
-\[
-R =\sqrt{ \langle r^2\rangle}.
-\]
-!et
-!eblock
-
-!split
-===== Radii  =====
-!bblock
-Radii for most stable
-nuclei have been deduced from electron scattering form
-factors and/or from the x-ray transition energies of muonic atoms. 
-The relative radii for a
-series of isotopes can be extracted from the isotope shifts of atomic x-ray transitions.
-The rms radius for the nuclear point-proton density, $R_p$ is obtained from the rms charge radius by:
-!bt
-\[
-R_p = \sqrt{R^2_{\mathrm{ch}}- R^2_{\mathrm{corr}}},
-\]
-!et
-where
-!bt
-\[
-R^2_{\mathrm{corr}}= R^2_{\mathrm{op}}+(N/Z)R^2_{\mathrm{on}}+R^2_{\mathrm{rel}},
-\]
-!et
-where 
-!bt
-\[
-R_{\mathrm{op}}= 0.875(7) \mathrm{fm}.
-\]
-!et  
-is the rms radius of the proton, $R^2_{\mathrm{on}} = 0.116(2)$ $\mbox{fm}^{2}$ is the
-mean-square radius of the neutron and $R^2_{\mathrm{rel}} = 0.033$ $\mbox{fm}^{2}$ is the relativistic Darwin-Foldy correction. There are additional  smaller nucleus-dependent corrections.
-!eblock
-
-
-
-
-
-
-
-!split 
-===== Definitions ===== 
-!bblock
-We will now introduce the potential models we have discussex above, namely the harmonic oscillator and the Woods-Saxon potentials.  In order to proceed, we need some definitions.
- 
-We define an operator as $\hat{O}$ throughout. Unless otherwise specified the total number of nucleons is
-always $A$ and $d$ is the dimension of the system.  In nuclear physics
-we normally define the total number of particles to be $A=N+Z$, where
-$N$ is total number of neutrons and $Z$ the total number of
-protons. In case of other baryons such as isobars $\Delta$ or various
-hyperons such as $\Lambda$ or $\Sigma$, one needs to add their
-definitions.  When we refer to a single neutron we will use the label $n$ and when we refer to a single proton we will use the label $p$. Unless otherwise specified, we will simply call these particles for nucleons.
-!eblock
-
-!split
-===== Definitions =====
-!bblock
-The quantum numbers of a single-particle state in coordinate space are
-defined by the variables 
-!bt
-\[
-x=(\bm{r},\sigma), 
-\]
-!et
-where 
-!bt
-\[
-\bm{r}\in {\mathbb{R}}^{d},
-\]
-!et
-with $d=1,2,3$ represents the spatial coordinates and $\sigma$ is the eigenspin of the particle. For fermions with eigenspin $1/2$ this means that
-!bt
-\[
- x\in {\mathbb{R}}^{d}\oplus (\frac{1}{2}),
-\]
-!et
-and the integral
-!bt
-\[
-\int dx = \sum_{\sigma}\int d^dr = \sum_{\sigma}\int d\bm{r}.
-\]
-!et
-Since we are dealing with protons and neutrons we need to add isospin as a new degree of freedom.
-!eblock
-
-
-!split
-===== Definitions =====
-!bblock
-Including isospin $\tau$ we have 
-!bt
-\[
-x=(\bm{r},\sigma,\tau), 
-\]
-!et
-where 
-!bt
-\[
-\bm{r}\in {\mathbb{R}}^{3},
-\]
-!et
-For nucleons, which are fermions with eigenspin $1/2$ and isospin $1/2$ this means that
-!bt
-\[
- x\in {\mathbb{R}}^{d}\oplus (\frac{1}{2})\oplus (\frac{1}{2}),
-\]
-!et
-and the integral
-!bt
-\[
-\int dx = \sum_{\sigma\tau}\int d\bm{r},
-\]
-!et
-and
-!bt
-\[
-\int d^Ax= \int dx_1\int dx_2\dots\int dx_A.
-\]
-!et
-We will use the standard nuclear physics definition of isospin, resulting in $\tau_z=-1/2$ for protons and $\tau_z=1/2$ for neutrons.
-
-!eblock
-
-
-
-
-!split
-===== Definitions =====
-!bblock
-The quantum mechanical wave function of a given state with quantum numbers $\lambda$ (encompassing all quantum numbers needed to specify the system), ignoring time, is
-!bt
-\[
-\Psi_{\lambda}=\Psi_{\lambda}(x_1,x_2,\dots,x_A),
-\]
-!et
-with $x_i=(\bm{r}_i,\sigma_i,\tau_i)$ and the projections of $\sigma_i$ and $\tau_i$ take the values
-$\{-1/2,+1/2\}$. 
-We will hereafter always refer to $\Psi_{\lambda}$ as the exact wave function, and if the ground state is not degenerate we label it as 
-!bt
-\[
-\Psi_0=\Psi_0(x_1,x_2,\dots,x_A).
-\]
-!et
-!eblock
-
-
-!split
-===== Definitions =====
-!bblock
-Since the solution $\Psi_{\lambda}$ seldomly can be found in closed form, approximations are sought. In this text we define an approximative wave function or an ansatz to the exact wave function as 
-!bt
-\[
-\Phi_{\lambda}=\Phi_{\lambda}(x_1,x_2,\dots,x_A),
-\]
-!et
-with
-
-!bt 
-\[
-\Phi_{0}=\Phi_{0}(x_{1},x_{2},\dots,x_{A}),
-\]
-!et
-being the ansatz for the ground state.  
-!eblock
-
-
-!split
-===== Definitions =====
-!bblock
-The wave function $\Psi_{\lambda}$ is sought in the Hilbert space of either symmetric or anti-symmetric $N$-body functions, namely
-!bt
-\[
-\Psi_{\lambda}\in {\cal H}_A:= {\cal H}_1\oplus{\cal H}_1\oplus\dots\oplus{\cal H}_1,
-\]
-!et
-where the single-particle Hilbert space $\hat{H}_1$ is the space of square integrable functions over $\in {\mathbb{R}}^{d}\oplus (\sigma)\oplus (\tau)$ resulting in
-!bt
-\[
-{\cal H}_1:= L^2(\mathbb{R}^{d}\oplus (\sigma)\oplus (\tau)).
-\]
-!et
-!eblock
-
-
-
-!split
-===== Definitions =====
-!bblock
-Our Hamiltonian is invariant under the permutation (interchange) of two particles.
-Since we deal with fermions however, the total wave function is antisymmetric.
-Let $\hat{P}$ be an operator which interchanges two particles.
-Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
-!bt
-\[
-[\hat{H},\hat{P}] = 0,
-\]
-!et
-meaning that $\Psi_{\lambda}(x_1, x_2, \dots , x_A)$ is an eigenfunction of 
-$\hat{P}$ as well, that is
-!bt
-\[
-\hat{P}_{ij}\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A)=
-\beta\Psi_{\lambda}(x_1, x_2, \dots,x_j,\dots,x_i,\dots,x_A),
-\]
-!et
-where $\beta$ is the eigenvalue of $\hat{P}$. We have introduced the suffix $ij$ in order to indicate that we permute particles $i$ and $j$.
-The Pauli principle tells us that the total wave function for a system of fermions
-has to be antisymmetric, resulting in the eigenvalue $\beta = -1$.   
-!eblock
-
-
-!split
-===== Definitions and notations =====
-!bblock
-The Schrodinger equation reads 
-!bt
-\begin{equation}
-\hat{H}(x_1, x_2, \dots , x_A) \Psi_{\lambda}(x_1, x_2, \dots , x_A) = 
-E_\lambda  \Psi_\lambda(x_1, x_2, \dots , x_A), label{eq:basicSE1}
-\end{equation}
-!et
-where the vector $x_i$ represents the coordinates (spatial, spin and isospin) of particle $i$, $\lambda$ stands  for all the quantum
-numbers needed to classify a given $A$-particle state and $\Psi_{\lambda}$ is the pertaining eigenfunction.  Throughout this course,
-$\Psi$ refers to the exact eigenfunction, unless otherwise stated.
-!eblock
-
-!split
-===== Definitions and notations =====
-!bblock
-We write the Hamilton operator, or Hamiltonian,  in a generic way 
-!bt
-\[
-	\hat{H} = \hat{T} + \hat{V} 
-\]
-!et
-where $\hat{T}$  represents the kinetic energy of the system
-!bt
-\[
-	\hat{T} = \sum_{i=1}^A \frac{\mathbf{p}_i^2}{2m_i} = \sum_{i=1}^A \left( -\frac{\hbar^2}{2m_i} \mathbf{\nabla_i}^2 \right) =
-		\sum_{i=1}^A t(x_i)
-\]
-!et
-while the operator $\hat{V}$ for the potential energy is given by
-!bt
-\begin{equation}
-	\hat{V} = \sum_{i=1}^A \hat{u}_{\mathrm{ext}}(x_i) + \sum_{ji=1}^A v(x_i,x_j)+\sum_{ijk=1}^Av(x_i,x_j,x_k)+\dots
-label{eq:firstv}
-\end{equation}
-!et
-Hereafter we use natural units, viz.~$\hbar=c=e=1$, with $e$ the elementary charge and $c$ the speed of light. This means that momenta and masses
-have dimension energy. 
-!eblock
-
-
-
-!split
-===== Definitions and notations =====
-!bblock
-The potential energy part includes also an external potential $\hat{u}_{\mathrm{ext}}(x_i)$.
-
-In a non-relativistic approach to atomic  physics, this external potential is given by the attraction an electron feels from the atomic nucleus. The latter being much heavier than the involved electrons, is often used to define a natural center of mass. In nuclear physics there is no such external potential. It is the nuclear force which results in binding in nuclear systems. In a non-relativistic framework, the nuclear force contains two-body, three-body and more complicated degrees of freedom. The potential energy reads then  
-!bt
-\[
-	\hat{V} = \sum_{ij}^A v(x_i,x_j)+\sum_{ijk}^Av(x_i,x_j,x_k)+\dots
-\]
-!et
-!eblock
-
-
-!split
-===== Definitions and notations, more complicated forces =====
-!bblock
-Three-body and more  complicated forces arise since we are dealing with protons and neutrons as effective degrees of freedom. We will come back to this topic later. Furthermore, in large parts of these lectures we will assume that the potential energy can be approximated by a two-body interaction only. Our Hamiltonian reads then
-!bt
-\begin{equation}
-	\hat{H} = \sum_{i=1}^A \frac{\mathbf{p}_i^2}{2m_i}+\sum_{ij}^A v(x_i,x_j).
-label{eq:firstH}
-\end{equation}
-!et
-
-
-!eblock
-
- 
-
-
-
-!split
-===== A modified Hamiltonian  =====
-!bblock
-It is however, from a computational point of view, convenient to introduce an external potential $\hat{u}_{\mathrm{ext}}(x_i)$ by adding and substracting it to the original Hamiltonian. 
-This means that our Hamiltonian can be rewritten as 
-!bt
-\[
-    \hat{H} = \hat{H}_0 + \hat{H}_I 
-    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j=1}^A \hat{v}(x_{ij})-\sum_{i=1}^A\hat{u}_{\mathrm{ext}}(x_i),
-\]
-!et
-with
-
-!bt 
-\[
-  \hat{H}_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right).
-\]
-!et
-
-The interaction (or potential energy term) reads now
-!bt 
-\[
-  \hat{H}_I=  \sum_{i < j=1}^A \hat{v}(x_{ij})-\sum_{i=1}^A\hat{u}_{\mathrm{ext}}(x_i).
-\]
-!et
-
-In nuclear physics the one-body part $u_{\mathrm{ext}}(x_i)$ is often approximated by a harmonic oscillator potential or a
-Woods-Saxon potential. However, this is not fully correct, because as we have discussed, nuclei are self-bound systems and there is no external confining potential. As we will see later, *the $\hat{H}_0$ part of the hamiltonian cannot be used to compute the binding energy of a nucleus since it is not based on a model for the nuclear forces*. That is, the binding energy is not the sum of the individual single-particle energies. 
-!eblock
-
-
-!split
-===== A modified Hamiltonian  =====
-!bblock
-Why do we introduce the  Hamiltonian  in the form
-!bt
-\[
-    \hat{H} = \hat{H}_0 + \hat{H}_I? 
-\]
-!et
-There are many reasons for this. Let us look at some of them, using the harmonic oscillator in three dimensions as our starting point. For the harmonic oscillator we know that
-
-!bt 
-\[
-  \hat{h}_0(x_i)\psi_{\alpha}(x_i)=\varepsilon_{\alpha}\psi_{\alpha}(x_i),  
-\]
-!et
-
-where the eigenvalues are $\varepsilon_{\alpha}$ and the eigenfunctions are $\psi_{\alpha}(x_i)$. The subscript $\alpha$ represents quantum numbers like the orbital angular momentum $l_{\alpha}$, its projection $m_{l_{\alpha}}$ and the   
-principal quantum number $n_{\alpha}=0,1,2,\dots$. 
-
-The eigenvalues are
-!bt
-\[
-\varepsilon_{\alpha} = \hbar\omega \left(2n_{\alpha}+l_{\alpha}+\frac{3}{2}\right).
-\]
-!et
-!eblock
-
-
-!split
-===== A modified Hamiltonian  =====
-!bblock
-The following mathematical properties of the  harmonic oscillator are handy. 
- * First of all we have a complete basis of orthogonal eigenvectors. These have well-know expressions and can be easily be encoded. 
-
- * With a complete basis $\psi_{\alpha}(x_i)$, we can construct a new basis $\phi_{\tau}(x_i)$ by expanding in terms of a harmonic oscillator basis, that is  
-!bt
-\[
-\phi_{\tau}(x_i)=\sum_{\alpha} C_{\tau\alpha}\psi_{\alpha}(x_i),
-\]
-!et
-where $C_{\tau\alpha}$ represents the overlap between the two basis sets. 
- * As we will see later, the harmonic oscillator basis allows us to compute in an expedient way matrix elements of the interactions between two nucleons.  Using the above expansion we can in turn represent nuclear forces in terms of new basis, for example the  Woods-Saxon basis  to be discussed later here.
-!eblock
-
-
-!split
-===== A modified Hamiltonian  =====
-!bblock
-The harmonic oscillator (a shifted one by a negative constant) provides also a very good approximation to most bound single-particle states. Furthermore, it serves as a starting point in building up our picture of nuclei, in particular how we define magic numbers and systems with one nucleon added to (or removed from) a closed-shell core nucleus. The figure here shows 
-the various harmonic oscillator states, with those obtained with a Woods-Saxon potential as well, including a spin-orbit splitting (to be discussed below).
-!eblock
-
-
-
-!split
-===== A modified Hamiltonian, harmonic oscillator spectrum  =====
+===== Our first attempt at a model,  harmonic oscillator spectrum  =====
 !bblock
 FIGURE: [figslides/singleparticle.png, width=500 frac=0.6] Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force.
 !eblock
-
-
-
-
-
-
-
-!split
-===== The harmonic oscillator Hamiltonian  =====
-!bblock
-In nuclear physics the one-body part $u_{\mathrm{ext}}(x_i)$ is often 
-approximated by a harmonic oscillator potential. However,  as we also noted with the Woods-Saxon potential there is no 
-external confining potential in nuclei. 
-
-What many people do then, is to add and subtract a harmonic oscillator potential,
-with 
-!bt
-\[
-\hat{u}_{\mathrm{ext}}(x_i)=\hat{u}_{\mathrm{ho}}(x_i)= \frac{1}{2}m\omega^2 r_i^2,
-\]
-!et
-where $\omega$ is the oscillator frequency. This leads to 
-!bt
-\[
-    \hat{H} = \hat{H_0} + \hat{H_I} 
-    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j=1}^A \hat{v}(x_{ij})-\sum_{i=1}^A\hat{u}_{\mathrm{ho}}(x_i),
-\]
-!et
-with 
-!bt
-\[
-  H_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ho}}(x_i)\right).
-\]
-!et
-Many practitioners use this as the standard Hamiltonian when doing nuclear structure calculations. 
-This is ok if the number of nucleons is large, but still with this Hamiltonian, we do not obey translational invariance.  How can we cure this?
-!eblock
-
-!split
-===== Translationally Invariant Hamiltonian  =====
-!bblock
- In setting up a translationally invariant Hamiltonian  
- the following expressions are helpful.
- The center-of-mass (CoM)  momentum is
-!bt 
-\[
-    P=\sum_{i=1}^A\bm{p}_i,
- \]
-!et
- and we have that
-!bt 
-\[
- \sum_{i=1}^A\bm{p}_i^2 =
- \frac{1}{A}\left[\bm{P}^2+\sum_{i < j}(\bm{p}_i-\bm{p}_j)^2\right]
- \]
-!et
- meaning that
-!bt 
-\[
- \left[\sum_{i=1}^A\frac{\bm{p}_i^2}{2m} -\frac{\bm{P}^2}{2mA}\right]
- =\frac{1}{2mA}\sum_{i < j}(\bm{p}_i-\bm{p}_j)^2.
- \]
-!et
-!eblock
-
-!split
-===== The harmonic oscillator Hamiltonian  =====
-!bblock
- In a similar fashion we can define the CoM coordinate
-!bt 
-\[
-     \bm{R}=\frac{1}{A}\sum_{i=1}^{A}\bm{r}_i,
- \]
-!et
- which yields
-!bt
- \[
- \sum_{i=1}^A\bm{r}_i^2 =
- \frac{1}{A}\left[A^2\bm{R}^2+\sum_{i < j}(\bm{r}_i-\bm{r}_j)^2\right].
- \]
-!et
-!eblock
-
-!split
-===== The harmonic oscillator Hamiltonian  =====
-!bblock
- If we then introduce the harmonic oscillator one-body Hamiltonian
-!bt 
-\[
-      H_0= \sum_{i=1}^A\left(\frac{\bm{p}_i^2}{2m}+
-	   \frac{1}{2}m\omega^2\bm{r}_i^2\right),
- \]
-!et
- with $\omega$ the oscillator frequency,
- we can rewrite the latter as 
-!bt
- \[
-      H_{\mathrm{HO}}= \frac{\bm{P}^2}{2mA}+\frac{mA\omega^2\bm{R}^2}{2}
-	    +\frac{1}{2mA}\sum_{i < j}(\bm{p}_i-\bm{p}_j)^2
-	    +\frac{m\omega^2}{2A}\sum_{i < j}(\bm{r}_i-\bm{r}_j)^2.
-     label{eq:obho}
- \]
-!et
-
-!eblock
-
-
-!split
-===== The harmonic oscillator Hamiltonian  =====
-!bblock
-Alternatively, we could write it as	
-!bt 
-\[
- H_{\mathrm{HO}}= H_{\mathrm{CoM}}+\frac{1}{2mA}\sum_{i < j}(\bm{p}_i-\bm{p}_j)^2
-	    +\frac{m\omega^2}{2A}\sum_{i < j}(\bm{r}_i-\bm{r}_j)^2,
- \]
-!et
-
-The center-of-mass term is defined as
-!bt 
- \[
-      H_{\mathrm{CoM}}= \frac{\bm{P}^2}{2mA}+\frac{mA\omega^2\bm{R}^2}{2}.
- \]
-!et
-!eblock
-
-
-!split
-===== Translationally Invariant Hamiltonian  =====
-!bblock
- The translationally invariant one- and two-body  Hamiltonian reads for an A-nucleon system,
-!bt
- \[
-label{eq:ham}
-\hat{H}=\left[\sum_{i=1}^A\frac{\bm{p}_i^2}{2m} -\frac{\bm{P}^2}{2mA}\right] +\sum_{i < j}^A V_{ij} \; ,
- \]
-!et
- where $V_{ij}$ is the nucleon-nucleon interaction. Adding zero as here
-!bt 
-\[
- \sum_{i=1}^A\frac{1}{2}m\omega^2\bm{r}_i^2-
- \frac{m\omega^2}{2A}\left[\bm{R}^2+\sum_{i < j}(\bm{r}_i-\bm{r}_j)^2\right]=0.
- \]
-!et
-we can then rewrite the Hamiltonian as 
-!bt 
-\[
- \hat{H}=\sum_{i=1}^A \left[ \frac{\bm{p}_i^2}{2m}
- +\frac{1}{2}m\omega^2 \bm{r}^2_i
- \right] + \sum_{i < j}^A \left[ V_{ij}-\frac{m\omega^2}{2A}
- (\bm{r}_i-\bm{r}_j)^2
- \right]-H_{\mathrm{CoM}}.
- \]
-!et
-!eblock
-
 
 !split
 ===== The Woods-Saxon potential  =====
@@ -1281,7 +707,7 @@ The value for $r_0$ can be extracted from a fit to data, see for example "M. Kir
 !bblock
 The following python code produces a plot of the Woods-Saxon potential with the above parameters. 
 
-!bc pyscpro
+!bc pycod
 import numpy as np
 from  matplotlib import pyplot as plt
 from matplotlib import rc, rcParams
@@ -1311,7 +737,6 @@ plt.ylabel(r'$V(r)$ [MeV]',fontsize=20)
 
 # Tweak spacing to prevent clipping of ylabel
 plt.subplots_adjust(left=0.15)
-plt.savefig('woodsaxon.pdf', format='pdf')
 !ec
 From the plot we notice that the potential
 * rapidly approaches zero as $r$ goes to infinity, reflecting the short-distance nature of the strong nuclear force.
@@ -1395,7 +820,7 @@ or
 \]
 !et
 clearly lifting the degeneracy. Note well that till now we have simply postulated the spin-orbit force in *ad hoc* way.
-Later, we will see how this term arises from the two-nucleon force in a natural way. 
+This term arises from the nuclear force in a natural way. 
 !eblock
 
 !split
@@ -1421,7 +846,8 @@ f_{so}(r) = \frac{1}{1+\exp{(r-R_{so})/a_{so}}}.
 !et
 !eblock
 
-!split ===== Single-particle Hamiltonians and spin-orbit force =====
+!split 
+===== Single-particle Hamiltonians and spin-orbit force =====
 !bblock 
 We can also add, in case of proton, a Coulomb potential. The
 Woods-Saxon potential has been widely used in parametrizations of
@@ -1431,9 +857,9 @@ _However, as was the case with
 the harmonic oscillator, none of these potentials are linked directly
 to the nuclear forces_. 
 
-Our next step is to build a mean field based
-on the nucleon-nucleon interaction.  This will lead us to our first
-and simplest many-body theory, Hartree-Fock theory.  
+This is solved by building a mean field based
+on the nucleon-nucleon interaction and forms the basis for the discussions of Brown and Hergert.
+
 !eblock
 
 
@@ -1724,9 +1150,7 @@ The solution is zero in both cases.
 The following python program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
 
 
-* The c++ and Fortran versions of this program can be found at URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs". 
 
-* The c++  program uses the c++ library armadillo, see URL: "http://arma.sourceforge.net/". 
 !eblock
 
 
@@ -1736,10 +1160,10 @@ The following python program is an example of how one can obtain the eigenvalues
 The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of $r$ with a
 maximum value of integration points.  These are set in the initialization function. It plots the 
 eigenfunctions of the three lowest eigenstates.
-!bc pyscpro
-#Program which solves the one-particle Schrodinger equation 
+!bc pycod
+#Program which solves the one-particle Schrodinger equation
 #for a potential specified in function
-#potential(). This example is for the harmonic oscillator in 3d
+#potential().
 
 from  matplotlib import pyplot as plt
 import numpy as np
@@ -1750,45 +1174,45 @@ def initialize():
     lOrbital = 0
     Dim = 400
     return RMin, RMax, lOrbital, Dim
-# Here we set up the harmonic oscillator potential
+# Harmonic oscillator here, easy to change
 def potential(r):
-    return r*r
+    return 0.5*r*r
 
 #Get the boundary, orbital momentum and number of integration points
 RMin, RMax, lOrbital, Dim = initialize()
 
 #Initialize constants
 Step    = RMax/(Dim+1)
-DiagConst = 2.0 / (Step*Step)
-NondiagConst =  -1.0 / (Step*Step)
-OrbitalFactor = lOrbital * (lOrbital + 1.0)
+DiagConst = 1.0/ (Step*Step)
+NondiagConst =  -0.5 / (Step*Step)
+OrbitalFactor = 0.5*lOrbital * (lOrbital + 1.0)
 
 #Calculate array of potential values
 v = np.zeros(Dim)
 r = np.linspace(RMin,RMax,Dim)
-for i in xrange(Dim):
+for i in range(Dim):
     r[i] = RMin + (i+1) * Step;
     v[i] = potential(r[i]) + OrbitalFactor/(r[i]*r[i]);
 
-#Setting up tridiagonal matrix and find eigenvectors and eigenvalues
-Hamiltonian = np.zeros((Dim,Dim))
-Hamiltonian[0,0] = DiagConst + v[0];
-Hamiltonian[0,1] = NondiagConst;
-for i in xrange(1,Dim-1):
-    Hamiltonian[i,i-1]  = NondiagConst;
-    Hamiltonian[i,i]    = DiagConst + v[i];
-    Hamiltonian[i,i+1]  = NondiagConst;
-Hamiltonian[Dim-1,Dim-2] = NondiagConst;
-Hamiltonian[Dim-1,Dim-1] = DiagConst + v[Dim-1];
+#Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
+Matrix = np.zeros((Dim,Dim))
+Matrix[0,0] = DiagConst + v[0];
+Matrix[0,1] = NondiagConst;
+for i in range(1,Dim-1):
+    Matrix[i,i-1]  = NondiagConst;
+    Matrix[i,i]    = DiagConst + v[i];
+    Matrix[i,i+1]  = NondiagConst;
+Matrix[Dim-1,Dim-2] = NondiagConst;
+Matrix[Dim-1,Dim-1] = DiagConst + v[Dim-1];
 # diagonalize and obtain eigenvalues, not necessarily sorted
-EigValues, EigVectors = np.linalg.eig(Hamiltonian)
+EigValues, EigVectors = np.linalg.eig(Matrix)
 # sort eigenvectors and eigenvalues
 permute = EigValues.argsort()
 EigValues = EigValues[permute]
 EigVectors = EigVectors[:,permute]
 # now plot the results for the three lowest lying eigenstates
-for i in xrange(3):
-    print EigValues[i]
+for i in range(3):
+    print(EigValues[i])
 FirstEigvector = EigVectors[:,0]
 SecondEigvector = EigVectors[:,1]
 ThirdEigvector = EigVectors[:,2]
@@ -1797,8 +1221,6 @@ plt.axis([0,4.6,0.0, 0.025])
 plt.xlabel(r'$r$')
 plt.ylabel(r'Radial probability $r^2|R(r)|^2$')
 plt.title(r'Radial probability distributions for three lowest-lying states')
-plt.savefig('eigenvector.pdf')
-plt.savefig('eigenvector.png')
 plt.show()
 
 !ec
@@ -1806,45 +1228,12 @@ plt.show()
 
 
 
-!split
-=====  Exercise: Masses and binding energies   =====
-The data on binding energies can be found in the file bedata.dat at the github address of the "course":"https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
-!bsubex
-Write a small program which reads in the proton and neutron numbers and the binding energies 
-and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
-!bt
-\[
-S_n= BE(N,Z)-BE(N-1,Z).
-\]
-!et
-Comment your results. 
-!esubex
 
-!bsubex
-Include in the same figure(s) the liquid drop model results of Eq.~(2.17) of Alex Brown's text, namely
-!bt
-\[
-BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
-\]
-!et 
-with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV. Comment your results
-!esubex
-!bsubex
-Make a plot of the binding energies as function of the number of nucleons $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
-!esubex
-!bsubex
-Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
-Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment.  Comment your results.
-!esubex
-A program example in C++ and the input data file *bedata.dat* can be found found at the github repository for the "course":"https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
 
 !split
 =====  Exercise: Eigenstates and eigenvalues of single-particle problems  =====
 
-The program for finding the eigenvalues of the harmonic oscillator are in the github folder
-URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs".
 
-You can use this program to solve the exercise below, or write your own using your preferred programming language, be it python, fortran or c++ or other languages. Here I will mainly provide fortran, python and c++. 
 !bsubex
 Compute the eigenvalues of the three lowest states with a given orbital momentum and oscillator frequency $\omega$. Study these results as functions of the the maximum value of $r$ and the number of integration points $n$, starting with  $r_{\mathrm{max}}=10$. Compare the computed ones with the exact values and comment your results.
 !esubex
@@ -1855,102 +1244,19 @@ Plot thereafter the eigenfunctions as functions of $r$ for the lowest-lying stat
 Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
 !esubex
 
-!split
-=====  Exercise: Operators and Slater determinants  =====
-Consider the Slater determinant
-!bt
-\[
-\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
-=\frac{1}{\sqrt{N!}}\sum_{p}(-)^{p}P\prod_{i=1}^{N}\psi_{\alpha_{i}}(x_{i}).
-\]
-!et
-where $P$ is an operator which permutes the coordinates of two particles. We have assumed here that the 
-number of particles is the same as the number of available single-particle states, represented by the
-greek letters $\alpha_{1}\alpha_{2}\dots\alpha_{N}$.
-!bsubex 
-Write  out $\Phi^{AS}$ for $N=3$.  
-!esubex
-!bsubex
-Show that
-!bt
-\[
-\int dx_{1}dx_{2}\dots dx_{N}\left\vert
-\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
-\right\vert^{2} = 1.
-\]
-!et
-!esubex
-!bsubex
-Define a general onebody operator $\hat{F} = \sum_{i}^N\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^N\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. Calculate the matrix elements for a two-particle Slater determinant
-!bt
-\[
-\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{F}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle,
-\]
-!et
-and
-!bt
-\[
-\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{G}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle.
-\]
-!et
-Explain the short-hand notation for the Slater determinant.
-Which properties do you expect these operators to have in addition to an eventual permutation
-symmetry?
-!esubex
+
 
 !split
-=====  Exercise: First simple shell-model calculation  =====
-We will now consider a simple three-level problem, depicted in the figure below. This is our first and very simple model of a possible many-nucleon (or just fermion) problem and the shell-model.
-The single-particle states are labelled by the quantum number $p$ and can accomodate up to two single particles,  viz., every single-particle state  is doubly degenerate (you could think of this as one state having spin up and the other spin down). 
-We let the spacing between the doubly degenerate single-particle states be constant, with value $d$.  The first state
-has energy $d$. There are only three available single-particle states, $p=1$, $p=2$ and $p=3$, as illustrated
-in the figure. 
-!bsubex
-How many two-particle Slater determinants can we construct in this space? 
-!esubex
-We limit ourselves to a system with only the two lowest single-particle orbits and two particles, $p=1$ and $p=2$. We assume that we can write the Hamiltonian as
-!bt
-\[
-       \hat{H}=\hat{H}_0+\hat{H}_I,
-\]
-!et
-and that the onebody part of the Hamiltonian with single-particle operator $\hat{h}_0$ has the property
-!bt
-\[
-\hat{h}_0\psi_{p\sigma} = p\times d \psi_{p\sigma},
-\]
-!et
-where we have added a spin quantum number $\sigma$. 
-We assume also that the only two-particle states that can exist are those where two particles are in the 
-same state $p$, as shown by the two possibilities to the left in the figure.
-The two-particle matrix elements of $\hat{H}_I$ have all a constant value, $-g$.
+=====  Where do we go from here? =====
 
-!bsubex
-Show then that the Hamiltonian matrix can be written as 
-!bt
-\[
-\left(\begin{array}{cc}2d-g &-g \\
--g &4d-g \end{array}\right),
-\]
-!et
-!esubex
-!bsubex
-Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in $p=2$  to the wave function with two-particles in $p=1$? Discuss your results in terms of a linear combination of Slater determinants. 
-!esubex
-!bsubex
-Add the possibility that the two particles can be in the state with $p=3$ as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level $p$. You can diagonalize numerically your $3\times 3$ matrix.
-!esubex
+!bblock
+With a single-particle basis (an orthonormal basis) we can construct a basis of anti-symmetrized and orthogonal many-body states
+(called Slater determinants). This basis can then be used to study various many-body methods and properties of nuclei.
+Recall that nuclei are complicated many-body systems. 
+!eblock
 
-This simple model catches several birds with a stone. It demonstrates how we can build linear combinations
-of Slater determinants and interpret these as different admixtures to a given state. It represents also the way we are going to interpret these contributions.  The two-particle states above $p=1$ will be interpreted as 
-excitations from the ground state configuration, $p=1$ here.  The reliability of this ansatz for the ground state, 
-with two particles in $p=1$,
-depends on the strength of the interaction $g$ and the single-particle spacing $d$.
-Finally, this model is a simple schematic ansatz for studies of pairing correlations and thereby superfluidity/superconductivity  
-in fermionic systems. 
+!bblock
+A single-particle basis like the harmonic oscillator basis is also a useful basis for computing integrals involved in the computation of various matrix elements.
+!eblock
 
-FIGURE: [figslides/simplemodel.png, width=500 frac=0.6] Schematic plot of the possible single-particle levels with double degeneracy. The filled circles indicate occupied particle states. The spacing between each level $p$ is constant in this picture. We show some possible two-particle states.
-
-
-
-
+Hopefully, this gives you an input to the discussions to come of Alex Brown and Heiko Hergert.  Best wishes to you all and enjoy your time at MSU.  
