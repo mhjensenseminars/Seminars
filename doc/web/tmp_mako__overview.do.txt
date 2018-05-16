@@ -62,24 +62,6 @@ formulas in HTML or ipython notebook files.
 
 
 
-===== Nuclear physics courses, Talent and FRIB theory center =====
-
-
-
- * LaTeX PDF:
-   * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-beamer.pdf"
- * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-bs.html"
- * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/ipynb/np.ipynb"
-
-
-
 ===== Nuclear Talent perspectives =====
 
 
@@ -98,57 +80,21 @@ formulas in HTML or ipython notebook files.
 
 
 
-===== Computations and education =====
+===== Nuclear Physics Summer School 2018, Nuclear Models =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-print6.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-beamer.pdf"
+     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-beamer.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-bs.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/ipynb/NPretreatComputation.ipynb"
-
-
-
-===== Nuclear physics  education =====
-
-
-
- * LaTeX PDF:
-   * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-beamer.pdf"
- * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-bs.html"
- * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/ipynb/NPretreatEducation.ipynb"
-
-
-
-===== What do we need =====
-
-
-
- * LaTeX PDF:
-   * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/pdf/NPCompetences-beamer.pdf"
- * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/html/NPCompetences-bs.html"
- * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPCompetences/ipynb/NPCompetences.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/ipynb/nuclearmodels.ipynb"
 
 
 
