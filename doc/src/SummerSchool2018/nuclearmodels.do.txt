@@ -1,6 +1,6 @@
 TITLE: Nuclear Models
 AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-DATE:  NS3 Nuclear Physics Summer School 2018, Nuclear Models
+DATE:  NS3 Nuclear Physics Summer School 2018
 
 !split 
 ===== Stability of matter ===== 
@@ -11,6 +11,9 @@ overarching aims and intellectual challenges
 of basic research in nuclear physics. To relate the stability of matter
 to the underlying fundamental forces and particles of nature as manifested in nuclear matter, is central
 to present and planned rare isotope facilities. 
+!eblock
+!bblock
+
 Important properties of nuclear systems which can reveal information about these topics 
 are for example masses, and thereby binding energies, and density distributions of nuclei.  
 These are quantities which convey important information on 
@@ -51,6 +54,8 @@ During this summer school you will meet several of the above theoretical approac
 (lectures of Brown and Hergert).
 
 The aim here is provide you with the starting point for modeling nuclei and nuclear matter.   
+!eblock
+!bblock
 
 Where we do start from? 
 !bpop
@@ -71,6 +76,8 @@ Neutron (or proton)-rich nuclei are particularly interesting. As a particular ch
 of isotopes (isotones) becomes more and more neutron (proton) rich, one reaches finally the limit of stability, the so-called
 dripline, where one additional neutron (proton) makes the next isotope (isotone)  unstable with respect 
 to the previous ones. 
+!eblock
+!bblock
 
 The appearence or not of magic numbers and shell structures,
 the formation of for example neutron skins and halos
@@ -164,6 +171,9 @@ we are capable of parametrizing the abovementioned interactions in
 order to reproduce say the excitation spectrum of a nucleus like
 ${}^{17}\mbox{O}$.
 
+!eblock
+!bblock
+
 With such a parametrized interaction we are able to solve
 Schroedinger's equation for the motion of one nucleon in a given
 field. A nucleus is however a true and complicated many-nucleon
@@ -183,6 +193,8 @@ An improvement to these simpler single-nucleon potentials is given by
 the Hartree-Fock method, where the variational principle is used to
 define a mean-field which the nucleons move in. There are many
 different classes of mean-field methods.  
+!eblock
+!bblock
 
 An important difference
 between these methods and the simpler parametrized mean-field
@@ -201,25 +213,23 @@ functional theory can be considered as essential *kitchen items* in our attempts
 !bblock 
 
 The aim here is to present some of the experimental data we
-will confront theory with. In particular, we will focus on separation
+use to motivate our ansatz for a many-body wave function. In particular, we will focus on separation energies
 and shell-gap energies and use these to build a picture of nuclei in
 terms of (from a philosophical stand we would call this a reductionist
 approach) a single-particle picture. 
+!eblock
+!bblock
 
 The harmonic oscillator will
 serve as an excellent starting point in building nuclei from the
 bottom and up. Here we will neglect a theoretical description in terms of the underlying nuclear forces (see Brown's and Hergert's lectures).
 
 !eblock
-
-
-!split 
-===== Aims here ===== 
 !bblock 
 
 
 
-The aims here are to develop our physics intuition of nuclear
+We want to develop our physics intuition of nuclear
 systems using a theoretical approach where we describe data in terms
 of the motion of individual nucleons and their mutual interactions.
 
@@ -235,6 +245,8 @@ Our first approach in analyzing data theoretically, is to see if we can use expe
 
 * Extract information about a *so-called* single-particle  behavior
 * And interpret such a behavior in terms of the underlying forces and microscopic physics
+!eblock
+!bblock
 
 The next step is to see if we could use these interpretations to say something about shell closures and magic numbers. Since we focus on single-particle properties, a quantity we can extract from experiment is the separation energy for protons and neutrons. Before we proceed, we need to define quantities like masses and binding energies.   Two excellent reviews on 
 recent trends in the determination of nuclear masses can be found in the articles of "Lunney and co-workers":"http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021" and "Blaum and co-workers":"http://iopscience.iop.org/1402-4896/2013/T152/014017/"
@@ -245,6 +257,8 @@ recent trends in the determination of nuclear masses can be found in the article
 ===== Masses and Binding energies ===== 
 !bblock
 A basic quantity which can be measured for the ground states of nuclei is the atomic mass $M(N, Z)$ of the neutral atom with atomic mass number $A$ and charge $Z$. The number of neutrons is $N$.
+!eblock
+!bblock
 
 Atomic masses are usually tabulated in terms of the mass excess defined by
 !bt
@@ -277,6 +291,8 @@ and
 m_n = 939.56536(8)\hspace{0.1cm} \mathrm{MeV}/c^2 = 1.0086649156(6)u.
 \]
 !et
+!eblock
+!bblock
 
 In the 2003 mass evaluation there are 2127 nuclei measured with an accuracy of 0.2
 MeV or better, and 101 nuclei measured with an accuracy of greater than 0.2 MeV. For
@@ -309,7 +325,7 @@ where $\Delta_H c^2 = 7.2890$ MeV and $\Delta_n c^2 = 8.0713$ MeV.
 ===== Masses and Binding energies ===== 
 !bblock
 The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number $A$. One notices clearly a saturation of the binding energy per nucleon at $A\approx 56$.
-!bc pyscpro
+!bc pycod
 import numpy as np
 from  matplotlib import pyplot as plt
 # Load in data file
@@ -364,10 +380,13 @@ To arrive at the above expression we have assumed that we can make the following
 
  * There is an asymmetry term $a_4\frac{(N-Z)^2}{A}$. This term is associated with the Pauli exclusion principle and reflectd the fact that the proton-neutron interaction is more attractive on the average than the neutron-neutron and proton-proton interactions.
 
-We could also add a so-called pairing term, which is a correction term that
+!eblock
+!bblock
+
+We could also add a so-called pairing term (an important model in nuclear physics), which is a correction term that
 arises from the tendency of proton pairs and neutron pairs to
 occur. An even number of particles is more stable than an odd number. 
-Performing a least-square fit to data, we obtain the following numerical values for the various constants
+Performing a least-square fit to data (try this), we obtain the following numerical values for the various constants
 * $a_1=15.49$ MeV
 * $a_2=17.23$ MeV
 * $a_3=0.697$ MeV
@@ -649,6 +668,7 @@ In the exercise below you will be asked to perform a similar analysis for other 
 
 !split
 =====  Exercise: Masses and binding energies   =====
+!bblock
 The data on binding energies can be found in the file bedata.dat (go to the datafiles folder)
 !bsubex
 Write a small program which reads in the proton and neutron numbers and the binding energies 
@@ -677,12 +697,12 @@ Make a plot of the binding energies as function of the number of nucleons $A$ us
 Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
 Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment.  Comment your results.
 !esubex
-
+!eblock
 
 !split
 ===== Our first attempt at a model,  harmonic oscillator spectrum  =====
 !bblock
-FIGURE: [figslides/singleparticle.png, width=500 frac=0.6] Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force.
+FIGURE: [figslides/singleparticle.png, width=800 frac=0.8] Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force.
 !eblock
 
 !split
@@ -853,6 +873,8 @@ We can also add, in case of proton, a Coulomb potential. The
 Woods-Saxon potential has been widely used in parametrizations of
 effective single-particle potentials. 
 
+!eblock
+!bblock
 _However, as was the case with
 the harmonic oscillator, none of these potentials are linked directly
 to the nuclear forces_. 
@@ -1233,7 +1255,7 @@ plt.show()
 !split
 =====  Exercise: Eigenstates and eigenvalues of single-particle problems  =====
 
-
+!bblock
 !bsubex
 Compute the eigenvalues of the three lowest states with a given orbital momentum and oscillator frequency $\omega$. Study these results as functions of the the maximum value of $r$ and the number of integration points $n$, starting with  $r_{\mathrm{max}}=10$. Compare the computed ones with the exact values and comment your results.
 !esubex
@@ -1241,9 +1263,9 @@ Compute the eigenvalues of the three lowest states with a given orbital momentum
 Plot thereafter the eigenfunctions as functions of $r$ for the lowest-lying state with a given orbital momentum $l$.
 !esubex
 !bsubex
-Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
+Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest three eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
 !esubex
-
+!eblock
 
 
 !split
@@ -1252,11 +1274,14 @@ Replace thereafter the harmonic oscillator potential with a Woods-Saxon potentia
 !bblock
 With a single-particle basis (an orthonormal basis) we can construct a basis of anti-symmetrized and orthogonal many-body states
 (called Slater determinants). This basis can then be used to study various many-body methods and properties of nuclei.
-Recall that nuclei are complicated many-body systems. 
+Recall that nuclei are complicated many-body systems. It is an essential input to Brown's and Hergert's talks later this week.
 !eblock
 
 !bblock
 A single-particle basis like the harmonic oscillator basis is also a useful basis for computing integrals involved in the computation of various matrix elements.
 !eblock
 
+!bblock
+
 Hopefully, this gives you an input to the discussions to come of Alex Brown and Heiko Hergert.  Best wishes to you all and enjoy your time at MSU.  
+!eblock
