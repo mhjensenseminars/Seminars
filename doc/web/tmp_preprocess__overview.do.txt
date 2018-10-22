@@ -4,13 +4,14 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/EducationalSeminars/doc/pub'
-published = ['cse', 'csebio', 'talent', 'nuclearmodels', 'cleancode',]
+published = ['cse', 'csebio', 'talent', 'nuclearmodels', 'cleancode', 'OsloMet',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life science education',
  'talent': 'Nuclear Talent perspectives',
  'nuclearmodels': 'Nuclear Physics Summer School 2018, Nuclear Models',
  'cleancode': 'Why clean code matters',
+ 'OsloMet': 'Education and research in computational science and data science; from bachelor programs to research',
 }
 %>
 
