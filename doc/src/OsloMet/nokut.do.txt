@@ -1,0 +1,134 @@
+# Slides for Computing in science education
+TITLE: Meeting the future: Education and research in computational science and data science
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics and "Center for Computing in Science Education":"http://www.mn.uio.no/ccse/english/people/index.html", University of Oslo, Oslo, Norway
+DATE: UiO, CCSE-NOKUT/DIKU meeting, October 30, 2018
+
+!split
+===== Why should we focus on Computational Science and Data Science? =====
+!bblock
+* "By 2020, it is expected that one of every two jobs in the STEM fields will be in computing":"http://pathways.acm.org/executive-summary.html" (Association for Computing Machinery, 2013)
+* Computation is an essential and cross-cutting element of all STEM disciplines
+* Computational science and Data science have developed into  disciplines of their own right
+* Computations and the understanding of large data sets play an even larger role in basically all disciplines of STEM fields, Medicine, the Social Sciences, the Humanities and  education
+* Students at both undergraduate and graduate level are unprepared to use computational modeling, data science, and high performance computing – skills valued by a very broad range of employers.
+* The 3rd Industrial Revolution will alter significantly the demands on the workforce. To adapt a highly-qualified workforce to coming challenges  requires strong fundamental bases in STEM fields. Computational Science and Data Science can provide such bases at all stages.
+!eblock
+!split
+=====  "Computing across Disciplines at UiO":"https://computationalscienceuio.github.io/CCAD/doc/pub/whitepaper/html/whitepaper-bs.html" =====
+
+FIGURE: [figslides/cs.jpg, width=500 frac=0.7]
+
+!split
+===== Education: Computational Science and Data Science  at Norwegian  universities =====
+!bblock
+In Norway it is only UiO which offers  Master of Science  programs in
+"Computational Science":"https://www.uio.no/english/studies/programmes/computational-science-master/index.html" and "Data Science":"https://www.uio.no/english/studies/programmes/datascience-master/index.html". All other universities have
+only Master programs in Computer Science, with minor emphasis on computational science and/or data science. 
+The University of Bergen has
+a Masters program in Applied Mathematics while UMB has a newly
+established program in computational science and data science. UiS is planning a new MSc program in computational science with start 2019.
+
+Nationally, UiO is the only university which offers
+broad programs in Computational Science and Data Science.
+!eblock
+
+|-------------------------------------------------------------------------------------------------------------|
+| University | Bachelor program | Master program | PhD program |
+|-------------------------------------------------------------------------------------------------------------|
+|   UiO                            |  Proposal being developed                | Yes           | Proposal being developed         |
+|   UMB                             |  No                | "Yes":"https://www.nmbu.no/en/studies/study-options/master/master-of-science-in-data-science"           | No      |
+|   UiS    |    No                |  Planned start fall 2019 |  No |
+|   NTNU                            |  No                | No           | No                   |
+|   UiT                             |  No                | No           | No                   |
+|   UiB                             |  No                | Applied Math           | No         |
+|   UMB                             |  No                | Yes           | No      |
+|   OsloMet                        |  No                |  No |  No |
+|   UiA    |    No                |  No, but direction in AI |  No |
+|   UiN    |    No                |  No |  No |
+|   USN    |   No                |  No |  No |
+|------------------------------------------------------------------------------------------------------------|
+
+Out of 95 universities polled in the USA, there are less than 15 which have a department on Scientific Computing
+and more than 50 that have a center on Scientific Computing. Between 20 to 30 of these offer a bachelor, Master of Science or PhD program. On Data Science there are approximately 30 departments and 40 centers. Almost 50 of these universities offer a Masters degree in Data Science and close to 40 a PhD in Data Science. 
+
+
+!split
+===== How to introduce computing in all disciplines: Future Research directions =====
+
+!bblock Enhance Computational Science and Data Science across the disciplines 
+* Computational Science and Data Science in Mathematics and all of the physical sciences (Astrophysics, Chemistry, Geoscience and Physics)
+* Bioinformatics
+* Develop research programs in "Quantum Computing and Quantum Information theory":"https://www.aps.org/publications/apsnews/201802/ostp.cfm?utm_source=APS+Physics+Main+Group&utm_campaign=fb7a2e7d6b-News+021218&utm_medium=email&utm_term=0_825303224b-fb7a2e7d6b-106513221". Many universities are now developing research and "educational strategies in Quantum Computing":"https://vprgs.msu.edu/event/interdisciplinary-forum-quantum-information-science"
+* Develop data-driven discovery research programs utilizing recent developments in machine learning
+* Computational life science
+* Computational Materials Science
+* Computational Economy and Data Science and computing in Law and the Social Sciences
+* Data Science and computing in the Humanities
+* And many more
+!eblock
+
+
+!split
+===== And as a figure =====
+
+FIGURE: [figslides/topics.png, width=800 frac=1.0]
+
+!split
+===== Strengths, Possibilities and Synergies, a UiO based perspective =====
+!bblock
+* Several Centers of excellence in research where Computational Science plays a major role
+* Newly established center of excellence in education research, CCSE
+* Newly established Master of Science programs in Computational Science and Data Science
+* Several excellent groups in STEM fiels who do Computational Science
+* Computational topics are included in all undergraduate STEM programs, now develop an all university  bachelor program in Computational Science and Data Science
+* Several educational prizes and awards related to computational science 
+* Lead in the development of computations in Life Science
+Our programs are now serving as role models for other Norwegian universities.
+!eblock
+
+!split
+===== Educational Goals =====
+!bblock
+
+
+* Develop a comprehensive set of courses and degree programs at both undergraduate and graduate levels that will give students across the university exposure to practical computational methods, understanding how to analyse data and more generally to the idea of computers as problem-solving tools. 
+
+* Develop an all university PhD program in Computational Science and Data Science (with dual degrees/certificates)
+
+* Develop an all university Bachelor and Master of Science Program in Computational Science and Data Science
+
+* Develop courses and course  modules in Computational Science and Data Science for the private and the public sectors
+
+* Develop a PhD program in Computational Science and Data Science tailored to the needs of the private and the public sectors
+
+* Facilitate the adoption of computational tools and techniques for both research and education across campus, through education and faculty collaboration. 
+
+* "Educate the next generation of school teachers and university teachers,  with a strong focus on digital competences":"https://www.realfagsforlaget.no/publikasjoner".
+ 
+!eblock
+    
+!split
+===== A new all university bachelor program in computational science and data science =====
+
+This program has a compulsory mathematics, computational science  and data science set of courses. It aims thus at recruiting students who want to deepen their knowledge in 
+computational science and data science but with applications to various STEM fields, the Humanities, Social Sciences etc. Medicine and Law would be excluded since they have a much degree of compulsory courses. 
+
+It has a set of compulsory courses in computational science and data science amounting to 90 ECTS and 90 ECTS of elective discipline specific courses.  
+
+Here's a possible path, with UiO specific courses and 10 ECTS per course. We can easily split this into 5 or 7.5 ECTS courses
+
+|----------------------------------------------------------|
+| Semester |  10 ECTS | 10 ECTS | 10 ECTS                  |
+|----------------------------------------------------------|
+| 6         | Elective         | Elective        | Elective                         |
+|----------------------------------------------------------|
+| 5         | Elective         | Elective        | FYS-STK3155   |
+|----------------------------------------------------------|
+| 4         | STK2100         | Elective        |  Elective                |
+|----------------------------------------------------------|
+| 3         | MAT1120    | STK1100        | Elective   |
+|----------------------------------------------------------|
+| 2         | MAT1110         |  Elective       |   IN1910 |
+|----------------------------------------------------------|
+| 1         | MAT1100         |  MAT-INF1100       | IN1900 |
+|----------------------------------------------------------|
