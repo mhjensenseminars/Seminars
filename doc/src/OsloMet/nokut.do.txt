@@ -48,9 +48,6 @@ broad programs in Computational Science and Data Science.
 |   USN    |   No                |  No |  No |
 |------------------------------------------------------------------------------------------------------------|
 
-Out of 95 universities polled in the USA, there are less than 15 which have a department on Scientific Computing
-and more than 50 that have a center on Scientific Computing. Between 20 to 30 of these offer a bachelor, Master of Science or PhD program. On Data Science there are approximately 30 departments and 40 centers. Almost 50 of these universities offer a Masters degree in Data Science and close to 40 a PhD in Data Science. 
-
 
 !split
 ===== How to introduce computing in all disciplines: Future Research directions =====
@@ -82,7 +79,7 @@ FIGURE: [figslides/topics.png, width=800 frac=1.0]
 * Several excellent groups in STEM fields who do Computational Science
 * Computational topics are included in all undergraduate STEM programs, now develop an all university  bachelor program in Computational Science and Data Science
 * Lead in the development of computations in Life Science
-Our Educational programs are now serving as role models for other Norwegian universities.
+Our educational programs are now serving as role models for other Norwegian universities.
 !eblock
 
 !split
@@ -92,9 +89,9 @@ Our Educational programs are now serving as role models for other Norwegian univ
 
 * Develop a comprehensive set of courses and degree programs at both undergraduate and graduate levels that will give students across the university exposure to practical computational methods, understanding how to analyse data and more generally to the idea of computers as problem-solving tools. 
 
-* Develop an all university PhD program in Computational Science and Data Science (with dual degrees/certificates)
+* _Develop an all university PhD program in Computational Science and Data Science (with dual degrees/certificates)_
 
-* Develop an all university Bachelor and Master of Science Program in Computational Science and Data Science
+* _Develop an all university Bachelor and Master of Science Program in Computational Science and Data Science_
 
 * Develop courses and course  modules in Computational Science and Data Science for the private and the public sectors
 
