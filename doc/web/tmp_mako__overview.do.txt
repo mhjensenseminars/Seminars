@@ -134,5 +134,23 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Education and research in computational science and data science =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-beamer.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/ipynb/cse2018.ipynb"
+
+
+
 
 
