@@ -1,0 +1,1647 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Education and research in computational science and data science; from bachelor programs to research">
+
+<title>Education and research in computational science and data science; from bachelor programs to research</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<script>
+$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+});
+</script>
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('Why should we focus on Computational Science and Data Science?',
+               2,
+               None,
+               '___sec0'),
+              ('"Computing across Disciplines at '
+               'UiO":"https://computationalscienceuio.github.io/CCAD/doc/pub/whitepaper/html/whitepaper-bs.html"',
+               2,
+               None,
+               '___sec1'),
+              ('How to introduce computing in all disciplines: Future Research '
+               'directions',
+               2,
+               None,
+               '___sec2'),
+              ('And as a figure', 2, None, '___sec3'),
+              ('Strengths, Possibilities and Synergies, a UiO based '
+               'perspective',
+               2,
+               None,
+               '___sec4'),
+              ('Goals', 2, None, '___sec5'),
+              ('Unique opportunities', 2, None, '___sec6'),
+              ('Computing competence', 2, None, '___sec7'),
+              ('Better understanding of the scientific method',
+               2,
+               None,
+               '___sec8'),
+              ('Why should basic university education undergo a shift towards '
+               'modern computing?',
+               2,
+               None,
+               '___sec9'),
+              ('Why is computing competence important?', 2, None, '___sec10'),
+              ('Disasters attributable to poor management of code and more',
+               2,
+               None,
+               '___sec11'),
+              ('Modeling and computations as a way to enhance algorithminc '
+               'thinking',
+               2,
+               None,
+               '___sec12'),
+              ('The foundation, Computing in Science Education at UiO: Can we '
+               'catch many birds with one stone?',
+               2,
+               None,
+               '___sec13'),
+              ('What is needed?', 2, None, '___sec14'),
+              ('Implementation', 2, None, '___sec15'),
+              ('Implementation in Oslo: The "C(omputing '
+               'in)S(cience)E(Education)":"http://www.mn.uio.no/ccse/english/people/index.html"  '
+               'project',
+               2,
+               None,
+               '___sec16'),
+              ('Example of bachelor program, Physics and Astronomy (astro '
+               'path), University of Oslo',
+               2,
+               None,
+               '___sec17'),
+              ('Example: Computations from day one', 2, None, '___sec18'),
+              ('Example: Computations from day one', 2, None, '___sec19'),
+              ('Other Examples', 2, None, '___sec20'),
+              ('Typical implementation first semester of study',
+               2,
+               None,
+               '___sec21'),
+              ('Symbolic calculations and numerical calculations in one code',
+               2,
+               None,
+               '___sec22'),
+              ('Error analysis', 2, None, '___sec23'),
+              ('Integrating numerical mathematics with calculus',
+               2,
+               None,
+               '___sec24'),
+              ('Additional benefits: A structured approach to solving problems',
+               2,
+               None,
+               '___sec25'),
+              ('Additional benefits: A structure approach to solving problems',
+               2,
+               None,
+               '___sec26'),
+              ('Learning outcomes three first semesters', 2, None, '___sec27'),
+              ('Later courses', 2, None, '___sec28'),
+              ('Coordination', 2, None, '___sec29'),
+              ('Challenges...', 2, None, '___sec30'),
+              ('Physical Sciences implementation: Examples of simple '
+               'algorithms, initial value problems and proper scaling of '
+               'equations',
+               2,
+               None,
+               '___sec31'),
+              ('Mechanics and electromagnetism, initial value problems',
+               2,
+               None,
+               '___sec32'),
+              ('Mechanics and electromagnetism, initial value problems and now '
+               'proper scaling',
+               2,
+               None,
+               '___sec33'),
+              ('Other examples of simple algorithms that can be reused in many '
+               'courses, two-point boundary value problems and scaling',
+               2,
+               None,
+               '___sec34'),
+              ('The power of numerical methods', 2, None, '___sec35'),
+              ('Which aspects are important for a successful introduction of '
+               'CSE?',
+               2,
+               None,
+               '___sec36'),
+              ('CSE Summary', 2, None, '___sec37'),
+              ('Summary: New Master of Science programs', 2, None, '___sec38'),
+              ('Summary: Research', 2, None, '___sec39'),
+              ('Examples of simple algorithms, initial value problems and '
+               'proper scaling of equations',
+               2,
+               None,
+               '___sec40'),
+              ('Mechanics and electromagnetism, initial value problems',
+               2,
+               None,
+               '___sec41'),
+              ('Mechanics and electromagnetism, initial value problems and now '
+               'proper scaling',
+               2,
+               None,
+               '___sec42'),
+              ('Other examples of simple algorithms that can be reused in many '
+               'courses, two-point boundary value problems and scaling',
+               2,
+               None,
+               '___sec43'),
+              ('A buckling beam, or a quantum mechanical particle in an '
+               'infinite well',
+               2,
+               None,
+               '___sec44'),
+              ('Discretize and get the same type of problem',
+               2,
+               None,
+               '___sec45'),
+              ('Adding complexity, hydrogen-like atoms or other one-particle '
+               'potentials',
+               2,
+               None,
+               '___sec46'),
+              ('Radial Schroedinger equation', 2, None, '___sec47'),
+              ('Scaling the equations', 2, None, '___sec48'),
+              ('A natural length scale comes out automagically when scaling',
+               2,
+               None,
+               '___sec49'),
+              ('Discretizing', 2, None, '___sec50'),
+              ('The Python  code', 2, None, '___sec51'),
+              ('The power of numerical methods', 2, None, '___sec52')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for Computing in science education -->
+
+
+<center><h1>Education and research in computational science and data science; from bachelor programs to research</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no -->
+
+<center>
+<b>Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no</b> [1, 2]
+</center>
+
+<p>
+<!-- institution(s) -->
+
+<center>[1] <b>National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA</b></center>
+<center>[2] <b>Department of Physics and <a href="http://www.mn.uio.no/ccse/english/people/index.html" target="_blank">Center for Computing in Science Education</a>, University of Oslo, Oslo, Norway</b></center>
+<br>
+<p>
+<center><h4>OsloMet, October 22, 2018</h4></center> <!-- date -->
+<br>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">Why should we focus on Computational Science and Data Science? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> <a href="http://pathways.acm.org/executive-summary.html" target="_blank">By 2020, it is expected that one of every two jobs in the STEM fields will be in computing</a> (Association for Computing Machinery, 2013)</li>
+<li> Computation is an essential and cross-cutting element of all STEM disciplines</li>
+<li> Computational science and Data science have developed into  disciplines of their own right</li>
+<li> Computations and the understanding of large data sets play an even larger role in basically all disciplines of STEM fields, Medicine, the Social Sciences, the Humanities and  education</li>
+<li> Students at both undergraduate and graduate level are unprepared to use computational modeling, data science, and high performance computing &#8211; skills valued by a very broad range of employers.</li>
+<li> The 3rd Industrial Revolution will alter significantly the demands on the workforce. To adapt a highly-qualified workforce to coming challenges  requires strong fundamental bases in STEM fields. Computational Science and Data Science can provide such bases at all stages.</li>
+</ul>
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1"><a href="https://computationalscienceuio.github.io/CCAD/doc/pub/whitepaper/html/whitepaper-bs.html" target="_blank">Computing across Disciplines at UiO</a> </h2>
+
+<p>
+<br /><br /><center><p><img src="figslides/cs.jpg" align="bottom" width=500></p></center><br /><br />
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">How to introduce computing in all disciplines: Future Research directions </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Enhance Computational Science and Data Science across the disciplines.</b>
+<p>
+
+<ul>
+<li> Computational Science and Data Science in Mathematics and all of the physical sciences (Astrophysics, Chemistry, Geoscience and Physics)</li>
+<li> Bioinformatics</li>
+<li> Develop research programs in <a href="https://www.aps.org/publications/apsnews/201802/ostp.cfm?utm_source=APS+Physics+Main+Group&utm_campaign=fb7a2e7d6b-News+021218&utm_medium=email&utm_term=0_825303224b-fb7a2e7d6b-106513221" target="_blank">Quantum Computing and Quantum Information theory</a>. Many universities are now developing research and <a href="https://vprgs.msu.edu/event/interdisciplinary-forum-quantum-information-science" target="_blank">educational strategies in Quantum Computing</a></li>
+<li> Develop data-driven discovery research programs utilizing recent developments in machine learning</li>
+<li> Computational life science</li>
+<li> Computational Materials Science</li>
+<li> Computational Economy and Data Science and computing in Law and the Social Sciences</li>
+<li> Data Science and computing in the Humanities</li>
+<li> And many more</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">And as a figure </h2>
+
+<p>
+<br /><br /><center><p><img src="figslides/topics.png" align="bottom" width=800></p></center><br /><br />
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Strengths, Possibilities and Synergies, a UiO based perspective </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Several Centers of excellence in research where Computational Science plays a major role</li>
+<li> Newly established center of excellence in education research</li>
+<li> Newly established Master of Science programs in Computational Science and Data Science</li>
+<li> Several excellent groups in STEM fiels who do Computational Science</li>
+<li> Computational topics are included in all undergraduate STEM programs, now developing a bachelor program in Computational Science and Data Science</li>
+<li> New development of computations in Life Science</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Goals </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Develop a comprehensive set of courses and degree programs at both undergraduate and graduate levels that will give students across the university exposure to practical computational methods, understanding how to analyse data and more generally to the idea of computers as problem-solving tools.</li> 
+<li> Develop an all university PhD program in Computational Science and Data Science</li>
+<li> Develop an all university Master of Science Program in Computational Science and Data Science</li>
+<li> Develop courses and course  modules in Computational Science and Data Science for the private and the public sectors</li>
+<li> Develop a PhD program in Computational Science and Data Science tailored to the needs of the private and the public sectors</li>
+<li> Facilitate the adoption of computational tools and techniques for both research and education across campus, through education and faculty collaboration.</li> 
+<li> Educate the next generation of school teachers and university teachers,  with a strong focus on digital competences.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Unique opportunities </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Computing competence represents a central element
+in scientific problem solving, from basic education and research to
+essentially almost all advanced problems in modern
+societies.
+
+<p>
+Computing competence <b>enlarges the body of tools available to students</b> and
+scientists beyond classical tools and <b>allows for a more generic
+handling of problems</b>. Focusing on algorithmic aspects <b>results in
+deeper insights</b> about scientific problems.
+
+<ul>
+<li> Computing in scince courses allows us to bring important elements of scientific methods at a much earlier stage in our students' education.</li>
+<li> It gives the students skills and abilities that are asked for by society.</li>
+<li> It gives us as university teachers a unique opportunity to enhance students' insights about our disciplines and how to solve scientific problems.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Computing competence </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Computing means solving scientific problems using all possible tools</b>, including symbolic computing, computers and numerical algorithms, and analytical paper and pencil solutions .
+
+<p>
+<b>Computing is about developing an understanding of the scientific method</b> by enhancing algorithmic thinking when solving problems.
+
+<p>
+On the part of students, this competence involves being able to:
+
+<ul>
+<li> understand how algorithms are used to solve mathematical problems,</li>
+<li> derive, verify, and implement algorithms,</li>
+<li> understand what can go wrong with algorithms,</li>
+<li> use these algorithms to construct reproducible scientific outcomes and to engage in science in ethical ways, and</li>
+<li> think algorithmically for the purposes of gaining deeper insights about scientific problems.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Better understanding of the scientific method </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+All these elements are central for maturing and gaining a better understanding of the modern scientific process <em>per se</em>.
+
+<p>
+The power of the scientific method lies in identifying a given problem
+as a special case of an abstract class of problems, identifying
+general solution methods for this class of problems, and applying a
+general method to the specific problem (applying means, in the case of
+computing, calculations by pen and paper, symbolic computing, or
+numerical computing by ready-made and/or self-written software). This
+generic view on problems and methods is particularly important for
+understanding how to apply available, generic software to solve a
+particular problem.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">Why should basic university education undergo a shift towards modern computing?  </h2>
+
+<ul>
+<li> Algorithms involving pen and paper are traditionally aimed at what we often refer to as continuous models.</li>
+<li> Application of computers calls for approximate discrete models.</li>
+<li> Much of the development of <b>methods for continuous models are now being replaced by methods  for discrete models</b> in science and industry, simply because <b>much larger classes of problems can be addressed</b> with discrete models, often also by simpler and more generic methodologies.</li>
+</ul>
+
+<em>However, verification of algorithms and understanding their limitations requires much of the classical knowledge about continuous models.</em>
+
+<p>
+So, why should basic university education undergo a shift towards modern computing?
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">Why is computing competence important? </h2>
+The impact of the computer on mathematics and science is tremendous: <b>science and industry now rely on solving mathematical problems through computing</b>.
+
+<ul>
+<li> Computing can increase the relevance in education by solving more realistic problems earlier.</li>
+<li> Computing through programming can be excellent training of creativity.</li>
+<li> Computing can enhance the understanding of abstractions and generalization.</li>
+<li> Computing can decrease the need for special tricks and tedious algebra, and shifts the focus to problem definition, visualization, and "what if" discussions.</li>
+</ul>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">Disasters attributable to poor management of code and more </h2>
+
+<p>
+Have you been paying attention in your numerical analysis or scientific computation courses? If not, it could be a costly mistake. Here are some real life examples of what can happen when numerical algorithms are not correctly applied.
+
+<ol>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/patriot.html" target="_blank">The Patriot Missile failure</a>, in Dharan, Saudi Arabia, on February 25, 1991 which resulted in 28 deaths, is ultimately attributable to poor handling of rounding errors.</li>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/ariane.html" target="_blank">The explosion of the Ariane 5 rocket</a> just after lift-off on its maiden voyage off French Guiana, on June 4, 1996, was ultimately the consequence of a simple overflow.</li>
+<li> <a href="http://www-users.math.umn.edu/~arnold/disasters/sleipner.html" target="_blank">The sinking of the Sleipner A</a> offshore platform in Gandsfjorden near Stavanger, Norway, on August 23, 1991, resulted in a loss of nearly one billion dollars. It was found to be the result of inaccurate finite element analysis.</li>
+<li> Scaling error, metric and imperial system of units, see the <a href="http://articles.latimes.com/1999/oct/01/news/mn-17288" target="_blank">Mars expedition</a>.</li>
+</ol>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec12">Modeling and computations as a way to enhance algorithminc thinking </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Algorithmic  thinking as a way to
+
+<ul>
+<li> Enhance instruction based teaching</li>
+<li> Introduce Research based teaching  from day one</li>
+<li> Trigger further insights in math and other disciplines</li> 
+<li> Validation and verification of scientific results (the PRL example), with the possibility to emphasize ethical aspects as well. Version control is central.</li>
+<li> Good working practices from day one.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec13">The foundation, Computing in Science Education at UiO: Can we catch many birds with one stone? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> How can we include and integrate an algorithmic (computational) perspective   in our basic education?</li>
+<li> Can this enhance the students' understanding of mathematics and science?</li>
+<li> Can it strengthen research based teaching?</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec14">What is needed? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Programming.</b>
+<p>
+A compulsory programming course with a strong mathematical flavour. <em>Should give a solid foundation in programming as a problem solving technique in mathematics</em>. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Mathematics and numerics.</b>
+<p>
+Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Sciences.</b>
+<p>
+Training in modeling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec15">Implementation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Crucial ingredients.</b>
+<p>
+
+<ul>
+<li> Support from governing bodies (high priorities at the College of Natural Science at UOslo and the Physics and Astronomy department of Michigan State University)</li>
+<li> Cooperation across departmental boundaries</li>
+<li> Willingness by individuals to give priority to teaching reform</li>
+</ul>
+
+Consensus driven approach.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec16">Implementation in Oslo: The <a href="http://www.mn.uio.no/ccse/english/people/index.html" target="_blank">C(omputing in)S(cience)E(Education)</a>  project </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What we do.</b>
+<p>
+
+<ul>
+<li> Coordinated use of computational exercises and numerical tools in most undergraduate courses.</li>
+<li> Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction.</li>
+<li> Teachers get good summer students to aid in introducing computational exercises</li>
+<li> Develop courses and exercise modules with a computational perspective, both for students and teachers. New textbooks!!</li> 
+<li> Basic idea: mixture of mathematics, computation, informatics and topics from the physical sciences.</li>
+</ul>
+
+Interesting outcome: higher focus on teaching and pedagogical issues!!
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec17">Example of bachelor program, Physics and Astronomy (astro path), University of Oslo </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figslides/astronomy.png" align="bottom" width=900></p></center><br /><br />
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec18">Example: Computations from day one </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Differentiation.</b>
+<p>
+Three courses the first semester:  MAT1100, MAT-INF1100 og INF1100.
+
+<ul>
+<li> Definition  of the derivative in  MAT1100 (Calculus and analysis)</li> 
+</ul>
+
+$$
+ f'(x)=\lim_{h \rightarrow 0}\frac{f(x+h)-f(x)}{h}.
+$$
+
+
+<ul>
+<li> Algorithms to compute the derivative in MAT-INF1100  (Mathematical modelling with computing)</li>
+</ul>
+
+$$
+ f'(x)= \frac{f(x+h)-f(x-h)}{2h}+O(h^2).
+$$
+
+
+<ul>
+<li> Implementation in Python in INF1100</li>
+</ul>
+
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">differentiate</span>(f, x, h<span style="color: #666666">=1E-5</span>):
+     <span style="color: #008000; font-weight: bold">return</span> (f(x<span style="color: #666666">+</span>h) <span style="color: #666666">-</span> f(x<span style="color: #666666">-</span>h))<span style="color: #666666">/</span>(<span style="color: #666666">2*</span>h)
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec19">Example: Computations from day one </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Differentiation and comparison with symbolic expressions.</b>
+<p>
+Combined with the possibility of symbolic calculations with <em>Sympy</em>, Python offers an environment where students and teachers alike can test many different aspects of mathematics and numerical mathematics, in addition to being able to verify and validate their codes. The following simple example shows how to extend the simple function for computing the numerical derivative with the possibility of obtaining the closed form or analytical expression
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">differentiate</span>(f, x, h<span style="color: #666666">=1E-5</span>, symbolic<span style="color: #666666">=</span><span style="color: #008000">False</span>):
+    <span style="color: #008000; font-weight: bold">if</span> symbolic:
+        <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sympy</span>
+        <span style="color: #008000; font-weight: bold">return</span> sympy<span style="color: #666666">.</span>lambdify([x], sympy<span style="color: #666666">.</span>diff(f, x))
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> (f(x<span style="color: #666666">+</span>h) <span style="color: #666666">-</span> f(x<span style="color: #666666">-</span>h))<span style="color: #666666">/</span>(<span style="color: #666666">2*</span>h)
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec20">Other Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<ul>
+<li> Definition of integration  in MAT1100 (Calculus and analysis).</li>
+<li> The algorithm for computing the  integral vha the Trapezoidal rule for an interval \( x \in [a,b] \)</li>
+</ul>
+
+$$
+  \int_a^b(f(x) dx \approx \frac{1}{2}\left [f(a)+2f(a+h)+\dots+2f(b-h)+f(b)\right] 
+$$
+
+
+<ul>
+<li> Taught   in MAT-INF1100  (Mathematical modelling)</li>
+<li> The algorithm is then implemented in  INF1100 (programming course).</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec21">Typical implementation first semester of study </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integration by Trapezoidal Rule.</b>
+<p>
+
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> exp, log, sin
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">Trapez</span>(a,b,f,n):
+   h <span style="color: #666666">=</span> (b<span style="color: #666666">-</span>a)<span style="color: #666666">/</span><span style="color: #008000">float</span>(n)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+   x <span style="color: #666666">=</span> a
+   <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,n,<span style="color: #666666">1</span>):
+       x <span style="color: #666666">=</span> x<span style="color: #666666">+</span>h
+       s <span style="color: #666666">=</span> s<span style="color: #666666">+</span> f(x)
+   s <span style="color: #666666">=</span> <span style="color: #666666">0.5*</span>(f(a)<span style="color: #666666">+</span>f(b)) <span style="color: #666666">+</span>s
+   <span style="color: #008000; font-weight: bold">return</span> h<span style="color: #666666">*</span>s
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">f1</span>(x):
+    <span style="color: #008000; font-weight: bold">return</span> exp(<span style="color: #666666">-</span>x<span style="color: #666666">*</span>x)<span style="color: #666666">*</span>log(<span style="color: #666666">1+</span>x<span style="color: #666666">*</span>sin(x))
+
+a <span style="color: #666666">=</span> <span style="color: #666666">1</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">3</span>; n <span style="color: #666666">=</span> <span style="color: #666666">1000</span>
+result <span style="color: #666666">=</span> Trapez(a,b,f1,n)
+<span style="color: #008000; font-weight: bold">print</span>(result)
+</pre></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec22">Symbolic calculations and numerical calculations in one code  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Python offers an  extremely versatile programming  environment, allowing for
+the inclusion of analytical studies in a numerical program. Here we show an
+example code with the <b>trapezoidal rule</b> using <b>SymPy</b> to evaluate an integral and compute the absolute error
+with respect to the numerically evaluated one of the integral
+\( \int_0^1 dx x^2 = 1/3 \):
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from math import *
+from sympy import *
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+
+#  function to compute pi
+def function(x):
+    return x*x
+
+a = 0.0;  b = 1.0; n = 100
+result = Trapez(a,b,function,n)
+print("Trapezoidal rule=", result)
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, 0.0, 1.0))
+print("Sympy integration=", exact)
+# Find relative error
+print("Relative error", abs((exact-result)/exact))
+
+</script></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec23">Error analysis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The following extended version of the trapezoidal rule allows you  to plot the relative error by comparing with the exact result. By increasing to \( 10^8 \) points one arrives at a region where numerical errors start to accumulate.
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from math import log10
+import numpy as np
+from sympy import Symbol, integrate
+import matplotlib.pyplot as plt
+# function for the trapezoidal rule
+def Trapez(a,b,f,n):
+   h = (b-a)/float(n)
+   s = 0
+   x = a
+   for i in range(1,n,1):
+       x = x+h
+       s = s+ f(x)
+   s = 0.5*(f(a)+f(b)) +s
+   return h*s
+#  function to compute pi
+def function(x):
+    return x*x
+# define integration limits
+a = 0.0;  b = 1.0;
+# find result from sympy
+# define x as a symbol to be used by sympy
+x = Symbol('x')
+exact = integrate(function(x), (x, a, b))
+# set up the arrays for plotting the relative error
+n = np.zeros(9); y = np.zeros(9);
+# find the relative error as function of integration points
+for i in range(1, 8, 1):
+    npts = 10**i
+    result = Trapez(a,b,function,npts)
+    RelativeError = abs((exact-result)/exact)
+    n[i] = log10(npts); y[i] = log10(RelativeError);
+plt.plot(n,y, 'ro')
+plt.xlabel('n')
+plt.ylabel('Relative error')
+plt.show()
+
+</script></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec24">Integrating numerical mathematics with calculus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last example shows the potential of combining numerical algorithms with symbolic calculations, allowing thereby students and teachers to
+
+<ul>
+<li> Validate and verify  their  algorithms.</li> 
+<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+<li> The above example allows the student to also test the mathematical error of the algorithm for the trapezoidal rule by changing the number of integration points. The students get trained from day one to think error analysis.</li> 
+<li> With an Jupyter/Ipython notebook the students can keep exploring similar examples and turn them in as their own notebooks.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec25">Additional benefits: A structured approach to solving problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In this process we easily bake in
+
+<ol>
+  <li> How to structure a code in terms of functions</li>
+  <li> How to make a module</li>
+  <li> How to read input data flexibly from the command line</li>
+  <li> How to create graphical/web user interfaces</li>
+  <li> How to write unit tests (test functions or doctests)</li>
+  <li> How to refactor code in terms of classes (instead of functions only)</li>
+  <li> How to conduct and automate large-scale numerical experiments</li>
+  <li> How to write scientific reports in various formats (LaTeX, HTML)</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec26">Additional benefits: A structure approach to solving problems </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The conventions and techniques outlined here will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
+
+<ol>
+<li> New code is added in a modular fashion to a library (modules)</li>
+<li> Programs are run through convenient user interfaces</li>
+<li> It takes one quick command to let all your code undergo heavy testing</li> 
+<li> Tedious manual work with running programs is automated,</li>
+<li> Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec27">Learning outcomes three first semesters </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Knowledge of basic algorithms.</b>
+<p>
+
+<ul>
+<li> Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)</li>
+<li> Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals (first semester)</li>
+<li> Random numbers, random walks, probability distributions and Monte Carlo integration  (first semester)</li>
+<li> Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel. (second and third semester)</li>
+<li> Root finding and interpolation etc. (all three first semesters)</li>
+<li> Processing of sound and images (first semester).</li>
+</ul>
+
+The students have to code several of these algorithms during the first three semesters.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec28">Later courses </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+<b>Later courses should build on this foundation as much as possible</b>.
+
+<ol>
+<li> In particular, the course should not be too basic! There should be progression in the use of mathematics, numerical methods and programming, as well as science.</li>
+<li> Computational platform: Python, fully object-oriented and allows for seamless integration of c++ and Fortran codes, as well as Matlab-like programming environment. Makes it easy to parallelize codes as well.</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec29">Coordination </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec30">Challenges...  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>.. and objections.</b>
+<p>
+
+<p>
+<em>Standard objection: computations take away the attention from other central topics in 'my course'</em>.
+
+<p>
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.  Coordination and synchronization across departments and courses. Increases collaboration on teaching and awareness of pedagical research.
+
+<ul>
+<li> To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec31">Physical Sciences implementation: Examples of simple algorithms, initial value problems and proper scaling of equations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ol>
+<li> Ordinary differential equations (ODE): RLC circuit</li>
+<li> ODE: Classical pendulum</li>
+<li> ODE: Solar system</li>
+<li> and many more cases</li>
+</ol>
+
+Can use essentially the <b>same algorithms to solve these problems</b>, either some simple modified Euler algorithms or some Runge-Kutta class of algorithms or perhaps the so-called Verlet class of algorithms.  <b>Algorithms students use in one course can be reused in other courses</b>.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec32">Mechanics and electromagnetism, initial value problems  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>When properly scaled, these equations are essentially the same. Scaling is important.</b>
+<p>
+
+<p>
+Classical pendulum with damping and external force as it could appear in a mechanics course (PHY 321)
+$$
+  ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Acos(\omega t).
+$$
+
+Easy to solve numerically and then visualize the solution.
+Almost the same equation for an RLC circuit in the electromagnetism course (PHY 482)
+$$
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=Acos(\omega t).
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec33">Mechanics and electromagnetism, initial value problems and now proper scaling  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Classical pendulum equations with damping and external force
+$$
+   \frac{d\theta}{d\hat{t}} =\hat{v},
+$$
+
+and
+$$
+   \frac{d\hat{v}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{v}\xi-\sin(\theta),
+$$
+
+with \( \omega_0=\sqrt{g/l} \), \( \hat{t}=\omega_0 t \) and \( \xi = mg/\omega_0\nu \).
+
+<p>
+The RLC circuit
+$$
+   \frac{dQ}{d\hat{t}} =\hat{I},
+$$
+
+and
+$$
+   \frac{d\hat{I}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{I}\xi-Q,
+$$
+
+with \( \omega_0=1/\sqrt{LC} \), \( \hat{t}=\omega_0 t \) and \( \xi = CR\omega_0 \).
+
+<p>
+The equations are essentially the same. <b>Great potential for abstraction</b>.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec34">Other examples of simple algorithms that can be reused in many courses, two-point boundary value problems and scaling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+These physics examples can all be studied using almost the same types of algorithms, simple eigenvalue solvers and Gaussian elimination with the same starting matrix!
+
+<ol>
+<li> A buckling beam and Toeplitz matrices (mechanics and mathematical methods), eigenvalue problems</li>
+<li> A particle in an infinite potential well, quantum eigenvalue problems</li>
+<li> A particle (or two) in a general quantum well, quantum eigenvalue problems</li>
+<li> Poisson's  equation in one dim, linear algebra (electromagnetism)</li>
+<li> The diffusion equation in one dimension (Statistical Physics), linear algebra</li>
+<li> and many other cases</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec35">The power of numerical methods </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last examples shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students and teachers to
+
+<ul>
+<li> make abstraction and explore other physics cases easily where no analytical solutions are known</li>
+<li> Validate and verify  their  algorithms.</li>
+<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+<li> The above examples allow the student to  test the mathematical error of the algorithm for the eigenvalue solver by changing the number of integration points. The students get trained from day one to think error analysis.</li>
+<li> The algorithm can be tailored to any kind of one-particle problem used in quantum mechanics or eigenvalue problems</li>
+<li> A simple rewrite allows for reuse in linear algebra problems for solution of say Poisson's equation in electromagnetism, or the diffusion equation in one dimension.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec36">Which aspects are important for a successful introduction of CSE? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.</li>
+<li> Crucial to learn proper programming at the beginning.</li>
+<li> Good TAs</li>
+<li> Choice of software.</li>
+<li> Textbooks and modularization of topics, ask for details</li>
+<li> Resources and expenses.</li>
+<li> Tailor to specific disciplines.</li>
+<li> Organizational matters.</li>
+<li> Strong education research groups.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec37">CSE Summary </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Make our research visible in early undergraduate courses, enhance research based teaching</li>
+<li> Possibility to focus more on understanding and increased insight.</li>
+<li> Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.</li>
+<li> Strengthening of instruction based teaching (expensive and time-consuming).</li>
+<li> Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.</li>
+<li> And perhaps the most important issue: does this enhance the student's insight in the Sciences?</li>
+</ul>
+
+We invite you to visit (online and/or in real life) our new center on <a href="http://www.mn.uio.no/ccse/english/" target="_blank">Computing in Science Education</a>
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec38">Summary: New Master of Science programs </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The two new Master of Science programs 
+
+<ul>
+<li> <a href="https://www.uio.no/english/studies/programmes/computational-science-master/index.html" target="_blank">Computational Science</a></li>
+<li> <a href="https://www.uio.no/english/studies/programmes/datascience-master/index.html" target="_blank">Data Science</a></li> 
+</ul>
+
+are a direct consequence of the <a href="https://www.mn.uio.no/ccse/english/" target="_blank">Computing in Science Education project</a>, which has aimed at a full integration and coordination of computational methods in basic undergrad natural science programs.
+
+<p>
+We are planning new undergraduate programs in Computational Science and Data Science, as well as cross-disciplinary programs at all levels.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec39">Summary: Research </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>We give students an education relevant for many exciting future research directions.</b>
+<p>
+
+<ul>
+<li> Computational Science and Data Science in Mathematics and all of the physical sciences (Astrophysics, Chemistry, Geoscience and Physics)</li>
+<li> Bioinformatics</li>
+<li> Develop research programs in <a href="https://www.aps.org/publications/apsnews/201802/ostp.cfm?utm_source=APS+Physics+Main+Group&utm_campaign=fb7a2e7d6b-News+021218&utm_medium=email&utm_term=0_825303224b-fb7a2e7d6b-106513221" target="_blank">Quantum Computing and Quantum Information theory</a>. Many universities are now developing research and <a href="https://vprgs.msu.edu/event/interdisciplinary-forum-quantum-information-science" target="_blank">educational strategies in Quantum Computing</a></li>
+<li> Develop data-driven discovery research programs utilizing recent developments in machine learning</li>
+<li> Computational life science</li>
+<li> Computational Materials Science</li>
+<li> Computational Economy and Data Science and computing in Law and the Social Sciences</li>
+<li> Data Science and computing in the Humanities</li>
+<li> And many more</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec40">Examples of simple algorithms, initial value problems and proper scaling of equations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ol>
+<li> Ordinary differential equations (ODE): RLC circuit</li>
+<li> ODE: Classical pendulum</li>
+<li> ODE: Solar system</li>
+<li> and many more cases</li>
+</ol>
+
+Can use essentially the <b>same algorithms to solve these problems</b>, either some simple modified Euler algorithms or some Runge-Kutta class of algorithms or perhaps the so-called Verlet class of algorithms.  <b>Algorithms students use in one course can be reused in other courses</b>.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec41">Mechanics and electromagnetism, initial value problems  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>When properly scaled, these equations are essentially the same. Scaling is important.</b>
+<p>
+
+<p>
+Classical pendulum with damping and external force as it could appear in a mechanics course (PHY 321)
+$$
+  ml\frac{d^2\theta}{dt^2}+\nu\frac{d\theta}{dt}  +mgsin(\theta)=Acos(\omega t).
+$$
+
+Easy to solve numerically and then visualize the solution.
+Almost the same equation for an RLC circuit in the electromagnetism course (PHY 482)
+$$
+L\frac{d^2Q}{dt^2}+\frac{Q}{C}+R\frac{dQ}{dt}=Acos(\omega t).
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec42">Mechanics and electromagnetism, initial value problems and now proper scaling  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Classical pendulum equations with damping and external force
+$$
+   \frac{d\theta}{d\hat{t}} =\hat{v},
+$$
+
+and
+$$
+   \frac{d\hat{v}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{v}\xi-\sin(\theta),
+$$
+
+with \( \omega_0=\sqrt{g/l} \), \( \hat{t}=\omega_0 t \) and \( \xi = mg/\omega_0\nu \).
+
+<p>
+The RLC circuit
+$$
+   \frac{dQ}{d\hat{t}} =\hat{I},
+$$
+
+and
+$$
+   \frac{d\hat{I}}{d\hat{t}} =Acos(\hat{\omega} \hat{t})-\hat{I}\xi-Q,
+$$
+
+with \( \omega_0=1/\sqrt{LC} \), \( \hat{t}=\omega_0 t \) and \( \xi = CR\omega_0 \).
+
+<p>
+The equations are essentially the same. <b>Great potential for abstraction</b>.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec43">Other examples of simple algorithms that can be reused in many courses, two-point boundary value problems and scaling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+These physics examples can all be studied using almost the same types of algorithms, simple eigenvalue solvers and Gaussian elimination with the same starting matrix!
+
+<ol>
+<li> A buckling beam and Toeplitz matrices (mechanics and mathematical methods), eigenvalue problems</li>
+<li> A particle in an infinite potential well, quantum eigenvalue problems</li>
+<li> A particle (or two) in a general quantum well, quantum eigenvalue problems</li>
+<li> Poisson's  equation in one dim, linear algebra (electromagnetism)</li>
+<li> The diffusion equation in one dimension (Statistical Physics), linear algebra</li>
+<li> and many other cases</li>
+</ol>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec44">A buckling beam, or a quantum mechanical particle in an infinite well </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This is a two-point boundary value problem
+$$
+R \frac{d^2 u(x)}{dx^2} = -F u(x),
+$$
+
+where \( u(x) \) is the vertical displacement, \( R \) is a material specific constant, \( F \) the force and \( x \in [0,L] \) with \( u(0)=u(L)=0 \).
+
+<p>
+Scale equations with \( x = \rho L \) and \( \rho \in [0,1] \) and get (note that we change from \( u(x) \) to \( v(\rho) \)) 
+$$
+\frac{d^2 v(\rho)}{dx^2} +K v(\rho)=0,
+$$
+
+a standard eigenvalue problem with \( K= FL^2/R \).
+
+<p>
+If you replace \( R=-\hbar^2/2m \) and \( -F=\lambda \), we have the quantum mechanical variant for a particle moving in a well with infinite walls at the endpoints.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec45">Discretize and get the same type of problem  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Discretize the second derivative and the rhs
+$$
+    -\frac{v_{i+1} -2v_i +v_{i-i}}{h^2}=\lambda v_i,
+$$
+
+with \( i=1,2,\dots, n \). We need to add to this system the two boundary conditions \( v(0) =v_0 \) and \( v(1) = v_{n+1} \).
+The so-called Toeplitz matrix (special case from the discretized second derivative)
+$$
+    \mathbf{A} = \frac{1}{h^2}\begin{bmatrix}
+                          2 & -1 &  &   &  & \\
+                          -1 & 2 & -1 & & & \\
+                           & -1 & 2 & -1 & &  \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           &   &  &-1  &2& -1 \\
+                           &    &  &   &-1 & 2 \\
+                      \end{bmatrix}
+$$
+
+with the corresponding vectors \( \mathbf{v} = (v_1, v_2, \dots,v_n)^T \) allows us to rewrite the differential equation
+including the boundary conditions as a standard eigenvalue problem
+$$
+   \mathbf{A}\mathbf{u} = \lambda\mathbf{v}.
+$$
+
+The Toeplitz matrix has analytical eigenpairs!! Adding a potential along the diagonals allows us to reuse this problem for many types of physics cases.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec46">Adding complexity, hydrogen-like atoms or other one-particle potentials  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We are first interested in the solution of the radial part of Schroedinger's equation for one electron. This equation reads
+$$
+  -\frac{\hbar^2}{2 m} \left ( \frac{1}{r^2} \frac{d}{dr} r^2
+  \frac{d}{dr} - \frac{l (l + 1)}{r^2} \right )R(r)
+     + V(r) R(r) = E R(r).
+$$
+
+Suppose in our  case \( V(r) \) is the harmonic oscillator potential \( (1/2)kr^2 \) with
+\( k=m\omega^2 \) and \( E \) is
+the energy of the harmonic oscillator in three dimensions.
+The oscillator frequency is \( \omega \) and the energies are
+$$
+E_{nl}=  \hbar \omega \left(2n+l+\frac{3}{2}\right),
+$$
+
+with \( n=0,1,2,\dots \) and \( l=0,1,2,\dots \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec47">Radial Schroedinger equation  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Since we have made a transformation to spherical coordinates it means that
+\( r\in [0,\infty) \).
+The quantum number
+\( l \) is the orbital momentum of the electron.   Then we substitute \( R(r) = (1/r) u(r) \) and obtain
+$$
+  -\frac{\hbar^2}{2 m} \frac{d^2}{dr^2} u(r)
+       + \left ( V(r) + \frac{l (l + 1)}{r^2}\frac{\hbar^2}{2 m}
+                                    \right ) u(r)  = E u(r) .
+$$
+
+The boundary conditions are \( u(0)=0 \) and \( u(\infty)=0 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec48">Scaling the equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We introduce a dimensionless variable \( \rho = (1/\alpha) r \)
+where \( \alpha \) is a constant with dimension length and get
+$$
+  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} v(\rho)
+       + \left ( V(\rho) + \frac{l (l + 1)}{\rho^2}
+         \frac{\hbar^2}{2 m\alpha^2} \right ) v(\rho)  = E v(\rho) .
+$$
+
+Let us choose \( l=0 \).
+Inserting \( V(\rho) = (1/2) k \alpha^2\rho^2 \) we end up with
+$$
+  -\frac{\hbar^2}{2 m \alpha^2} \frac{d^2}{d\rho^2} v(\rho)
+       + \frac{k}{2} \alpha^2\rho^2v(\rho)  = E v(\rho) .
+$$
+
+We multiply thereafter with \( 2m\alpha^2/\hbar^2 \) on both sides and obtain
+$$
+  -\frac{d^2}{d\rho^2} v(\rho)
+       + \frac{mk}{\hbar^2} \alpha^4\rho^2v(\rho)  = \frac{2m\alpha^2}{\hbar^2}E v(\rho) .
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec49">A natural length scale comes out automagically when scaling </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have thus
+$$
+  -\frac{d^2}{d\rho^2} v(\rho)
+       + \frac{mk}{\hbar^2} \alpha^4\rho^2v(\rho)  = \frac{2m\alpha^2}{\hbar^2}E v(\rho) .
+$$
+
+The constant \( \alpha \) can now be fixed
+so that
+$$
+\frac{mk}{\hbar^2} \alpha^4 = 1,
+$$
+
+and it defines a natural length scale (like the Bohr radius does)
+$$
+\alpha = \left(\frac{\hbar^2}{mk}\right)^{1/4}.
+$$
+
+Defining
+$$
+\lambda = \frac{2m\alpha^2}{\hbar^2}E,
+$$
+
+we can rewrite Schroedinger's equation as
+$$
+  -\frac{d^2}{d\rho^2} v(\rho) + \rho^2v(\rho)  = \lambda v(\rho) .
+$$
+
+This is similar to the equation for a buckling beam except for the potential term.
+In three dimensions
+the eigenvalues for \( l=0 \) are
+\( \lambda_0=1.5,\lambda_1=3.5,\lambda_2=5.5,\dots . \)
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec50">Discretizing </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Define first the diagonal matrix element
+$$
+   d_i=\frac{2}{h^2}+V_i,
+$$
+
+and the non-diagonal matrix element
+$$
+   e_i=-\frac{1}{h^2}.
+$$
+
+In this case the non-diagonal matrix elements are given by a mere constant. <em>All non-diagonal matrix elements are equal</em>.
+
+<p>
+With these definitions the Schroedinger equation takes the following form
+$$
+d_iu_i+e_{i-1}v_{i-1}+e_{i+1}v_{i+1}  = \lambda v_i,
+$$
+
+where \( v_i \) is unknown. We can write the
+latter equation as a matrix eigenvalue problem
+$$
+\begin{equation}
+    \begin{bmatrix} d_1 & e_1 & 0   & 0    & \dots  &0     & 0 \\
+                                e_1 & d_2 & e_2 & 0    & \dots  &0     &0 \\
+                                0   & e_2 & d_3 & e_3  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &d_{n_{\mathrm{step}}-2} & e_{n_{\mathrm{step}}-1}\\
+                                0   & \dots & \dots & \dots  &\dots       &e_{n_{\mathrm{step}}-1} & d_{n_{\mathrm{step}}-1}
+             \end{bmatrix}      \begin{bmatrix} v_{1} \\
+                                                              v_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              v_{n_{\mathrm{step}}-1}
+             \end{bmatrix}=\lambda \begin{bmatrix}{c} v_{1} \\
+                                                              v_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              v_{n_{\mathrm{step}}-1}
+             \end{bmatrix}
+\label{eq:sematrix}
+\end{equation}
+$$
+
+or if we wish to be more detailed, we can write the tridiagonal matrix as
+$$
+\begin{equation}
+    \left( \begin{array}{ccccccc} \frac{2}{h^2}+V_1 & -\frac{1}{h^2} & 0   & 0    & \dots  &0     & 0 \\
+                                -\frac{1}{h^2} & \frac{2}{h^2}+V_2 & -\frac{1}{h^2} & 0    & \dots  &0     &0 \\
+                                0   & -\frac{1}{h^2} & \frac{2}{h^2}+V_3 & -\frac{1}{h^2}  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &\frac{2}{h^2}+V_{n_{\mathrm{step}}-2} & -\frac{1}{h^2}\\
+                                0   & \dots & \dots & \dots  &\dots       &-\frac{1}{h^2} & \frac{2}{h^2}+V_{n_{\mathrm{step}}-1}
+             \end{array} \right)
+\label{eq:matrixse}
+\end{equation}
+$$
+
+Recall that the solutions are known via the boundary conditions at
+\( i=n_{\mathrm{step}} \) and at the other end point, that is for  \( \rho_0 \).
+The solution is zero in both cases.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec51">The Python  code </h2>
+The code sets up the Hamiltonian matrix by defining the minimun and maximum values of \( r \) with a
+maximum value of integration points. It plots the
+eigenfunctions of the three lowest eigenstates.
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+#Program which solves the one-particle Schrodinger equation
+#for a potential specified in function
+#potential().
+
+from  matplotlib import pyplot as plt
+import numpy as np
+#Function for initialization of parameters
+def initialize():
+    RMin = 0.0
+    RMax = 10.0
+    lOrbital = 0
+    Dim = 400
+    return RMin, RMax, lOrbital, Dim
+# Different types of potentials
+def potential(r):
+    return 0.5*r*r
+    #  return 0.0
+    #  return -1.0/r
+    #if r >= 0.0 and r <= 10.0:
+    #    V = -0.05
+    #else:
+    #    V =0.0
+    #return V
+
+#Get the boundary, orbital momentum and number of integration points
+RMin, RMax, lOrbital, Dim = initialize()
+
+#Initialize constants
+Step    = RMax/(Dim+1)
+DiagConst = 1.0/ (Step*Step)
+NondiagConst =  -0.5 / (Step*Step)
+OrbitalFactor = 0.5*lOrbital * (lOrbital + 1.0)
+
+#Calculate array of potential values
+v = np.zeros(Dim)
+r = np.linspace(RMin,RMax,Dim)
+for i in range(Dim):
+    r[i] = RMin + (i+1) * Step;
+    v[i] = potential(r[i]) + OrbitalFactor/(r[i]*r[i]);
+
+#Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
+Matrix = np.zeros((Dim,Dim))
+Matrix[0,0] = DiagConst + v[0];
+Matrix[0,1] = NondiagConst;
+for i in range(1,Dim-1):
+    Matrix[i,i-1]  = NondiagConst;
+    Matrix[i,i]    = DiagConst + v[i];
+    Matrix[i,i+1]  = NondiagConst;
+Matrix[Dim-1,Dim-2] = NondiagConst;
+Matrix[Dim-1,Dim-1] = DiagConst + v[Dim-1];
+# diagonalize and obtain eigenvalues, not necessarily sorted
+EigValues, EigVectors = np.linalg.eig(Matrix)
+# sort eigenvectors and eigenvalues
+permute = EigValues.argsort()
+EigValues = EigValues[permute]
+EigVectors = EigVectors[:,permute]
+# now plot the results for the three lowest lying eigenstates
+for i in range(3):
+    print(EigValues[i])
+FirstEigvector = EigVectors[:,0]
+SecondEigvector = EigVectors[:,1]
+ThirdEigvector = EigVectors[:,2]
+plt.plot(r, FirstEigvector**2 ,'b-',r, SecondEigvector**2 ,'g-',r, ThirdEigvector**2 ,'r-')
+plt.axis([0,4.6,0.0, 0.025])
+plt.xlabel(r'$r$')
+plt.ylabel(r'Radial probability $r^2|R(r)|^2$')
+plt.title(r'Radial probability distributions for three lowest-lying states')
+plt.savefig('eigenvector.pdf')
+plt.show()
+
+</script></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec52">The power of numerical methods </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last example shows the potential of combining numerical algorithms with analytical results (or eventually symbolic calculations), allowing thereby students and teachers to
+
+<ul>
+<li> make abstraction and explore other physics cases easily where no analytical solutions are known</li>
+<li> Validate and verify  their  algorithms.</li>
+<li> Including concepts like unit testing, one has the possibility to test and validate several or all parts of the code.</li>
+<li> Validation and verification are then included <em>naturally</em> and one can develop a better attitude to what is meant with an ethically sound scientific approach.</li>
+<li> The above example allows the student to also test the mathematical error of the algorithm for the eigenvalue solver by changing the number of integration points. The students get trained from day one to think error analysis.</li>
+<li> The algorithm can be tailored to any kind of one-particle problem used in quantum mechanics or eigenvalue problems</li>
+<li> A simple rewrite allows for reuse in linear algebra problems for solution of say Poisson's equation in electromagnetism, or the diffusion equation in one dimension.</li>
+<li> With an ipython notebook the students can keep exploring similar examples and turn them in as their own notebooks.</li>
+</ul>
+</div>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 1999-2019, Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+
+
+</body>
+</html>
+    
+
