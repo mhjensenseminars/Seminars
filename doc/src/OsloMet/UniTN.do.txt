@@ -540,7 +540,7 @@ with the corresponding vectors $\mathbf{v} = (v_1, v_2, \dots,v_n)^T$ allows us 
 including the boundary conditions as a standard eigenvalue problem
 !bt
 \[
-   \mathbf{A}\mathbf{u} = \lambda\mathbf{v}.
+   \mathbf{A}\mathbf{v} = \lambda\mathbf{v}.
 \]
 !et
 The Toeplitz matrix has analytical eigenpairs!! Adding a potential along the diagonals allows us to reuse this problem for many types of physics cases.
