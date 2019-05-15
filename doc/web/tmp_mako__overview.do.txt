@@ -32,9 +32,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse-reveal.html"
@@ -50,9 +48,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio-reveal.html"
@@ -68,9 +64,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent-reveal.html"
@@ -80,15 +74,13 @@ formulas in HTML or ipython notebook files.
 
 
 
-===== Nuclear Physics Summer School 2018, Nuclear Models =====
+===== Nuclear Physics Summer School 2019, Nuclear Models =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels-reveal.html"
@@ -104,9 +96,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-reveal.html"
@@ -122,9 +112,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/pdf/OsloMet-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/pdf/OsloMet-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/pdf/OsloMet-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/pdf/OsloMet-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/html/OsloMet.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/html/OsloMet-reveal.html"
@@ -140,9 +128,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018-reveal.html"
@@ -158,9 +144,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/pdf/UniTN-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/pdf/UniTN-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/pdf/UniTN-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/pdf/UniTN-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN-reveal.html"
