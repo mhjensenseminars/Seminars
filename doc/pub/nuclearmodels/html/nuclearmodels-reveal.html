@@ -1,8 +1,8 @@
-\
 <!DOCTYPE html>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Nuclear Models">
 
 <title>Nuclear Models</title>
@@ -147,12 +147,12 @@ MathJax.Hub.Config({
 <center><b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>NS3 Nuclear Physics Summer School 2018</h4></center> <!-- date -->
+<center><h4>NS3 Nuclear Physics Summer School 2019</h4></center> <!-- date -->
 <br>
 <p>
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2018, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright --> &copy; 2013-2019, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
 </center>
 </section>
 
@@ -208,7 +208,7 @@ To understand nuclei and nuclear matter theoretically means
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The Ipython (Jupyter) Notebook is at the link <a href="https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb" target="_blank"><tt>https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb</tt></a>
+The Jupyter Notebook is at the link <a href="https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb" target="_blank"><tt>https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb</tt></a>
 
 <p>
 The material in various formats (jupyter notebooks, various html and pdf formats) is at <a href="http://mhjensenseminars.github.io/EducationalSeminars/doc/web/overview.html" target="_blank"><tt>http://mhjensenseminars.github.io/EducationalSeminars/doc/web/overview.html</tt></a>
@@ -228,7 +228,7 @@ Feel free to use this material as you wish.
 <b></b>
 <p>
 During this summer school you will meet several of the above theoretical approaches to understand nuclei from a bottom-up type of approach
-(lectures of Brown and Hergert).
+(lectures of Brown, Lee and Nunes).
 
 <p>
 The aim here is provide you with the starting point for modeling nuclei and nuclear matter.
@@ -358,7 +358,7 @@ states.
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-A parametrized, and more realistic, potential model which is
+A parameterized, and more realistic, potential model which is
 widely used in nuclear physics, is the so-called <b>Woods-Saxon</b>
 potential. Both the harmonic oscillator and the Woods-Saxon potential
 models define computational problems that can easily be solved (see
@@ -509,9 +509,6 @@ $$
 u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
 $$
 <p>&nbsp;<br>
-
-Here we will use
-data from the 2003 compilation of <a href="http://www.sciencedirect.com/science/journal/03759474/729/1" target="_blank">Audi, Wapstra and Thibault</a>.
 </div>
 </section>
 
@@ -575,36 +572,7 @@ where \( \Delta_H c^2 = 7.2890 \) MeV and \( \Delta_n c^2 = 8.0713 \) MeV.
 
 
 <section>
-<h2 id="___sec17">Masses and Binding energies </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number \( A \). One notices clearly a saturation of the binding energy per nucleon at \( A\approx 56 \).
-<p>
-
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.dat&quot;</span>)
-<span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of A</span>
-x = data[:,<span style="color: #B452CD">2</span>]
-bexpt = data[:,<span style="color: #B452CD">3</span>]
-plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;ro&#39;</span>)
-plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
-plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
-plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
-plt.legend((<span style="color: #CD5555">&#39;Experiment&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
-plt.title(<span style="color: #CD5555">r&#39;Binding energies from experiment&#39;</span>)
-plt.show()
-</pre></div>
-
-</div>
-</section>
-
-
-<section>
-<h2 id="___sec18">Liquid drop model as a simple parametrization of binding energies  </h2>
+<h2 id="___sec17">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -624,7 +592,7 @@ to the experimental data.
 
 
 <section>
-<h2 id="___sec19">Liquid drop model as a simple parametrization of binding energies  </h2>
+<h2 id="___sec18">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -639,7 +607,7 @@ To arrive at the above expression we have assumed that we can make the following
 
 
 <section>
-<h2 id="___sec20">Liquid drop model as a simple parametrization of binding energies, continues  </h2>
+<h2 id="___sec19">Liquid drop model as a simple parametrization of binding energies, continues  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -654,97 +622,205 @@ To arrive at the above expression we have assumed that we can make the following
 <p>
 We could also add a so-called pairing term (an important model in nuclear physics), which is a correction term that
 arises from the tendency of proton pairs and neutron pairs to
-occur. An even number of particles is more stable than an odd number. 
-Performing a least-square fit to data (try this), we obtain the following numerical values for the various constants
+occur. An even number of particles is more stable than an odd number.
 
-<ul>
-<p><li> \( a_1=15.49 \) MeV</li>
-<p><li> \( a_2=17.23 \) MeV</li>
-<p><li> \( a_3=0.697 \) MeV</li>
-<p><li> \( a_4=22.6 \) MeV</li>
-</ul>
+
 </div>
 </section>
 
 
 <section>
-<h2 id="___sec21">Masses and Binding energies </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<h2 id="___sec20">Masses and Binding energies </h2>
+
 <p>
-The following python program reads now in the experimental data on binding energies as well as the results from the above liquid drop model and plots these energies as function of the mass number \( A \). One sees that for larger values of \( A \), there is a better agreement with data. 
+The following python program reads now in the experimental data on binding energies and performs a least squares fit to the data using a Machine Learning library called <b>Scikit-Learn</b>
+Let us start with reading and organizing our data. 
+We start with the compilation of masses and binding energies from 2016.
+After having downloaded this file to our own computer, we are now ready to read the file and start structuring our data.
+
+<p>
+We start with preparing folders for storing our calculations and the data file over masses and binding energies. We import also various modules that we will find useful in order to present various Machine Learning methods. Here we focus mainly on the functionality of <b>Scikit-Learn</b>.
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.dat&quot;</span>)
-<span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of</span>
-x = data[:,<span style="color: #B452CD">2</span>]
-bexpt = data[:,<span style="color: #B452CD">3</span>]
-liquiddrop = data[:,<span style="color: #B452CD">4</span>]
-plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;b-o&#39;</span>, x, liquiddrop, <span style="color: #CD5555">&#39;r-o&#39;</span>)
-plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
-plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
-plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
-plt.legend((<span style="color: #CD5555">&#39;Experiment&#39;</span>,<span style="color: #CD5555">&#39;Liquid Drop&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
-plt.title(<span style="color: #CD5555">r&#39;Binding energies from experiment and liquid drop&#39;</span>)
-plt.show()
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22"># Common imports</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">pandas</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">pd</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">sklearn.linear_model</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">skl</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.model_selection</span> <span style="color: #8B008B; font-weight: bold">import</span> train_test_split
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.metrics</span> <span style="color: #8B008B; font-weight: bold">import</span> mean_squared_error, r2_score, mean_absolute_error
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">os</span>
+
+<span style="color: #228B22"># Where to save the figures and data files</span>
+PROJECT_ROOT_DIR = <span style="color: #CD5555">&quot;Results&quot;</span>
+FIGURE_ID = <span style="color: #CD5555">&quot;Results/FigureFiles&quot;</span>
+DATA_ID = <span style="color: #CD5555">&quot;DataFiles/&quot;</span>
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(PROJECT_ROOT_DIR):
+    os.mkdir(PROJECT_ROOT_DIR)
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(FIGURE_ID):
+    os.makedirs(FIGURE_ID)
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(DATA_ID):
+    os.makedirs(DATA_ID)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">image_path</span>(fig_id):
+    <span style="color: #8B008B; font-weight: bold">return</span> os.path.join(FIGURE_ID, fig_id)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">data_path</span>(dat_id):
+    <span style="color: #8B008B; font-weight: bold">return</span> os.path.join(DATA_ID, dat_id)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">save_fig</span>(fig_id):
+    plt.savefig(image_path(fig_id) + <span style="color: #CD5555">&quot;.png&quot;</span>, format=<span style="color: #CD5555">&#39;png&#39;</span>)
+
+infile = <span style="color: #658b00">open</span>(data_path(<span style="color: #CD5555">&quot;MassEval2016.dat&quot;</span>),<span style="color: #CD5555">&#39;r&#39;</span>)
 </pre></div>
-
-</div>
-</section>
-
-
-<section>
-<h2 id="___sec22">Masses and Binding energies </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
 <p>
-This   python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters \( a_1 \) and \( a_2 \), leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver &amp; Boyd, 1969.
+Before we proceed, we define also a function for making our plots. You can obviously avoid this and simply set up various <b>matplotlib</b> commands every time you need them. You may however find it convenient to collect all such commands in one function and simply call this function. 
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">pylab</span> <span style="color: #8B008B; font-weight: bold">import</span> plt, mpl
+plt.style.use(<span style="color: #CD5555">&#39;seaborn&#39;</span>)
+mpl.rcParams[<span style="color: #CD5555">&#39;font.family&#39;</span>] = <span style="color: #CD5555">&#39;serif&#39;</span>
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">MakePlot</span>(x,y, styles, labels, axlabels):
+    plt.figure(figsize=(<span style="color: #B452CD">10</span>,<span style="color: #B452CD">6</span>))
+    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #658b00">len</span>(x)):
+        plt.plot(x[i], y[i], styles[i], label = labels[i])
+        plt.xlabel(axlabels[<span style="color: #B452CD">0</span>])
+        plt.ylabel(axlabels[<span style="color: #B452CD">1</span>])
+    plt.legend(loc=<span style="color: #B452CD">0</span>)
+</pre></div>
+<p>
+Our next step is to read the data on experimental binding energies and
+reorganize them as functions of the mass number \( A \), the number of
+protons \( Z \) and neutrons \( N \) using <b>pandas</b>.  Before we do this it is
+always useful (unless you have a binary file or other types of compressed
+data) to actually open the file and simply take a look at it!
+
+<p>
+In particular, the program that outputs the final nuclear masses is written in Fortran with a specific format. It means that we need to figure out the format and which columns contain the data we are interested in. Pandas comes with a function that reads formatted output. After having admired the file, we are now ready to start massaging it with <b>pandas</b>. The file begins with some basic format information.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #CD5555">&quot;&quot;&quot;                                                                                                                         </span>
+<span style="color: #CD5555">This is taken from the data file of the mass 2016 evaluation.                                                               </span>
+<span style="color: #CD5555">All files are 3436 lines long with 124 character per line.                                                                  </span>
+<span style="color: #CD5555">       Headers are 39 lines long.                                                                                           </span>
+<span style="color: #CD5555">   col 1     :  Fortran character control: 1 = page feed  0 = line feed                                                     </span>
+<span style="color: #CD5555">   format    :  a1,i3,i5,i5,i5,1x,a3,a4,1x,f13.5,f11.5,f11.3,f9.3,1x,a2,f11.3,f9.3,1x,i3,1x,f12.5,f11.5                     </span>
+<span style="color: #CD5555">   These formats are reflected in the pandas widths variable below, see the statement                                       </span>
+<span style="color: #CD5555">   widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),                                                            </span>
+<span style="color: #CD5555">   Pandas has also a variable header, with length 39 in this case.                                                          </span>
+<span style="color: #CD5555">&quot;&quot;&quot;</span>
+</pre></div>
+<p>
+The data we are interested in are in columns 2, 3, 4 and 11, giving us
+the number of neutrons, protons, mass numbers and binding energies,
+respectively. We add also for the sake of completeness the element name. The data are in fixed-width formatted lines and we will
+covert them into the <b>pandas</b> DataFrame structure.
 
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">scipy.optimize</span> <span style="color: #8B008B; font-weight: bold">import</span> curve_fit
-<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.dat&quot;</span>)
-<span style="color: #228B22"># Make arrays containing A on x-axis and binding energies</span>
-A = data[:,<span style="color: #B452CD">2</span>]
-bexpt = data[:,<span style="color: #B452CD">3</span>]
-<span style="color: #228B22"># The function we want to fit to, only two terms here</span>
-<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">func</span>(A,a1, a2):
-    <span style="color: #8B008B; font-weight: bold">return</span> a1*A-a2*(A**(<span style="color: #B452CD">2.0</span>/<span style="color: #B452CD">3.0</span>))
-<span style="color: #228B22"># function to perform nonlinear least square with guess for a1 and a2</span>
-popt, pcov = curve_fit(func, A, bexpt, p0 = (<span style="color: #B452CD">16.0</span>, <span style="color: #B452CD">18.0</span>))
-a1  = popt[<span style="color: #B452CD">0</span>]
-a2 = popt[<span style="color: #B452CD">1</span>]
-liquiddrop = a1*A-a2*(A**(<span style="color: #B452CD">2.0</span>/<span style="color: #B452CD">3.0</span>))
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22"># Read the experimental data with Pandas</span>
+Masses = pd.read_fwf(infile, usecols=(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>,<span style="color: #B452CD">6</span>,<span style="color: #B452CD">11</span>),
+              names=(<span style="color: #CD5555">&#39;N&#39;</span>, <span style="color: #CD5555">&#39;Z&#39;</span>, <span style="color: #CD5555">&#39;A&#39;</span>, <span style="color: #CD5555">&#39;Element&#39;</span>, <span style="color: #CD5555">&#39;Ebinding&#39;</span>),
+              widths=(<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">13</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">9</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">2</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">9</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">12</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">1</span>),
+              header=<span style="color: #B452CD">39</span>,
+              index_col=<span style="color: #658b00">False</span>)
 
-plt.plot(A, bexpt ,<span style="color: #CD5555">&#39;bo&#39;</span>, A, liquiddrop, <span style="color: #CD5555">&#39;ro&#39;</span>)
-plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
-plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
-plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
-plt.legend((<span style="color: #CD5555">&#39;Experiment&#39;</span>,<span style="color: #CD5555">&#39;Liquid Drop&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
-plt.title(<span style="color: #CD5555">r&#39;Binding energies from experiment and liquid drop&#39;</span>)
-plt.show()
+<span style="color: #228B22"># Extrapolated values are indicated by &#39;#&#39; in place of the decimal place, so</span>
+<span style="color: #228B22"># the Ebinding column won&#39;t be numeric. Coerce to float and drop these entries.</span>
+Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>] = pd.to_numeric(Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>], errors=<span style="color: #CD5555">&#39;coerce&#39;</span>)
+Masses = Masses.dropna()
+<span style="color: #228B22"># Convert from keV to MeV.</span>
+Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>] /= <span style="color: #B452CD">1000</span>
+
+<span style="color: #228B22"># Group the DataFrame by nucleon number, A.</span>
+Masses = Masses.groupby(<span style="color: #CD5555">&#39;A&#39;</span>)
+<span style="color: #228B22"># Find the rows of the grouped DataFrame with the maximum binding energy.</span>
+Masses = Masses.apply(<span style="color: #8B008B; font-weight: bold">lambda</span> t: t[t.Ebinding==t.Ebinding.max()])
 </pre></div>
 <p>
-Try to add more terms to the fitting as an exercise, or feel tempted to study Machine Learning!
-A cute article which uses Machine Learning to extract info on mass models
+We have now read in the data, grouped them according to the variables we are interested in. 
+We see how easy it is to reorganize the data using <b>pandas</b>. If we
+were to do these operations in C/C++ or Fortran, we would have had to
+write various functions/subroutines which perform the above
+reorganizations for us.  Having reorganized the data, we can now start
+to make some simple fits using both the functionalities in <b>numpy</b> and
+<b>Scikit-Learn</b> afterwards.
 
-<ul>
-<p><li> <a href="https://journals.aps.org/prc/abstract/10.1103/PhysRevC.97.014306" target="_blank">Utama and Piekarewicz, Validating neural-network refinements of nuclear mass models, Phys. Rev. C 97, 014306 </a></li>
-</ul>
-</div>
+<p>
+Now we define five variables which contain
+the number of nucleons \( A \), the number of protons \( Z \) and the number of neutrons \( N \), the element name and finally the energies themselves.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span>A = Masses[<span style="color: #CD5555">&#39;A&#39;</span>]
+Z = Masses[<span style="color: #CD5555">&#39;Z&#39;</span>]
+N = Masses[<span style="color: #CD5555">&#39;N&#39;</span>]
+Element = Masses[<span style="color: #CD5555">&#39;Element&#39;</span>]
+Energies = Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>]
+<span style="color: #8B008B; font-weight: bold">print</span>(Masses)
+</pre></div>
+<p>
+The next step, and we will define this mathematically later, is to set up the so-called <b>design matrix</b>. We will throughout call this matrix \( \boldsymbol{X} \).
+It has dimensionality \( p\times n \), where \( n \) is the number of data points and \( p \) are the so-called predictors. In our case here they are given by the number of polynomials in \( A \) we wish to include in the fit. 
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22"># Now we set up the design matrix X</span>
+X = np.zeros((<span style="color: #658b00">len</span>(A),<span style="color: #B452CD">5</span>))
+X[:,<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">1</span>
+X[:,<span style="color: #B452CD">1</span>] = A
+X[:,<span style="color: #B452CD">2</span>] = A**(<span style="color: #B452CD">2.0</span>/<span style="color: #B452CD">3.0</span>)
+X[:,<span style="color: #B452CD">3</span>] = A**(-<span style="color: #B452CD">1.0</span>/<span style="color: #B452CD">3.0</span>)
+X[:,<span style="color: #B452CD">4</span>] = A**(-<span style="color: #B452CD">1.0</span>)
+</pre></div>
+<p>
+With <b>scikitlearn</b> we are now ready to use linear regression and fit our data.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span>clf = skl.LinearRegression().fit(X, Energies)
+fity = clf.predict(X)
+</pre></div>
+<p>
+Pretty simple!  
+Now we can print measures of how our fit is doing, the coefficients from the fits and plot the final fit together with our data.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22"># The mean squared error                               </span>
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&quot;Mean squared error: %.2f&quot;</span> % mean_squared_error(Energies, fity))
+<span style="color: #228B22"># Explained variance score: 1 is perfect prediction                                 </span>
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&#39;Variance score: %.2f&#39;</span> % r2_score(Energies, fity))
+<span style="color: #228B22"># Mean absolute error                                                           </span>
+<span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&#39;Mean absolute error: %.2f&#39;</span> % mean_absolute_error(Energies, fity))
+<span style="color: #8B008B; font-weight: bold">print</span>(clf.coef_, clf.intercept_)
+
+Masses[<span style="color: #CD5555">&#39;Eapprox&#39;</span>]  = fity
+<span style="color: #228B22"># Generate a plot comparing the experimental with the fitted values values.</span>
+fig, ax = plt.subplots()
+ax.set_xlabel(<span style="color: #CD5555">r&#39;$A = N + Z$&#39;</span>)
+ax.set_ylabel(<span style="color: #CD5555">r&#39;$E_\mathrm{bind}\,/\mathrm{MeV}$&#39;</span>)
+ax.plot(Masses[<span style="color: #CD5555">&#39;A&#39;</span>], Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>], alpha=<span style="color: #B452CD">0.7</span>, lw=<span style="color: #B452CD">2</span>,
+            label=<span style="color: #CD5555">&#39;Ame2016&#39;</span>)
+ax.plot(Masses[<span style="color: #CD5555">&#39;A&#39;</span>], Masses[<span style="color: #CD5555">&#39;Eapprox&#39;</span>], alpha=<span style="color: #B452CD">0.7</span>, lw=<span style="color: #B452CD">2</span>, c=<span style="color: #CD5555">&#39;m&#39;</span>,
+            label=<span style="color: #CD5555">&#39;Fit&#39;</span>)
+ax.legend()
+save_fig(<span style="color: #CD5555">&quot;Masses2016&quot;</span>)
+plt.show()
+</pre></div>
 </section>
 
 
 <section>
-<h2 id="___sec23">\( Q \)-values and separation energies </h2>
+<h2 id="___sec21">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -768,7 +844,7 @@ $$
 
 
 <section>
-<h2 id="___sec24">\( Q \)-values and separation energies </h2>
+<h2 id="___sec22">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -792,7 +868,7 @@ $$
 
 
 <section>
-<h2 id="___sec25">Motivation </h2>
+<h2 id="___sec23">Motivation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Do we understand the physics of dripline systems?</b>
 <p>
@@ -817,7 +893,7 @@ $$
 
 
 <section>
-<h2 id="___sec26">\( Q \)-values and separation energies </h2>
+<h2 id="___sec24">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -834,7 +910,7 @@ Spontaneous decay involves a single initial nuclear state and is allowed if \( Q
 
 
 <section>
-<h2 id="___sec27">\( Q \)-values and separation energies </h2>
+<h2 id="___sec25">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -872,7 +948,7 @@ $$
 
 
 <section>
-<h2 id="___sec28">Separation energies and energy gaps </h2>
+<h2 id="___sec26">Separation energies and energy gaps </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -911,67 +987,95 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 
 
 <section>
-<h2 id="___sec29">Separation energies for oxygen isotopes </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<h2 id="___sec27">Separation energies  </h2>
+
 <p>
-The following python programs can now be used to plot the separation energies and the energy gaps for the oxygen isotopes.  The following python code reads the separation energies from file for all oxygen isotopes from \( A=13 \) to \( A=25 \), The data are taken from the file <em>snox.dat</em>.  This files contains the separation energies and the shell gap energies.
+To calculate say the neutron separation we need to multiply our masses with the nucleon number \( A \) (why?).
+Thereafter we pick the oxygen isotopes and simply compute the separation energies with  two lines of code (note that most of the code here is a repeat of what you have seen before). 
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/snox.dat&quot;</span>)
-<span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of</span>
-x = data[:,<span style="color: #B452CD">1</span>]
-y = data[:,<span style="color: #B452CD">2</span>]
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22"># Common imports</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">pandas</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">pd</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">os</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">pylab</span> <span style="color: #8B008B; font-weight: bold">import</span> plt, mpl
+plt.style.use(<span style="color: #CD5555">&#39;seaborn&#39;</span>)
+mpl.rcParams[<span style="color: #CD5555">&#39;font.family&#39;</span>] = <span style="color: #CD5555">&#39;serif&#39;</span>
 
-plt.plot(x, y,<span style="color: #CD5555">&#39;b-+&#39;</span>,markersize=<span style="color: #B452CD">6</span>)
-plt.axis([<span style="color: #B452CD">4</span>,<span style="color: #B452CD">18</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">25.0</span>])
-plt.xlabel(<span style="color: #CD5555">r&#39;Number of neutrons $N$&#39;</span>,fontsize=<span style="color: #B452CD">20</span>)
-plt.ylabel(<span style="color: #CD5555">r&#39;$S_n$ [MeV]&#39;</span>,fontsize=<span style="color: #B452CD">20</span>)
-plt.legend((<span style="color: #CD5555">&#39;Separation energies for oxygen isotpes&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
-plt.title(<span style="color: #CD5555">r&#39;Separation energy for the oxygen isotopes&#39;</span>)
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">MakePlot</span>(x,y, styles, labels, axlabels):
+    plt.figure(figsize=(<span style="color: #B452CD">10</span>,<span style="color: #B452CD">6</span>))
+    <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(<span style="color: #658b00">len</span>(x)):
+        plt.plot(x[i], y[i], styles[i], label = labels[i])
+        plt.xlabel(axlabels[<span style="color: #B452CD">0</span>])
+        plt.ylabel(axlabels[<span style="color: #B452CD">1</span>])
+    plt.legend(loc=<span style="color: #B452CD">0</span>)
+
+
+
+<span style="color: #228B22"># Where to save the figures and data files</span>
+PROJECT_ROOT_DIR = <span style="color: #CD5555">&quot;Results&quot;</span>
+FIGURE_ID = <span style="color: #CD5555">&quot;Results/FigureFiles&quot;</span>
+DATA_ID = <span style="color: #CD5555">&quot;DataFiles/&quot;</span>
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(PROJECT_ROOT_DIR):
+    os.mkdir(PROJECT_ROOT_DIR)
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(FIGURE_ID):
+    os.makedirs(FIGURE_ID)
+
+<span style="color: #8B008B; font-weight: bold">if</span> <span style="color: #8B008B">not</span> os.path.exists(DATA_ID):
+    os.makedirs(DATA_ID)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">image_path</span>(fig_id):
+    <span style="color: #8B008B; font-weight: bold">return</span> os.path.join(FIGURE_ID, fig_id)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">data_path</span>(dat_id):
+    <span style="color: #8B008B; font-weight: bold">return</span> os.path.join(DATA_ID, dat_id)
+
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">save_fig</span>(fig_id):
+    plt.savefig(image_path(fig_id) + <span style="color: #CD5555">&quot;.png&quot;</span>, format=<span style="color: #CD5555">&#39;png&#39;</span>)
+
+infile = <span style="color: #658b00">open</span>(data_path(<span style="color: #CD5555">&quot;MassEval2016.dat&quot;</span>),<span style="color: #CD5555">&#39;r&#39;</span>)
+
+
+<span style="color: #228B22"># Read the experimental data with Pandas</span>
+Masses = pd.read_fwf(infile, usecols=(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>,<span style="color: #B452CD">6</span>,<span style="color: #B452CD">11</span>),
+              names=(<span style="color: #CD5555">&#39;N&#39;</span>, <span style="color: #CD5555">&#39;Z&#39;</span>, <span style="color: #CD5555">&#39;A&#39;</span>, <span style="color: #CD5555">&#39;Element&#39;</span>, <span style="color: #CD5555">&#39;Ebinding&#39;</span>),
+              widths=(<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">5</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">13</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">9</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">2</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">9</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">1</span>,<span style="color: #B452CD">12</span>,<span style="color: #B452CD">11</span>,<span style="color: #B452CD">1</span>),
+              header=<span style="color: #B452CD">39</span>,
+              index_col=<span style="color: #658b00">False</span>)
+
+<span style="color: #228B22"># Extrapolated values are indicated by &#39;#&#39; in place of the decimal place, so</span>
+<span style="color: #228B22"># the Ebinding column won&#39;t be numeric. Coerce to float and drop these entries.</span>
+Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>] = pd.to_numeric(Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>], errors=<span style="color: #CD5555">&#39;coerce&#39;</span>)
+Masses = Masses.dropna()
+<span style="color: #228B22"># Convert from keV to MeV.</span>
+Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>] /= <span style="color: #B452CD">1000</span>
+A = Masses[<span style="color: #CD5555">&#39;A&#39;</span>]
+Z = Masses[<span style="color: #CD5555">&#39;Z&#39;</span>]
+N = Masses[<span style="color: #CD5555">&#39;N&#39;</span>]
+Element = Masses[<span style="color: #CD5555">&#39;Element&#39;</span>]
+Energies = Masses[<span style="color: #CD5555">&#39;Ebinding&#39;</span>]*A
+
+df = pd.DataFrame({<span style="color: #CD5555">&#39;A&#39;</span>:A,<span style="color: #CD5555">&#39;Z&#39;</span>:Z, <span style="color: #CD5555">&#39;N&#39;</span>:N,<span style="color: #CD5555">&#39;Element&#39;</span>:Element,<span style="color: #CD5555">&#39;Energies&#39;</span>:Energies})
+<span style="color: #228B22"># Her we pick the oyxgen isotopes</span>
+Nucleus = df.loc[<span style="color: #8B008B; font-weight: bold">lambda</span> df: df.Z==<span style="color: #B452CD">8</span>, :]
+<span style="color: #228B22"># drop cases with no number</span>
+Nucleus = Nucleus.dropna()
+<span style="color: #228B22"># Here we do the magic and obtain the neutron separation energies, one line of code!!</span>
+Nucleus[<span style="color: #CD5555">&#39;NeutronSeparationEnergies&#39;</span>] = Nucleus[<span style="color: #CD5555">&#39;Energies&#39;</span>].diff(+<span style="color: #B452CD">1</span>)
+<span style="color: #8B008B; font-weight: bold">print</span>(Nucleus)
+MakePlot([Nucleus.A], [Nucleus.NeutronSeparationEnergies], [<span style="color: #CD5555">&#39;b&#39;</span>], [<span style="color: #CD5555">&#39;Neutron Separation Energy&#39;</span>], [<span style="color: #CD5555">&#39;$A$&#39;</span>,<span style="color: #CD5555">&#39;$S_n$&#39;</span>])
+save_fig(<span style="color: #CD5555">&#39;Nucleus&#39;</span>)
 plt.show()
 </pre></div>
-
-</div>
 </section>
 
 
 <section>
-<h2 id="___sec30">Energy gaps for oxygen isotopes </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Here we display the python program for plotting the corresponding results for shell gaps for the oxygen isotopes. 
-<p>
-
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
-<span style="color: #228B22"># Load in data file</span>
-data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/snox.dat&quot;</span>)
-<span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of</span>
-x = data[:,<span style="color: #B452CD">1</span>]
-y = data[:,<span style="color: #B452CD">3</span>]
-
-plt.plot(x, y,<span style="color: #CD5555">&#39;b-+&#39;</span>,markersize=<span style="color: #B452CD">6</span>)
-plt.axis([<span style="color: #B452CD">4</span>,<span style="color: #B452CD">18</span>,-<span style="color: #B452CD">7</span>, <span style="color: #B452CD">12.0</span>])
-plt.xlabel(<span style="color: #CD5555">r&#39;Number of neutrons $N$&#39;</span>,fontsize=<span style="color: #B452CD">20</span>)
-plt.ylabel(<span style="color: #CD5555">r&#39;$\Delta S_n$ [MeV]&#39;</span>,fontsize=<span style="color: #B452CD">20</span>)
-plt.legend((<span style="color: #CD5555">&#39;Shell gap energies for oxygen isotpes&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
-plt.title(<span style="color: #CD5555">r&#39;Shell gap energies for the oxygen isotopes&#39;</span>)
-plt.show()
-</pre></div>
-
-</div>
-</section>
-
-
-<section>
-<h2 id="___sec31">Features to be noted  </h2>
+<h2 id="___sec28">Features to be noted  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -992,7 +1096,7 @@ One may thus infer that intrinsic properties of nucleons in a nucleus are close 
 
 
 <section>
-<h2 id="___sec32">Features to be noted, continues  </h2>
+<h2 id="___sec29">Features to be noted, continues  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <ul>
@@ -1011,7 +1115,7 @@ In the exercise below you will be asked to perform a similar analysis for other 
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec33">Exercise 1: Masses and binding energies </h2>
+<h2 id="___sec30">Exercise 1: Masses and binding energies </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1058,7 +1162,7 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 
 
 <section>
-<h2 id="___sec34">Our first attempt at a model,  harmonic oscillator spectrum  </h2>
+<h2 id="___sec31">Our first attempt at a model,  harmonic oscillator spectrum  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1074,7 +1178,7 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 
 
 <section>
-<h2 id="___sec35">The Woods-Saxon potential  </h2>
+<h2 id="___sec32">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1095,7 +1199,7 @@ The value for \( r_0 \) can be extracted from a fit to data, see for example <a 
 
 
 <section>
-<h2 id="___sec36">The Woods-Saxon potential  </h2>
+<h2 id="___sec33">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1147,7 +1251,7 @@ From the plot we notice that the potential
 
 
 <section>
-<h2 id="___sec37">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec34">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1174,7 +1278,7 @@ $$
 
 
 <section>
-<h2 id="___sec38">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec35">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1210,7 +1314,7 @@ $$
 
 
 <section>
-<h2 id="___sec39">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec36">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1243,7 +1347,7 @@ This term arises from the nuclear force in a natural way.
 
 
 <section>
-<h2 id="___sec40">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec37">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1272,7 +1376,7 @@ $$
 
 
 <section>
-<h2 id="___sec41">Single-particle Hamiltonians and spin-orbit force </h2>
+<h2 id="___sec38">Single-particle Hamiltonians and spin-orbit force </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1300,7 +1404,7 @@ on the nucleon-nucleon interaction and forms the basis for the discussions of Br
 
 
 <section>
-<h2 id="___sec42">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec39">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1323,7 +1427,7 @@ To solve the above equation is however rather straightforward numerically.
 
 
 <section>
-<h2 id="___sec43">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec40">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1348,7 +1452,7 @@ $$
 
 
 <section>
-<h2 id="___sec44">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec41">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1368,7 +1472,7 @@ with \( n=0,1,2,\dots \) and \( l=0,1,2,\dots \).
 
 
 <section>
-<h2 id="___sec45">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec42">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1390,7 +1494,7 @@ The boundary conditions are \( u(0)=0 \) and \( u(\infty)=0 \).
 
 
 <section>
-<h2 id="___sec46">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec43">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1425,7 +1529,7 @@ $$
 
 
 <section>
-<h2 id="___sec47">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec44">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1456,7 +1560,7 @@ $$
 
 
 <section>
-<h2 id="___sec48">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec45">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1482,7 +1586,7 @@ the eigenvalues for \( l=0 \) are
 
 
 <section>
-<h2 id="___sec49">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec46">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1508,7 +1612,7 @@ You need to check your results for the energies against different values
 
 
 <section>
-<h2 id="___sec50">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec47">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1545,7 +1649,7 @@ $$
 
 
 <section>
-<h2 id="___sec51">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec48">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1571,7 +1675,7 @@ In this case the non-diagonal matrix elements are given by a mere constant. <em>
 
 
 <section>
-<h2 id="___sec52">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec49">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1611,7 +1715,7 @@ $$
 
 
 <section>
-<h2 id="___sec53">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec50">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1639,7 +1743,7 @@ The solution is zero in both cases.
 
 
 <section>
-<h2 id="___sec54">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec51">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1651,7 +1755,7 @@ The following python program is an example of how one can obtain the eigenvalues
 
 
 <section>
-<h2 id="___sec55">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec52">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1674,9 +1778,17 @@ eigenfunctions of the three lowest eigenstates.
     lOrbital = <span style="color: #B452CD">0</span>
     Dim = <span style="color: #B452CD">400</span>
     <span style="color: #8B008B; font-weight: bold">return</span> RMin, RMax, lOrbital, Dim
-<span style="color: #228B22"># Harmonic oscillator here, easy to change</span>
+<span style="color: #228B22">#Harmonic oscillator here, easy to change</span>
 <span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">potential</span>(r):
     <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0.5</span>*r*r
+    <span style="color: #228B22">#  return 0.0</span>
+    <span style="color: #228B22">#  return -1.0/r</span>
+    <span style="color: #228B22">#if r &gt;= 0.0 and r &lt;= 10.0:</span>
+    <span style="color: #228B22">#    V = -0.05</span>
+    <span style="color: #228B22">#else:</span>
+    <span style="color: #228B22">#    V =0.0</span>
+    <span style="color: #228B22">#return V</span>
+
 
 <span style="color: #228B22">#Get the boundary, orbital momentum and number of integration points</span>
 RMin, RMax, lOrbital, Dim = initialize()
@@ -1733,7 +1845,7 @@ plt.show()
 <p>
 <!-- --- begin exercise --- -->
 
-<h2 id="___sec56">Exercise 2: Eigenstates and eigenvalues of single-particle problems </h2>
+<h2 id="___sec53">Exercise 2: Eigenstates and eigenvalues of single-particle problems </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1757,7 +1869,7 @@ Replace thereafter the harmonic oscillator potential with a Woods-Saxon potentia
 
 
 <section>
-<h2 id="___sec57">Where do we go from here? </h2>
+<h2 id="___sec54">Where do we go from here? </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1779,7 +1891,7 @@ A single-particle basis like the harmonic oscillator basis is also a useful basi
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Hopefully, this gives you an input to the discussions to come of Alex Brown and Heiko Hergert.  Best wishes to you all and enjoy your time at MSU.
+Hopefully, this gives you an input to the discussions to come of Alex Brown, Dean Lee and Filomena Nunes.  Best wishes to you all and enjoy your time at MSU.
 </div>
 </section>
 

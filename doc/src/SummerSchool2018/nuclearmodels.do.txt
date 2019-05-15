@@ -1,6 +1,6 @@
 TITLE: Nuclear Models
 AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
-DATE:  NS3 Nuclear Physics Summer School 2018
+DATE:  NS3 Nuclear Physics Summer School 2019
 
 !split 
 ===== Stability of matter ===== 
@@ -37,7 +37,7 @@ To understand nuclei and nuclear matter theoretically means
 !split
 ===== Where to find the material =====
 !bblock
-The Ipython (Jupyter) Notebook is at the link URL:"https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb"
+The Jupyter Notebook is at the link URL:"https://github.com/mhjensenseminars/EducationalSeminars/tree/master/doc/pub/nuclearmodels/ipynb"
 
 The material in various formats (jupyter notebooks, various html and pdf formats) is at URL:"http://mhjensenseminars.github.io/EducationalSeminars/doc/web/overview.html"
 
@@ -51,7 +51,7 @@ Feel free to use this material as you wish.
 ===== The nuclear many-body problem, where do we start?  =====
 !bblock
 During this summer school you will meet several of the above theoretical approaches to understand nuclei from a bottom-up type of approach
-(lectures of Brown and Hergert).
+(lectures of Brown, Lee and Nunes).
 
 The aim here is provide you with the starting point for modeling nuclei and nuclear matter.   
 !eblock
@@ -149,7 +149,7 @@ states.
 ===== Mean-field picture, more realistic model  ===== 
 !bblock 
 
-A parametrized, and more realistic, potential model which is
+A parameterized, and more realistic, potential model which is
 widely used in nuclear physics, is the so-called _Woods-Saxon_
 potential. Both the harmonic oscillator and the Woods-Saxon potential
 models define computational problems that can easily be solved (see
@@ -272,8 +272,6 @@ where $u$ is the Atomic Mass Unit
 u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
 \]
 !et
-Here we will use
-data from the 2003 compilation of "Audi, Wapstra and Thibault":"http://www.sciencedirect.com/science/journal/03759474/729/1".
 !eblock
 
 !split 
@@ -321,28 +319,6 @@ where $\Delta_H c^2 = 7.2890$ MeV and $\Delta_n c^2 = 8.0713$ MeV.
 
 !eblock
 
-!split 
-===== Masses and Binding energies ===== 
-!bblock
-The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number $A$. One notices clearly a saturation of the binding energy per nucleon at $A\approx 56$.
-!bc pycod
-import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/bindingenergies.dat")
-# Make arrays containing x-axis and binding energies as function of A
-x = data[:,2]
-bexpt = data[:,3]
-plt.plot(x, bexpt ,'ro')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment'), loc='upper right')
-plt.title(r'Binding energies from experiment')
-plt.show()
-!ec
-!eblock
-
 
 !split
 ===== Liquid drop model as a simple parametrization of binding energies  =====
@@ -386,11 +362,6 @@ To arrive at the above expression we have assumed that we can make the following
 We could also add a so-called pairing term (an important model in nuclear physics), which is a correction term that
 arises from the tendency of proton pairs and neutron pairs to
 occur. An even number of particles is more stable than an odd number. 
-Performing a least-square fit to data (try this), we obtain the following numerical values for the various constants
-* $a_1=15.49$ MeV
-* $a_2=17.23$ MeV
-* $a_3=0.697$ MeV
-* $a_4=22.6$ MeV
 
 !eblock
 
@@ -398,67 +369,171 @@ Performing a least-square fit to data (try this), we obtain the following numeri
 
 !split 
 ===== Masses and Binding energies ===== 
-!bblock
-The following python program reads now in the experimental data on binding energies as well as the results from the above liquid drop model and plots these energies as function of the mass number $A$. One sees that for larger values of $A$, there is a better agreement with data. 
+
+The following python program reads now in the experimental data on binding energies and performs a least squares fit to the data using a Machine Learning library called _Scikit-Learn_
+Let us start with reading and organizing our data. 
+We start with the compilation of masses and binding energies from 2016.
+After having downloaded this file to our own computer, we are now ready to read the file and start structuring our data.
+
+
+We start with preparing folders for storing our calculations and the data file over masses and binding energies. We import also various modules that we will find useful in order to present various Machine Learning methods. Here we focus mainly on the functionality of _Scikit-Learn_.
 !bc pycod
+# Common imports
 import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/bindingenergies.dat")
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,2]
-bexpt = data[:,3]
-liquiddrop = data[:,4]
-plt.plot(x, bexpt ,'b-o', x, liquiddrop, 'r-o')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment','Liquid Drop'), loc='upper right')
-plt.title(r'Binding energies from experiment and liquid drop')
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn.linear_model as skl
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import os
+
+# Where to save the figures and data files
+PROJECT_ROOT_DIR = "Results"
+FIGURE_ID = "Results/FigureFiles"
+DATA_ID = "DataFiles/"
+
+if not os.path.exists(PROJECT_ROOT_DIR):
+    os.mkdir(PROJECT_ROOT_DIR)
+
+if not os.path.exists(FIGURE_ID):
+    os.makedirs(FIGURE_ID)
+
+if not os.path.exists(DATA_ID):
+    os.makedirs(DATA_ID)
+
+def image_path(fig_id):
+    return os.path.join(FIGURE_ID, fig_id)
+
+def data_path(dat_id):
+    return os.path.join(DATA_ID, dat_id)
+
+def save_fig(fig_id):
+    plt.savefig(image_path(fig_id) + ".png", format='png')
+
+infile = open(data_path("MassEval2016.dat"),'r')
+!ec
+
+
+Before we proceed, we define also a function for making our plots. You can obviously avoid this and simply set up various _matplotlib_ commands every time you need them. You may however find it convenient to collect all such commands in one function and simply call this function. 
+!bc pycod 
+from pylab import plt, mpl
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
+
+def MakePlot(x,y, styles, labels, axlabels):
+    plt.figure(figsize=(10,6))
+    for i in range(len(x)):
+        plt.plot(x[i], y[i], styles[i], label = labels[i])
+        plt.xlabel(axlabels[0])
+        plt.ylabel(axlabels[1])
+    plt.legend(loc=0)
+!ec
+
+Our next step is to read the data on experimental binding energies and
+reorganize them as functions of the mass number $A$, the number of
+protons $Z$ and neutrons $N$ using _pandas_.  Before we do this it is
+always useful (unless you have a binary file or other types of compressed
+data) to actually open the file and simply take a look at it!
+
+
+In particular, the program that outputs the final nuclear masses is written in Fortran with a specific format. It means that we need to figure out the format and which columns contain the data we are interested in. Pandas comes with a function that reads formatted output. After having admired the file, we are now ready to start massaging it with _pandas_. The file begins with some basic format information.
+!bc pycod 
+"""                                                                                                                         
+This is taken from the data file of the mass 2016 evaluation.                                                               
+All files are 3436 lines long with 124 character per line.                                                                  
+       Headers are 39 lines long.                                                                                           
+   col 1     :  Fortran character control: 1 = page feed  0 = line feed                                                     
+   format    :  a1,i3,i5,i5,i5,1x,a3,a4,1x,f13.5,f11.5,f11.3,f9.3,1x,a2,f11.3,f9.3,1x,i3,1x,f12.5,f11.5                     
+   These formats are reflected in the pandas widths variable below, see the statement                                       
+   widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),                                                            
+   Pandas has also a variable header, with length 39 in this case.                                                          
+"""
+!ec
+
+The data we are interested in are in columns 2, 3, 4 and 11, giving us
+the number of neutrons, protons, mass numbers and binding energies,
+respectively. We add also for the sake of completeness the element name. The data are in fixed-width formatted lines and we will
+covert them into the _pandas_ DataFrame structure.
+
+!bc pycod 
+# Read the experimental data with Pandas
+Masses = pd.read_fwf(infile, usecols=(2,3,4,6,11),
+              names=('N', 'Z', 'A', 'Element', 'Ebinding'),
+              widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),
+              header=39,
+              index_col=False)
+
+# Extrapolated values are indicated by '#' in place of the decimal place, so
+# the Ebinding column won't be numeric. Coerce to float and drop these entries.
+Masses['Ebinding'] = pd.to_numeric(Masses['Ebinding'], errors='coerce')
+Masses = Masses.dropna()
+# Convert from keV to MeV.
+Masses['Ebinding'] /= 1000
+
+# Group the DataFrame by nucleon number, A.
+Masses = Masses.groupby('A')
+# Find the rows of the grouped DataFrame with the maximum binding energy.
+Masses = Masses.apply(lambda t: t[t.Ebinding==t.Ebinding.max()])
+!ec
+
+We have now read in the data, grouped them according to the variables we are interested in. 
+We see how easy it is to reorganize the data using _pandas_. If we
+were to do these operations in C/C++ or Fortran, we would have had to
+write various functions/subroutines which perform the above
+reorganizations for us.  Having reorganized the data, we can now start
+to make some simple fits using both the functionalities in _numpy_ and
+_Scikit-Learn_ afterwards. 
+
+Now we define five variables which contain
+the number of nucleons $A$, the number of protons $Z$ and the number of neutrons $N$, the element name and finally the energies themselves.
+!bc pycod 
+A = Masses['A']
+Z = Masses['Z']
+N = Masses['N']
+Element = Masses['Element']
+Energies = Masses['Ebinding']
+print(Masses)
+!ec
+The next step, and we will define this mathematically later, is to set up the so-called _design matrix_. We will throughout call this matrix $\bm{X}$.
+It has dimensionality $p\times n$, where $n$ is the number of data points and $p$ are the so-called predictors. In our case here they are given by the number of polynomials in $A$ we wish to include in the fit. 
+!bc pycod
+# Now we set up the design matrix X
+X = np.zeros((len(A),5))
+X[:,0] = 1
+X[:,1] = A
+X[:,2] = A**(2.0/3.0)
+X[:,3] = A**(-1.0/3.0)
+X[:,4] = A**(-1.0)
+!ec
+With _scikitlearn_ we are now ready to use linear regression and fit our data.
+!bc pycod 
+clf = skl.LinearRegression().fit(X, Energies)
+fity = clf.predict(X)
+!ec
+Pretty simple!  
+Now we can print measures of how our fit is doing, the coefficients from the fits and plot the final fit together with our data.
+!bc pycod
+# The mean squared error                               
+print("Mean squared error: %.2f" % mean_squared_error(Energies, fity))
+# Explained variance score: 1 is perfect prediction                                 
+print('Variance score: %.2f' % r2_score(Energies, fity))
+# Mean absolute error                                                           
+print('Mean absolute error: %.2f' % mean_absolute_error(Energies, fity))
+print(clf.coef_, clf.intercept_)
+
+Masses['Eapprox']  = fity
+# Generate a plot comparing the experimental with the fitted values values.
+fig, ax = plt.subplots()
+ax.set_xlabel(r'$A = N + Z$')
+ax.set_ylabel(r'$E_\mathrm{bind}\,/\mathrm{MeV}$')
+ax.plot(Masses['A'], Masses['Ebinding'], alpha=0.7, lw=2,
+            label='Ame2016')
+ax.plot(Masses['A'], Masses['Eapprox'], alpha=0.7, lw=2, c='m',
+            label='Fit')
+ax.legend()
+save_fig("Masses2016")
 plt.show()
 !ec
-!eblock
-
-
-
-!split 
-===== Masses and Binding energies ===== 
-!bblock
-This   python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
-
-!bc pycod
-import numpy as np
-from scipy.optimize import curve_fit
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/bindingenergies.dat")
-# Make arrays containing A on x-axis and binding energies
-A = data[:,2]
-bexpt = data[:,3]
-# The function we want to fit to, only two terms here
-def func(A,a1, a2):
-    return a1*A-a2*(A**(2.0/3.0))
-# function to perform nonlinear least square with guess for a1 and a2
-popt, pcov = curve_fit(func, A, bexpt, p0 = (16.0, 18.0))
-a1  = popt[0]
-a2 = popt[1]
-liquiddrop = a1*A-a2*(A**(2.0/3.0))
-
-plt.plot(A, bexpt ,'bo', A, liquiddrop, 'ro')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment','Liquid Drop'), loc='upper right')
-plt.title(r'Binding energies from experiment and liquid drop')
-plt.show()
-!ec
-Try to add more terms to the fitting as an exercise, or feel tempted to study Machine Learning!
-A cute article which uses Machine Learning to extract info on mass models
-* "Utama and Piekarewicz, Validating neural-network refinements of nuclear mass models, Phys. Rev. C 97, 014306 ":"https://journals.aps.org/prc/abstract/10.1103/PhysRevC.97.014306"
-
-
-!eblock
-
 
 
 
@@ -593,54 +668,89 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 
 
 !split 
-=====  Separation energies for oxygen isotopes ===== 
-!bblock
-The following python programs can now be used to plot the separation energies and the energy gaps for the oxygen isotopes.  The following python code reads the separation energies from file for all oxygen isotopes from $A=13$ to $A=25$, The data are taken from the file *snox.dat*.  This files contains the separation energies and the shell gap energies.
+=====  Separation energies  ===== 
+
+
+To calculate say the neutron separation we need to multiply our masses with the nucleon number $A$ (why?).
+Thereafter we pick the oxygen isotopes and simply compute the separation energies with  two lines of code (note that most of the code here is a repeat of what you have seen before). 
 !bc pycod
-
+# Common imports
 import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/snox.dat")
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,1]
-y = data[:,2]
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+from pylab import plt, mpl
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
 
-plt.plot(x, y,'b-+',markersize=6)
-plt.axis([4,18,-1, 25.0])
-plt.xlabel(r'Number of neutrons $N$',fontsize=20)
-plt.ylabel(r'$S_n$ [MeV]',fontsize=20)
-plt.legend(('Separation energies for oxygen isotpes'), loc='upper right')
-plt.title(r'Separation energy for the oxygen isotopes')
+def MakePlot(x,y, styles, labels, axlabels):
+    plt.figure(figsize=(10,6))
+    for i in range(len(x)):
+        plt.plot(x[i], y[i], styles[i], label = labels[i])
+        plt.xlabel(axlabels[0])
+        plt.ylabel(axlabels[1])
+    plt.legend(loc=0)
+
+
+
+# Where to save the figures and data files
+PROJECT_ROOT_DIR = "Results"
+FIGURE_ID = "Results/FigureFiles"
+DATA_ID = "DataFiles/"
+
+if not os.path.exists(PROJECT_ROOT_DIR):
+    os.mkdir(PROJECT_ROOT_DIR)
+
+if not os.path.exists(FIGURE_ID):
+    os.makedirs(FIGURE_ID)
+
+if not os.path.exists(DATA_ID):
+    os.makedirs(DATA_ID)
+
+def image_path(fig_id):
+    return os.path.join(FIGURE_ID, fig_id)
+
+def data_path(dat_id):
+    return os.path.join(DATA_ID, dat_id)
+
+def save_fig(fig_id):
+    plt.savefig(image_path(fig_id) + ".png", format='png')
+
+infile = open(data_path("MassEval2016.dat"),'r')
+
+
+# Read the experimental data with Pandas
+Masses = pd.read_fwf(infile, usecols=(2,3,4,6,11),
+              names=('N', 'Z', 'A', 'Element', 'Ebinding'),
+              widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),
+              header=39,
+              index_col=False)
+
+# Extrapolated values are indicated by '#' in place of the decimal place, so
+# the Ebinding column won't be numeric. Coerce to float and drop these entries.
+Masses['Ebinding'] = pd.to_numeric(Masses['Ebinding'], errors='coerce')
+Masses = Masses.dropna()
+# Convert from keV to MeV.
+Masses['Ebinding'] /= 1000
+A = Masses['A']
+Z = Masses['Z']
+N = Masses['N']
+Element = Masses['Element']
+Energies = Masses['Ebinding']*A
+
+df = pd.DataFrame({'A':A,'Z':Z, 'N':N,'Element':Element,'Energies':Energies})
+# Her we pick the oyxgen isotopes
+Nucleus = df.loc[lambda df: df.Z==8, :]
+# drop cases with no number
+Nucleus = Nucleus.dropna()
+# Here we do the magic and obtain the neutron separation energies, one line of code!!
+Nucleus['NeutronSeparationEnergies'] = Nucleus['Energies'].diff(+1)
+print(Nucleus)
+MakePlot([Nucleus.A], [Nucleus.NeutronSeparationEnergies], ['b'], ['Neutron Separation Energy'], ['$A$','$S_n$'])
+save_fig('Nucleus')
 plt.show()
+
 !ec
-!eblock
-
-
-!split 
-=====  Energy gaps for oxygen isotopes ===== 
-!bblock
-Here we display the python program for plotting the corresponding results for shell gaps for the oxygen isotopes. 
-!bc pycod
-
-import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt("datafiles/snox.dat")
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,1]
-y = data[:,3]
-
-plt.plot(x, y,'b-+',markersize=6)
-plt.axis([4,18,-7, 12.0])
-plt.xlabel(r'Number of neutrons $N$',fontsize=20)
-plt.ylabel(r'$\Delta S_n$ [MeV]',fontsize=20)
-plt.legend(('Shell gap energies for oxygen isotpes'), loc='upper right')
-plt.title(r'Shell gap energies for the oxygen isotopes')
-plt.show()
-!ec
-
-!eblock
 
 
 
@@ -1196,9 +1306,17 @@ def initialize():
     lOrbital = 0
     Dim = 400
     return RMin, RMax, lOrbital, Dim
-# Harmonic oscillator here, easy to change
+#Harmonic oscillator here, easy to change
 def potential(r):
     return 0.5*r*r
+    #  return 0.0
+    #  return -1.0/r
+    #if r >= 0.0 and r <= 10.0:
+    #    V = -0.05
+    #else:
+    #    V =0.0
+    #return V
+
 
 #Get the boundary, orbital momentum and number of integration points
 RMin, RMax, lOrbital, Dim = initialize()
@@ -1283,5 +1401,12 @@ A single-particle basis like the harmonic oscillator basis is also a useful basi
 
 !bblock
 
-Hopefully, this gives you an input to the discussions to come of Alex Brown and Heiko Hergert.  Best wishes to you all and enjoy your time at MSU.  
+Hopefully, this gives you an input to the discussions to come of Alex Brown, Dean Lee and Filomena Nunes.  Best wishes to you all and enjoy your time at MSU.  
 !eblock
+
+
+
+
+
+
+
