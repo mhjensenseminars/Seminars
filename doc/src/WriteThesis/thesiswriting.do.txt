@@ -1,0 +1,270 @@
+TITLE: Computational Physics Lectures: How to write a scientific report/thesis
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
+DATE: today
+
+
+!split
+===== What do we mean with computing?  =====
+!bblock
+
+_Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems._
+
+And this  competence is about:
+
+* derivation, verification, and implementation of algorithms
+* understanding what can go wrong with algorithms
+* overview of important, known algorithms
+* understanding how algorithms are used to solve complicated problems
+* reproducible science and ethics
+* algorithmic thinking for gaining deeper insights about scientific problems
+
+All these elements (and many more) will hopefully aid you in maturing and gaining a better understanding of the scientific process *per se*.    _Writing good reports is a central element in achieving such insights_.    The computational part is actually a central element in your thesis. How do we document that?
+!eblock
+
+
+!split
+===== The standard situation we meet on a daily basis =====
+!bblock
+The standard situation we meet at an almost daily basis:
+
+* Theory+experiment+simulation is almost the norm in research and industry
+* To be able to model complex systems with no simple answers. Solve real problems.
+* Emphasis on insight and understanding of fundamental principles and laws in the Sciences.
+* Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.
+* Enhance reasoning about the scientific method
+
+Again, a proper presentation of obtained results via good  scientic reports, aids in including all the above aspects.
+!eblock
+
+
+!split
+===== Some basic ingredients for a successful numerical project/thesis work =====
+
+When building up a numerical project there are several elements you should think of, amongst these we take the liberty of mentioning the following:
+ o   How to structure a code in terms of functions, see slides on clean code later
+ o   How to make a module
+ o   How to read input data flexibly from the command line
+ o   How to create graphical/web user interfaces
+ o   How to write unit tests (test functions)
+ o   How to refactor code in terms of classes (instead of functions only), in our case you think of a system and a solver class
+ o   How to conduct and automate large-scale numerical experiments
+ o   How to write scientific reports in various formats (LaTeX, HTML)
+
+!split
+===== More basic ingredients  =====
+The conventions and techniques outlined here will save you a lot of time when you incrementally extend software over time from simpler to more complicated problems. In particular, you will benefit from many good habits:
+ o New code is added in a modular fashion to a library (modules)
+ o Programs are run through convenient user interfaces
+ o It takes one quick command to let all your code undergo heavy testing
+ o Tedious manual work with running programs is automated,
+ o Your scientific investigations are reproducible, scientific reports with top quality typesetting are produced both for paper and electronic devices.
+
+
+
+!split
+===== The thesis/report: how to write a good one =====
+!bblock What should it contain? A typical structure
+ * An abstract where you give the main summary of your work
+ * An introduction where you explain the aims and rationale for the physics case and  what you have done. At the end of the introduction you should give a brief summary of the structure of the report
+ * Theoretical models and technicalities. This is the methods section
+ * Implementation, the software you have developed
+ * Results and discussion
+ * Conclusions and perspectives
+ * Appendix with extra material
+ * Bibliography
+Keep always a good log of what you do.
+!eblock
+
+!split
+===== The report, the abstract =====
+!bblock 
+The abstract gives the reader a quick overview of what has been done and the most important results. "Here is a typical example":"https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.060403"
+
+_As is well known, angular position and orbital angular momentum (OAM) of photons are a conjugate pair of variables that have been extensively explored for quantum information science and technology. In contrast, the radial degrees of freedom remain relatively unexplored. Here we exploit the radial variables, i.e., radial position and radial momentum, to demonstrate Einstein-Podolsky-Rosen correlations between down-converted photons. In our experiment, we prepare various annular apertures to define the radial positions and use eigenmode projection to measure the radial momenta. The resulting correlations are found to violate the Heisenberg-like uncertainty principle for independent particles, thus manifesting the entangled feature in the radial structure of two-photon wave functions. Our work suggests that, in parallel with angular position and OAM, the radial position and radial momentum can offer a new platform for a fundamental test of quantum mechanics and for novel application of quantum information._
+
+
+
+!eblock
+
+!split
+===== The report, the introduction =====
+!bblock What should I focus on? Introduction
+You don't need to answer all questions in a chronological order.  When you write the introduction you could focus on the following aspects
+ * Motivate the reader, the first part of the introduction gives always a motivation and tries to give the overarching ideas
+ * What I have done
+ * The structure of the report, how it is organized etc
+!eblock
+
+
+
+!split
+===== The report, discussion of methods and your implementation =====
+!bblock What should I focus on? Methods sections
+ * Describe the methods and algorithms
+ * You need to explain how you implemented the methods and also say something about the structure of your algorithm and present some parts of your code
+ * You should plug in some calculations to demonstrate your code, such as selected runs used to validate and verify your results. The latter is extremely important!!  A reader needs to understand that your code reproduces selected benchmarks and reproduces previous results, either numerical and/or well-known  closed form expressions.
+
+The implementation part is central, this is where most of you will present what you have developed, how you have tested the code, its structure, validation and verification and much more.
+
+!eblock
+
+
+!split
+===== The report, results part =====
+!bblock What should I focus on? Results
+ * Present your results
+ * Give a critical discussion of your work and place it in the correct context.
+ * Relate your work to other calculations/studies
+ * An eventual reader should be able to reproduce your calculations if she/he wants to do so. All input variables should be properly explained.
+ * Make sure that figures and tables should contain enough information in their captions, axis labels etc so that an eventual reader can gain a first impression of your work by studying figures and tables only.
+!eblock
+
+
+!split
+===== The report, conclusions and perspectives =====
+!bblock What should I focus on? Conclusions
+ * State your main findings and interpretations
+ * Try as far as possible to present perspectives for future work
+ * Try to discuss the pros and cons of the methods and possible improvements
+!eblock
+
+!split
+===== The report, appendices =====
+!bblock What should I focus on? additional material 
+ * Additional calculations used to validate the codes
+ * Selected calculations, these can be listed with  few comments
+ * Listing of the code if you feel this is necessary
+
+You can consider moving parts of the material from the methods section to the appendix. You can also place additional material on your webpage. 
+!eblock
+
+!split
+===== The report, references =====
+!bblock What should I focus on? References
+ * Give always references to material you base your work on, either  scientific articles/reports or books.
+ * Refer to articles as: name(s) of author(s), journal, volume (boldfaced), page and year in parenthesis.
+ * Refer to books as: name(s) of author(s), title of book, publisher, place and year, eventual page numbers
+
+Finally, figures and tables should be clear with labels on axes and good captions!
+!eblock
+
+
+!split
+===== Where do I find scientific articles, books etc and examples of reports  =====
+!bblock 
+ * With a UiO IP number you can access freely all books and scientific journals available at our "University library":"http://www.ub.uio.no/"
+ * For scientific articles, go to for example the journal "Physical Review Letters of the American Physical Society":"http://journals.aps.org/prl/issues/117/10"
+!eblock
+  
+
+!split
+===== Additional resources =====
+
+* Use always version control software like "Git":"https://git-scm.com/" with providers like "GitHub":"https://github.com/", "GitLab":"https://about.gitlab.com/", "BitBucket":"https://bitbucket.org/product?&aceid=&adposition=1t1&adgroup=55499729756&campaign=1407243017&creative=377537901819&device=c&keyword=bitbucket&matchtype=e&network=g&placement=&ds_kids=p33211125163&ds_e=GOOGLE&ds_eid=700000001551985&ds_e1=GOOGLE&gclid=Cj0KCQjwhdTqBRDNARIsABsOl9_sHITZ2N92Z8_ESiVlnvqOSGt7Pw7d_A1C9K8LaVtSu2wfoNI3jwUaAtNjEALw_wcB&gclsrc=aw.ds" and other
+* Introduce Unit testting from day one (see the how to write a good code slides).
+* Use if you like IDEs like "QtCreator":"https://www.qt.io/qt-features-libraries-apis-tools-and-ide/" and other. They have excellent debugging and analysis options.
+* Use "LaTex":"https://www.latex-project.org/" for typesetting and "BibTex":"http://www.bibtex.org/" for managing references.
+* Jupyter Notebooks and Jupyter Books are extremely useful. See also list over various Python libraries
+* Look up previous Master theses at "duo.uio.no":"https://www.duo.uio.no/" 
+
+
+
+!split
+===== Python installers =====
+
+We
+recommend two widely used distrubutions which set up all relevant
+dependencies for Python, namely 
+
+* "Anaconda":"https://docs.anaconda.com/", 
+
+which is an open source
+distribution of the Python and R programming languages for large-scale
+data processing, predictive analytics, and scientific computing, that
+aims to simplify package management and deployment. Package versions
+are managed by the package management system _conda_. 
+
+* "Enthought canopy":"https://www.enthought.com/product/canopy/" 
+
+is a Python
+distribution for scientific and analytic computing distribution and
+analysis environment, available for free and under a commercial
+license.
+
+Furthermore, "Google's Colab":"https://colab.research.google.com/notebooks/welcome.ipynb" is a free Jupyter notebook environment that requires 
+no setup and runs entirely in the cloud. Try it out!
+
+!split
+===== Useful Python libraries =====
+Here we list several useful Python libraries we strongly recommend (if you use anaconda many of these are already there)
+
+* "NumPy":"https://www.numpy.org/" is a highly popular library for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays
+* "The pandas":"https://pandas.pydata.org/" library provides high-performance, easy-to-use data structures and data analysis tools 
+* "Xarray":"http://xarray.pydata.org/en/stable/" is a Python package that makes working with labelled multi-dimensional arrays simple, efficient, and fun!
+* "Scipy":"https://www.scipy.org/" (pronounced “Sigh Pie”) is a Python-based ecosystem of open-source software for mathematics, science, and engineering. 
+* "Matplotlib":"https://matplotlib.org/" is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+* "Autograd":"https://github.com/HIPS/autograd" can automatically differentiate native Python and Numpy code. It can handle a large subset of Python's features, including loops, ifs, recursion and closures, and it can even take derivatives of derivatives of derivatives
+* "SymPy":"https://www.sympy.org/en/index.html" is a Python library for symbolic mathematics. 
+* "scikit-learn":"https://scikit-learn.org/stable/" has simple and efficient tools for machine learning, data mining and data analysis
+* "TensorFlow":"https://www.tensorflow.org/" is a Python library for fast numerical computing created and released by Google
+* "Keras":"https://keras.io/" is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano
+* And many more such as "pytorch":"https://pytorch.org/",  "Theano":"https://pypi.org/project/Theano/" etc 
+
+!split
+===== Installing R, C++, cython or Julia =====
+
+You will also find it convenient to utilize _R_. We will mainly
+use Python during lectures and in various projects and exercises.
+Those of you
+already familiar with _R_ should feel free to continue using _R_, keeping
+however an eye on the parallel Python set ups. Similarly, if you are a
+Python afecionado, feel free to explore _R_ as well.  Jupyter/Ipython
+notebook allows you to run _R_ codes interactively in your
+browser. The software library _R_ is tuned to statistically analysis
+and allows for an easy usage of the tools we will discuss in these
+lectures.
+
+To install _R_ with Jupyter notebook 
+"follow the link here":"https://mpacer.org/maths/r-kernel-for-ipython-notebook"
+
+
+
+!split
+===== Installing R, C++, cython, Numba etc =====
+
+
+For the C++ aficionados, Jupyter/IPython notebook allows you also to
+install C++ and run codes written in this language interactively in
+the browser. Since we will emphasize writing many of the algorithms
+yourself, you can thus opt for either Python or C++ (or Fortran or other compiled languages) as programming
+languages.
+
+To add more entropy, _cython_ can also be used when running your
+notebooks. It means that Python with the jupyter notebook
+setup allows you to integrate widely popular softwares and tools for
+scientific computing. Similarly, the 
+"Numba Python package":"https://numba.pydata.org/" delivers increased performance
+capabilities with minimal rewrites of your codes.  With its
+versatility, including symbolic operations, Python offers a unique
+computational environment. Your jupyter notebook can easily be
+converted into a nicely rendered _PDF_ file or a Latex file for
+further processing. For example, convert to latex as 
+
+!bc 
+pycod jupyter nbconvert filename.ipynb --to latex 
+!ec
+
+And to add more versatility, the Python package "SymPy":"http://www.sympy.org/en/index.html" is a Python library for symbolic mathematics. It aims to become a full-featured computer algebra system (CAS)  and is entirely written in Python. 
+
+Finally, if you wish to use the light mark-up language 
+"doconce":"https://github.com/hplgit/doconce" you can convert a standard ascii text file into various HTML 
+formats, ipython notebooks, latex files, pdf files etc with minimal edits. These lectures were generated using _doconce_.
+
+
+!split
+===== Procrastination... the curse of all? Don't start too late with writing! =====
+FIGURE: [fig-projectwriting/procrast.jpg, width=700 frac=0.9]
+"Enjoy this video":"https://www.youtube.com/watch?v=arj7oStGLkU"
+
+"And research shows that procrastinating enhances creativity!!":"http://www.nytimes.com/2016/01/17/opinion/sunday/why-i-taught-myself-to-procrastinate.html?_r=0"
+

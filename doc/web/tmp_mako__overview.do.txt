@@ -96,13 +96,13 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/pdf/computercode-print.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-bs.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/ipynb/cleancode.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/ipynb/computercode.ipynb"
 
 
 
@@ -151,6 +151,22 @@ formulas in HTML or ipython notebook files.
    * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN-bs.html"
  * iPython notebook:
    * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/ipynb/UniTN.ipynb"
+
+
+
+===== How to write a good scientific report/thesis =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/pdf/thesiswriting-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/ipynb/thesiswriting.ipynb"
 
 
 
