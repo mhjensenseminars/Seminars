@@ -89,7 +89,7 @@ _As is well known, angular position and orbital angular momentum (OAM) of photon
 !split
 ===== The report, the introduction =====
 !bblock What should I focus on? Introduction
-You don't need to answer all questions in a chronological order.  When you write the introduction you could focus on the following aspects
+When you write the introduction you could focus on the following aspects
  * Motivate the reader, the first part of the introduction gives always a motivation and tries to give the overarching ideas
  * What I have done
  * The structure of the report, how it is organized etc
