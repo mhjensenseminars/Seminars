@@ -1,0 +1,194 @@
+# Slides for Computing in science education
+TITLE: Integrating a Computational Perspective in Physics (and Science) Courses
+AUTHOR: Discussion Material
+DATE: University of Århus, October 23, 2019, URL:"http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus-reveal.html"
+
+!split
+===== Most important experiences =====
+!bblock Programming
+A compulsory programming course with a strong mathematical flavour. *Should give a solid foundation in programming as a problem solving technique in mathematics*. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
+!eblock
+
+!bblock Mathematics and numerics
+Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
+!eblock
+
+!bblock Sciences
+Training in modeling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+!eblock
+
+!split
+===== More experiences =====
+!bblock What we do
+* Coordinated use of computational exercises and numerical tools in most undergraduate courses.
+* Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction.
+* Teachers get good summer students to aid in introducing computational exercises
+* Develop courses and exercise modules with a computational perspective, both for students and teachers. New textbooks!! 
+* Basic idea: mixture of mathematics, computation, informatics and topics from other disciplines.
+ 
+Interesting outcome: higher focus on teaching and pedagogical issues!!
+!eblock
+
+
+!split
+===== Implementation  and coordination between departments =====
+!bblock Crucial ingredients
+
+* Support from governing bodies (high priorities at the College of Natural Science at UOslo)
+* Cooperation across departmental boundaries
+* Willingness by individuals to give priority to teaching reform
+
+Consensus driven approach.
+!eblock
+
+!split
+===== How to define Learning Outcomes =====
+From 2015-2017 we had at a Nat Science College level a process where all bachelor and master programs where revised, with an eye on specific and general (also computing) learning outcomes.
+!split
+===== Learning outcomes three first semesters =====
+
+For the physical sciences it was agree that students should be able to have the following basic knowledge of important algorithms
+!bblock 
+
+* Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)
+* Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals (first semester)
+* Random numbers, random walks, probability distributions and Monte Carlo integration  (first semester)
+* Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel. (second and third semester)
+* Root finding and interpolation etc. (all three first semesters)
+* Processing of sound and images (first semester).
+
+The students have to code several of these algorithms during the first three semesters.
+!eblock
+
+
+
+Boundaries between general computing learning outcomes and specific physics learning outcomes
+
+!split
+===== How to assess computational learning outcomes in later courses =====
+
+_Later courses should build on this foundation as much as possible_.
+
+o In particular, the course should not be too basic! There should be progression in the use of mathematics, numerical methods and programming, as well as science.
+
+
+o Computational platform: Python, fully object-oriented and allows for seamless integration of c++ and Fortran codes, as well as Matlab-like programming environment. Makes it easy to parallelize codes as well.
+
+
+!split
+===== How to maintain a continuity when teachers are rotated? =====
+
+* Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses.
+
+*Standard objection: computations take away the attention from other central topics in 'my course'*. 
+
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.  Coordination and synchronization across departments and courses. Increases collaboration on teaching and awareness of pedagical research.
+
+* To help teachers: Developed pedagogical modules which can aid university teachers. Own course for teachers.
+
+
+!split
+===== How to anchor CSE across Departments =====
+
+* The college of Math and Natural science (Matematisk Naturvitenskapelig fakultet) is strongly involved in coordinating the introduction of computing across departments. The Interact process helped here.
+
+* The Center for Computing in Science Education plays a central role
+
+!split
+===== How to involve students =====
+
+* Project based courses
+* Learning assistants programs
+* Summer projects in CSE
+* TAs with 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!split
+===== Which aspects are important for a successful introduction of CSE? =====
+!bblock
+
+* Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
+* Crucial to learn proper programming at the beginning.
+* Good TAs
+* Choice of software.
+* Textbooks and modularization of topics (ask for details). Development of new learning material and assessment program
+* Resources and expenses.
+* Tailor to specific disciplines.
+* Organizational matters. 
+* Collaboration across disciplines.
+* Research on Science Education and the role of computing in Science Education
+!eblock
+
+
+!split
+===== CSE Summary =====
+!bblock
+
+* Make our research visible in early undergraduate courses, enhance research based teaching
+* Possibility to focus more on understanding and increased insight.
+* Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.
+* Strengthening of instruction based teaching (expensive and time-consuming).
+* Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.
+* And perhaps the most important issue: does this enhance the student's insight in the Sciences?
+
+We invite you to visit (online and/or in real life) our new center on "Computing in Science Education":"http://www.mn.uio.no/ccse/english/"
+
+!eblock
+
+
+!split
+===== Summary: New Master of Science programs =====
+!bblock
+The two new Master of Science programs 
+
+* "Computational Science":"https://www.uio.no/english/studies/programmes/computational-science-master/index.html"
+* "Data Science":"https://www.uio.no/english/studies/programmes/datascience-master/index.html" 
+
+are a direct consequence of the "Computing in Science Education project":"https://www.mn.uio.no/ccse/english/", which has aimed at a full integration and coordination of computational methods in basic undergrad natural science programs.
+
+We are planning new undergraduate programs in Computational Science and Data Science, as well as cross-disciplinary programs at all levels.
+!eblock
+
+!split
+===== Summary: Research =====
+
+!bblock We give students an education relevant for many exciting future research directions
+* Computational Science and Data Science in Mathematics and all of the physical sciences (Astrophysics, Chemistry, Geoscience and Physics)
+* Bioinformatics
+* Develop research programs in "Quantum Computing and Quantum Information theory":"https://www.aps.org/publications/apsnews/201802/ostp.cfm?utm_source=APS+Physics+Main+Group&utm_campaign=fb7a2e7d6b-News+021218&utm_medium=email&utm_term=0_825303224b-fb7a2e7d6b-106513221". Many universities are now developing research and "educational strategies in Quantum Computing":"https://vprgs.msu.edu/event/interdisciplinary-forum-quantum-information-science"
+* Develop data-driven discovery research programs utilizing recent developments in machine learning
+* Computational life science
+* Computational Materials Science
+* Computational Economy and Data Science and computing in Law and the Social Sciences
+* Data Science and computing in the Humanities
+* And many more
+!eblock
+
+
+
+
+
+
+    
