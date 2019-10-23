@@ -170,5 +170,21 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Integrating a Computational Perspective in Physics (and Science) Courses =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/pdf/UniAarhus-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/ipynb/UniAarhus.ipynb"
+
+
+
 
 

@@ -10,7 +10,7 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/EducationalSeminars/doc/pub'
-published = ['cse', 'csebio', 'talent', 'nuclearmodels', 'computercode', 'OsloMet', 'cse2018', 'UniTN', 'thesiswriting',]
+published = ['cse', 'csebio', 'talent', 'nuclearmodels', 'computercode', 'OsloMet', 'cse2018', 'UniTN', 'thesiswriting', 'UniAarhus',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life science education',
@@ -21,6 +21,7 @@ chapters = {
  'cse2018': 'Education and research in computational science and data science',
  'UniTN': 'Integrating a Computational Perspective in Physics (and Science) Courses',
  'thesiswriting': 'How to write a good scientific report/thesis',
+  'UniAarhus': 'Integrating a Computational Perspective in Physics (and Science) Courses',
 }
 %>
 
