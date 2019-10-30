@@ -1,1 +1,1 @@
-# This repository contains material from various educational seminars, ranging from Nuclear Talent to the CSE project and its different ramifications.
+# This repository contains material from various educational seminars, including the Computing i Science Education initiative, basic courses in nuclear physics, Nuclear Talent and much more.
