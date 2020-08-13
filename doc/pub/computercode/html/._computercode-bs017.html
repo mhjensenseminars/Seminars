@@ -266,8 +266,8 @@ r <span style="color: #666666">=</span> sqrt(x<span style="color: #666666">*</sp
 phi <span style="color: #666666">=</span> (Z<span style="color: #666666">*</span>r <span style="color: #666666">-</span> <span style="color: #666666">2</span>)<span style="color: #666666">*</span>exp(<span style="color: #666666">-</span>Z<span style="color: #666666">*</span>r<span style="color: #666666">/2</span>)
 R <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;r&#39;</span>) <span style="color: #408080; font-style: italic">#Creates a symbolic equivalent of r</span>
 <span style="color: #408080; font-style: italic">#print latex and c++ code</span>
-<span style="color: #008000; font-weight: bold">print</span> printing<span style="color: #666666">.</span>latex(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
-<span style="color: #008000; font-weight: bold">print</span> printing<span style="color: #666666">.</span>ccode(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
+<span style="color: #008000">print</span> printing<span style="color: #666666">.</span>latex(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
+<span style="color: #008000">print</span> printing<span style="color: #666666">.</span>ccode(diff(phi, x)<span style="color: #666666">.</span>factor()<span style="color: #666666">.</span>subs(r, R))
 </pre></div>
 <p>
 </div>

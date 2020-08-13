@@ -281,13 +281,13 @@ with respect to the numerically evaluated one of the integral
 
 a <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;  b <span style="color: #666666">=</span> <span style="color: #666666">1.0</span>; n <span style="color: #666666">=</span> <span style="color: #666666">100</span>
 result <span style="color: #666666">=</span> Trapez(a,b,function,n)
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Trapezoidal rule=&quot;</span>, result
+<span style="color: #008000">print</span> <span style="color: #BA2121">&quot;Trapezoidal rule=&quot;</span>, result
 <span style="color: #408080; font-style: italic"># define x as a symbol to be used by sympy</span>
 x <span style="color: #666666">=</span> Symbol(<span style="color: #BA2121">&#39;x&#39;</span>)
 exact <span style="color: #666666">=</span> integrate(function(x), (x, <span style="color: #666666">0.0</span>, <span style="color: #666666">1.0</span>))
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Sympy integration=&quot;</span>, exact
+<span style="color: #008000">print</span> <span style="color: #BA2121">&quot;Sympy integration=&quot;</span>, exact
 <span style="color: #408080; font-style: italic"># Find relative error</span>
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Relative error&quot;</span>, <span style="color: #008000">abs</span>((exact<span style="color: #666666">-</span>result)<span style="color: #666666">/</span>exact)
+<span style="color: #008000">print</span> <span style="color: #BA2121">&quot;Relative error&quot;</span>, <span style="color: #008000">abs</span>((exact<span style="color: #666666">-</span>result)<span style="color: #666666">/</span>exact)
 </pre></div>
 <p>
 </div>
