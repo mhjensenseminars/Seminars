@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Project based courses, how and why?">
+
+<title>Project based courses, how and why?</title>
+
+
+
+
+
+
+
+<!-- reveal.js: https://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+    hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .reveal .alert-text-small   { font-size: 80%;  }
+    .reveal .alert-text-large   { font-size: 130%; }
+    .reveal .alert-text-normal  { font-size: 90%;  }
+    .reveal .alert {
+             padding:8px 35px 8px 14px; margin-bottom:18px;
+             text-shadow:0 1px 0 rgba(255,255,255,0.5);
+             border:5px solid #bababa;
+             -webkit-border-radius: 14px; -moz-border-radius: 14px;
+             border-radius:14px;
+             background-position: 10px 10px;
+             background-repeat: no-repeat;
+             background-size: 38px;
+             padding-left: 30px; /* 55px; if icon */
+     }
+     .reveal .alert-block {padding-top:14px; padding-bottom:14px}
+     .reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+     /*.reveal .alert li {margin-top: 1em}*/
+     .reveal .alert-block p+p {margin-top:5px}
+     /*.reveal .alert-notice { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+     .reveal .alert-summary  { background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+     .reveal .alert-warning { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+     .reveal .alert-question {background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+
+</style>
+
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+<body>
+<div class="reveal">
+
+<!-- Any section element inside the <div class="slides"> container
+     is displayed as a slide -->
+
+<div class="slides">
+
+
+
+    
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for Computing in science education -->
+
+
+<center><h1 style="text-align: center;">Project based courses, how and why? </h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no -->
+
+<center>
+<b>Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no</b> [1, 2]
+</center>
+
+<p>&nbsp;<br>
+<!-- institution(s) -->
+
+<center>[1] <b>Department of Physics and Astronomy and Facility for Rare Ion Beams, Michigan State University, USA</b></center>
+<center>[2] <b>Department of Physics and <a href="http://www.mn.uio.no/ccse/english/people/index.html" target="_blank">Center for Computing in Science Education</a>, University of Oslo, Norway</b></center>
+<br>
+<p>&nbsp;<br>
+<center><h4><p></h4></center> <!-- date -->
+<br>
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 1999-2021, Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+</section>
+
+
+<section>
+<h2 id="overview">Overview </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ul>
+<p><li> Overarching view on project based approach and problem based learning (PBL)</li>
+<p><li> What do we mean with research based education and how to introduce it as early as possible?</li> 
+<p><li> How to develop deeper insights in a specific discipline</li>
+<p><li> How to integrate a project-based approach with learning and assessment criteria</li>
+<p><li> Examples and experiences</li>
+<p><li> Conclusions</li>
+</ul>
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Overarching Motivation</b>
+<p>
+Excellent research depends on excellent education --- and vice versa!
+
+
+</div>
+
+<p>
+Litt om innhold: f&#248;rst en mer overordna argumentasjon om l&#230;ringsutbytte rundt prosjektbaserte kurs, hvordan utvikle ei djupere innsikt om et fagfelt, l&#230;ringsm&#229;l, vurderingsformer, kopling til eksisterende forskning og s&#229; litt mer om hvordan en faktisk gj&#248;r det i praksis, fra undervisningsverkt&#248;y til egne erfaringer over 30 &#229;r ved ulike universitet i inn og utland (Norge, USA og andre europeiske land).
+</section>
+
+
+<section>
+<h2 id="wouldn-t-it-be-cool-if-your-mechanics-students-could-reproduce-results-in-a-scientific-journal">Wouldn't it be cool if your mechanics students could reproduce results in a Scientific Journal? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/prl1.png" align="bottom" width=800></p></center><br /><br />
+
+<p>
+Grand challenge project in FYS-MEK1100 (Mechanics, University of Oslo), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<br /><br /><center><p><img src="figures/prl2.png" align="bottom" width=700></p></center><br /><br />
+</div>
+</section>
+
+
+<section>
+<h2 id="project-based-courses-and-project-based-learning">Project based Courses and Project-based Learning </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Some standard elements in  project based courses</b>
+<ol>
+<p><li> The audiences for projects are generally at the university</li>
+<p><li> Are traditionally more about the end-product and less about the learning and process</li>
+<p><li> The project is pre-planned and clear</li>
+<p><li> The project is based on specific directions and criteria</li>
+<p><li> The project can be done at home without teacher guidance or collaboration</li>
+<p><li> The project can be outlined in details</li>
+<p><li> Are less open-ended and more uniform</li>
+<p><li> Projects are &#8216;turned in&#8217; rather than &#8216;puhlished,&#8217; presented, or otherwise managed on an ongoing basis. They are normally graded</li>
+</ol>
+</div>
+</section>
+
+
+<section>
+<h2 id="more-on-project-based-courses-and-project-based-learning">More on Project based Courses and Project-based Learning </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Some standard elements in  project-based learning (PBL)</b>
+<ol>
+<p><li> In PBL, the audience is generally outside the university/school</li>
+<p><li> PBL includes &#8216;need to knows&#8217; and progress checkpoints</li>
+<p><li> Input from peers, teachers, community members, experts, and others can help guide and improve the project</li>
+<p><li> The &#8216;teacher work&#8217; is done mainly before and during the process itself</li>
+<p><li> PBL Is often based on a driving question and ongoing inquiry, discovery, and iteration</li>
+<p><li> PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and &#8216;projects&#8217;</li>
+</ol>
+<p>
+
+PBL requires a lot of planning in advance and coordination of teaching teams an students.
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="research-based-teaching">Research based Teaching </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>How do we define it?</b>
+<p>
+One possible definition: It is coupled to a direct participation in actual research and builds upon established
+knowledge and insights about scientific methods.
+
+<ol>
+<p><li> It is the standard situation at all universities  and takes normally place at the senior undergraduate/graduate level (isn't it too late?)</li>
+<p><li> It is seldom done in undergraduate courses.</li>
+<p><li> Taught by a researcher</li>
+<p><li> The student starts seeing the countour of the scientific approach leading her/him to make new interpretations, develop new insights and understandings that lead  to further research.</li>
+</ol>
+</div>
+</section>
+
+
+<section>
+<h2 id="more-on-research-based-education">More on Research based Education  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What should the education contain?</b>
+<p>
+The standard situation we meet at an almost daily basis:
+
+<ol>
+<p><li> Theory+experiment+simulation is almost the norm in research and industry</li>
+<p><li> To be able to model complex systems with no simple answers on closed form. Solve real problems.</li>
+<p><li> Emphasis on insight and understanding of fundamental principles and laws in the Sciences.</li>
+<p><li> Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.</li>
+</ol>
+<p>
+
+Our education should reflect this.
+</div>
+</section>
+
+
+<section>
+<h2 id="some-final-words-on-research-based-education">Some final Words on Research based Education </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Normal workflow in Science and Engineering</b>
+<ol>
+<p><li> A problem is properly described using a precise (normal) language.</li>
+<p><li> It is translated to a mathematical problem using known laws and</li> 
+</ol>
+<p>
+
+principles.
+
+<ol>
+<p><li> It is solved, normally via numerical similations.</li>
+<p><li> The solution is visualized and analyzed.</li>
+<p><li> The solution to the problem is formulated.</li>
+</ol>
+<p>
+
+People who master these skills bring an important compentence to society. Gain via increased efficiency and quality due to interdisciplinarity at a more detailed level.
+
+<p>
+Question: how does this translate into your discipline?
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="how-to-develop-deeper-insights-in-a-specific-discipline">How to develop deeper Insights in a specific Discipline? </h2>
+
+<p>
+Here I will focus on the role of computations inserted in a project-based learning approach.
+</section>
+
+
+<section>
+<h2 id="the-role-of-computations-from-education-to-society">The role of computations, from education to society </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Computations are central to our  basic understanding of nature and to technological advances</b>.
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Examples</b>
+<ul>
+<p><li> <b>Nanotech and Materials</b>: quantum physical systems in nanotechnology; characteristics of new materials; semi-conductor devices and quantum computers</li>
+<p><li> <b>The smallest particles in nature</b>: subatomic physics at its smallest length scale</li>
+<p><li> <b>And the largest</b>: simulating galaxies and the evolution of the universe</li>
+<p><li> <b>Life science</b>: cancer treatment and how the brain works</li>
+<p><li> <b>Geosciences</b>: predicting climate changes and this week's weather, simulating natural disasters</li>
+<p><li> <b>Finance</b>: assessing risk in the insurance and financial industry</li>
+<p><li> and many many more</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h2 id="modeling-and-computations-as-a-way-to-enhance-algorithminc-thinking">Modeling and computations as a way to enhance algorithminc thinking </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Algorithm</b> :
+A set of instructions to solve a problem.
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Algorithmic thinking applies to all disciplines. It</b>
+
+<ul>
+<p><li> Enhances instruction-based teaching</li>
+<p><li> Introduces research-based teaching  from day one</li>
+<p><li> Triggers further insights in scientific problems</li>
+<p><li> Emphasizes validation and verification of scientific results, and integrates science ethics in a natural way</li>
+<p><li> Ensures good working practices from day one!</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h2 id="what-does-computing-mean">What does computing mean?  </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing the algorithmic thinking when solving problems.</b>
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Computing competence is about:</b>
+<ul>
+<p><li> derivation, verification, and implementation of algorithms</li>
+<p><li> understanding what can go wrong with algorithms</li>
+<p><li> overview of important, known algorithms</li>
+<p><li> understanding how algorithms are used to solve complicated problems</li>
+<p><li> reproducible science and ethics</li>
+<p><li> algorithmic thinking for gaining deeper insights about scientific problems</li>
+</ul>
+<p>
+
+All these elements (and many more) aid students in maturing and gaining a better understanding of the scientific process <em>per se</em>.
+</div>
+</section>
+
+
+<section>
+<h2 id="computing-and-research-based-education">Computing and research-based education </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+A computational approach allows us to introduce research concepts and engage students in research from <em>day one</em>.
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What should the education contain?</b>
+<ul>
+<p><li> Theory + experiment + simulation is the norm in research and industry</li>
+<p><li> Modeling of real, complex systems with no simple answers</li>
+<p><li> Insight and understanding of fundamental principles and laws</li>
+<p><li> Visualization, presentation, discussion, interpretation, and critical analysis of results</li>
+<p><li> Development of a sound ethical attitude to own and other's work</li>
+<p><li> Enhanced reasoning about the scientific method</li>
+<p><li> Individually tailored education in order to let students  realize their full potentials and discover their creative powers</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h2 id="the-challenges-for-the-future">The challenges for the Future </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We need to educate the next generation of
+science students with the knowledge, skills, and values needed to pose
+and solve current and new scientific, technological and societal
+challenges.
+</div>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This will lay the foundation for cross-disciplinary
+educational, research and innovation activities. It will contribute to building a common cross-disciplinary
+approach to key strategic initiatives, with important examples from fields like  <em>Energy research, Materials science and  Life Science</em>.
+</div>
+</section>
+
+
+<section>
+<h2 id="better-understanding-of-the-scientific-method">Better understanding of the scientific method </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+All these elements are central for maturing and gaining a better understanding of the modern scientific process <em>per se</em>.
+
+<p>
+The power of the scientific method lies in identifying a given problem
+as a special case of an abstract class of problems, identifying
+general solution methods for this class of problems, and applying a
+general method to the specific problem (applying means, in the case of
+computing, calculations by pen and paper, symbolic computing, or
+numerical computing by ready-made and/or self-written software). This
+generic view on problems and methods is particularly important for
+understanding how to apply available, generic software to solve a
+particular problem.
+</div>
+</section>
+
+
+<section>
+<h2 id="how-to-integrate-a-project-based-approach-with-learning-and-assessment-criteria">* How to integrate a project-based approach with learning and assessment criteria </h2>
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+    // Display navigation controls in the bottom right corner
+    controls: true,
+
+    // Display progress bar (below the horiz. slider)
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    //center: true,
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+    theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speaker notes
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remote control your reveal.js presentation using a touch device
+        //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // MathJax
+        //{ src: 'reveal.js/plugin/math/math.js', async: true }
+    ]
+});
+
+Reveal.initialize({
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1170,  // original: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+     end footer logo -->
+
+
+
+</body>
+</html>
