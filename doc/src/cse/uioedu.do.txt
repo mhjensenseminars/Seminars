@@ -71,7 +71,7 @@ o The project can be outlined in details
 
 o Can be  less open-ended and more uniform
 
-o Projects are ‘turned in’ rather than ‘puhlished,’ presented, or otherwise managed on an ongoing basis. They are normally graded
+o Projects are *turned in* rather than *published*, presented, or otherwise managed on an ongoing basis. They are normally graded
 
 !eblock
 
@@ -83,7 +83,7 @@ o Projects are ‘turned in’ rather than ‘puhlished,’ presented, or otherw
 
 o In PBL, the audience is generally outside the university/school
 
-o PBL includes ‘need to knows’ and progress checkpoints
+o PBL includes *need to knows* and progress checkpoints
 
 o Input from peers, teachers, community members, experts, and others can help guide and improve the project
 
@@ -91,7 +91,7 @@ o The *teacher work* is done mainly before and during the process itself
 
 o PBL Is often based on a driving question and ongoing inquiry, discovery, and iteration
 
-o PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and ‘projects’
+o PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and projects
 
 
 PBL requires a lot of planning in advance and coordination of teaching teams an students.  My experience is that this applies to PBC as well.
@@ -245,6 +245,7 @@ educational, research and innovation activities. It will contribute to building 
 approach to key strategic initiatives, with important examples from fields like  *Energy research, Materials science and  Life Science*.
 !eblock
 
+A project-based learning approach can easily encompass many of the challenges.
 
 
 !split
@@ -275,7 +276,7 @@ o _Define how to assess learning outcomes_
   o other assessment forms
 o Which tools should I use?  Version control software like "Git":"https://git-scm.com/" and providers like "GitHub":"https://github.com/" and "GitLab":"https://about.gitlab.com/" are very useful in order to disseminate and organize learning material as "shown here":"https://github.com/CompPhysics/MachineLearning".
 o Develop good discussion fora (Slack, Mattermost and many other)
-o and more. Suggestions
+o and more. Suggestions from you!
 !eblock
 
 
@@ -309,6 +310,7 @@ o and more
 !split
 ===== More on the Integration of PBC/PBL, flipped classrooms? =====
 
+To me a flipped classroom environment seems like the best approach to catch all these birds with just one stone!
 !bblock Where am I now?
 o Moving towards a more active learning environment using flipped classrooms
 o University based
