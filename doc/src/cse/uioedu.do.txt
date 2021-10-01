@@ -133,8 +133,7 @@ Our education should reflect this.
 
 !bblock Normal workflow in Science and Engineering
 o A problem is properly described using a precise (normal) language.
-o It is translated to a mathematical problem using known laws and 
-principles.
+o It is translated to a mathematical problem using known laws and principles.
 o It is solved, normally via numerical similations.
 o The solution is visualized and analyzed.
 o The solution to the problem is formulated.
@@ -276,13 +275,14 @@ o _Define how to assess learning outcomes_
   o other assessment forms
 o Which tools should I use?  Version control software like "Git":"https://git-scm.com/" and providers like "GitHub":"https://github.com/" and "GitLab":"https://about.gitlab.com/" are very useful in order to disseminate and organize learning material as "shown here":"https://github.com/CompPhysics/MachineLearning".
 o Develop good discussion fora (Slack, Mattermost and many other)
+o and more. Suggestions
 !eblock
 
 
 !split
 ===== Active and passive Learning again, planning your Course  =====
 
-!bblock Active Learning Methods
+!bblock 
 o Question-answer
 o Excursion
 o Brainstorming
@@ -296,7 +296,7 @@ o and more
 !split
 ===== And passive Learning =====
 
-!bblock Passive Learning
+!bblock 
 o Lectures
 o Tutorials
 o Seminar
@@ -311,8 +311,11 @@ o and more
 
 !bblock Where am I now?
 o Moving towards a more active learning environment using flipped classrooms
+o University based
 o Appropriate settings, classrooms, equipment and "more":"https://revolutionlightboards.com/collections/studio-packages"
 o High-quality learning material, online texts (lectures, projects, exercises), "videos":"https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&ab_channel=SteveBrunton" and more
 !eblock
 
+!bblock
 Question: What kind of drawbacks do you see with flipped classrooms?
+!eblock
