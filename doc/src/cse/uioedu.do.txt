@@ -1,0 +1,254 @@
+# Slides for Computing in science education
+TITLE: Project based courses, how and why? 
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at Department of Physics and Astronomy and Facility for Rare Ion Beams, Michigan State University, USA & Department of Physics and "Center for Computing in Science Education":"http://www.mn.uio.no/ccse/english/people/index.html", University of Oslo, Norway
+DATE:
+
+!split
+=====   Overview =====
+
+!bblock
+* Overarching view on project based approach and problem based learning (PBL)
+* What do we mean with research based education and how to introduce it as early as possible? 
+* How to develop deeper insights in a specific discipline
+* How to integrate a project-based approach with learning and assessment criteria
+* Examples and experiences
+* Conclusions
+!eblock
+
+!bblock Overarching Motivation
+Excellent research depends on excellent education --- and vice versa!
+
+!eblock
+
+Litt om innhold: først en mer overordna argumentasjon om læringsutbytte rundt prosjektbaserte kurs, hvordan utvikle ei djupere innsikt om et fagfelt, læringsmål, vurderingsformer, kopling til eksisterende forskning og så litt mer om hvordan en faktisk gjør det i praksis, fra undervisningsverktøy til egne erfaringer over 30 år ved ulike universitet i inn og utland (Norge, USA og andre europeiske land).
+
+
+!split
+===== Wouldn't it be cool if your mechanics students could reproduce results in a Scientific Journal? =====
+!bblock
+FIGURE: [figures/prl1.png, width=800 frac=0.5] 
+
+Grand challenge project in FYS-MEK1100 (Mechanics, University of Oslo), Second Semester: a friction model to be solved as coupled ODEs. And find problems with the article?
+!eblock
+!bblock 
+FIGURE: [figures/prl2.png, width=700 frac=0.5] 
+!eblock
+
+
+
+!split
+=====  Project based Courses and Project-based Learning =====
+
+!bblock Some standard elements in  project based courses
+
+o The audiences for projects are generally at the university
+
+o Are traditionally more about the end-product and less about the learning and process
+
+o The project is pre-planned and clear
+
+o The project is based on specific directions and criteria
+
+o The project can be done at home without teacher guidance or collaboration
+
+o The project can be outlined in details
+
+o Are less open-ended and more uniform
+
+o Projects are ‘turned in’ rather than ‘puhlished,’ presented, or otherwise managed on an ongoing basis. They are normally graded
+
+!eblock
+
+
+!split
+=====  More on Project based Courses and Project-based Learning =====
+
+!bblock Some standard elements in  project-based learning (PBL)
+
+o In PBL, the audience is generally outside the university/school
+
+o PBL includes ‘need to knows’ and progress checkpoints
+
+o Input from peers, teachers, community members, experts, and others can help guide and improve the project
+
+o The ‘teacher work’ is done mainly before and during the process itself
+
+o PBL Is often based on a driving question and ongoing inquiry, discovery, and iteration
+
+o PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and ‘projects’
+
+
+PBL requires a lot of planning in advance and coordination of teaching teams an students. 
+
+!eblock
+
+
+
+!split
+===== Research based Teaching =====
+!bblock How do we define it? 
+
+One possible definition: It is coupled to a direct participation in actual research and builds upon established
+knowledge and insights about scientific methods.
+
+o It is the standard situation at all universities  and takes normally place at the senior undergraduate/graduate level (isn't it too late?)
+o It is seldom done in undergraduate courses.
+o Taught by a researcher
+o The student starts seeing the countour of the scientific approach leading her/him to make new interpretations, develop new insights and understandings that lead  to further research.
+!eblock
+
+
+!split
+===== More on Research based Education  =====
+!bblock What should the education contain?
+The standard situation we meet at an almost daily basis:
+o Theory+experiment+simulation is almost the norm in research and industry
+o To be able to model complex systems with no simple answers on closed form. Solve real problems.
+o Emphasis on insight and understanding of fundamental principles and laws in the Sciences.
+o Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.
+
+Our education should reflect this.
+!eblock
+
+
+!split
+===== Some final Words on Research based Education =====
+!bblock Normal workflow in Science and Engineering
+o A problem is properly described using a precise (normal) language.
+o It is translated to a mathematical problem using known laws and 
+principles.
+o It is solved, normally via numerical similations.
+o The solution is visualized and analyzed.
+o The solution to the problem is formulated.
+People who master these skills bring an important compentence to society. Gain via increased efficiency and quality due to interdisciplinarity at a more detailed level. 
+
+Question: how does this translate into your discipline?
+
+
+!eblock
+
+
+!split
+===== How to develop deeper Insights in a specific Discipline? =====
+
+Here I will focus on the role of computations inserted in a project-based learning approach.
+!split
+===== The role of computations, from education to society =====
+!bblock
+_Computations are central to our  basic understanding of nature and to technological advances_.
+!eblock
+
+!bblock Examples
+* _Nanotech and Materials_: quantum physical systems in nanotechnology; characteristics of new materials; semi-conductor devices and quantum computers
+* _The smallest particles in nature_: subatomic physics at its smallest length scale
+* _And the largest_: simulating galaxies and the evolution of the universe
+* _Life science_: cancer treatment and how the brain works
+* _Geosciences_: predicting climate changes and this week's weather, simulating natural disasters
+* _Finance_: assessing risk in the insurance and financial industry
+* and many many more
+!eblock
+
+!split
+===== Modeling and computations as a way to enhance algorithminc thinking =====
+
+!bblock
+_Algorithm_ :
+A set of instructions to solve a problem.
+!eblock
+
+!bblock 
+_Algorithmic thinking applies to all disciplines. It_
+* Enhances instruction-based teaching
+* Introduces research-based teaching  from day one
+* Triggers further insights in scientific problems
+* Emphasizes validation and verification of scientific results, and integrates science ethics in a natural way
+* Ensures good working practices from day one!
+
+!eblock
+
+
+
+!split
+===== What does computing mean?  =====
+
+!bblock
+
+_Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing the algorithmic thinking when solving problems._
+!eblock
+
+!bblock Computing competence is about:
+
+* derivation, verification, and implementation of algorithms
+* understanding what can go wrong with algorithms
+* overview of important, known algorithms
+* understanding how algorithms are used to solve complicated problems
+* reproducible science and ethics
+* algorithmic thinking for gaining deeper insights about scientific problems
+
+All these elements (and many more) aid students in maturing and gaining a better understanding of the scientific process *per se*.
+!eblock
+
+
+
+
+
+!split
+===== Computing and research-based education =====
+
+!bblock
+A computational approach allows us to introduce research concepts and engage students in research from *day one*.
+!eblock
+
+
+!bblock What should the education contain?
+
+* Theory + experiment + simulation is the norm in research and industry
+* Modeling of real, complex systems with no simple answers
+* Insight and understanding of fundamental principles and laws
+* Visualization, presentation, discussion, interpretation, and critical analysis of results
+* Development of a sound ethical attitude to own and other's work
+* Enhanced reasoning about the scientific method
+* Individually tailored education in order to let students  realize their full potentials and discover their creative powers
+
+!eblock
+
+
+!split
+===== The challenges for the Future =====
+!bblock
+We need to educate the next generation of
+science students with the knowledge, skills, and values needed to pose
+and solve current and new scientific, technological and societal
+challenges.
+!eblock
+!bblock
+This will lay the foundation for cross-disciplinary
+educational, research and innovation activities. It will contribute to building a common cross-disciplinary
+approach to key strategic initiatives, with important examples from fields like  *Energy research, Materials science and  Life Science*.
+!eblock
+
+
+
+!split
+===== Better understanding of the scientific method =====
+!bblock
+All these elements are central for maturing and gaining a better understanding of the modern scientific process *per se*.
+
+The power of the scientific method lies in identifying a given problem
+as a special case of an abstract class of problems, identifying
+general solution methods for this class of problems, and applying a
+general method to the specific problem (applying means, in the case of
+computing, calculations by pen and paper, symbolic computing, or
+numerical computing by ready-made and/or self-written software). This
+generic view on problems and methods is particularly important for
+understanding how to apply available, generic software to solve a
+particular problem.
+!eblock
+
+
+!split
+===== * How to integrate a project-based approach with learning and assessment criteria =====
+
+
+    
+
