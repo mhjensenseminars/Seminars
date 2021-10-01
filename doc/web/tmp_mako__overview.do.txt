@@ -186,5 +186,21 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Project-based Learning, how and why =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/uioedu/pdf/uioedu-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/uioedu/html/uioedu.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/uioedu/html/uioedu-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/uioedu/html/uioedu-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/uioedu/ipynb/uioedu.ipynb"
+
+
+
 
 
