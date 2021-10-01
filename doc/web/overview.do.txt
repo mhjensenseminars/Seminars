@@ -10,15 +10,18 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://mhjensenseminars.github.io/EducationalSeminars/doc/pub'
-published = ['cse', 'csebio', 'np', 'talent', 'NPretreatComputation', 'NPretreatEducation', 'cleancode',]
+published = ['cse', 'csebio', 'talent', 'nuclearmodels', 'computercode', 'OsloMet', 'cse2018', 'UniTN', 'thesiswriting', 'UniAarhus',]
 chapters = {
  'cse': 'Computing in science education',
  'csebio': 'Computing in life science education',
- 'np': 'Nuclear physics courses, Talent and FRIB theory center',
  'talent': 'Nuclear Talent perspectives',
- 'NPretreatComputation': 'Computations and education',
- 'NPretreatEducation': 'Nuclear physics  education',
- 'cleancode': 'Why clean code matters',
+ 'nuclearmodels': 'Nuclear Physics Summer School 2019, Nuclear Models',
+ 'computercode': 'Why clean code matters',
+ 'OsloMet': 'Education and research in computational science and data science; from bachelor programs to research',
+ 'cse2018': 'Education and research in computational science and data science',
+ 'UniTN': 'Integrating a Computational Perspective in Physics (and Science) Courses',
+ 'thesiswriting': 'How to write a good scientific report/thesis',
+  'UniAarhus': 'Integrating a Computational Perspective in Physics (and Science) Courses',
 }
 %>
 
@@ -28,9 +31,7 @@ chapters = {
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "${pub_url}/${name}/pdf/${name}-print.pdf", compact: "6 pages per sheet": "${pub_url}/${name}/pdf/${name}-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "${pub_url}/${name}/pdf/${name}-beamer.pdf"
+     * "Standard one-page format": "${pub_url}/${name}/pdf/${name}-print.pdf"
  * HTML:
    * "Plain html style": "${pub_url}/${name}/html/${name}.html"
    * "reveal.js beige slide style": "${pub_url}/${name}/html/${name}-reveal.html"

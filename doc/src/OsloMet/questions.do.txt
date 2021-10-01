@@ -1,0 +1,170 @@
+# Slides for Computing in science education
+TITLE: Integrating a Computational Perspective in Physics (and Science) Courses
+AUTHOR: Discussion Material
+DATE: University of Århus, October 23, 2019
+
+!split
+===== Most important experiences =====
+
+!bblock Programming
+A compulsory programming course with a strong mathematical flavour. *Should give a solid foundation in programming as a problem solving technique in mathematics*. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
+!eblock
+
+!bblock Mathematics and numerics
+Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
+!eblock
+
+!bblock Sciences
+Training in modeling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+!eblock
+
+!split
+===== More experiences =====
+!bblock What we do
+* Coordinated use of computational exercises and numerical tools in most undergraduate courses.
+* Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction. The new center of excellence in education Center for Computing in Science Education runs courses on computing for university teachers and high-school teachers
+* Teachers get good summer students to aid in introducing computational exercises
+* Develop courses and exercise modules with a computational perspective, both for students and teachers. New textbooks!! 
+* Basic idea: mixture of mathematics, computation, informatics and topics from other disciplines.
+ 
+Interesting outcome: higher focus on teaching and pedagogical issues!! And impetus to focus on the scientific method per se. _Not easy_ to get everybody on board. 
+!eblock
+
+
+!split
+===== Implementation  and coordination between departments =====
+!bblock Crucial ingredients
+
+* Support from governing bodies (high priorities at the College of Natural Science at UOslo). Computing became part of the strategic aim of the College of Natural Science in 2005
+* Cooperation across departmental boundaries
+* Willingness by individuals to give priority to teaching reform
+* The new center of excellence in education "Center for Computing in Science Education":"https://www.mn.uio.no/ccse/english/" plays a central role in overseeing many of our initiatives.
+
+
+Consensus driven approach since approximately 2000. First Physics pilots in 2002-2004 with computational projects and exercises in Mechanics and Quantum Physics. 
+!eblock
+
+!split
+===== How to define Learning Outcomes =====
+
+From 2015-2017 we had at the Nat Science College (Mat-Nat fakultetet) level a process where all bachelor and master programs where revised, with an eye on specific and general (also computing) learning outcomes. This process was named "Interact":"https://www.mn.uio.no/om/organisasjon/adm/prosjekter/interact/".
+
+* Revision of course description and learning outcomes for all courses offered
+* Revision of learning outcomes and competences for all Bachelor and Master programs, with an eye on computations.
+* "Learning outcomes CS program":"https://www.uio.no/english/studies/programmes/computational-science-master/". 
+* "Learning outcomes bachelor program in Physics and Astronomy":"https://www.uio.no/studier/program/fysikk-astronomi/index.html"
+* "Learning outcomes Master program in Physics":"https://www.uio.no/english/studies/programmes/physics-master/index.html"
+
+
+!split
+===== Learning outcomes three first semesters =====
+
+For the physical sciences it was agreed that students should be able to have the following basic knowledge of important algorithms via mathematics and computing courses
+!bblock 
+
+* Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)
+* Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals (first semester)
+* Random numbers, random walks, probability distributions and Monte Carlo integration  (first semester)
+* Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel. (second and third semester)
+* Root finding and interpolation etc. (all three first semesters)
+* Processing of sound and images (first semester).
+
+The students have to code several of these algorithms during the first three semesters.
+!eblock
+
+
+_Weakness_:  Boundaries between general computing learning outcomes and specific physics learning outcomes are less clear since most physics (applies to all disciplines) are less familiar with computing competences.
+
+!split
+===== How to assess computational learning outcomes in later courses =====
+
+* Computational projects and exercises as well as numerical exercises in exams. Computational projects and exercises  are graded and are parts of the final mark in several Physics courses.
+
+* Research projects run by the Computing in Science Education center on assessment programs.
+
+_Weakness_: as of now we cannot claim that computing deepens a student's insight about the physics of a given problem.
+
+!split
+===== How to maintain a continuity when teachers are rotated? =====
+
+* Many of the computational competences are included in the central mathematics and programming courses the first three semesters. Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses. All bachelor programs have an introductory programming course tailored to their discipline. "Bioscience as an example here":"https://www.uio.no/studier/emner/matnat/ibv/BIOS1100/index.html".
+
+* Biannual one-day educational workshops (spring and fall semesters) on pedagogical topics for all teachers.  Developing an awareness on computations and which competences we want to give our students.
+
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.  Coordination and synchronization across departments and courses. Increases collaboration on teaching and awareness of pedagical research.
+
+* To help teachers: Pedagogical modules which can aid university teachers. Own course for teachers run by the "Center for Computing in Science Education":"https://www.mn.uio.no/ccse/english/"
+
+_Weakness_: Not all teachers feel comfortable with computing in various undergraduate courses. Rotation may cause problems.
+
+!split
+===== How to anchor CSE across Departments =====
+
+* The college of Math and Natural science (Matematisk Naturvitenskapelig fakultet) is strongly involved in coordinating the introduction of computing across departments. The Interact process helped here.
+
+* The Center for Computing in Science Education plays a central role in these educational activities.
+
+!split
+===== How to involve students =====
+
+* Project based courses with numerical projects and exercises
+* "Learning assistants programs":"https://www.mn.uio.no/om/samarbeid/tilbud-skoler/kurt/Undervisningsutvikling/oppleringsprogram-for-gruppelerere/la-programmet/"
+* Summer projects in CSE where students do research on computing in science education and/or develop projects and exercises for different courses. The CCSE center organizes these activities in close collaboration with science education groups.
+* TAs with good background in computing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!split
+===== Which aspects are important for a successful introduction of CSE? =====
+!bblock
+
+* Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.
+* Crucial to learn proper programming at the beginning.
+* Good TAs
+* Choice of software.
+* Textbooks and modularization of topics (ask for details). Development of new learning material and assessment program
+* Resources and expenses.
+* Tailor to specific disciplines.
+* Organizational matters. 
+* Collaboration across disciplines.
+* Research on Science Education and the role of computing in Science Education
+!eblock
+
+
+!split
+===== CSE Summary =====
+!bblock
+
+* Make our research visible in early undergraduate courses, enhance research based teaching
+* Possibility to focus more on understanding and increased insight.
+* Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.
+* Strengthening of instruction based teaching (expensive and time-consuming).
+* Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.
+* And perhaps the most important issue: does this enhance the student's insight in the Sciences?
+
+We invite you to visit (online and/or in real life) our new center on "Computing in Science Education":"http://www.mn.uio.no/ccse/english/"
+
+!eblock
+
+

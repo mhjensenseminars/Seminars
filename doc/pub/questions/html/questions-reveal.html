@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Integrating a Computational Perspective in Physics (and Science) Courses">
+
+<title>Integrating a Computational Perspective in Physics (and Science) Courses</title>
+
+
+
+
+
+
+
+<!-- reveal.js: http://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+    hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .reveal .alert-text-small   { font-size: 80%;  }
+    .reveal .alert-text-large   { font-size: 130%; }
+    .reveal .alert-text-normal  { font-size: 90%;  }
+    .reveal .alert {
+             padding:8px 35px 8px 14px; margin-bottom:18px;
+             text-shadow:0 1px 0 rgba(255,255,255,0.5);
+             border:5px solid #bababa;
+             -webkit-border-radius: 14px; -moz-border-radius: 14px;
+             border-radius:14px;
+             background-position: 10px 10px;
+             background-repeat: no-repeat;
+             background-size: 38px;
+             padding-left: 30px; /* 55px; if icon */
+     }
+     .reveal .alert-block {padding-top:14px; padding-bottom:14px}
+     .reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+     /*.reveal .alert li {margin-top: 1em}*/
+     .reveal .alert-block p+p {margin-top:5px}
+     /*.reveal .alert-notice { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+     .reveal .alert-summary  { background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+     .reveal .alert-warning { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+     .reveal .alert-question {background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+
+</style>
+
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+<body>
+<div class="reveal">
+
+<!-- Any section element inside the <div class="slides"> container
+     is displayed as a slide -->
+
+<div class="slides">
+
+
+
+    
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for Computing in science education -->
+
+
+<center><h1 style="text-align: center;">Integrating a Computational Perspective in Physics (and Science) Courses</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Discussion Material -->
+
+<center>
+<b>Discussion Material</b> 
+</center>
+
+<p>&nbsp;<br>
+<!-- institution(s) -->
+
+<br>
+<p>&nbsp;<br>
+<center><h4>University of &#197;rhus, October 23, 2019</h4></center> <!-- date -->
+<br>
+</section>
+
+
+<section>
+<h2 id="___sec0">Most important experiences </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Programming.</b>
+<p>
+A compulsory programming course with a strong mathematical flavour. <em>Should give a solid foundation in programming as a problem solving technique in mathematics</em>. Programming is understanding! The line of thought when solving mathematical problems numerically enhances algorithmic thinking,  and thereby the students' understanding of the scientific process.
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Mathematics and numerics.</b>
+<p>
+Mathematics is at least as important as before, but should be supplemented with development, analysis, implementation, verification and validation of numerical methods. Science ethics and better understanding of the pedagogical process, almost for free!
+</div>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Sciences.</b>
+<p>
+Training in modeling and problem solving with numerical methods and visualisation, as well as traditional methods in Science courses, Physics, Chemistry, Biology, Geology, Engineering...
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec1">More experiences </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What we do.</b>
+<ul>
+<p><li> Coordinated use of computational exercises and numerical tools in most undergraduate courses.</li>
+<p><li> Help update the scientific staff's competence on computational aspects and give support (scientific, pedagogical and financial)  to those who wish to revise  their courses in a computational direction. The new center of excellence in education Center for Computing in Science Education runs courses on computing for university teachers and high-school teachers</li>
+<p><li> Teachers get good summer students to aid in introducing computational exercises</li>
+<p><li> Develop courses and exercise modules with a computational perspective, both for students and teachers. New textbooks!!</li> 
+<p><li> Basic idea: mixture of mathematics, computation, informatics and topics from other disciplines.</li>
+</ul>
+<p>
+
+Interesting outcome: higher focus on teaching and pedagogical issues!! And impetus to focus on the scientific method per se. <b>Not easy</b> to get everybody on board.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec2">Implementation  and coordination between departments </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Crucial ingredients.</b>
+<ul>
+<p><li> Support from governing bodies (high priorities at the College of Natural Science at UOslo). Computing became part of the strategic aim of the College of Natural Science in 2005</li>
+<p><li> Cooperation across departmental boundaries</li>
+<p><li> Willingness by individuals to give priority to teaching reform</li>
+<p><li> The new center of excellence in education <a href="https://www.mn.uio.no/ccse/english/" target="_blank">Center for Computing in Science Education</a> plays a central role in overseeing many of our initiatives.</li>
+</ul>
+<p>
+
+Consensus driven approach since approximately 2000. First Physics pilots in 2002-2004 with computational projects and exercises in Mechanics and Quantum Physics.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec3">How to define Learning Outcomes </h2>
+
+<p>
+From 2015-2017 we had at the Nat Science College (Mat-Nat fakultetet) level a process where all bachelor and master programs where revised, with an eye on specific and general (also computing) learning outcomes. This process was named <a href="https://www.mn.uio.no/om/organisasjon/adm/prosjekter/interact/" target="_blank">Interact</a>.
+
+<ul>
+<p><li> Revision of course description and learning outcomes for all courses offered</li>
+<p><li> Revision of learning outcomes and competences for all Bachelor and Master programs, with an eye on computations.</li>
+<p><li> <a href="https://www.uio.no/english/studies/programmes/computational-science-master/" target="_blank">Learning outcomes CS program</a>.</li> 
+<p><li> <a href="https://www.uio.no/studier/program/fysikk-astronomi/index.html" target="_blank">Learning outcomes bachelor program in Physics and Astronomy</a></li>
+<p><li> <a href="https://www.uio.no/english/studies/programmes/physics-master/index.html" target="_blank">Learning outcomes Master program in Physics</a></li>
+</ul>
+</section>
+
+
+<section>
+<h2 id="___sec4">Learning outcomes three first semesters </h2>
+
+<p>
+For the physical sciences it was agreed that students should be able to have the following basic knowledge of important algorithms via mathematics and computing courses
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ul>
+<p><li> Differential equations: Euler, modified Euler and Runge-Kutta methods (first semester)</li>
+<p><li> Numerical integration: Trapezoidal and Simpson's rule, multidimensional integrals (first semester)</li>
+<p><li> Random numbers, random walks, probability distributions and Monte Carlo integration  (first semester)</li>
+<p><li> Linear Algebra and eigenvalue problems: Gaussian elimination, LU-decomposition, SVD, QR, Givens rotations and eigenvalues, Gauss-Seidel. (second and third semester)</li>
+<p><li> Root finding and interpolation etc. (all three first semesters)</li>
+<p><li> Processing of sound and images (first semester).</li>
+</ul>
+<p>
+
+The students have to code several of these algorithms during the first three semesters.
+</div>
+
+<p>
+<b>Weakness</b>:  Boundaries between general computing learning outcomes and specific physics learning outcomes are less clear since most physics (applies to all disciplines) are less familiar with computing competences.
+</section>
+
+
+<section>
+<h2 id="___sec5">How to assess computational learning outcomes in later courses </h2>
+
+<ul>
+<p><li> Computational projects and exercises as well as numerical exercises in exams. Computational projects and exercises  are graded and are parts of the final mark in several Physics courses.</li>
+<p><li> Research projects run by the Computing in Science Education center on assessment programs.</li>
+</ul>
+<p>
+
+<b>Weakness</b>: as of now we cannot claim that computing deepens a student's insight about the physics of a given problem.
+</section>
+
+
+<section>
+<h2 id="___sec6">How to maintain a continuity when teachers are rotated? </h2>
+
+<ul>
+<p><li> Many of the computational competences are included in the central mathematics and programming courses the first three semesters. Teachers in other courses need therefore not use much time on numerical tools. Naturally included in other courses. All bachelor programs have an introductory programming course tailored to their discipline. <a href="https://www.uio.no/studier/emner/matnat/ibv/BIOS1100/index.html" target="_blank">Bioscience as an example here</a>.</li>
+<p><li> Biannual one-day educational workshops (spring and fall semesters) on pedagogical topics for all teachers.  Developing an awareness on computations and which competences we want to give our students.</li>
+</ul>
+<p>
+
+CSE incorporates computations from day one, and courses higher up do not need to
+spend time on computational topics  (technicalities), but can focus on the interesting
+science applications.  Coordination and synchronization across departments and courses. Increases collaboration on teaching and awareness of pedagical research.
+
+<ul>
+<p><li> To help teachers: Pedagogical modules which can aid university teachers. Own course for teachers run by the <a href="https://www.mn.uio.no/ccse/english/" target="_blank">Center for Computing in Science Education</a></li>
+</ul>
+<p>
+
+<b>Weakness</b>: Not all teachers feel comfortable with computing in various undergraduate courses. Rotation may cause problems.
+</section>
+
+
+<section>
+<h2 id="___sec7">How to anchor CSE across Departments </h2>
+
+<ul>
+<p><li> The college of Math and Natural science (Matematisk Naturvitenskapelig fakultet) is strongly involved in coordinating the introduction of computing across departments. The Interact process helped here.</li>
+<p><li> The Center for Computing in Science Education plays a central role in these educational activities.</li>
+</ul>
+</section>
+
+
+<section>
+<h2 id="___sec8">How to involve students </h2>
+
+<ul>
+<p><li> Project based courses with numerical projects and exercises</li>
+<p><li> <a href="https://www.mn.uio.no/om/samarbeid/tilbud-skoler/kurt/Undervisningsutvikling/oppleringsprogram-for-gruppelerere/la-programmet/" target="_blank">Learning assistants programs</a></li>
+<p><li> Summer projects in CSE where students do research on computing in science education and/or develop projects and exercises for different courses. The CCSE center organizes these activities in close collaboration with science education groups.</li>
+<p><li> TAs with good background in computing.</li>
+</ul>
+</section>
+
+
+<section>
+<h2 id="___sec9">Which aspects are important for a successful introduction of CSE? </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ul>
+<p><li> Early introduction, programming course at beginning of studies linked with math courses and science and engineering courses.</li>
+<p><li> Crucial to learn proper programming at the beginning.</li>
+<p><li> Good TAs</li>
+<p><li> Choice of software.</li>
+<p><li> Textbooks and modularization of topics (ask for details). Development of new learning material and assessment program</li>
+<p><li> Resources and expenses.</li>
+<p><li> Tailor to specific disciplines.</li>
+<p><li> Organizational matters.</li> 
+<p><li> Collaboration across disciplines.</li>
+<p><li> Research on Science Education and the role of computing in Science Education</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec10">CSE Summary </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ul>
+<p><li> Make our research visible in early undergraduate courses, enhance research based teaching</li>
+<p><li> Possibility to focus more on understanding and increased insight.</li>
+<p><li> Impetus for broad cooperation in teaching. Broad focus on university pedagogical topics.</li>
+<p><li> Strengthening of instruction based teaching (expensive and time-consuming).</li>
+<p><li> Give our candidates a broader and more up-to-date education with a problem-based orientation, often requested by potential employers.</li>
+<p><li> And perhaps the most important issue: does this enhance the student's insight in the Sciences?</li>
+</ul>
+<p>
+
+We invite you to visit (online and/or in real life) our new center on <a href="http://www.mn.uio.no/ccse/english/" target="_blank">Computing in Science Education</a>
+
+
+</div>
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+    // Display navigation controls in the bottom right corner
+    controls: true,
+
+    // Display progress bar (below the horiz. slider)
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    //center: true,
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+    theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speaker notes
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remote control your reveal.js presentation using a touch device
+        //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // MathJax
+        //{ src: 'reveal.js/plugin/math/math.js', async: true }
+    ]
+});
+
+Reveal.initialize({
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1170,  // original: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+     end footer logo -->
+
+
+
+</body>
+</html>

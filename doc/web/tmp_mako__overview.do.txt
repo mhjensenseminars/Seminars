@@ -32,9 +32,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/pdf/cse-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse/html/cse-reveal.html"
@@ -50,9 +48,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/pdf/csebio-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/csebio/html/csebio-reveal.html"
@@ -62,33 +58,13 @@ formulas in HTML or ipython notebook files.
 
 
 
-===== Nuclear physics courses, Talent and FRIB theory center =====
-
-
-
- * LaTeX PDF:
-   * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/pdf/np-beamer.pdf"
- * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/html/np-bs.html"
- * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/np/ipynb/np.ipynb"
-
-
-
 ===== Nuclear Talent perspectives =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/pdf/talent-print.pdf"
  * HTML:
    * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent.html"
    * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/talent/html/talent-reveal.html"
@@ -98,39 +74,19 @@ formulas in HTML or ipython notebook files.
 
 
 
-===== Computations and education =====
+===== Nuclear Physics Summer School 2019, Nuclear Models =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/pdf/NPretreatComputation-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/pdf/nuclearmodels-print.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/html/NPretreatComputation-bs.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/html/nuclearmodels-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatComputation/ipynb/NPretreatComputation.ipynb"
-
-
-
-===== Nuclear physics  education =====
-
-
-
- * LaTeX PDF:
-   * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/pdf/NPretreatEducation-beamer.pdf"
- * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/html/NPretreatEducation-bs.html"
- * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/NPretreatEducation/ipynb/NPretreatEducation.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/nuclearmodels/ipynb/nuclearmodels.ipynb"
 
 
 
@@ -140,15 +96,93 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print.pdf", compact: "6 pages per sheet": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-print6.pdf"
-   * For screen viewing:
-     * "standard Beamer format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/pdf/cleancode-beamer.pdf"
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/pdf/computercode-print.pdf"
  * HTML:
-   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode.html"
-   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-reveal.html"
-   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/html/cleancode-bs.html"
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/html/computercode-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cleancode/ipynb/cleancode.ipynb"
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/computercode/ipynb/computercode.ipynb"
+
+
+
+===== Education and research in computational science and data science; from bachelor programs to research =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/pdf/OsloMet-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/html/OsloMet.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/html/OsloMet-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/html/OsloMet-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/OsloMet/ipynb/OsloMet.ipynb"
+
+
+
+===== Education and research in computational science and data science =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/pdf/cse2018-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/html/cse2018-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/cse2018/ipynb/cse2018.ipynb"
+
+
+
+===== Integrating a Computational Perspective in Physics (and Science) Courses =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/pdf/UniTN-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/html/UniTN-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTN/ipynb/UniTN.ipynb"
+
+
+
+===== How to write a good scientific report/thesis =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/pdf/thesiswriting-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/html/thesiswriting-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/thesiswriting/ipynb/thesiswriting.ipynb"
+
+
+
+===== Integrating a Computational Perspective in Physics (and Science) Courses =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/pdf/UniAarhus-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/html/UniAarhus-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniAarhus/ipynb/UniAarhus.ipynb"
 
 
 
