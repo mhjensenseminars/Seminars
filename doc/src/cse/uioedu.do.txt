@@ -17,7 +17,7 @@ Excellent research depends on excellent education --- and vice versa!
 !eblock
 
 !split
-===== Wouldn't it be cool if your mechanics students could reproduce results in a Scientific Journal? =====
+===== Wouldn't it be cool if your students could reproduce results in a Scientific Journal? =====
 !bblock
 FIGURE: [figures/prl1.png, width=800 frac=0.5] 
 
