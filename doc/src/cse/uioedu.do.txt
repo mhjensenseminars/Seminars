@@ -1,5 +1,4 @@
-# Slides for Computing in science education
-TITLE: Project based courses, how and why? 
+TITLE: Project based courses and learning, how and why? 
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at Department of Physics and Astronomy and Facility for Rare Ion Beams, Michigan State University, USA & Department of Physics and "Center for Computing in Science Education":"http://www.mn.uio.no/ccse/english/people/index.html", University of Oslo, Norway
 DATE:
 
@@ -10,18 +9,12 @@ DATE:
 * Overarching view on project based approach and problem based learning (PBL)
 * What do we mean with research based education and how to introduce it as early as possible? 
 * How to develop deeper insights in a specific discipline
-* How to integrate a project-based approach with learning and assessment criteria
-* Examples and experiences
-* Conclusions
+* How to integrate a project-based approach with learning and assessment criteria with examples
 !eblock
 
 !bblock Overarching Motivation
 Excellent research depends on excellent education --- and vice versa!
-
 !eblock
-
-Litt om innhold: først en mer overordna argumentasjon om læringsutbytte rundt prosjektbaserte kurs, hvordan utvikle ei djupere innsikt om et fagfelt, læringsmål, vurderingsformer, kopling til eksisterende forskning og så litt mer om hvordan en faktisk gjør det i praksis, fra undervisningsverktøy til egne erfaringer over 30 år ved ulike universitet i inn og utland (Norge, USA og andre europeiske land).
-
 
 !split
 ===== Wouldn't it be cool if your mechanics students could reproduce results in a Scientific Journal? =====
@@ -34,12 +27,35 @@ Grand challenge project in FYS-MEK1100 (Mechanics, University of Oslo), Second S
 FIGURE: [figures/prl2.png, width=700 frac=0.5] 
 !eblock
 
+!split
+===== Active or passive Learning, or a Mix? =====
+
+!bblock
+Active learning can be defined as an approach to learning wherein the
+students engage themselves in the learning process by developing
+knowledge and understanding. It demands full-fledged participation on
+the part of the learner and is not based on classroom teaching, rather
+it is based on interactive learning sessions.
+!eblock
+
+!split
+===== Passive Learning =====
+
+!bblock
+Passive Learning means the traditional form of learning wherein teachers are seen as experts and they are expected to transfer knowledge to the learners. Hence, the students have a laid-back attitude, as they learn from what is taught to them by their instructor. Moreover, the student does normally not get any feedback from the instructor.
+!eblock
+
+
+!bblock
+There is growing evidence that an active learning environment leads to deeper insights and knowledge
+!eblock
+
 
 
 !split
 =====  Project based Courses and Project-based Learning =====
 
-!bblock Some standard elements in  project based courses
+!bblock Some standard elements in  project-based courses (PBC)
 
 o The audiences for projects are generally at the university
 
@@ -53,7 +69,7 @@ o The project can be done at home without teacher guidance or collaboration
 
 o The project can be outlined in details
 
-o Are less open-ended and more uniform
+o Can be  less open-ended and more uniform
 
 o Projects are ‘turned in’ rather than ‘puhlished,’ presented, or otherwise managed on an ongoing basis. They are normally graded
 
@@ -71,14 +87,14 @@ o PBL includes ‘need to knows’ and progress checkpoints
 
 o Input from peers, teachers, community members, experts, and others can help guide and improve the project
 
-o The ‘teacher work’ is done mainly before and during the process itself
+o The *teacher work* is done mainly before and during the process itself
 
 o PBL Is often based on a driving question and ongoing inquiry, discovery, and iteration
 
 o PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and ‘projects’
 
 
-PBL requires a lot of planning in advance and coordination of teaching teams an students. 
+PBL requires a lot of planning in advance and coordination of teaching teams an students.  My experience is that this applies to PBC as well.
 
 !eblock
 
@@ -100,6 +116,7 @@ o The student starts seeing the countour of the scientific approach leading her/
 
 !split
 ===== More on Research based Education  =====
+
 !bblock What should the education contain?
 The standard situation we meet at an almost daily basis:
 o Theory+experiment+simulation is almost the norm in research and industry
@@ -113,6 +130,7 @@ Our education should reflect this.
 
 !split
 ===== Some final Words on Research based Education =====
+
 !bblock Normal workflow in Science and Engineering
 o A problem is properly described using a precise (normal) language.
 o It is translated to a mathematical problem using known laws and 
@@ -132,6 +150,7 @@ Question: how does this translate into your discipline?
 ===== How to develop deeper Insights in a specific Discipline? =====
 
 Here I will focus on the role of computations inserted in a project-based learning approach.
+
 !split
 ===== The role of computations, from education to society =====
 !bblock
@@ -161,7 +180,7 @@ _Algorithmic thinking applies to all disciplines. It_
 * Enhances instruction-based teaching
 * Introduces research-based teaching  from day one
 * Triggers further insights in scientific problems
-* Emphasizes validation and verification of scientific results, and integrates science ethics in a natural way
+* Emphasizes validation and verification of scientific results, and integrates ethics in a natural way
 * Ensures good working practices from day one!
 
 !eblock
@@ -247,8 +266,53 @@ particular problem.
 
 
 !split
-===== * How to integrate a project-based approach with learning and assessment criteria =====
+===== How to integrate a Project-based Approach with Learning and Assessment Criteria =====
+
+!bblock  Open-ended approach
+o _Define detailed learning outcomes/goals_, often  in close collaboration with other colleagues
+o _Define how to assess learning outcomes_
+  o Projects, PBL, weekly exercises and possible final examination
+  o Projects and weekly exercises only, see "examples here":"https://github.com/CompPhysics/MachineLearning"
+  o other assessment forms
+o Which tools should I use?  Version control software like "Git":"https://git-scm.com/" and providers like "GitHub":"https://github.com/" and "GitLab":"https://about.gitlab.com/" are very useful in order to disseminate and organize learning material as "shown here":"https://github.com/CompPhysics/MachineLearning".
+o Develop good discussion fora (Slack, Mattermost and many other)
+!eblock
 
 
-    
+!split
+===== Active and passive Learning again, planning your Course  =====
 
+!bblock Active Learning Methods
+o Question-answer
+o Excursion
+o Brainstorming
+o Debates
+o Projects and Assignments
+o Independent study
+o Problem-solving
+o and more
+!eblock
+
+!split
+===== And passive Learning =====
+
+!bblock Passive Learning
+o Lectures
+o Tutorials
+o Seminar
+o Programmed Instructions
+o Slides 
+o Textbook
+o and more
+!eblock
+
+!split
+===== More on the Integration of PBC/PBL, flipped classrooms? =====
+
+!bblock Where am I now?
+o Moving towards a more active learning environment using flipped classrooms
+o Appropriate settings, classrooms, equipment and "more":"https://revolutionlightboards.com/collections/studio-packages"
+o High-quality learning material, online texts (lectures, projects, exercises), "videos":"https://www.youtube.com/watch?v=gXbThCXjZFM&list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv&ab_channel=SteveBrunton" and more
+!eblock
+
+Question: What kind of drawbacks do you see with flipped classrooms?
