@@ -202,5 +202,21 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Computational Physics and Quantum Technologies, a new Bachelor of Science program =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/compphys/pdf/compphys-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/compphys/html/compphys.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/compphys/html/compphys-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/compphys/html/compphys-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/compphys/ipynb/compphys.ipynb"
+
+
+
 
 
