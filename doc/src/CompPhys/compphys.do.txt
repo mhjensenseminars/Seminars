@@ -1,4 +1,4 @@
-TITLE: Nye kurs of nytt studieprogram
+TITLE: Nye kurs og nytt studieprogram
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics and Astronomy and FRIB Laboratory, Michigan State University, USA & Department of Physics and Center for Computing in Science Education, University of Oslo, Norway
 DATE: Today
 
