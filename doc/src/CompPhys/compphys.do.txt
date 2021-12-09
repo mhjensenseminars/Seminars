@@ -53,12 +53,12 @@ _Forslag: kurset opprettes som et sjølstudiums kurs med ukentlige samlinger fom
 !split
 ===== "Nytt Bachelor program":"https://github.com/mhjensen/CPMLS/blob/gh-pages/doc/src/Courses/CompPhysicsQT.pdf" =====
 
-Overordna: FI må tenke igjennom hvordan vi vil posisjonere oss fremover, særlig med tanke på
+Overordna: FI må tenke igjennom hvordan vi vil posisjonere oss i tida framover, særlig med tanke på
 
 o utviklinga som skjer i quantum information systems og quantum technologies QIS/QT, og
 o kunstig intelligens og maskinlæring (AI/ML)
 
-Her meiner vi  et nytt bachelorprogram er sentralt.
+Her meiner vi  et nytt bachelorprogram er sentralt.  Liknende tenkning som Nanotek@NTNU, kanskje maks 20 studenter.
 
 Om vi ikke lager et slikt program (med liknende profil), vil andre gjøre det. 
 
