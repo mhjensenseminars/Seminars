@@ -100,9 +100,9 @@ Heidi
 
 Jeg tror den mest fruktbare kommentaren jeg kan gi er et spørsmål som kanskje kan hjelpe dere å gjøre identiteten til den nye studieretningen enda tydeligere: Dersom jeg ser for meg "meg selv" som fersk student i dag, så ville jeg vært en ~20-åring som 
 
-o  er fascinert av "fysikk for fysikkens skyld", naturen og "de store spørsmålene", ikke teknologiutvikling (enn hvor viktig det er!);
+o er fascinert av "fysikk for fysikkens skyld", naturen og "de store spørsmålene", ikke teknologiutvikling (enn hvor viktig det er!)
 
-o liker å jobbe med datamaskiner; og
+o liker å jobbe med datamaskiner og
 
 o har hørt mye om maskinlæring og kunstig intelligens og gjerne vil lære mer om dette.
 
