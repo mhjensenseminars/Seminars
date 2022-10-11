@@ -218,5 +218,21 @@ formulas in HTML or ipython notebook files.
 
 
 
+===== Integrating a Computational Perspective in Physics (and Science) Courses =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTsukuba/pdf/UniTsukuba-print.pdf"
+ * HTML:
+   * "Plain html style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTsukuba/html/UniTsukuba.html"
+   * "reveal.js beige slide style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTsukuba/html/UniTsukuba-reveal.html"
+   * "Bootstrap style": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTsukuba/html/UniTsukuba-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://mhjensenseminars.github.io/EducationalSeminars/doc/pub/UniTsukuba/ipynb/UniTsukuba.ipynb"
+
+
+
 
 
