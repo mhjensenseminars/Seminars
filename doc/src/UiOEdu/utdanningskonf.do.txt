@@ -1,12 +1,12 @@
 TITLE: Active learning, how and why? 
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at Department of Physics and Astronomy and Facility for Rare Ion Beams, Michigan State University, USA & Department of Physics and "Center for Computing in Science Education":"http://www.mn.uio.no/ccse/english/people/index.html", University of Oslo, Norway
-DATE:
+DATE: Edu Conference UiO 2023
 
 !split
 =====   Overview =====
 
 !bblock
-* Overarching view on project based approach and problem based learning (PBL)
+* Overarching view on active learning, project based approach, problem based learning (PBL) etc
 * What do we mean with research based education and how to introduce it as early as possible? 
 * How to develop deeper insights in a specific discipline
 * How to integrate an active learning approach with proper learning and assessment criterias
@@ -108,20 +108,20 @@ o The student starts seeing the countour of the scientific approach leading her/
 ===== More on Research based Education  =====
 
 !bblock What should the education contain?
-The standard situation we meet at an almost daily basis:
+The standard situation we meet at an almost daily basis (STEM related examples):
 o Theory+experiment+simulation is almost the norm in research and industry
 o To be able to model complex systems with no simple answers on closed form. Solve real problems.
 o Emphasis on insight and understanding of fundamental principles and laws in the Sciences.
 o Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.
 
-Our education should reflect this.
+Our education should reflect this. How does this transfer to your discipline?
 !eblock
 
 
 !split
 ===== Some final Words on Research based Education =====
 
-!bblock Normal workflow in Science and Engineering
+!bblock Normal workflow in STEM fields
 o A problem is properly described using a precise (normal) language.
 o It is translated to a mathematical problem using known laws and principles.
 o It is solved, normally via numerical similations.
@@ -134,33 +134,3 @@ Question: how does this translate into your discipline?
 
 !eblock
 
-
-
-!split
-===== Active and passive Learning again, planning your Course  =====
-
-!bblock 
-o Question-answer
-o Excursion
-o Brainstorming
-o Debates
-o Projects and Assignments
-o Independent study
-o Problem-solving
-o and more
-!eblock
-
-!split
-===== And passive Learning =====
-
-!bblock 
-o Lectures
-o Tutorials
-o Seminar
-o Programmed Instructions
-o Slides 
-o Textbook
-o and more
-!eblock
-
-!split
