@@ -1,0 +1,308 @@
+<!--
+HTML file automatically generated from DocOnce source
+(https://github.com/doconce/doconce/)
+doconce format html utdanningskonf.do.txt --pygments_html_style=perldoc --html_style=solarized3 --html_links_in_new_window --html_output=utdanningskonf-solarized --no_mako
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Active learning, how and why?">
+<title>Active learning, how and why?</title>
+<link href="https://cdn.rawgit.com/doconce/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/doconce/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link href="https://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<style type="text/css">
+h1 {color: #b58900;}  /* yellow */
+/* h1 {color: #cb4b16;}  orange */
+/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
+code { padding: 0px; background-color: inherit; }
+pre {
+  border: 0pt solid #93a1a1;
+  box-shadow: none;
+}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #93a1a1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #eee8d5;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/doconce/doconce/master/bundled/html_images/small_yellow_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/doconce/doconce/master/bundled/html_images/small_yellow_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/doconce/doconce/master/bundled/html_images/small_yellow_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/doconce/doconce/master/bundled/html_images/small_yellow_question.png); }
+div { text-align: justify; text-justify: inter-word; }
+.tab {
+  padding-left: 1.5em;
+}
+div.toc p,a {
+  line-height: 1.3;
+  margin-top: 1.1;
+  margin-bottom: 1.1;
+}
+</style>
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('Overview', 2, None, 'overview'),
+              ('Active or passive Learning, or a Mix?',
+               2,
+               None,
+               'active-or-passive-learning-or-a-mix'),
+              ('Passive Learning', 2, None, 'passive-learning'),
+              ('Project based Courses and Project-based Learning',
+               2,
+               None,
+               'project-based-courses-and-project-based-learning'),
+              ('More on Project based Courses and Project-based Learning',
+               2,
+               None,
+               'more-on-project-based-courses-and-project-based-learning'),
+              ('Research based Teaching', 2, None, 'research-based-teaching'),
+              ('More on Research based Education',
+               2,
+               None,
+               'more-on-research-based-education'),
+              ('Some final Words on Research based Education',
+               2,
+               None,
+               'some-final-words-on-research-based-education'),
+              ('Active and passive Learning again, planning your Course',
+               2,
+               None,
+               'active-and-passive-learning-again-planning-your-course'),
+              ('And passive Learning', 2, None, 'and-passive-learning')]}
+end of tocinfo -->
+
+<body>
+<!-- ------------------- main content ---------------------- -->
+<center>
+<h1>Active learning, how and why? </h1>
+</center>  <!-- document title -->
+
+<!-- author(s): Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no -->
+<center>
+<b>Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no</b> [1, 2]
+</center>
+<!-- institution(s) -->
+<center>
+[1] <b>Department of Physics and Astronomy and Facility for Rare Ion Beams, Michigan State University, USA</b>
+</center>
+<center>
+[2] <b>Department of Physics and <a href="http://www.mn.uio.no/ccse/english/people/index.html" target="_blank">Center for Computing in Science Education</a>, University of Oslo, Norway</b>
+</center>
+<br>
+<p>DATE:</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="overview">Overview </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<ul>
+<li> Overarching view on project based approach and problem based learning (PBL)</li>
+<li> What do we mean with research based education and how to introduce it as early as possible?</li> 
+<li> How to develop deeper insights in a specific discipline</li>
+<li> How to integrate an active learning approach with proper learning and assessment criterias</li>
+</ul>
+</div>
+
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Overarching Motivation</b>
+<p>
+<p>Excellent research depends on excellent education --- and vice versa!</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="active-or-passive-learning-or-a-mix">Active or passive Learning, or a Mix? </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>Active learning can be defined as an approach to learning wherein the
+students engage themselves in the learning process by developing
+knowledge and understanding. It demands full-fledged participation on
+the part of the learner and is not based on classroom teaching, rather
+it is based on interactive learning sessions.
+</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="passive-learning">Passive Learning </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>Passive Learning means the traditional form of learning wherein teachers are seen as experts and they are expected to transfer knowledge to the learners. Hence, the students have a laid-back attitude, as they learn from what is taught to them by their instructor. Moreover, the student does normally not get any feedback from the instructor.</p>
+</div>
+
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>There is growing evidence that an active learning environment leads to deeper insights and knowledge</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="project-based-courses-and-project-based-learning">Project based Courses and Project-based Learning </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Some standard elements in  project-based courses (PBC)</b>
+<p>
+
+<ol>
+<li> The audiences for projects are generally at the university</li>
+<li> Are traditionally more about the end-product and less about the learning and process</li>
+<li> The project is pre-planned and clear</li>
+<li> The project is based on specific directions and criteria</li>
+<li> The project can be done at home without teacher guidance or collaboration</li>
+<li> The project can be outlined in details</li>
+<li> Can be  less open-ended and more uniform</li>
+<li> Projects are <em>turned in</em> rather than <em>published</em>, presented, or otherwise managed on an ongoing basis. They are normally graded</li>
+</ol>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="more-on-project-based-courses-and-project-based-learning">More on Project based Courses and Project-based Learning </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Some standard elements in  project-based learning (PBL)</b>
+<p>
+
+<ol>
+<li> In PBL, the audience is generally outside the university/school</li>
+<li> PBL includes <em>need to knows</em> and progress checkpoints</li>
+<li> Input from peers, teachers, community members, experts, and others can help guide and improve the project</li>
+<li> The <em>teacher work</em> is done mainly before and during the process itself</li>
+<li> PBL Is often based on a driving question and ongoing inquiry, discovery, and iteration</li>
+<li> PBL depends on background knowledge, learner choice, technology tools, support from others, and dozens of other factors that result in a process of learning that produces very different results and projects</li>
+</ol>
+<p>PBL requires a lot of planning in advance and coordination of teaching teams an students.  My experience is that this applies to PBC as well.</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="research-based-teaching">Research based Teaching </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>How do we define it?</b>
+<p>
+
+<p>One possible definition: It is coupled to a direct participation in actual research and builds upon established
+knowledge and insights about scientific methods.
+</p>
+
+<ol>
+<li> It is the standard situation at all universities  and takes normally place at the senior undergraduate/graduate level (isn't it too late?)</li>
+<li> It is seldom done in undergraduate courses.</li>
+<li> Taught by a researcher</li>
+<li> The student starts seeing the countour of the scientific approach leading her/him to make new interpretations, develop new insights and understandings that lead  to further research.</li>
+</ol>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="more-on-research-based-education">More on Research based Education  </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>What should the education contain?</b>
+<p>
+<p>The standard situation we meet at an almost daily basis:</p>
+<ol>
+<li> Theory+experiment+simulation is almost the norm in research and industry</li>
+<li> To be able to model complex systems with no simple answers on closed form. Solve real problems.</li>
+<li> Emphasis on insight and understanding of fundamental principles and laws in the Sciences.</li>
+<li> Be able to visualize, present, discuss, interpret and come with a critical analysis of the results, and develop a sound ethical attitude to own and other's work.</li>
+</ol>
+<p>Our education should reflect this.</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="some-final-words-on-research-based-education">Some final Words on Research based Education </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Normal workflow in Science and Engineering</b>
+<p>
+<ol>
+<li> A problem is properly described using a precise (normal) language.</li>
+<li> It is translated to a mathematical problem using known laws and principles.</li>
+<li> It is solved, normally via numerical similations.</li>
+<li> The solution is visualized and analyzed.</li>
+<li> The solution to the problem is formulated.</li>
+</ol>
+<p>People who master these skills bring an important compentence to society. Gain via increased efficiency and quality due to interdisciplinarity at a more detailed level. </p>
+
+<p>Question: how does this translate into your discipline?</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="active-and-passive-learning-again-planning-your-course">Active and passive Learning again, planning your Course  </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<ol>
+<li> Question-answer</li>
+<li> Excursion</li>
+<li> Brainstorming</li>
+<li> Debates</li>
+<li> Projects and Assignments</li>
+<li> Independent study</li>
+<li> Problem-solving</li>
+<li> and more</li>
+</ol>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="and-passive-learning">And passive Learning </h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<ol>
+<li> Lectures</li>
+<li> Tutorials</li>
+<li> Seminar</li>
+<li> Programmed Instructions</li>
+<li> Slides</li> 
+<li> Textbook</li>
+<li> and more</li>
+</ol>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<!-- ------------------- end of main content --------------- -->
+<center style="font-size:80%">
+<!-- copyright --> &copy; 1999-2023, Morten Hjorth-Jensen  Email morten.hjorth-jensen@fys.uio.no. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+</body>
+</html>
+
